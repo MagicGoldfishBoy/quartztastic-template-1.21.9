@@ -1,0 +1,13 @@
+{
+  "itemGroup.quartztastic": "Quartztastic",
+  "block.quartztastic.example_block": "Example Block",
+  "item.quartztastic.example_item": "Example Item",
+
+  "quartztastic.configuration.title": "Quartztastic Configs",
+  "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
+  "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",
+  "quartztastic.configuration.items": "Item List",
+  "quartztastic.configuration.logDirtBlock": "Log Dirt Block",
+  "quartztastic.configuration.magicNumberIntroduction": "Magic Number Text",
+  "quartztastic.configuration.magicNumber": "Magic Number"
+}
