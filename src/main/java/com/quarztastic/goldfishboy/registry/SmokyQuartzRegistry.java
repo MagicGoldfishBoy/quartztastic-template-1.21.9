@@ -5,6 +5,7 @@ import com.quarztastic.goldfishboy.Quartztastic;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -14,6 +15,8 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 
 public class SmokyQuartzRegistry {
+
+    public static DeferredItem<Item> SMOKY_QUARTZ_CRYSTAL;
 
     public static DeferredBlock<Block> SMOKY_QUARTZ_BLOCK;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_ITEM;
@@ -29,6 +32,10 @@ public class SmokyQuartzRegistry {
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_BRICKS_ITEM;
 
     public static void registerAll() {
+
+        SMOKY_QUARTZ_CRYSTAL = Quartztastic.ITEMS.registerSimpleItem(
+            "smoky_quartz_crystal"
+        );
 
         SMOKY_QUARTZ_BLOCK = Quartztastic.BLOCKS.register(
             "smoky_quartz_block", 
