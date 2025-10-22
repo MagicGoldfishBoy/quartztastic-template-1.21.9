@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "quartztastic:example_block"
+          "name": "quartztastic:smoky_quartz_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "quartztastic:blocks/example_block"
+  "random_sequence": "quartztastic:blocks/smoky_quartz_block"
 }

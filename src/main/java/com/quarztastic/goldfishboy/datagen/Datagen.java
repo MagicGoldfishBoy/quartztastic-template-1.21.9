@@ -12,7 +12,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 public class Datagen {
         public void gatherData(GatherDataEvent event) {
         // event.createProvider(RecipeDatagen.Runner::new);
-        // event.createProvider(ModelDatagen::new);
+        event.createProvider(ModelDatagen::new);
         event.createProvider((out, lookup) -> new TagDatagen(out, lookup, Quartztastic.MODID));
         event.createProvider((output, lookupProvider) -> new LootTableProvider(
             output,

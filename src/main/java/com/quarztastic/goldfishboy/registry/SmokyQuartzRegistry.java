@@ -19,13 +19,13 @@ public class SmokyQuartzRegistry {
     public static void registerAll() {
 
         SMOKY_QUARTZ_BLOCK = Quartztastic.BLOCKS.register(
-            "smoky_quartz", 
+            "smoky_quartz_block", 
             registryName -> new Block(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.8f, 4.0f)
                 .sound(SoundType.AMETHYST)
-                //.requiresCorrectToolForDrops()
-                //.noOcclusion()
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
 
