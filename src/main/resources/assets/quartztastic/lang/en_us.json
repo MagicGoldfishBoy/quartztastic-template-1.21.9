@@ -1,6 +1,10 @@
 {
   "itemGroup.quartztastic": "Quartztastic",
   "block.quartztastic.smoky_quartz_block": "Smoky Quartz Block",
+  "block.quartztastic.smoky_quartz_slab": "Smoky Quartz Slab",
+  "block.quartztastic.smoky_quartz_stairs": "Smoky Quartz Stairs",
+
+  "block.quartztastic.smoky_quartz_bricks": "Smoky Quartz Bricks",
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
