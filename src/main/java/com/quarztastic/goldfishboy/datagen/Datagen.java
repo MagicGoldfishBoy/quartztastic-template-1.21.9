@@ -5,6 +5,7 @@ import java.util.Set;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 
+import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
@@ -26,5 +27,7 @@ public class Datagen {
             lookupProvider
         ));
     }
+
+    private static final RegistrySetBuilder WORLD_GEN_BUILDER = new RegistrySetBuilder();
 }
     

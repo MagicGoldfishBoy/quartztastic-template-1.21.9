@@ -1,15 +1,18 @@
 package com.quarztastic.goldfishboy.datagen;
 
+import java.rmi.registry.Registry;
 import java.util.concurrent.CompletableFuture;
 
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -27,6 +30,13 @@ public class RecipeDatagen extends RecipeProvider {
     }
 
     protected void buildBlockRecipes() {
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get())
+            .pattern("@@")
+            .pattern("@@")
+            .define('@', SmokyQuartzRegistry.SMOKY_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzRegistry.SMOKY_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_ITEM.get())
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()))
