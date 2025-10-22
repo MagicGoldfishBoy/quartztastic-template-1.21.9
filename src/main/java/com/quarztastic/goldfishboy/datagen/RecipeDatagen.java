@@ -22,12 +22,31 @@ public class RecipeDatagen extends RecipeProvider {
     @Override
     protected void buildRecipes() {
         buildBlockRecipes();
+        buildSlabRecipes();
+        buildStairsRecipes();
     }
 
     protected void buildBlockRecipes() {
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_ITEM.get())
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()))
+            .save(this.output, "smoky_quartz_bricks_by_stonecutting");
+    }
+
+    protected void buildSlabRecipes() {
+
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzRegistry.SMOKY_QUARTZ_SLAB_ITEM.get(), 2)
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()))
-            .save(this.output, "smoky_quartz_stairs_by_stonecutting");
+            .save(this.output, "smoky_quartz_stairs_by_stonecutting");  
+
+    }
+
+    protected void buildStairsRecipes() {
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzRegistry.SMOKY_QUARTZ_STAIRS_ITEM.get())
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()))
+            .save(this.output, "smoky_quartz_slab_by_stonecutting");
+
     }
 
     public static class Runner extends RecipeProvider.Runner {
