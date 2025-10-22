@@ -1,7 +1,6 @@
 {
   "itemGroup.quartztastic": "Quartztastic",
-  "block.quartztastic.example_block": "Example Block",
-  "item.quartztastic.example_item": "Example Item",
+  "block.quartztastic.smoky_quartz_block": "Smoky Quartz Block",
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

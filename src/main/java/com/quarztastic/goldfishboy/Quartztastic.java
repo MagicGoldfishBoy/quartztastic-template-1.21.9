@@ -106,6 +106,9 @@ public class Quartztastic {
     {
         LOGGER.info("Setting Render Layers");
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzRegistry.SMOKY_QUARTZ_SLAB.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzRegistry.SMOKY_QUARTZ_STAIRS.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS.get(), ChunkSectionLayer.TRANSLUCENT);
     }
 
 

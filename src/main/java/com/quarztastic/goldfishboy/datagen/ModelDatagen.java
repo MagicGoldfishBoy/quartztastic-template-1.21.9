@@ -18,10 +18,21 @@ public class ModelDatagen extends ModelProvider {
     @Override
     protected void registerModels(@Nonnull BlockModelGenerators blockModels, @Nonnull ItemModelGenerators itemModels) {
         registerSimpleBlockModels(blockModels, itemModels);
+        registerBlockFamilies(blockModels, itemModels);
     }
 
     protected void registerSimpleBlockModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
         blockModels.createTrivialCube(SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get());
+
+        blockModels.createTrivialCube(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS.get());
+    }
+
+    protected void registerBlockFamilies(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
+        blockModels.familyWithExistingFullBlock(SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get())
+            .slab(SmokyQuartzRegistry.SMOKY_QUARTZ_SLAB.get())
+            .stairs(SmokyQuartzRegistry.SMOKY_QUARTZ_STAIRS.get());
     }
 }
 
