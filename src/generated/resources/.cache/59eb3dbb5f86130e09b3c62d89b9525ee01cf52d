@@ -1,5 +1,6 @@
-// 1.21.9	2025-10-22T14:19:45.894576007	Loot Tables
+// 1.21.9	2025-10-22T15:20:34.658583606	Loot Tables
 43a8c0fea9fd2911579aafa62d3e16a9a87b02c7 data/quartztastic/loot_table/blocks/smoky_quartz_block.json
 f3f6a92eca226ad63cab828eeea8a8a7afbe5ca4 data/quartztastic/loot_table/blocks/smoky_quartz_bricks.json
+838955f4f0e9d709c9ac61db9d4c2586275f5c18 data/quartztastic/loot_table/blocks/smoky_quartz_ore.json
 49427f7fc398b34cb0c94d0ea95bfe0e742ad199 data/quartztastic/loot_table/blocks/smoky_quartz_slab.json
 ea95f94eff01150da7d956a90274c29f0ec7bac2 data/quartztastic/loot_table/blocks/smoky_quartz_stairs.json

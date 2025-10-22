@@ -18,6 +18,9 @@ public class SmokyQuartzRegistry {
 
     public static DeferredItem<Item> SMOKY_QUARTZ_CRYSTAL;
 
+    public static DeferredBlock<Block> SMOKY_QUARTZ_ORE;
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_ORE_ITEM;
+
     public static DeferredBlock<Block> SMOKY_QUARTZ_BLOCK;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_ITEM;
 
@@ -36,6 +39,23 @@ public class SmokyQuartzRegistry {
         SMOKY_QUARTZ_CRYSTAL = Quartztastic.ITEMS.registerSimpleItem(
             "smoky_quartz_crystal"
         );
+
+
+        SMOKY_QUARTZ_ORE = Quartztastic.BLOCKS.register(
+            "smoky_quartz_ore", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        SMOKY_QUARTZ_ORE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SMOKY_QUARTZ_ORE
+        );
+
 
         SMOKY_QUARTZ_BLOCK = Quartztastic.BLOCKS.register(
             "smoky_quartz_block", 

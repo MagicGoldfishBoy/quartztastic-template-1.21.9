@@ -24,8 +24,12 @@ public class TagDatagen extends BlockTagsProvider {
     @Override
     protected void addTags(Provider provider) {
         this.tag(MINED_BY_PICKAXE_TAG)
-        .add(SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get(), SmokyQuartzRegistry.SMOKY_QUARTZ_SLAB.get(), SmokyQuartzRegistry.SMOKY_QUARTZ_STAIRS.get(), 
-        SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS.get()
+        .add(
+        SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get(), 
+        SmokyQuartzRegistry.SMOKY_QUARTZ_SLAB.get(), 
+        SmokyQuartzRegistry.SMOKY_QUARTZ_STAIRS.get(), 
+        SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS.get(), 
+        SmokyQuartzRegistry.SMOKY_QUARTZ_ORE.get()
         );
     }
     

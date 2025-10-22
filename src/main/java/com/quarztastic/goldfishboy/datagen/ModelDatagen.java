@@ -30,6 +30,8 @@ public class ModelDatagen extends ModelProvider {
 
     protected void buildSimpleBlockModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
+        blockModels.createTrivialCube(SmokyQuartzRegistry.SMOKY_QUARTZ_ORE.get());
+
         blockModels.createTrivialCube(SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get());
 
         blockModels.createTrivialCube(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS.get());

@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy.datagen;
 import java.util.Set;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -50,6 +51,10 @@ public class LootTableDatagen extends BlockLootSubProvider {
     }
             if(block.getName().toString().matches(".*door.*") && !block.getName().toString().matches(".*trapdoor.*")) {
             this.add(block, this::createDoorTable);
+            return;
+    }
+            if(block.getName().toString().matches(".*smoky_quartz_ore.*")) {
+            this.add(block, this.createOreDrop(block, SmokyQuartzRegistry.SMOKY_QUARTZ_CRYSTAL.get()));
             return;
     }
 
