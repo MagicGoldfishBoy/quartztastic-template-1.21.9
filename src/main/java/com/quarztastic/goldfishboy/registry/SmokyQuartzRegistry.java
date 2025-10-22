@@ -24,7 +24,7 @@ public class SmokyQuartzRegistry {
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.8f, 4.0f)
                 .sound(SoundType.AMETHYST)
-                .requiresCorrectToolForDrops()
+                //.requiresCorrectToolForDrops()
                 //.noOcclusion()
             )
         );

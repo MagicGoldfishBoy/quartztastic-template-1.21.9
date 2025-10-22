@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
+import com.quarztastic.goldfishboy.datagen.Datagen;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -17,7 +18,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -25,14 +25,13 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Quartztastic.MODID)
 public class Quartztastic {
 
@@ -87,6 +86,9 @@ public class Quartztastic {
 
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+
+        modEventBus.addListener(this::gatherData);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -107,4 +109,10 @@ public class Quartztastic {
     public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("HELLO from server starting");
     }
+
+    public void gatherData(GatherDataEvent.Client event) {
+        Datagen datagen = new Datagen();
+        datagen.gatherData(event);
+    }
+
 }
