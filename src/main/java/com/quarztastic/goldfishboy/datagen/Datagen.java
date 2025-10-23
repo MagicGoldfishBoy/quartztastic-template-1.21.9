@@ -20,12 +20,17 @@ public class Datagen {
             Set.of(),
             List.of(
                 new LootTableProvider.SubProviderEntry(
-                    LootTableDatagen::new,
+                    BlockLootTableDatagen::new,
                     LootContextParamSets.BLOCK
+                ),
+                new LootTableProvider.SubProviderEntry(
+                    lookup -> new LootTableDatagen.CustomChestLoot(),
+                    LootContextParamSets.CHEST
                 )
             ),
             lookupProvider
         ));
+        event.createProvider((output, lookupProvider) -> new LootModifierDatagen(output, lookupProvider));
     }
 
     private static final RegistrySetBuilder WORLD_GEN_BUILDER = new RegistrySetBuilder();

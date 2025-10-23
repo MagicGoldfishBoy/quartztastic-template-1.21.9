@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 import com.quarztastic.goldfishboy.datagen.Datagen;
+import com.quarztastic.goldfishboy.registry.LootModifierRegistry;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -78,6 +79,7 @@ public class Quartztastic {
 
         SmokyQuartzRegistry.registerAll();
 
+       // LootModifierRegistry.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
