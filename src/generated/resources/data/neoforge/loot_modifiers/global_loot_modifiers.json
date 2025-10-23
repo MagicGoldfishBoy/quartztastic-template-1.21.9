@@ -1,6 +1,7 @@
 {
   "entries": [
-    "quartztastic:smoky_quartz_nether_fortress"
+    "quartztastic:smoky_quartz_nether_fortress",
+    "quartztastic:smoky_quartz_block_nether_fortress"
   ],
   "replace": false
 }

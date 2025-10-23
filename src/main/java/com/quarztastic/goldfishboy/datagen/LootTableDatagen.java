@@ -48,6 +48,19 @@ public class LootTableDatagen extends LootTableProvider {
                         )
                     )
             );
+
+            location = ResourceLocation.fromNamespaceAndPath(Quartztastic.MODID, "smoky_quartz_block_nether_fortress_table");
+            
+            output.accept(ResourceKey.create(Registries.LOOT_TABLE, location), 
+                LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get())
+                            .setWeight(5)
+                            .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2)))
+                        )
+                    )
+            );
         }
     }
 }

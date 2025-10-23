@@ -49,5 +49,17 @@ public class LootModifierDatagen extends GlobalLootModifierProvider {
             ),
             List.of()
         );
+        add("smoky_quartz_block_nether_fortress", 
+            new AddTableLootModifier(
+                new LootItemCondition[] {
+                    LootTableIdCondition.builder(
+                        ResourceLocation.withDefaultNamespace("chests/nether_bridge")
+                    ).build()
+                },
+                ResourceKey.create(Registries.LOOT_TABLE,
+                    ResourceLocation.fromNamespaceAndPath(Quartztastic.MODID, "smoky_quartz_block_nether_fortress_table"))
+            ),
+            List.of()
+        );
     }
 }
