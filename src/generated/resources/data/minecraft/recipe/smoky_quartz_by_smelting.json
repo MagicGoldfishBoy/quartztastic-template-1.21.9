@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 60,
+  "experience": 0.4,
+  "ingredient": "quartztastic:smoky_quartz_ore",
+  "result": {
+    "count": 1,
+    "id": "quartztastic:smoky_quartz_crystal"
+  }
+}
