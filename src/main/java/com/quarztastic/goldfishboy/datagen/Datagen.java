@@ -31,8 +31,8 @@ public class Datagen {
             lookupProvider
         ));
         event.createProvider((output, lookupProvider) -> new LootModifierDatagen(output, lookupProvider));
-    }
 
-    private static final RegistrySetBuilder WORLD_GEN_BUILDER = new RegistrySetBuilder();
+        event.createProvider((output, lookupProvider) -> new WorldgenDatagen(output, lookupProvider));
+    };
 }
     
