@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_smoky_quartz_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "quartztastic:smoky_quartz_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:smoky_quartz_button_by_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_smoky_quartz_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:smoky_quartz_button_by_stonecutting"
+    ]
+  }
+}

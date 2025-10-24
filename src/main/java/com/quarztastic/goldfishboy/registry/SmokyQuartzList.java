@@ -5,6 +5,10 @@ import com.quarztastic.goldfishboy.block.Pillar;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -35,6 +39,26 @@ public class SmokyQuartzList {
     public static DeferredBlock<StairBlock> SMOKY_QUARTZ_STAIRS;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_STAIRS_ITEM;
+
+
+    public static DeferredBlock<ButtonBlock> SMOKY_QUARTZ_BUTTON;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_BUTTON_ITEM;
+
+
+    public static DeferredBlock<PressurePlateBlock> SMOKY_QUARTZ_PRESSURE_PLATE;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_PRESSURE_PLATE_ITEM;
+
+
+    public static DeferredBlock<FenceBlock> SMOKY_QUARTZ_FENCE;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_FENCE_ITEM;
+
+
+    public static DeferredBlock<FenceGateBlock> SMOKY_QUARTZ_GATE;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_GATE_ITEM;
 
 
 

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    "quartztastic:smoky_quartz_block"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:smoky_quartz_button"
+  }
+}
