@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 import com.quarztastic.goldfishboy.datagen.Datagen;
+import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -44,7 +45,7 @@ public class Quartztastic {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("quartztastic", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.quartztastic"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get().getDefaultInstance())
+            .icon(() -> SmokyQuartzList.SMOKY_QUARTZ_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.acceptAll(
                 ITEMS.getEntries().stream()
@@ -98,13 +99,13 @@ public class Quartztastic {
     public void onClientSetup(FMLClientSetupEvent event)
     {
         LOGGER.info("Setting Render Layers");
-        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
-        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzRegistry.SMOKY_QUARTZ_SLAB.get(), ChunkSectionLayer.TRANSLUCENT);
-        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzRegistry.SMOKY_QUARTZ_STAIRS.get(), ChunkSectionLayer.TRANSLUCENT);
-        
-        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_SLAB.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_STAIRS.get(), ChunkSectionLayer.TRANSLUCENT);
 
-        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzRegistry.SMOKY_QUARTZ_PILLAR.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get(), ChunkSectionLayer.TRANSLUCENT);
+
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_PILLAR.get(), ChunkSectionLayer.TRANSLUCENT);
     }
 
 

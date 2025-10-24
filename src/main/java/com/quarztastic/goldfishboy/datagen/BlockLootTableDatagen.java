@@ -3,7 +3,7 @@ package com.quarztastic.goldfishboy.datagen;
 import java.util.Set;
 
 import com.quarztastic.goldfishboy.Quartztastic;
-import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
+import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -54,7 +54,7 @@ public class BlockLootTableDatagen extends BlockLootSubProvider {
             return;
     }
             if(block.getName().toString().matches(".*smoky_quartz_ore.*")) {
-            this.add(block, this.createOreDrop(block, SmokyQuartzRegistry.SMOKY_QUARTZ_CRYSTAL.get()));
+            this.add(block, this.createOreDrop(block, SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()));
             return;
     }
 

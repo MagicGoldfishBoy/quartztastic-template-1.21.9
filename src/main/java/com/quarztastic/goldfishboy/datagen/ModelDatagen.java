@@ -3,7 +3,7 @@ package com.quarztastic.goldfishboy.datagen;
 import javax.annotation.Nonnull;
 
 import com.quarztastic.goldfishboy.Quartztastic;
-import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
+import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -28,36 +28,36 @@ public class ModelDatagen extends ModelProvider {
 
     protected void buildSimpleItemModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
-        itemModels.generateFlatItem(SmokyQuartzRegistry.SMOKY_QUARTZ_CRYSTAL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get(), ModelTemplates.FLAT_ITEM);
     }
 
     protected void buildSimpleBlockModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
-        blockModels.createTrivialCube(SmokyQuartzRegistry.SMOKY_QUARTZ_ORE.get());
+        blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_ORE.get());
 
-        blockModels.createTrivialCube(SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get());
+        blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get());
 
-        blockModels.createTrivialCube(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS.get());
+        blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get());
     }
 
     protected void buildBlockFamilies(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
-        blockModels.familyWithExistingFullBlock(SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get())
-            .slab(SmokyQuartzRegistry.SMOKY_QUARTZ_SLAB.get())
-            .stairs(SmokyQuartzRegistry.SMOKY_QUARTZ_STAIRS.get());
+        blockModels.familyWithExistingFullBlock(SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get())
+            .slab(SmokyQuartzList.SMOKY_QUARTZ_SLAB.get())
+            .stairs(SmokyQuartzList.SMOKY_QUARTZ_STAIRS.get());
 
-        blockModels.familyWithExistingFullBlock(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS.get())
-            .slab(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_SLAB.get())
-            .stairs(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_STAIRS.get());
+        blockModels.familyWithExistingFullBlock(SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get())
+            .slab(SmokyQuartzList.SMOKY_QUARTZ_BRICKS_SLAB.get())
+            .stairs(SmokyQuartzList.SMOKY_QUARTZ_BRICKS_STAIRS.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
-        ModelDatagenHelpers.createPillarModels(blockModels, itemModels, SmokyQuartzRegistry.SMOKY_QUARTZ_PILLAR.get(), new Variant(modLocation("block/smoky_quartz_pillar_top")), 
+        ModelDatagenHelpers.createPillarModels(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_PILLAR.get(), new Variant(modLocation("block/smoky_quartz_pillar_top")), 
         new Variant(modLocation("block/smoky_quartz_pillar_middle")), new Variant(modLocation("block/smoky_quartz_pillar_bottom")), new Variant(modLocation("block/smoky_quartz_pillar_single")));
 
         itemModels.itemModelOutput.accept(
-            SmokyQuartzRegistry.SMOKY_QUARTZ_PILLAR_ITEM.get(),
+            SmokyQuartzList.SMOKY_QUARTZ_PILLAR_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/smoky_quartz_pillar_single"))
         );
     }

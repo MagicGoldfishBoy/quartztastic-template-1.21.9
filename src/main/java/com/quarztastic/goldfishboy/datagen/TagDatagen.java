@@ -2,7 +2,7 @@ package com.quarztastic.goldfishboy.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
-import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
+import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.Registries;
@@ -25,17 +25,17 @@ public class TagDatagen extends BlockTagsProvider {
     protected void addTags(Provider provider) {
         this.tag(MINED_BY_PICKAXE_TAG)
         .add(
-        SmokyQuartzRegistry.SMOKY_QUARTZ_ORE.get(),
+        SmokyQuartzList.SMOKY_QUARTZ_ORE.get(),
 
-        SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get(), 
-        SmokyQuartzRegistry.SMOKY_QUARTZ_SLAB.get(), 
-        SmokyQuartzRegistry.SMOKY_QUARTZ_STAIRS.get(), 
+        SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get(), 
+        SmokyQuartzList.SMOKY_QUARTZ_SLAB.get(), 
+        SmokyQuartzList.SMOKY_QUARTZ_STAIRS.get(), 
 
-        SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS.get(), 
-        SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_SLAB.get(), 
-        SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_STAIRS.get(), 
+        SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get(), 
+        SmokyQuartzList.SMOKY_QUARTZ_BRICKS_SLAB.get(), 
+        SmokyQuartzList.SMOKY_QUARTZ_BRICKS_STAIRS.get(), 
         
-        SmokyQuartzRegistry.SMOKY_QUARTZ_PILLAR.get()
+        SmokyQuartzList.SMOKY_QUARTZ_PILLAR.get()
         );
     }
     

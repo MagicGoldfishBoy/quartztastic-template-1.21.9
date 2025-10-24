@@ -6,7 +6,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 
 import com.quarztastic.goldfishboy.Quartztastic;
-import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
+import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -42,7 +42,7 @@ public class LootTableDatagen extends LootTableProvider {
                 LootTable.lootTable()
                     .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(SmokyQuartzRegistry.SMOKY_QUARTZ_CRYSTAL.get())
+                        .add(LootItem.lootTableItem(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
                             .setWeight(10)
                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3)))
                         )
@@ -55,7 +55,7 @@ public class LootTableDatagen extends LootTableProvider {
                 LootTable.lootTable()
                     .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get())
+                        .add(LootItem.lootTableItem(SmokyQuartzList.SMOKY_QUARTZ_ITEM.get())
                             .setWeight(5)
                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2)))
                         )

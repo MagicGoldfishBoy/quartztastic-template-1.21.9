@@ -49,7 +49,7 @@ public class WorldgenRegistry {
         context.register(SMOKY_QUARTZ_ORE_CONFIGURED,
             new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(
                 basaltReplaceables,
-                SmokyQuartzRegistry.SMOKY_QUARTZ_ORE.get().defaultBlockState(),
+                SmokyQuartzList.SMOKY_QUARTZ_ORE.get().defaultBlockState(),
                 12
             ))
         );
