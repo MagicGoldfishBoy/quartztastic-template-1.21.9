@@ -1,4 +1,4 @@
-// 1.21.9	2025-10-24T09:32:20.844947444	Registries
+// 1.21.9	2025-10-24T09:42:03.648476376	Registries
 e73de93b0b16a72878d7dfcfad440004e3db5814 data/quartztastic/neoforge/biome_modifier/add_smoky_quartz_ore.json
-f5ac36cc3dd321292f67f0e226c1c1236cb1c618 data/quartztastic/worldgen/configured_feature/smoky_quartz_ore.json
-bd7ec7592d6149a3daee7c93fe7a5beb3b3d09b0 data/quartztastic/worldgen/placed_feature/smoky_quartz_ore.json
+b1ffdcd421a512f13da90c41c6a03950e45d7045 data/quartztastic/worldgen/configured_feature/smoky_quartz_ore.json
+a85b70eadfdab809bb264c92e80dbdf51bbd8f70 data/quartztastic/worldgen/placed_feature/smoky_quartz_ore.json

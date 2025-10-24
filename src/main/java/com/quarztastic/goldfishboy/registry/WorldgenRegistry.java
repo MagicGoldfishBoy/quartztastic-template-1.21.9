@@ -50,7 +50,7 @@ public class WorldgenRegistry {
             new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(
                 basaltReplaceables,
                 SmokyQuartzRegistry.SMOKY_QUARTZ_ORE.get().defaultBlockState(),
-                8
+                12
             ))
         );
     }
@@ -64,7 +64,7 @@ public class WorldgenRegistry {
             new PlacedFeature(
                 configuredFeatures.getOrThrow(SMOKY_QUARTZ_ORE_CONFIGURED),
                 List.of(
-                    CountPlacement.of(12),
+                    CountPlacement.of(24),
                     InSquarePlacement.spread(),
                     HeightRangePlacement.uniform(
                         VerticalAnchor.absolute(0),
