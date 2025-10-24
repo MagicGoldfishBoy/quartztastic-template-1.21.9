@@ -1,2 +1,3 @@
-// 1.21.9	2025-10-24T12:36:34.676895846	Tags for minecraft:block mod id quartztastic
-08e49701afd6d7919d500d6206b82f2ece71cf2f data/minecraft/tags/block/mineable/pickaxe.json
+// 1.21.9	2025-10-24T12:51:05.520421617	Tags for minecraft:block mod id quartztastic
+b7bfb90fa1948255a5bd41f57f62dec104152dd0 data/minecraft/tags/block/fences.json
+e0af36a8214cf2b837d78916be431dccdd218dae data/minecraft/tags/block/mineable/pickaxe.json

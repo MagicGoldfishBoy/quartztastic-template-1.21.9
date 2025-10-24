@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "quartztastic:block/smoky_quartz_block"
+  }
+}

@@ -1,4 +1,4 @@
-// 1.21.9	2025-10-24T12:36:34.677178716	Quartztastic Recipes
+// 1.21.9	2025-10-24T12:51:05.52065799	Quartztastic Recipes
 00be754583b8c5185bca4f80e42d50b9d2c5d647 data/minecraft/advancement/recipes/building_blocks/smoky_quartz_bricks_by_crafting.json
 5f7417687d178e3be9fbe6af89592a2a83f1db85 data/minecraft/advancement/recipes/building_blocks/smoky_quartz_bricks_by_stonecutting.json
 48ceb94352d95b93d9cf85b8770b73ddd62bf39a data/minecraft/advancement/recipes/building_blocks/smoky_quartz_bricks_slab_by_crafting.json
@@ -35,5 +35,7 @@ b4f795aacb89dbb5496a862b42d41ab65bbc9fdb data/minecraft/recipe/smoky_quartz_stai
 277033e17e478f962bfa5d48284ac9de3a4a1afc data/minecraft/recipe/smoky_quartz_stairs_by_stonecutting.json
 608ee4f82e0cc907d1cbaa70ae2739e321fa58c1 data/quartztastic/advancement/recipes/building_blocks/smoky_quartz_block.json
 746c448712d74920813c1c4ed15da4ee9280f21e data/quartztastic/advancement/recipes/building_blocks/smoky_quartz_pillar.json
+099f28f8b87796e4a767d0291721cc80a976ed17 data/quartztastic/advancement/recipes/decorations/smoky_quartz_fence.json
 85417c04f942375b3c8ec7b1c51624223d6a38d0 data/quartztastic/recipe/smoky_quartz_block.json
+8b83198aaeb2a767695501d9cf52a8aef35ce117 data/quartztastic/recipe/smoky_quartz_fence.json
 0314fe5dd9b87c27316845e2c6a0ede5d82dcbec data/quartztastic/recipe/smoky_quartz_pillar.json

@@ -32,6 +32,7 @@ public class RecipeDatagen extends RecipeProvider {
         buildStairsRecipes();
         buildButtonRecipes();
         buildPressurePlateRecipes();
+        buildFenceWallGateRecipes();
     }
 
     protected void buildItemRecipes() {
@@ -154,6 +155,17 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "smoky_quartz_pressure_plate_by_crafting");
+    }
+
+    protected void buildFenceWallGateRecipes() {
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_FENCE_ITEM.get(), 6)
+            .pattern("@#@")
+            .pattern("@#@")
+            .define('@', SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
+            .define('#', SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
+            .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
     }
 
     public static class Runner extends RecipeProvider.Runner {

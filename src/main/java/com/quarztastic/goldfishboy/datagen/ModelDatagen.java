@@ -46,7 +46,8 @@ public class ModelDatagen extends ModelProvider {
             .slab(SmokyQuartzList.SMOKY_QUARTZ_SLAB.get())
             .stairs(SmokyQuartzList.SMOKY_QUARTZ_STAIRS.get())
             .button(SmokyQuartzList.SMOKY_QUARTZ_BUTTON.get())
-            .pressurePlate(SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE.get());
+            .pressurePlate(SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE.get())
+            .fence(SmokyQuartzList.SMOKY_QUARTZ_FENCE.get());
 
         blockModels.familyWithExistingFullBlock(SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get())
             .slab(SmokyQuartzList.SMOKY_QUARTZ_BRICKS_SLAB.get())

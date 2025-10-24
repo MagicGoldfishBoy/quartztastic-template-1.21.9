@@ -1,9 +1,10 @@
-// 1.21.9	2025-10-24T12:36:34.675500421	Loot Tables
+// 1.21.9	2025-10-24T12:51:05.519285739	Loot Tables
 43a8c0fea9fd2911579aafa62d3e16a9a87b02c7 data/quartztastic/loot_table/blocks/smoky_quartz_block.json
 f3f6a92eca226ad63cab828eeea8a8a7afbe5ca4 data/quartztastic/loot_table/blocks/smoky_quartz_bricks.json
 6fdc38c052752952f17d6175d3e4baf12194a287 data/quartztastic/loot_table/blocks/smoky_quartz_bricks_slab.json
 03ce7e670849efcd485e4fa8ad3b5d3e70abba46 data/quartztastic/loot_table/blocks/smoky_quartz_bricks_stairs.json
 07da1529a5dc0a20c4d980ef6a4498e532d0f3fd data/quartztastic/loot_table/blocks/smoky_quartz_button.json
+f9f45ef51bb658923783853ad6939a93a132dc8a data/quartztastic/loot_table/blocks/smoky_quartz_fence.json
 838955f4f0e9d709c9ac61db9d4c2586275f5c18 data/quartztastic/loot_table/blocks/smoky_quartz_ore.json
 aa9e74726427350963fe48f3a32b41aa1b9ebe7b data/quartztastic/loot_table/blocks/smoky_quartz_pillar.json
 a8fbe62b2ef2939526cdbc960584c1bf6df3bdae data/quartztastic/loot_table/blocks/smoky_quartz_pressure_plate.json
