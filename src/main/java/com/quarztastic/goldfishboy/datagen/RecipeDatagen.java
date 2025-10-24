@@ -68,6 +68,11 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get())
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()))
             .save(this.output, "smoky_quartz_bricks_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzRegistry.SMOKY_QUARTZ_PILLAR_ITEM.get())
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {

@@ -1,6 +1,7 @@
 package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.block.Pillar;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -33,6 +34,11 @@ public class SmokyQuartzRegistry {
 
     public static DeferredBlock<Block> SMOKY_QUARTZ_BRICKS;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_BRICKS_ITEM;
+
+
+    public static DeferredBlock<Pillar> SMOKY_QUARTZ_PILLAR;
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_PILLAR_ITEM;
+
 
     public static void registerAll() {
 
@@ -119,6 +125,22 @@ public class SmokyQuartzRegistry {
 
         SMOKY_QUARTZ_BRICKS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SMOKY_QUARTZ_BRICKS
+        );
+
+
+        SMOKY_QUARTZ_PILLAR = Quartztastic.BLOCKS.register(
+            "smoky_quartz_pillar", 
+            registryName -> new Pillar(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        SMOKY_QUARTZ_PILLAR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SMOKY_QUARTZ_PILLAR
         );
 
     }

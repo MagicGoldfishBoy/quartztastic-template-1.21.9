@@ -8,6 +8,8 @@
 
   "block.quartztastic.smoky_quartz_bricks": "Smoky Quartz Bricks",
 
+  "block.quartztastic.smoky_quartz_pillar": "Smoky Quartz Pillar",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

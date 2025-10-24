@@ -8,7 +8,9 @@ import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
+import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.renderer.block.model.Variant;
 import net.minecraft.data.PackOutput;
 
 public class ModelDatagen extends ModelProvider {
@@ -21,6 +23,7 @@ public class ModelDatagen extends ModelProvider {
         buildSimpleItemModels(blockModels, itemModels);
         buildSimpleBlockModels(blockModels, itemModels);
         buildBlockFamilies(blockModels, itemModels);
+        buildPillarModels(blockModels, itemModels);
     }
 
     protected void buildSimpleItemModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
@@ -42,6 +45,17 @@ public class ModelDatagen extends ModelProvider {
         blockModels.familyWithExistingFullBlock(SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get())
             .slab(SmokyQuartzRegistry.SMOKY_QUARTZ_SLAB.get())
             .stairs(SmokyQuartzRegistry.SMOKY_QUARTZ_STAIRS.get());
+    }
+
+    protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
+        ModelDatagenHelpers.createPillarModels(blockModels, itemModels, SmokyQuartzRegistry.SMOKY_QUARTZ_PILLAR.get(), new Variant(modLocation("block/smoky_quartz_pillar_top")), 
+        new Variant(modLocation("block/smoky_quartz_pillar_middle")), new Variant(modLocation("block/smoky_quartz_pillar_bottom")), new Variant(modLocation("block/smoky_quartz_pillar_single")));
+
+        itemModels.itemModelOutput.accept(
+            SmokyQuartzRegistry.SMOKY_QUARTZ_PILLAR_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/smoky_quartz_pillar_single"))
+        );
     }
 }
 
