@@ -22,6 +22,7 @@ public class SmokyQuartzRegistry {
     public static DeferredBlock<Block> SMOKY_QUARTZ_ORE;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_ORE_ITEM;
 
+
     public static DeferredBlock<Block> SMOKY_QUARTZ_BLOCK;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_ITEM;
 
@@ -34,6 +35,12 @@ public class SmokyQuartzRegistry {
 
     public static DeferredBlock<Block> SMOKY_QUARTZ_BRICKS;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_BRICKS_ITEM;
+
+    public static DeferredBlock<SlabBlock> SMOKY_QUARTZ_BRICKS_SLAB;
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_BRICKS_SLAB_ITEM;
+
+    public static DeferredBlock<StairBlock> SMOKY_QUARTZ_BRICKS_STAIRS;
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_BRICKS_STAIRS_ITEM;
 
 
     public static DeferredBlock<Pillar> SMOKY_QUARTZ_PILLAR;
@@ -126,6 +133,39 @@ public class SmokyQuartzRegistry {
         SMOKY_QUARTZ_BRICKS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SMOKY_QUARTZ_BRICKS
         );
+
+
+        SMOKY_QUARTZ_BRICKS_SLAB = Quartztastic.BLOCKS.register(
+            "smoky_quartz_bricks_slab", 
+            registryName -> new SlabBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        SMOKY_QUARTZ_BRICKS_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SMOKY_QUARTZ_BRICKS_SLAB
+        );
+
+
+        SMOKY_QUARTZ_BRICKS_STAIRS = Quartztastic.BLOCKS.register(
+            "smoky_quartz_bricks_stairs", 
+            registryName -> new StairBlock(SMOKY_QUARTZ_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        SMOKY_QUARTZ_BRICKS_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SMOKY_QUARTZ_BRICKS_STAIRS
+        );
+
 
 
         SMOKY_QUARTZ_PILLAR = Quartztastic.BLOCKS.register(

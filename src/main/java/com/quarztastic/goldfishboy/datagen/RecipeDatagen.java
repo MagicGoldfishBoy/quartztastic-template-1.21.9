@@ -87,6 +87,17 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()))
             .save(this.output, "smoky_quartz_slab_by_crafting");
 
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_smoky_quartz_bricks_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_ITEM.get()))
+            .save(this.output, "smoky_quartz_bricks_slab_by_stonecutting");  
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_SLAB_ITEM.get(), 6)
+            .pattern("@@@")
+            .define('@', SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_ITEM.get())
+            .unlockedBy("has_smoky_quartz_bricks_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_ITEM.get()))
+            .save(this.output, "smoky_quartz_bricks_slab_by_crafting");
+
     }
 
     protected void buildStairsRecipes() {
@@ -102,6 +113,19 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get())
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_ITEM.get()))
             .save(this.output, "smoky_quartz_stairs_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_STAIRS_ITEM.get())
+            .unlockedBy("has_smoky_quartz_bricks_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_ITEM.get()))
+            .save(this.output, "smoky_quartz_bricks_stairs_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_STAIRS_ITEM.get(), 4)
+            .pattern("@  ")
+            .pattern("@@ ")
+            .pattern("@@@")
+            .define('@', SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_ITEM.get())
+            .unlockedBy("has_smoky_quartz_bricks_block", has(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_ITEM.get()))
+            .save(this.output, "smoky_quartz_bricks_stairs_by_crafting");
 
     }
 

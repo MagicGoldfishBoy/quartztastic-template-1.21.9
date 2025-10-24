@@ -45,6 +45,10 @@ public class ModelDatagen extends ModelProvider {
         blockModels.familyWithExistingFullBlock(SmokyQuartzRegistry.SMOKY_QUARTZ_BLOCK.get())
             .slab(SmokyQuartzRegistry.SMOKY_QUARTZ_SLAB.get())
             .stairs(SmokyQuartzRegistry.SMOKY_QUARTZ_STAIRS.get());
+
+        blockModels.familyWithExistingFullBlock(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS.get())
+            .slab(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_SLAB.get())
+            .stairs(SmokyQuartzRegistry.SMOKY_QUARTZ_BRICKS_STAIRS.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
