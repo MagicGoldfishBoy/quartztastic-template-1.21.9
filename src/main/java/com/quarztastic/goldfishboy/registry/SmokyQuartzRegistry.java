@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -17,6 +18,7 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.DoubleBlockCombiner.BlockType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class SmokyQuartzRegistry {
 
@@ -134,6 +136,21 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_FENCE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_FENCE
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_GATE = Quartztastic.BLOCKS.register(
+            "smoky_quartz_gate", 
+            registryName -> new FenceGateBlock(WoodType.WARPED, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.4f, 2.0f)
+                .sound(SoundType.AMETHYST_CLUSTER)
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_GATE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_GATE
         );
 
 

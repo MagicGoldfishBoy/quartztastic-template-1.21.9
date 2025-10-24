@@ -105,6 +105,7 @@ public class Quartztastic {
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_BUTTON.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_FENCE.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_GATE.get(), ChunkSectionLayer.TRANSLUCENT);
 
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get(), ChunkSectionLayer.TRANSLUCENT);
 

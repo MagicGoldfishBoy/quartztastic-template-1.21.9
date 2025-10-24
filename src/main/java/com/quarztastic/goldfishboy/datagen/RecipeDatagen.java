@@ -166,6 +166,15 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
             .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, SmokyQuartzList.SMOKY_QUARTZ_GATE_ITEM.get(), 2)
+            .pattern("#@#")
+            .pattern("#@#")
+            .define('@', SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
+            .define('#', SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
+            .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
     }
 
     public static class Runner extends RecipeProvider.Runner {
