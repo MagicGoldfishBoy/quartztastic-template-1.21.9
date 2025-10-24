@@ -9,6 +9,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
@@ -52,7 +53,7 @@ public class SmokyQuartzRegistry {
             )
         );
 
-        SmokyQuartzList.SMOKY_QUARTZ_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+        SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_BLOCK
         );
 
@@ -102,6 +103,21 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_BUTTON_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_BUTTON
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE = Quartztastic.BLOCKS.register(
+            "smoky_quartz_pressure_plate", 
+            registryName -> new PressurePlateBlock(BlockSetType.POLISHED_BLACKSTONE, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.4f, 2.0f)
+                .sound(SoundType.AMETHYST_CLUSTER)
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE
         );
 
 

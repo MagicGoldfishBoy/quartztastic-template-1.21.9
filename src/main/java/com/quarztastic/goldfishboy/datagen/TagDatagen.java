@@ -13,10 +13,12 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 
 public class TagDatagen extends BlockTagsProvider {
+    
     public static final TagKey<Block> MINED_BY_PICKAXE_TAG = TagKey.create(
         Registries.BLOCK,
         ResourceLocation.fromNamespaceAndPath("minecraft", "mineable/pickaxe")
     );
+
     public TagDatagen(PackOutput output, CompletableFuture<Provider> lookupProvider, String modId) {
         super(output, lookupProvider, modId);
     }
@@ -30,7 +32,7 @@ public class TagDatagen extends BlockTagsProvider {
         SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get(), 
         SmokyQuartzList.SMOKY_QUARTZ_SLAB.get(), 
         SmokyQuartzList.SMOKY_QUARTZ_STAIRS.get(), 
-        SmokyQuartzList.SMOKY_QUARTZ_BUTTON.get(), 
+        SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE.get(), 
 
         SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get(), 
         SmokyQuartzList.SMOKY_QUARTZ_BRICKS_SLAB.get(), 

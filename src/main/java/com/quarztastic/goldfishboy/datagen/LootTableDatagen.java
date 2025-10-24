@@ -55,7 +55,7 @@ public class LootTableDatagen extends LootTableProvider {
                 LootTable.lootTable()
                     .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(SmokyQuartzList.SMOKY_QUARTZ_ITEM.get())
+                        .add(LootItem.lootTableItem(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
                             .setWeight(5)
                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2)))
                         )

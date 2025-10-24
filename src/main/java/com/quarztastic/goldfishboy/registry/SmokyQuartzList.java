@@ -28,7 +28,7 @@ public class SmokyQuartzList {
 
     public static DeferredBlock<Block> SMOKY_QUARTZ_BLOCK;
 
-    public static DeferredItem<BlockItem> SMOKY_QUARTZ_ITEM;
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_BLOCK_ITEM;
 
 
     public static DeferredBlock<SlabBlock> SMOKY_QUARTZ_SLAB;
