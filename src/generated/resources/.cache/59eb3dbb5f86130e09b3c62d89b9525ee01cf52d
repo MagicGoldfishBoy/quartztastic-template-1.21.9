@@ -1,4 +1,4 @@
-// 1.21.9	2025-10-25T09:25:08.730695456	Loot Tables
+// 1.21.9	2025-10-25T11:02:02.603886888	Loot Tables
 e8d3ce5c1b5383aca9de09320f82dd14dc8c5c99 data/quartztastic/loot_table/blocks/chiseled_smoky_quartz_block.json
 43a8c0fea9fd2911579aafa62d3e16a9a87b02c7 data/quartztastic/loot_table/blocks/smoky_quartz_block.json
 7a848066f45a7bf4b98a555d638a5eb016cf3930 data/quartztastic/loot_table/blocks/smoky_quartz_brick_wall.json
@@ -13,6 +13,9 @@ aa9e74726427350963fe48f3a32b41aa1b9ebe7b data/quartztastic/loot_table/blocks/smo
 a8fbe62b2ef2939526cdbc960584c1bf6df3bdae data/quartztastic/loot_table/blocks/smoky_quartz_pressure_plate.json
 49427f7fc398b34cb0c94d0ea95bfe0e742ad199 data/quartztastic/loot_table/blocks/smoky_quartz_slab.json
 ea95f94eff01150da7d956a90274c29f0ec7bac2 data/quartztastic/loot_table/blocks/smoky_quartz_stairs.json
+606a44693823aed67b6b537f9fe9c7feb54efc5d data/quartztastic/loot_table/blocks/smoky_quartz_tiles.json
+1a77a4e48d3c3ffa367e7f2ae3053fac14a8124a data/quartztastic/loot_table/blocks/smoky_quartz_tiles_slab.json
+3ba1d27cc3acaf250723fce03a4c2b4ba3fc5b3f data/quartztastic/loot_table/blocks/smoky_quartz_tiles_stairs.json
 c3103cb9c5f0efbb80d87efaac338c4df8516c3b data/quartztastic/loot_table/blocks/smoky_quartz_wall.json
 212e92a779daed0380ac5fb820be1b68f178b445 data/quartztastic/loot_table/smoky_quartz_block_nether_fortress_table.json
 fefdae451af5c3143dcafb21bed7cab24f1ac462 data/quartztastic/loot_table/smoky_quartz_nether_fortress_table.json

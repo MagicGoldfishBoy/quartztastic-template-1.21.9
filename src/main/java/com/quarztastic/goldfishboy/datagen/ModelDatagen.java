@@ -40,6 +40,8 @@ public class ModelDatagen extends ModelProvider {
         blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get());
 
         blockModels.createTrivialCube(SmokyQuartzList.CHISELED_SMOKY_QUARTZ_BLOCK.get());
+
+        blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_TILES.get());
     }
 
     protected void buildBlockFamilies(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
@@ -57,6 +59,10 @@ public class ModelDatagen extends ModelProvider {
             .slab(SmokyQuartzList.SMOKY_QUARTZ_BRICKS_SLAB.get())
             .stairs(SmokyQuartzList.SMOKY_QUARTZ_BRICKS_STAIRS.get())
             .wall(SmokyQuartzList.SMOKY_QUARTZ_BRICK_WALL.get());
+
+        blockModels.familyWithExistingFullBlock(SmokyQuartzList.SMOKY_QUARTZ_TILES.get())
+            .slab(SmokyQuartzList.SMOKY_QUARTZ_TILES_SLAB.get())
+            .stairs(SmokyQuartzList.SMOKY_QUARTZ_TILES_STAIRS.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

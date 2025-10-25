@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "quartztastic:block/smoky_quartz_tiles_slab"
+    },
+    "type=double": {
+      "model": "quartztastic:block/smoky_quartz_tiles"
+    },
+    "type=top": {
+      "model": "quartztastic:block/smoky_quartz_tiles_slab_top"
+    }
+  }
+}

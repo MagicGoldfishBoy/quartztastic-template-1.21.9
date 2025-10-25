@@ -248,6 +248,53 @@ public class SmokyQuartzRegistry {
 
 
 
+        SmokyQuartzList.SMOKY_QUARTZ_TILES = Quartztastic.BLOCKS.register(
+            "smoky_quartz_tiles", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .noOcclusion()
+            )
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_TILES_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_TILES
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_TILES_SLAB = Quartztastic.BLOCKS.register(
+            "smoky_quartz_tiles_slab", 
+            registryName -> new SlabBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_TILES_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_TILES_SLAB
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_TILES_STAIRS = Quartztastic.BLOCKS.register(
+            "smoky_quartz_tiles_stairs", 
+            registryName -> new StairBlock(SmokyQuartzList.SMOKY_QUARTZ_TILES.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_TILES_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_TILES_STAIRS
+        );
+
+
+
         SmokyQuartzList.SMOKY_QUARTZ_PILLAR = Quartztastic.BLOCKS.register(
             "smoky_quartz_pillar", 
             registryName -> new Pillar(BlockBehaviour.Properties.of()
