@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 import com.quarztastic.goldfishboy.datagen.Datagen;
+import com.quarztastic.goldfishboy.registry.BlockSetTypes;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
 
@@ -61,7 +62,8 @@ public class Quartztastic {
 
         modEventBus.addListener(this::onClientSetup);
 
-
+        BlockSetTypes.init();
+        
         BLOCKS.register(modEventBus);
 
         ITEMS.register(modEventBus);

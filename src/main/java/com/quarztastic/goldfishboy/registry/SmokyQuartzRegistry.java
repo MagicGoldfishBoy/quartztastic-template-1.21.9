@@ -94,7 +94,7 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_BUTTON = Quartztastic.BLOCKS.register(
             "smoky_quartz_button", 
-            registryName -> new ButtonBlock(BlockSetType.POLISHED_BLACKSTONE, 25, BlockBehaviour.Properties.of()
+            registryName -> new ButtonBlock(BlockSetTypes.QUARTZ, 25, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.4f, 2.0f)
                 .sound(SoundType.AMETHYST_CLUSTER)
@@ -110,7 +110,7 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE = Quartztastic.BLOCKS.register(
             "smoky_quartz_pressure_plate", 
-            registryName -> new PressurePlateBlock(BlockSetType.POLISHED_BLACKSTONE, BlockBehaviour.Properties.of()
+            registryName -> new PressurePlateBlock(BlockSetTypes.QUARTZ, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.4f, 2.0f)
                 .sound(SoundType.AMETHYST_CLUSTER)
@@ -315,7 +315,7 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_DOOR = Quartztastic.BLOCKS.register(
             "smoky_quartz_door", 
-            registryName -> new DoorBlock(BlockSetType.POLISHED_BLACKSTONE, BlockBehaviour.Properties.of()
+            registryName -> new DoorBlock(BlockSetTypes.QUARTZ, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.8f, 4.0f)
                 .sound(SoundType.AMETHYST)
