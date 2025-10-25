@@ -53,7 +53,8 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.familyWithExistingFullBlock(SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get())
             .slab(SmokyQuartzList.SMOKY_QUARTZ_BRICKS_SLAB.get())
-            .stairs(SmokyQuartzList.SMOKY_QUARTZ_BRICKS_STAIRS.get());
+            .stairs(SmokyQuartzList.SMOKY_QUARTZ_BRICKS_STAIRS.get())
+            .wall(SmokyQuartzList.SMOKY_QUARTZ_BRICK_WALL.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

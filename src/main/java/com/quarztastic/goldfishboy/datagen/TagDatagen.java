@@ -48,7 +48,8 @@ public class TagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.WALLS_TAG)
             .add(
-                SmokyQuartzList.SMOKY_QUARTZ_WALL.get()
+                SmokyQuartzList.SMOKY_QUARTZ_WALL.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_BRICK_WALL.get()
             );
 
         this.tag(TagKeyList.GATES_TAG)

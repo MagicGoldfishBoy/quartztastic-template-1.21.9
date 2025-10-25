@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": "quartztastic:smoky_quartz_bricks"
+  },
+  "pattern": [
+    "@@@",
+    "@@@"
+  ],
+  "result": {
+    "count": 6,
+    "id": "quartztastic:smoky_quartz_brick_wall"
+  }
+}

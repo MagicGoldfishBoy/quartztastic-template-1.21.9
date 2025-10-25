@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "quartztastic:smoky_quartz_bricks",
+  "result": {
+    "count": 1,
+    "id": "quartztastic:smoky_quartz_brick_wall"
+  }
+}

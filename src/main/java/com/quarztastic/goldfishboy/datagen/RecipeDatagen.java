@@ -189,6 +189,18 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
             .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .save(this.output);
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BRICKS_ITEM.get()), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_BRICK_WALL_ITEM.get())
+            .unlockedBy("has_smoky_quartz_bricks", has(SmokyQuartzList.SMOKY_QUARTZ_BRICKS_ITEM.get()))
+            .save(this.output, "smoky_quartz_brick_wall_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_BRICK_WALL_ITEM.get(), 6)
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', SmokyQuartzList.SMOKY_QUARTZ_BRICKS_ITEM.get())
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BRICKS_ITEM.get()))
+            .save(this.output, "smoky_quartz_brick_wall_by_crafting");
     }
 
     public static class Runner extends RecipeProvider.Runner {

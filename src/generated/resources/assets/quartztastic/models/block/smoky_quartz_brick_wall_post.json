@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_post",
+  "textures": {
+    "wall": "quartztastic:block/smoky_quartz_bricks"
+  }
+}
