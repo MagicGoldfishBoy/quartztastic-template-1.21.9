@@ -5,17 +5,21 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import com.quarztastic.goldfishboy.datagen.Datagen;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
+import com.quarztastic.goldfishboy.registry.EntityRegistry;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -23,6 +27,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -35,6 +40,8 @@ public class Quartztastic {
     public static final String MODID = "quartztastic";
 
     public static final Logger LOGGER = LogUtils.getLogger();
+
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, MODID);
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
 
@@ -62,6 +69,8 @@ public class Quartztastic {
 
         modEventBus.addListener(this::onClientSetup);
 
+        modEventBus.addListener(this::onRegisterRenderers);
+
         BlockSetTypes.init();
         
         BLOCKS.register(modEventBus);
@@ -70,6 +79,10 @@ public class Quartztastic {
 
         CREATIVE_MODE_TABS.register(modEventBus);
 
+        BLOCK_ENTITIES.register(modEventBus);
+
+
+        EntityRegistry.init(modEventBus);
 
         SmokyQuartzRegistry.registerAll();
 
@@ -115,6 +128,7 @@ public class Quartztastic {
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_PILLAR.get(), ChunkSectionLayer.TRANSLUCENT);
 
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_DOOR.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_CHAIR.get(), ChunkSectionLayer.TRANSLUCENT);
     }
 
 
@@ -126,6 +140,10 @@ public class Quartztastic {
     public void gatherData(GatherDataEvent.Client event) {
         Datagen datagen = new Datagen();
         datagen.gatherData(event);
+    }
+
+    public void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(EntityRegistry.CHAIR_ENTITY.get(), NoopRenderer::new);
     }
 
 }

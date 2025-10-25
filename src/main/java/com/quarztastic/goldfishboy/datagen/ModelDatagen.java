@@ -25,6 +25,7 @@ public class ModelDatagen extends ModelProvider {
         buildBlockFamilies(blockModels, itemModels);
         buildPillarModels(blockModels, itemModels);
         buildDoorModels(blockModels, itemModels);
+        buildBlockbenchBlockstates(blockModels, itemModels);
     }
 
     protected void buildSimpleItemModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
@@ -79,6 +80,16 @@ public class ModelDatagen extends ModelProvider {
 
     protected void buildDoorModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         blockModels.createDoor(SmokyQuartzList.SMOKY_QUARTZ_DOOR.get());
+    }
+
+    protected void buildBlockbenchBlockstates(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_CHAIR.get(), new Variant(modLocation("block/smoky_quartz_chair")));
+
+        itemModels.itemModelOutput.accept(
+            SmokyQuartzList.SMOKY_QUARTZ_CHAIR_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/smoky_quartz_chair"))
+        );
     }
 }
 

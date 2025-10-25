@@ -1,5 +1,6 @@
 package com.quarztastic.goldfishboy.registry;
 
+import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Pillar;
 
 import net.minecraft.world.item.BlockItem;
@@ -120,5 +121,10 @@ public class SmokyQuartzList {
     public static DeferredBlock<DoorBlock> SMOKY_QUARTZ_DOOR;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_DOOR_ITEM;
+
+
+    public static DeferredBlock<Chair> SMOKY_QUARTZ_CHAIR;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_CHAIR_ITEM;
     
 }
