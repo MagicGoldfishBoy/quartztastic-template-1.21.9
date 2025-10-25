@@ -1,5 +1,6 @@
-// 1.21.9	2025-10-24T13:25:39.76989869	Tags for minecraft:block mod id quartztastic
+// 1.21.9	2025-10-24T21:56:43.935031791	Tags for minecraft:block mod id quartztastic
 316fc9903baf4cc64491a1aec40960059e9ad965 data/minecraft/tags/block/fence_gates.json
 b7bfb90fa1948255a5bd41f57f62dec104152dd0 data/minecraft/tags/block/fences.json
-52faf570ece0674bcaeed31ed25bed038ce4c1a5 data/minecraft/tags/block/mineable/pickaxe.json
+5a4761630f9594cc6578813b7aa7aef6042b67e5 data/minecraft/tags/block/mineable/pickaxe.json
 30831ea5eca0353e7205b774a3155647717604b7 data/minecraft/tags/block/stone_pressure_plates.json
+339a2a4d7b7e6e9d4d18de24800eaf7ecbd14fd6 data/minecraft/tags/block/walls.json

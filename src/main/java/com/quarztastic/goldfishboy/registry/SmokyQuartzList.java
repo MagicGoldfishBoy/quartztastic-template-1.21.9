@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 
@@ -54,6 +55,11 @@ public class SmokyQuartzList {
     public static DeferredBlock<FenceBlock> SMOKY_QUARTZ_FENCE;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_FENCE_ITEM;
+
+
+    public static DeferredBlock<WallBlock> SMOKY_QUARTZ_WALL;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_WALL_ITEM;
 
 
     public static DeferredBlock<FenceGateBlock> SMOKY_QUARTZ_GATE;

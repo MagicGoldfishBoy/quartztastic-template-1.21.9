@@ -48,6 +48,7 @@ public class ModelDatagen extends ModelProvider {
             .button(SmokyQuartzList.SMOKY_QUARTZ_BUTTON.get())
             .pressurePlate(SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE.get())
             .fence(SmokyQuartzList.SMOKY_QUARTZ_FENCE.get())
+            .wall(SmokyQuartzList.SMOKY_QUARTZ_WALL.get())
             .fenceGate(SmokyQuartzList.SMOKY_QUARTZ_GATE.get());
 
         blockModels.familyWithExistingFullBlock(SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get())
