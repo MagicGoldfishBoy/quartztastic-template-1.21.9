@@ -7,6 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
@@ -308,6 +309,23 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_PILLAR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_PILLAR
+        );
+
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_DOOR = Quartztastic.BLOCKS.register(
+            "smoky_quartz_door", 
+            registryName -> new DoorBlock(BlockSetType.POLISHED_BLACKSTONE, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_DOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_DOOR
         );
 
     }

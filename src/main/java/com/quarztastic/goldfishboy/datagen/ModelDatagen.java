@@ -24,6 +24,7 @@ public class ModelDatagen extends ModelProvider {
         buildSimpleBlockModels(blockModels, itemModels);
         buildBlockFamilies(blockModels, itemModels);
         buildPillarModels(blockModels, itemModels);
+        buildDoorModels(blockModels, itemModels);
     }
 
     protected void buildSimpleItemModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
@@ -74,6 +75,10 @@ public class ModelDatagen extends ModelProvider {
             SmokyQuartzList.SMOKY_QUARTZ_PILLAR_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/smoky_quartz_pillar_single"))
         );
+    }
+
+    protected void buildDoorModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+        blockModels.createDoor(SmokyQuartzList.SMOKY_QUARTZ_DOOR.get());
     }
 }
 

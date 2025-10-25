@@ -34,6 +34,11 @@ public class TagKeyList {
         ResourceLocation.fromNamespaceAndPath("minecraft", "fence_gates")
     );
 
+    public static final TagKey<Block> DOORS_TAG = TagKey.create(
+        Registries.BLOCK, 
+        ResourceLocation.fromNamespaceAndPath("minecraft", "doors")
+    );
+
 
 
     public static final TagKey<Item> QUARTZ_ORE_TAG = TagKey.create(
