@@ -76,6 +76,18 @@ public class RecipeDatagen extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_PILLAR_ITEM.get())
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output);
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.CHISELED_SMOKY_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "chiseled_smoky_quartz_block_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.CHISELED_SMOKY_QUARTZ_BLOCK_ITEM.get())
+            .pattern("@")
+            .pattern("@")
+            .define('@', SmokyQuartzList.SMOKY_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_smoky_quartz_slab", has(SmokyQuartzList.SMOKY_QUARTZ_SLAB_ITEM.get()))
+            .save(this.output, "chiseled_smoky_quartz_block_by_crafting");
     }
 
     protected void buildSlabRecipes() {

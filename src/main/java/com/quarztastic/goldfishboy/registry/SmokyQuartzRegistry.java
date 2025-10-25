@@ -127,7 +127,7 @@ public class SmokyQuartzRegistry {
             registryName -> new FenceBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.4f, 2.0f)
-                .sound(SoundType.AMETHYST_CLUSTER)
+                .sound(SoundType.AMETHYST)
                 .noOcclusion()
             )
         );
@@ -142,7 +142,7 @@ public class SmokyQuartzRegistry {
             registryName -> new WallBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.8f, 4.0f)
-                .sound(SoundType.AMETHYST_CLUSTER)
+                .sound(SoundType.AMETHYST)
                 .noOcclusion()
             )
         );
@@ -221,13 +221,29 @@ public class SmokyQuartzRegistry {
             registryName -> new WallBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.8f, 4.0f)
-                .sound(SoundType.AMETHYST_CLUSTER)
+                .sound(SoundType.AMETHYST)
                 .noOcclusion()
             )
         );
 
         SmokyQuartzList.SMOKY_QUARTZ_BRICK_WALL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_BRICK_WALL
+        );
+
+
+
+        SmokyQuartzList.CHISELED_SMOKY_QUARTZ_BLOCK = Quartztastic.BLOCKS.register(
+            "chiseled_smoky_quartz_block", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.CHISELED_SMOKY_QUARTZ_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.CHISELED_SMOKY_QUARTZ_BLOCK
         );
 
 
