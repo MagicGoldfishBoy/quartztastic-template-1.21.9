@@ -2,6 +2,7 @@ package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.Table;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -126,5 +127,10 @@ public class SmokyQuartzList {
     public static DeferredBlock<Chair> SMOKY_QUARTZ_CHAIR;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_CHAIR_ITEM;
+
+
+    public static DeferredBlock<Table> SMOKY_QUARTZ_TABLE;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_TABLE_ITEM;
     
 }

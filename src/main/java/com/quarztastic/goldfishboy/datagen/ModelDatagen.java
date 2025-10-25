@@ -90,6 +90,21 @@ public class ModelDatagen extends ModelProvider {
             SmokyQuartzList.SMOKY_QUARTZ_CHAIR_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/smoky_quartz_chair"))
         );
+
+
+        ModelDatagenHelpers.createTableModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_TABLE.get(), new Variant(modLocation("block/smoky_quartz_table_single")), 
+        new Variant(modLocation("block/smoky_quartz_table_multiple")), new Variant(modLocation("block/smoky_quartz_table_single")), new Variant(modLocation("block/smoky_quartz_table_single")), 
+        new Variant(modLocation("block/smoky_quartz_table_single")), new Variant(modLocation("block/smoky_quartz_table_single")), new Variant(modLocation("block/smoky_quartz_table_multiple")), 
+        new Variant(modLocation("block/smoky_quartz_table_single")), new Variant(modLocation("block/smoky_quartz_table_single")), 
+        new Variant(modLocation("block/smoky_quartz_table_multiple")), new Variant(modLocation("block/smoky_quartz_table_single")), 
+        new Variant(modLocation("block/smoky_quartz_table_single")), new Variant(modLocation("block/smoky_quartz_table_multiple")),
+        new Variant(modLocation("block/smoky_quartz_table_multiple")), new Variant(modLocation("block/smoky_quartz_table_multiple")), 
+        new Variant(modLocation("block/smoky_quartz_table_multiple")));
+
+        itemModels.itemModelOutput.accept(
+            SmokyQuartzList.SMOKY_QUARTZ_TABLE_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/smoky_quartz_table_single"))
+        );
     }
 }
 

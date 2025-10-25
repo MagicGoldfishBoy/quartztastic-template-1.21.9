@@ -26,6 +26,7 @@
 
   "block.quartztastic.smoky_quartz_door": "Smoky Quartz Door",
   "block.quartztastic.smoky_quartz_chair": "Smoky Quartz Chair",
+  "block.quartztastic.smoky_quartz_table": "Smoky Quartz Table",
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
