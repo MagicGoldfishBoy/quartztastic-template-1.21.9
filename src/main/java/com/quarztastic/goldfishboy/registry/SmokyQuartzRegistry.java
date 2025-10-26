@@ -22,6 +22,7 @@ import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -513,6 +514,22 @@ public class SmokyQuartzRegistry {
             registryName -> new StandingAndWallBlockItem(SmokyQuartzList.SMOKY_QUARTZ_SOUL_TORCH.get(), SmokyQuartzList.SMOKY_QUARTZ_WALL_SOUL_TORCH.get(), Direction.DOWN, new Item.Properties()
                 .setId(ResourceKey.create(Registries.ITEM, registryName))
             )
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
+            "smoky_quartz_ladder", 
+            registryName -> new LadderBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .sound(SoundType.AMETHYST_CLUSTER)
+                .strength(0.8f, 4.0f)
+                .noOcclusion()
+                .requiresCorrectToolForDrops()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_LADDER
         );
 
     }

@@ -84,6 +84,12 @@ public class TagDatagen extends BlockTagsProvider {
             .add(
                 SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN.get()
             );
+
+
+        this.tag(TagKeyList.CLIMBABLE_TAG)
+            .add(
+                SmokyQuartzList.SMOKY_QUARTZ_LADDER.get()
+            );
     }
     
 }

@@ -10,6 +10,7 @@ import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.blockstates.MultiPartGenerator;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.blockstates.PropertyDispatch;
+import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelLocationUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.renderer.block.model.Variant;
@@ -20,6 +21,7 @@ import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class ModelDatagenHelpers extends ModelProvider {
@@ -128,6 +130,26 @@ public class ModelDatagenHelpers extends ModelProvider {
                     .select(Direction.WEST, BlockModelGenerators.Y_ROT_90)
                     .select(Direction.EAST, BlockModelGenerators.Y_ROT_270)
             )
+        );
+    }
+
+    public static void createLadderBlockstates(BlockModelGenerators blockModels, ItemModelGenerators itemModels, LadderBlock block, Item item, Variant variant) {
+        blockModels.blockStateOutput.accept(
+            MultiVariantGenerator.dispatch(
+                block,
+                BlockModelGenerators.variant(variant)
+            ).with(
+                PropertyDispatch.modify(BlockStateProperties.HORIZONTAL_FACING)
+                    .select(Direction.SOUTH, BlockModelGenerators.NOP)
+                    .select(Direction.NORTH, BlockModelGenerators.Y_ROT_180)
+                    .select(Direction.WEST, BlockModelGenerators.Y_ROT_90)
+                    .select(Direction.EAST, BlockModelGenerators.Y_ROT_270)
+            )
+        );
+
+        itemModels.itemModelOutput.accept(
+            item,
+            ItemModelUtils.plainModel(ModelLocationUtils.getModelLocation(block))
         );
     }
 

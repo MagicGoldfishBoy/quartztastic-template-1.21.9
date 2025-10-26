@@ -1,4 +1,4 @@
-// 1.21.9	2025-10-26T10:49:51.562016687	Model Definitions - quartztastic
+// 1.21.9	2025-10-26T11:39:34.953633689	Model Definitions - quartztastic
 6b8d68d8af352c24aad6403b6b1c147333701061 assets/quartztastic/blockstates/chiseled_smoky_quartz_block.json
 7ce5bcd052ef26f50092d9ea18d6c620de50fad1 assets/quartztastic/blockstates/smoky_quartz_block.json
 c94bb350d14178657813358d8694a200a2470a2e assets/quartztastic/blockstates/smoky_quartz_brick_wall.json
@@ -11,6 +11,7 @@ cef0db576363ad0a4a44169cd632e7db80f3c021 assets/quartztastic/blockstates/smoky_q
 da841274adf85e3c62664f7d15f5dd1a2bb8d841 assets/quartztastic/blockstates/smoky_quartz_door.json
 14aa5af36c691a39126d0da5c91a5aa5c7ea6b66 assets/quartztastic/blockstates/smoky_quartz_fence.json
 b1e592e68223d04e9b7e52c9ac879c24a6e75fb0 assets/quartztastic/blockstates/smoky_quartz_gate.json
+b73f6f0bb28fa2e1789205f1cc4cc18909b388f6 assets/quartztastic/blockstates/smoky_quartz_ladder.json
 bd77b256ff3dc6d2591b0511cfbd8e09f2f5bb36 assets/quartztastic/blockstates/smoky_quartz_lantern.json
 89fa0e3172bdc21e3585cfcdb2c7354b5d8558b1 assets/quartztastic/blockstates/smoky_quartz_light.json
 c76d80c89f395cc4a1027f2b9721833b1210f629 assets/quartztastic/blockstates/smoky_quartz_ore.json
@@ -42,6 +43,7 @@ e28490dee88d8589bec71f33fb42c393b955eaed assets/quartztastic/items/smoky_quartz_
 2b831700819912f9fe2d40eeee61478934f13e7b assets/quartztastic/items/smoky_quartz_door.json
 b56f0bbadf9f573a220cb667e548a8c70b9d3016 assets/quartztastic/items/smoky_quartz_fence.json
 1f806583d4812f40765e58b74abe5e69ab444abb assets/quartztastic/items/smoky_quartz_gate.json
+12c3706ef2dc2eb13019c16697defa5347307ea1 assets/quartztastic/items/smoky_quartz_ladder.json
 c944ae1b5cb2077bd92d0215acac2e187b6190fd assets/quartztastic/items/smoky_quartz_lantern.json
 a151e2e4190adf4e6c0fe5713d01cf6c8aa2787e assets/quartztastic/items/smoky_quartz_light.json
 9b5ba9dd87a7d67a2fa95e7d239ab39087fbc51b assets/quartztastic/items/smoky_quartz_ore.json

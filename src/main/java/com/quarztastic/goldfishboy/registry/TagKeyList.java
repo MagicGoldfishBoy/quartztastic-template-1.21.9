@@ -46,6 +46,12 @@ public class TagKeyList {
     );
 
 
+    public static final TagKey<Block> CLIMBABLE_TAG = TagKey.create(
+        Registries.BLOCK, 
+        ResourceLocation.fromNamespaceAndPath("minecraft", "climbable")
+    );
+
+
 
     public static final TagKey<Item> QUARTZ_ORE_TAG = TagKey.create(
         Registries.ITEM, 

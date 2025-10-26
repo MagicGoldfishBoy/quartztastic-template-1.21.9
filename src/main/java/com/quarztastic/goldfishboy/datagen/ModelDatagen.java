@@ -117,6 +117,10 @@ public class ModelDatagen extends ModelProvider {
             SmokyQuartzList.SMOKY_QUARTZ_SHELF_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/smoky_quartz_shelf"))
         );
+
+        
+        ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_LADDER.get(), SmokyQuartzList.SMOKY_QUARTZ_LADDER_ITEM.get(), 
+            new Variant(modLocation("block/smoky_quartz_ladder")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
