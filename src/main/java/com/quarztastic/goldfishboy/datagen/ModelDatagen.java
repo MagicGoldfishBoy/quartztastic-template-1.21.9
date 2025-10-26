@@ -27,6 +27,7 @@ public class ModelDatagen extends ModelProvider {
         buildDoorModels(blockModels, itemModels);
         buildBlockbenchBlockstates(blockModels, itemModels);
         buildLanternModels(blockModels, itemModels);
+        buildTorchModels(blockModels, itemModels);
     }
 
     protected void buildSimpleItemModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
@@ -126,6 +127,13 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createChainBlockstates(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_CHAIN.get(), SmokyQuartzList.SMOKY_QUARTZ_CHAIN_ITEM.get());
 
+    }
+
+    protected void buildTorchModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
+        blockModels.createNormalTorch(SmokyQuartzList.SMOKY_QUARTZ_TORCH.get(), SmokyQuartzList.SMOKY_QUARTZ_WALL_TORCH.get());
+
+        blockModels.createNormalTorch(SmokyQuartzList.SMOKY_QUARTZ_SOUL_TORCH.get(), SmokyQuartzList.SMOKY_QUARTZ_WALL_SOUL_TORCH.get());
     }
 }
 

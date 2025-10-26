@@ -1,14 +1,22 @@
 package com.quarztastic.goldfishboy.registry;
 
+import java.util.Properties;
+
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
 
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
@@ -19,7 +27,10 @@ import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.WallTorchBlock;
+import net.minecraft.world.level.block.entity.trialspawner.TrialSpawner.FlameParticle;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -442,6 +453,66 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_CHAIN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_CHAIN
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_TORCH = Quartztastic.BLOCKS.register(
+            "smoky_quartz_torch", 
+            registryName -> new TorchBlock(ParticleTypes.FLAME , BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .sound(SoundType.AMETHYST)
+                .instabreak()
+                .noOcclusion()
+                .noCollision()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_WALL_TORCH = Quartztastic.BLOCKS.register(
+            "smoky_quartz_wall_torch", 
+            registryName -> new WallTorchBlock(ParticleTypes.FLAME , BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .sound(SoundType.AMETHYST)
+                .instabreak()
+                .noOcclusion()
+                .noCollision()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_TORCH_ITEM = Quartztastic.ITEMS.register(
+            "smoky_quartz_torch", 
+            registryName -> new StandingAndWallBlockItem(SmokyQuartzList.SMOKY_QUARTZ_TORCH.get(), SmokyQuartzList.SMOKY_QUARTZ_WALL_TORCH.get(), Direction.DOWN, new Item.Properties()
+                .setId(ResourceKey.create(Registries.ITEM, registryName))
+            )
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_SOUL_TORCH = Quartztastic.BLOCKS.register(
+            "smoky_quartz_soul_torch", 
+            registryName -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME , BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .sound(SoundType.AMETHYST)
+                .instabreak()
+                .noOcclusion()
+                .noCollision()
+            )
+        ); 
+
+        SmokyQuartzList.SMOKY_QUARTZ_WALL_SOUL_TORCH = Quartztastic.BLOCKS.register(
+            "smoky_quartz_wall_soul_torch", 
+            registryName -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME , BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .sound(SoundType.AMETHYST)
+                .instabreak()
+                .noOcclusion()
+                .noCollision()
+            )
+        ); 
+
+        SmokyQuartzList.SMOKY_QUARTZ_SOUL_TORCH_ITEM = Quartztastic.ITEMS.register(
+            "smoky_quartz_soul_torch", 
+            registryName -> new StandingAndWallBlockItem(SmokyQuartzList.SMOKY_QUARTZ_SOUL_TORCH.get(), SmokyQuartzList.SMOKY_QUARTZ_WALL_SOUL_TORCH.get(), Direction.DOWN, new Item.Properties()
+                .setId(ResourceKey.create(Registries.ITEM, registryName))
+            )
         );
 
     }

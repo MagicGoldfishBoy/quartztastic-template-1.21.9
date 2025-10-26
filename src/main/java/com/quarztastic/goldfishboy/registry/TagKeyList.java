@@ -56,5 +56,10 @@ public class TagKeyList {
         Registries.ITEM, 
         ResourceLocation.fromNamespaceAndPath("c", "gems/quartz")
     );
+
+    public static final TagKey<Item> COALS_TAG = TagKey.create(
+        Registries.ITEM, 
+        ResourceLocation.fromNamespaceAndPath("minecraft", "coals")
+    );
     
 }

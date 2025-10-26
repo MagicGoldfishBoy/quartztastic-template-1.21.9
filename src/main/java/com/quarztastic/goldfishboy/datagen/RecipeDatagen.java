@@ -4,6 +4,7 @@ import java.rmi.registry.Registry;
 import java.util.concurrent.CompletableFuture;
 
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
+import com.quarztastic.goldfishboy.registry.TagKeyList;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
@@ -16,6 +17,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -39,6 +41,7 @@ public class RecipeDatagen extends RecipeProvider {
         buildTableRecipes();
         buildShelfRecipes();
         buildLanternChainRecipes();
+        buildTorchRecipes();
     }
 
     protected void buildItemRecipes() {
@@ -332,6 +335,30 @@ public class RecipeDatagen extends RecipeProvider {
             .pattern("@")
             .pattern("@")
             .define('@', SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+    }
+
+    protected void buildTorchRecipes() {
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_TORCH_ITEM.get(), 4)
+            .pattern("@")
+            .pattern("#")
+            .define('@', TagKeyList.COALS_TAG)
+            .define('#', SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_coal_or_charcoal", has(TagKeyList.COALS_TAG))
+            .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_SOUL_TORCH_ITEM.get(), 4)
+            .pattern("@")
+            .pattern("$")
+            .pattern("#")
+            .define('@', TagKeyList.COALS_TAG)
+            .define('$',Items.SOUL_SAND)
+            .define('#', SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_coal_or_charcoal", has(TagKeyList.COALS_TAG))
+            .unlockedBy("has_soul_sand", has(Items.SOUL_SAND))
             .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .save(this.output);
     }

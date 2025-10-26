@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "quartztastic:smoky_quartz_crystal",
+    "@": "#minecraft:coals"
+  },
+  "pattern": [
+    "@",
+    "#"
+  ],
+  "result": {
+    "count": 4,
+    "id": "quartztastic:smoky_quartz_torch"
+  }
+}

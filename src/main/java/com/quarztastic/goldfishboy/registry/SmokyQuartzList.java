@@ -17,7 +17,9 @@ import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.WallTorchBlock;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 
@@ -160,5 +162,19 @@ public class SmokyQuartzList {
     public static DeferredBlock<ChainBlock> SMOKY_QUARTZ_CHAIN;
     
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_CHAIN_ITEM;
+
+
+    public static DeferredBlock<TorchBlock> SMOKY_QUARTZ_TORCH;
+
+    public static DeferredBlock<WallTorchBlock> SMOKY_QUARTZ_WALL_TORCH;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_TORCH_ITEM;
+
+
+    public static DeferredBlock<TorchBlock> SMOKY_QUARTZ_SOUL_TORCH;
+
+    public static DeferredBlock<WallTorchBlock> SMOKY_QUARTZ_WALL_SOUL_TORCH;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_SOUL_TORCH_ITEM;
     
 }
