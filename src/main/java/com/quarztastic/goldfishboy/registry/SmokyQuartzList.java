@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
@@ -141,7 +142,17 @@ public class SmokyQuartzList {
 
 
     public static DeferredBlock<Block> SMOKY_QUARTZ_LIGHT;
-    
+
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_LIGHT_ITEM;
+
+
+    public static DeferredBlock<LanternBlock> SMOKY_QUARTZ_LANTERN;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_LANTERN_ITEM;
+    
+
+    public static DeferredBlock<LanternBlock> SMOKY_QUARTZ_SOUL_LANTERN;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_SOUL_LANTERN_ITEM;
     
 }

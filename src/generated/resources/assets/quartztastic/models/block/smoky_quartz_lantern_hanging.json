@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_hanging_lantern",
+  "textures": {
+    "lantern": "quartztastic:block/smoky_quartz_lantern"
+  }
+}

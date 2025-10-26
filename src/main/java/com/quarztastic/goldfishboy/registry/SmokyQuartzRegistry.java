@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -393,6 +394,38 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_LIGHT
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_LANTERN = Quartztastic.BLOCKS.register(
+            "smoky_quartz_lantern", 
+            registryName -> new LanternBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .lightLevel(state -> 15)
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_LANTERN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_LANTERN
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN = Quartztastic.BLOCKS.register(
+            "smoky_quartz_soul_lantern", 
+            registryName -> new LanternBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .lightLevel(state -> 15)
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN
         );
 
     }
