@@ -28,6 +28,7 @@
   "block.quartztastic.smoky_quartz_chair": "Smoky Quartz Chair",
   "block.quartztastic.smoky_quartz_table": "Smoky Quartz Table",
   "block.quartztastic.smoky_quartz_shelf": "Smoky Quartz Shelf",
+  "block.quartztastic.smoky_quartz_light": "Smoky Quartz Light",
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

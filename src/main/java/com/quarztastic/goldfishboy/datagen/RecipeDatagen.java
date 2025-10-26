@@ -16,6 +16,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public class RecipeDatagen extends RecipeProvider {
@@ -96,7 +97,15 @@ public class RecipeDatagen extends RecipeProvider {
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_PILLAR_ITEM.get())
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
-            .save(this.output);           
+            .save(this.output);   
+            
+            
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_LIGHT_ITEM.get())
+            .requires(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
+            .requires(Items.GLOWSTONE)
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
+            .unlockedBy("has_glowstone", has(Items.GLOWSTONE))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {

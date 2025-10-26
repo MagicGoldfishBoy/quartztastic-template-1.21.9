@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "quartztastic:smoky_quartz_block",
+    "minecraft:glowstone"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:smoky_quartz_light"
+  }
+}

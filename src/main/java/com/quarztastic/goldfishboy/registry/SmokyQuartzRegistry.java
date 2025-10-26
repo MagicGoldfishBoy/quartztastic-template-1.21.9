@@ -379,6 +379,22 @@ public class SmokyQuartzRegistry {
             SmokyQuartzList.SMOKY_QUARTZ_SHELF
         );
 
+
+        SmokyQuartzList.SMOKY_QUARTZ_LIGHT = Quartztastic.BLOCKS.register(
+            "smoky_quartz_light", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .lightLevel(state -> 15)
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_LIGHT
+        );
+
     }
     
 }
