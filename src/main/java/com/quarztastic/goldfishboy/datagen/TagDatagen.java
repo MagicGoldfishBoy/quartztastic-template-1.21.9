@@ -44,7 +44,8 @@ public class TagDatagen extends BlockTagsProvider {
 
                 SmokyQuartzList.SMOKY_QUARTZ_DOOR.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_CHAIR.get(),
-                SmokyQuartzList.SMOKY_QUARTZ_TABLE.get()
+                SmokyQuartzList.SMOKY_QUARTZ_TABLE.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_SHELF.get()
             );
         
         this.tag(TagKeyList.STONE_PRESSURE_PLATES_TAG)

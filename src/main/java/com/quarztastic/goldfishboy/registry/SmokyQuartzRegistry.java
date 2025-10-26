@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy.registry;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
 
 import net.minecraft.core.registries.Registries;
@@ -34,7 +35,7 @@ public class SmokyQuartzRegistry {
             "smoky_quartz_ore", 
             registryName -> new Block(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(0.8f, 4.0f)
+                .strength(2.0f, 4.0f)
                 .sound(SoundType.AMETHYST)
                 .requiresCorrectToolForDrops()
                 .noOcclusion()
@@ -360,6 +361,22 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_TABLE
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_SHELF = Quartztastic.BLOCKS.register(
+            "smoky_quartz_shelf", 
+            registryName -> new Shelf(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_SHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_SHELF
         );
 
     }

@@ -105,6 +105,14 @@ public class ModelDatagen extends ModelProvider {
             SmokyQuartzList.SMOKY_QUARTZ_TABLE_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/smoky_quartz_table_single"))
         );
+
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SHELF.get(), new Variant(modLocation("block/smoky_quartz_shelf")));
+
+        itemModels.itemModelOutput.accept(
+            SmokyQuartzList.SMOKY_QUARTZ_SHELF_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/smoky_quartz_shelf"))
+        );
     }
 }
 

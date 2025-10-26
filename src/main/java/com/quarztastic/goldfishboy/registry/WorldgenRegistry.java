@@ -64,7 +64,7 @@ public class WorldgenRegistry {
             new PlacedFeature(
                 configuredFeatures.getOrThrow(SMOKY_QUARTZ_ORE_CONFIGURED),
                 List.of(
-                    CountPlacement.of(24),
+                    CountPlacement.of(36),
                     InSquarePlacement.spread(),
                     HeightRangePlacement.uniform(
                         VerticalAnchor.absolute(0),

@@ -130,6 +130,7 @@ public class Quartztastic {
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_DOOR.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_CHAIR.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_TABLE.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_SHELF.get(), ChunkSectionLayer.TRANSLUCENT);
     }
 
 
