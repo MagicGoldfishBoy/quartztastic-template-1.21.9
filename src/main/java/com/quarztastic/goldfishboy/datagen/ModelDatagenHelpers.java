@@ -20,6 +20,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -144,6 +145,34 @@ public class ModelDatagenHelpers extends ModelProvider {
                     .select(Direction.NORTH, BlockModelGenerators.Y_ROT_180)
                     .select(Direction.WEST, BlockModelGenerators.Y_ROT_90)
                     .select(Direction.EAST, BlockModelGenerators.Y_ROT_270)
+            )
+        );
+
+        itemModels.itemModelOutput.accept(
+            item,
+            ItemModelUtils.plainModel(ModelLocationUtils.getModelLocation(block))
+        );
+    }
+
+    public static void createRotatableStorageBlock(BlockModelGenerators blockModels, ItemModelGenerators itemModels, Block block, Item item,
+    Variant closed_variant, Variant open_variant) {
+
+        MultiVariant closed_multivariant = new MultiVariant(WeightedList.of(closed_variant));
+        MultiVariant open_multivariant = new MultiVariant(WeightedList.of(open_variant));
+
+        blockModels.blockStateOutput.accept(
+            MultiVariantGenerator.dispatch(block).with(
+                PropertyDispatch.initial(BlockStateProperties.OPEN)
+                    .select(false, closed_multivariant)
+                    .select(true, open_multivariant)
+            ).with(
+            PropertyDispatch.modify(DirectionalBlock.FACING)
+                .select(Direction.SOUTH, BlockModelGenerators.NOP)
+                .select(Direction.NORTH, BlockModelGenerators.Y_ROT_180)
+                .select(Direction.WEST, BlockModelGenerators.Y_ROT_90)
+                .select(Direction.EAST, BlockModelGenerators.Y_ROT_270)
+                .select(Direction.UP, BlockModelGenerators.X_ROT_90)
+                .select(Direction.DOWN, BlockModelGenerators.X_ROT_270)
             )
         );
 

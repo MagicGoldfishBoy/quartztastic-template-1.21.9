@@ -6,7 +6,9 @@ import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.Shelf;
+import com.quarztastic.goldfishboy.block.SmokyQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.entity.SmokyQuartzBarrelEntity;
 
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -31,6 +33,7 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.trialspawner.TrialSpawner.FlameParticle;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -530,6 +533,30 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_LADDER
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_BARREL = Quartztastic.BLOCKS.register(
+            "smoky_quartz_barrel", 
+            registryName -> new SmokyQuartzBarrelBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .requiresCorrectToolForDrops()
+                .sound(SoundType.AMETHYST)
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_BARREL_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "smoky_quartz_barrel_entity",
+            () -> new BlockEntityType<>(
+                SmokyQuartzBarrelEntity::new,
+                false,
+                SmokyQuartzList.SMOKY_QUARTZ_BARREL.get())
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_BARREL
         );
 
     }

@@ -375,6 +375,18 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
     }
 
+    protected void buildContainerRecipes() {
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_BARREL_ITEM.get())
+            .pattern("@#@")
+            .pattern("@ @")
+            .pattern("@#@")
+            .define('@', SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
+            .define('#', SmokyQuartzList.SMOKY_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output);
+    }
+
     public static class Runner extends RecipeProvider.Runner {
 
         public Runner(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

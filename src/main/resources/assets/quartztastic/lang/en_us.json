@@ -34,7 +34,10 @@
   "block.quartztastic.smoky_quartz_chain": "Smoky Quartz Chain",
   "item.quartztastic.smoky_quartz_torch": "Smoky Quartz Torch",
   "item.quartztastic.smoky_quartz_soul_torch": "Smoky Quartz Soul Torch",
+
   "block.quartztastic.smoky_quartz_ladder": "Smoky Quartz Ladder",
+  "block.quartztastic.smoky_quartz_barrel": "Smoky Quartz Barrel",
+  "container.smoky_quartz_barrel": "Smoky Quartz Barrel",
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

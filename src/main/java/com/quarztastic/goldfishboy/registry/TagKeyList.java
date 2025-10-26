@@ -39,6 +39,11 @@ public class TagKeyList {
         ResourceLocation.fromNamespaceAndPath("minecraft", "doors")
     );
 
+    public static final TagKey<Block> BARRELS_TAG = TagKey.create(
+        Registries.BLOCK, 
+        ResourceLocation.fromNamespaceAndPath("minecraft", "barrels")
+    );
+
 
     public static final TagKey<Block> PIGLIN_REPELLENT_TAG = TagKey.create(
         Registries.BLOCK, 
