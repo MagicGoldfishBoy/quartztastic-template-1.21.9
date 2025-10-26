@@ -38,7 +38,7 @@ public class RecipeDatagen extends RecipeProvider {
         buildChairRecipes();
         buildTableRecipes();
         buildShelfRecipes();
-        buildLanternRecipes();
+        buildLanternChainRecipes();
     }
 
     protected void buildItemRecipes() {
@@ -305,7 +305,7 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);            
     }
 
-    protected void buildLanternRecipes() {
+    protected void buildLanternChainRecipes() {
 
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_LANTERN_ITEM.get())
             .pattern("@@@")
@@ -325,6 +325,14 @@ public class RecipeDatagen extends RecipeProvider {
             .define('#', Items.SOUL_TORCH)
             .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .unlockedBy("has_soul_torch", has(Items.SOUL_TORCH))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_CHAIN.get())
+            .pattern("@")
+            .pattern("@")
+            .pattern("@")
+            .define('@', SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .save(this.output);
     }
 

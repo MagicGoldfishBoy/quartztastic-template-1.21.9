@@ -1,6 +1,7 @@
 package com.quarztastic.goldfishboy.datagen;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -9,11 +10,14 @@ import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.blockstates.MultiPartGenerator;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.blockstates.PropertyDispatch;
+import net.minecraft.client.data.models.model.ModelLocationUtils;
+import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.renderer.block.model.Variant;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.data.PackOutput;
 import net.minecraft.util.random.WeightedList;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -223,6 +227,26 @@ public class ModelDatagenHelpers extends ModelProvider {
                         north_east_west_multi
                     )
             );
+    }
+
+    public static void createChainBlockstates(BlockModelGenerators blockModels, ItemModelGenerators itemModels, Block block, Item item) {
+
+        Variant variant = new Variant(ModelLocationUtils.getModelLocation(block));
+
+        blockModels.blockStateOutput.accept(
+            MultiVariantGenerator.dispatch(
+                block,
+                BlockModelGenerators.variant(variant)
+            ).with(
+                PropertyDispatch.modify(BlockStateProperties.AXIS)
+                    .select(Direction.Axis.Y, BlockModelGenerators.NOP)
+                    .select(Direction.Axis.Z, BlockModelGenerators.X_ROT_90)
+                    .select(Direction.Axis.X, BlockModelGenerators.X_ROT_90.then(BlockModelGenerators.Y_ROT_90))
+            )
+        );
+
+
+        itemModels.generateFlatItem(item, ModelTemplates.FLAT_ITEM);
     }
     
 }

@@ -31,6 +31,7 @@
   "block.quartztastic.smoky_quartz_light": "Smoky Quartz Light",
   "block.quartztastic.smoky_quartz_lantern": "Smoky Quartz Lantern",
   "block.quartztastic.smoky_quartz_soul_lantern": "Smoky Quartz Soul Lantern",
+  "block.quartztastic.smoky_quartz_chain": "Smoky Quartz Chain",
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

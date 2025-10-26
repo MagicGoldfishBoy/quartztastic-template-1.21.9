@@ -9,6 +9,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
@@ -149,10 +150,15 @@ public class SmokyQuartzList {
     public static DeferredBlock<LanternBlock> SMOKY_QUARTZ_LANTERN;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_LANTERN_ITEM;
-    
+
 
     public static DeferredBlock<LanternBlock> SMOKY_QUARTZ_SOUL_LANTERN;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_SOUL_LANTERN_ITEM;
+
+
+    public static DeferredBlock<ChainBlock> SMOKY_QUARTZ_CHAIN;
+    
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_CHAIN_ITEM;
     
 }

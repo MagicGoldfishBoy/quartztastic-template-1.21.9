@@ -124,6 +124,8 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.createLantern(SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN.get());
 
+        ModelDatagenHelpers.createChainBlockstates(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_CHAIN.get(), SmokyQuartzList.SMOKY_QUARTZ_CHAIN_ITEM.get());
+
     }
 }
 
