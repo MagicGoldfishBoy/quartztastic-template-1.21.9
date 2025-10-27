@@ -7,11 +7,13 @@ import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBarrelBlock;
+import com.quarztastic.goldfishboy.block.SmokyQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
 import com.quarztastic.goldfishboy.block.SmokyQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBarrelEntity;
+import com.quarztastic.goldfishboy.entity.SmokyQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzNightstandEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzOvenEntity;
@@ -155,6 +157,13 @@ public class SmokyQuartzList {
     public static Supplier<BlockEntityType<SmokyQuartzOvenEntity>> SMOKY_QUARTZ_OVEN_ENTITY;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_OVEN_ITEM;
+
+
+    public static DeferredBlock<SmokyQuartzBlastFurnaceBlock> SMOKY_QUARTZ_BLAST_FURNACE_BLOCK;
+
+    public static Supplier<BlockEntityType<SmokyQuartzBlastFurnaceEntity>> SMOKY_QUARTZ_BLAST_FURNACE_ENTITY;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_BLAST_FURNACE_ITEM;
 
 
 

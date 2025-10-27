@@ -8,11 +8,13 @@ import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBarrelBlock;
+import com.quarztastic.goldfishboy.block.SmokyQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
 import com.quarztastic.goldfishboy.block.SmokyQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBarrelEntity;
+import com.quarztastic.goldfishboy.entity.SmokyQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzNightstandEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzOvenEntity;
@@ -383,6 +385,30 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_OVEN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_OVEN_BLOCK
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_BLOCK = Quartztastic.BLOCKS.register(
+            "smoky_quartz_blast_furnace", 
+            registryName -> new SmokyQuartzBlastFurnaceBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .requiresCorrectToolForDrops()
+                .sound(SoundType.AMETHYST)
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "smoky_quartz_blast_furnace_entity",
+            () -> new BlockEntityType<>(
+                SmokyQuartzBlastFurnaceEntity::new,
+                false,
+                SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_BLOCK.get())
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_BLOCK
         );
 
 

@@ -53,6 +53,9 @@
   "block.quartztastic.smoky_quartz_oven": "Smoky Quartz Oven",
   "container.smoky_quartz_oven": "Smoky Quartz Oven",
 
+  "block.quartztastic.smoky_quartz_blast_furnace": "Smoky Quartz Blast Furnace",
+  "container.smoky_quartz_blast_furnace": "Smoky Quartz Blast Furnace",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

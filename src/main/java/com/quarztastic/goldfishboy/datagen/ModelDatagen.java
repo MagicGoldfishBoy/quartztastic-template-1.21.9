@@ -186,7 +186,7 @@ public class ModelDatagen extends ModelProvider {
                 ItemModelUtils.plainModel(modLocation(name))
             );
             }
-            if (rawName.contains("furnace")) {
+            if (rawName.contains("furnace") || rawName.contains("oven")) {
                 String name = "block/" + rawName;
 
                 LOGGER.info("Generating model for: {}", name);
