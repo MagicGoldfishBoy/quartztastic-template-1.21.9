@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "quartztastic:smoky_quartz_slab",
+    "@": "quartztastic:smoky_quartz_block"
+  },
+  "pattern": [
+    "@#@",
+    "@ @",
+    "@#@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:smoky_quartz_barrel"
+  }
+}

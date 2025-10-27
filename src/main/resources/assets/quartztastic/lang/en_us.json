@@ -28,6 +28,7 @@
   "block.quartztastic.smoky_quartz_chair": "Smoky Quartz Chair",
   "block.quartztastic.smoky_quartz_table": "Smoky Quartz Table",
   "block.quartztastic.smoky_quartz_shelf": "Smoky Quartz Shelf",
+
   "block.quartztastic.smoky_quartz_light": "Smoky Quartz Light",
   "block.quartztastic.smoky_quartz_lantern": "Smoky Quartz Lantern",
   "block.quartztastic.smoky_quartz_soul_lantern": "Smoky Quartz Soul Lantern",
@@ -36,8 +37,12 @@
   "item.quartztastic.smoky_quartz_soul_torch": "Smoky Quartz Soul Torch",
 
   "block.quartztastic.smoky_quartz_ladder": "Smoky Quartz Ladder",
+
   "block.quartztastic.smoky_quartz_barrel": "Smoky Quartz Barrel",
   "container.smoky_quartz_barrel": "Smoky Quartz Barrel",
+  "block.quartztastic.smoky_quartz_nightstand": "Smoky Quartz Nightstand",
+  "container.smoky_quartz_nightstand": "Smoky Quartz Nightstand",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

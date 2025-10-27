@@ -6,8 +6,10 @@ import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBarrelBlock;
+import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBarrelEntity;
+import com.quarztastic.goldfishboy.entity.SmokyQuartzNightstandEntity;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -194,5 +196,12 @@ public class SmokyQuartzList {
     public static Supplier<BlockEntityType<SmokyQuartzBarrelEntity>> SMOKY_QUARTZ_BARREL_ENTITY;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_BARREL_ITEM;
+
+    
+    public static DeferredBlock<SmokyQuartzNightstand> SMOKY_QUARTZ_NIGHTSTAND;
+
+    public static Supplier<BlockEntityType<SmokyQuartzNightstandEntity>> SMOKY_QUARTZ_NIGHTSTAND_ENTITY;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_NIGHTSTAND_ITEM;
     
 }

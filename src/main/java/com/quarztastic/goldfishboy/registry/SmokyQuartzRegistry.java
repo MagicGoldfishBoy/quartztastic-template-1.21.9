@@ -7,8 +7,10 @@ import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBarrelBlock;
+import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBarrelEntity;
+import com.quarztastic.goldfishboy.entity.SmokyQuartzNightstandEntity;
 
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -557,6 +559,30 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_BARREL
+        );
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND = Quartztastic.BLOCKS.register(
+            "smoky_quartz_nightstand", 
+            registryName -> new SmokyQuartzNightstand(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .requiresCorrectToolForDrops()
+                .sound(SoundType.AMETHYST)
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "smoky_quartz_nightstand_entity",
+            () -> new BlockEntityType<>(
+                SmokyQuartzNightstandEntity::new,
+                false,
+                SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND.get())
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND
         );
 
     }

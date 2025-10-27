@@ -43,6 +43,7 @@ public class RecipeDatagen extends RecipeProvider {
         buildLanternChainRecipes();
         buildTorchRecipes();
         buildLadderRecipes();
+        buildContainerRecipes();
     }
 
     protected void buildItemRecipes() {
@@ -384,6 +385,18 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
             .define('#', SmokyQuartzList.SMOKY_QUARTZ_SLAB_ITEM.get())
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND_ITEM.get(), 2)
+            .pattern("###")
+            .pattern("@$@")
+            .pattern("@@@")
+            .define('@', SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
+            .define('#', SmokyQuartzList.SMOKY_QUARTZ_SLAB_ITEM.get())
+            .define('$', Items.CHEST)
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
+            .unlockedBy("has_chest", has(Items.CHEST))
             .save(this.output);
     }
 
