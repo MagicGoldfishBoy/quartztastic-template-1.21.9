@@ -40,12 +40,21 @@ public class WorldgenRegistry {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMOKY_QUARTZ_NETHERRACK_ORE_CONFIGURED = 
             createConfiguredFeatureKey("smoky_quartz_netherrack_ore");
     
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_QUARTZ_ORE_CONFIGURED = 
+            createConfiguredFeatureKey("rose_quartz_ore");
+
             
+
     public static final ResourceKey<PlacedFeature> SMOKY_QUARTZ_ORE_PLACED = 
             createPlacedFeatureKey("smoky_quartz_ore");
 
     public static final ResourceKey<PlacedFeature> SMOKY_QUARTZ_NETHERRACK_ORE_PLACED = 
             createPlacedFeatureKey("smoky_quartz_netherrack_ore");
+
+
+    public static final ResourceKey<PlacedFeature> ROSE_QUARTZ_ORE_PLACED = 
+            createPlacedFeatureKey("rose_quartz_ore");
         
 
     public static void bootstrapConfiguredFeatures(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -67,6 +76,15 @@ public class WorldgenRegistry {
                 netherrackReplaceables,
                 SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE.get().defaultBlockState(),
                 12
+            ))
+        );
+        
+
+        context.register(ROSE_QUARTZ_ORE_CONFIGURED,
+            new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(
+                netherrackReplaceables,
+                RoseQuartzList.ROSE_QUARTZ_ORE.get().defaultBlockState(),
+                8
             ))
         );
     }
@@ -106,5 +124,23 @@ public class WorldgenRegistry {
                 )
             )
         );
+
+        
+
+        context.register(ROSE_QUARTZ_ORE_PLACED,
+            new PlacedFeature(
+                configuredFeatures.getOrThrow(ROSE_QUARTZ_ORE_CONFIGURED),
+                List.of(
+                    CountPlacement.of(30),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(
+                        VerticalAnchor.absolute(0),
+                        VerticalAnchor.absolute(118)
+                    ),
+                    BiomeFilter.biome()
+                )
+            )
+        );
+
     }
 }

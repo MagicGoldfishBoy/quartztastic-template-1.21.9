@@ -6,6 +6,7 @@ import com.mojang.logging.LogUtils;
 import com.quarztastic.goldfishboy.datagen.Datagen;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
+import com.quarztastic.goldfishboy.registry.RoseQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
 
@@ -85,6 +86,7 @@ public class Quartztastic {
         EntityRegistry.init(modEventBus);
 
         SmokyQuartzRegistry.registerAll();
+        RoseQuartzRegistry.registerAll();
 
 
         NeoForge.EVENT_BUS.register(this);

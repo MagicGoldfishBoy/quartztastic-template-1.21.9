@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy.datagen;
 import javax.annotation.Nonnull;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
@@ -38,6 +39,8 @@ public class ModelDatagen extends ModelProvider {
     protected void buildSimpleItemModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
         itemModels.generateFlatItem(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get(), ModelTemplates.FLAT_ITEM);
+
+        itemModels.generateFlatItem(RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get(), ModelTemplates.FLAT_ITEM);
     }
 
     protected void buildSimpleBlockModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
@@ -55,6 +58,9 @@ public class ModelDatagen extends ModelProvider {
         blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_TILES.get());
 
         blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_LIGHT.get());
+
+
+        blockModels.createTrivialCube(RoseQuartzList.ROSE_QUARTZ_ORE.get());
     }
 
     protected void buildBlockFamilies(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

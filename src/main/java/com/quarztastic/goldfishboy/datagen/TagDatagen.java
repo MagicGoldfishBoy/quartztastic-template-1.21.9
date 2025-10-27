@@ -2,6 +2,7 @@ package com.quarztastic.goldfishboy.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
+import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.TagKeyList;
 
@@ -61,7 +62,10 @@ public class TagDatagen extends BlockTagsProvider {
 
                 SmokyQuartzList.SMOKY_QUARTZ_FURNACE_BLOCK.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_OVEN_BLOCK.get(),
-                SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_BLOCK.get()
+                SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_BLOCK.get(),
+
+
+                RoseQuartzList.ROSE_QUARTZ_ORE.get()
             );
 
         

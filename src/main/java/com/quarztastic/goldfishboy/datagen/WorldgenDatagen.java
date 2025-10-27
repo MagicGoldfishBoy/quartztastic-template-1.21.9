@@ -36,12 +36,24 @@ public class WorldgenDatagen extends DatapackBuiltinEntriesProvider {
                             GenerationStep.Decoration.UNDERGROUND_ORES
                         )
                     );
+                    
                     context.register(
                         ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
                             ResourceLocation.fromNamespaceAndPath(Quartztastic.MODID, "add_smoky_quartz_netherrack_ore")),
                         new BiomeModifiers.AddFeaturesBiomeModifier(
                             HolderSet.direct(biomes.getOrThrow(Biomes.BASALT_DELTAS)),
                             HolderSet.direct(placedFeatures.getOrThrow(WorldgenRegistry.SMOKY_QUARTZ_NETHERRACK_ORE_PLACED)),
+                            GenerationStep.Decoration.UNDERGROUND_ORES
+                        )
+                    );
+
+
+                    context.register(
+                        ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
+                            ResourceLocation.fromNamespaceAndPath(Quartztastic.MODID, "add_rose_quartz_ore")),
+                        new BiomeModifiers.AddFeaturesBiomeModifier(
+                            HolderSet.direct(biomes.getOrThrow(Biomes.NETHER_WASTES)),
+                            HolderSet.direct(placedFeatures.getOrThrow(WorldgenRegistry.ROSE_QUARTZ_ORE_PLACED)),
                             GenerationStep.Decoration.UNDERGROUND_ORES
                         )
                     );
