@@ -22,13 +22,6 @@ public class WorldgenRegistry {
             .add(Registries.CONFIGURED_FEATURE, WorldgenRegistry::bootstrapConfiguredFeatures)
             .add(Registries.PLACED_FEATURE, WorldgenRegistry::bootstrapPlacedFeatures);
     
-    // Smoky Quartz Ore feature keys
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SMOKY_QUARTZ_ORE_CONFIGURED = 
-            createConfiguredFeatureKey("smoky_quartz_ore");
-    
-    public static final ResourceKey<PlacedFeature> SMOKY_QUARTZ_ORE_PLACED = 
-            createPlacedFeatureKey("smoky_quartz_ore");
-    
     // Helper methods to create keys
     private static ResourceKey<ConfiguredFeature<?, ?>> createConfiguredFeatureKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, 
@@ -39,17 +32,40 @@ public class WorldgenRegistry {
         return ResourceKey.create(Registries.PLACED_FEATURE, 
                 ResourceLocation.fromNamespaceAndPath(Quartztastic.MODID, name));
     }
+
+    // Smoky Quartz Ore feature keys
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMOKY_QUARTZ_ORE_CONFIGURED = 
+            createConfiguredFeatureKey("smoky_quartz_ore");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMOKY_QUARTZ_NETHERRACK_ORE_CONFIGURED = 
+            createConfiguredFeatureKey("smoky_quartz_netherrack_ore");
     
+            
+    public static final ResourceKey<PlacedFeature> SMOKY_QUARTZ_ORE_PLACED = 
+            createPlacedFeatureKey("smoky_quartz_ore");
+
+    public static final ResourceKey<PlacedFeature> SMOKY_QUARTZ_NETHERRACK_ORE_PLACED = 
+            createPlacedFeatureKey("smoky_quartz_netherrack_ore");
+        
 
     public static void bootstrapConfiguredFeatures(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
         RuleTest basaltReplaceables = new BlockMatchTest(Blocks.BASALT);
+        RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
         
 
         context.register(SMOKY_QUARTZ_ORE_CONFIGURED,
             new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(
                 basaltReplaceables,
                 SmokyQuartzList.SMOKY_QUARTZ_ORE.get().defaultBlockState(),
+                12
+            ))
+        );
+
+        context.register(SMOKY_QUARTZ_NETHERRACK_ORE_CONFIGURED,
+            new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(
+                netherrackReplaceables,
+                SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE.get().defaultBlockState(),
                 12
             ))
         );
@@ -63,6 +79,22 @@ public class WorldgenRegistry {
         context.register(SMOKY_QUARTZ_ORE_PLACED,
             new PlacedFeature(
                 configuredFeatures.getOrThrow(SMOKY_QUARTZ_ORE_CONFIGURED),
+                List.of(
+                    CountPlacement.of(36),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(
+                        VerticalAnchor.absolute(0),
+                        VerticalAnchor.absolute(118)
+                    ),
+                    BiomeFilter.biome()
+                )
+            )
+        );
+        
+
+        context.register(SMOKY_QUARTZ_NETHERRACK_ORE_PLACED,
+            new PlacedFeature(
+                configuredFeatures.getOrThrow(SMOKY_QUARTZ_NETHERRACK_ORE_CONFIGURED),
                 List.of(
                     CountPlacement.of(36),
                     InSquarePlacement.spread(),

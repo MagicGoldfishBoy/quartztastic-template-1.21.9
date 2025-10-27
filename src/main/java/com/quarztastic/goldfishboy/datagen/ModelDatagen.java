@@ -44,6 +44,8 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_ORE.get());
 
+        blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE.get());
+
         blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get());
 
         blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get());

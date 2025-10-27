@@ -47,6 +47,11 @@ public class SmokyQuartzList {
     public static DeferredBlock<Block> SMOKY_QUARTZ_ORE;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_ORE_ITEM;
+    
+
+    public static DeferredBlock<Block> SMOKY_QUARTZ_NETHERRACK_ORE;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_NETHERRACK_ORE_ITEM;
 
 
 

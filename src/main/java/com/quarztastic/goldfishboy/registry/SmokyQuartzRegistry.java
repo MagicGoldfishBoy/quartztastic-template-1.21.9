@@ -73,6 +73,22 @@ public class SmokyQuartzRegistry {
         );
 
 
+        SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE = Quartztastic.BLOCKS.register(
+            "smoky_quartz_netherrack_ore", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(2.0f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE
+        );
+
+
         SmokyQuartzList.SMOKY_QUARTZ_BLOCK = Quartztastic.BLOCKS.register(
             "smoky_quartz_block", 
             registryName -> new Block(BlockBehaviour.Properties.of()

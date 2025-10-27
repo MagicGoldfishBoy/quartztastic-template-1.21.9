@@ -20,6 +20,7 @@ public class TagDatagen extends BlockTagsProvider {
         this.tag(TagKeyList.MINED_BY_PICKAXE_TAG)
             .add(
                 SmokyQuartzList.SMOKY_QUARTZ_ORE.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE.get(),
 
                 SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get(), 
                 SmokyQuartzList.SMOKY_QUARTZ_SLAB.get(), 

@@ -57,6 +57,10 @@ public class BlockLootTableDatagen extends BlockLootSubProvider {
             this.add(block, this.createOreDrop(block, SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()));
             return;
     }
+            if(block.getName().toString().matches(".*smoky_quartz_netherrack_ore.*")) {
+            this.add(block, this.createOreDrop(block, SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()));
+            return;
+    }
 
             this.dropSelf(block);
         });
