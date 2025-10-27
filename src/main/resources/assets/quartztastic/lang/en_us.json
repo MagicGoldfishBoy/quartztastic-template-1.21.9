@@ -48,6 +48,10 @@
   "block.quartztastic.smoky_quartz_bookshelf": "Smoky Quartz Bookshelf",
 
   "block.quartztastic.smoky_quartz_furnace": "Smoky Quartz Furnace",
+  "container.smoky_quartz_furnace": "Smoky Quartz Furnace",
+
+  "block.quartztastic.smoky_quartz_oven": "Smoky Quartz Oven",
+  "container.smoky_quartz_oven": "Smoky Quartz Oven",
 
 
   "quartztastic.configuration.title": "Quartztastic Configs",

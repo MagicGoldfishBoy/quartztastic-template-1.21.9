@@ -133,6 +133,15 @@ public class RecipeDatagen extends RecipeProvider {
             .define('#', Items.FURNACE)
             .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_OVEN_ITEM.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
+            .define('#', Items.SMOKER)
+            .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {

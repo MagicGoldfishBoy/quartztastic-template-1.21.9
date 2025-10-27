@@ -9,10 +9,12 @@ import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
+import com.quarztastic.goldfishboy.block.SmokyQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzNightstandEntity;
+import com.quarztastic.goldfishboy.entity.SmokyQuartzOvenEntity;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -146,6 +148,13 @@ public class SmokyQuartzList {
     public static Supplier<BlockEntityType<SmokyQuartzFurnaceEntity>> SMOKY_QUARTZ_FURNACE_ENTITY;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_FURNACE_ITEM;
+
+
+    public static DeferredBlock<SmokyQuartzOvenBlock> SMOKY_QUARTZ_OVEN_BLOCK;
+
+    public static Supplier<BlockEntityType<SmokyQuartzOvenEntity>> SMOKY_QUARTZ_OVEN_ENTITY;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_OVEN_ITEM;
 
 
 
