@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.Shelf;
+import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
 import com.quarztastic.goldfishboy.block.Table;
@@ -203,5 +204,10 @@ public class SmokyQuartzList {
     public static Supplier<BlockEntityType<SmokyQuartzNightstandEntity>> SMOKY_QUARTZ_NIGHTSTAND_ENTITY;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_NIGHTSTAND_ITEM;
+
+
+    public static DeferredBlock<Sink> SMOKY_QUARTZ_SINK;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_SINK_ITEM;
     
 }

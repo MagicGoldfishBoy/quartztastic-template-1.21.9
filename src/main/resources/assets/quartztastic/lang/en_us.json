@@ -43,6 +43,8 @@
   "block.quartztastic.smoky_quartz_nightstand": "Smoky Quartz Nightstand",
   "container.smoky_quartz_nightstand": "Smoky Quartz Nightstand",
 
+  "block.quartztastic.smoky_quartz_sink": "Smoky Quartz Sink",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
