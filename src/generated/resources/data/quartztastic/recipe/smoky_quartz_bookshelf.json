@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:book",
+    "@": "quartztastic:smoky_quartz_slab"
+  },
+  "pattern": [
+    "@@@",
+    "###",
+    "@@@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:smoky_quartz_bookshelf"
+  }
+}

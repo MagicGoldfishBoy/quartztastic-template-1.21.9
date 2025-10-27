@@ -14,6 +14,11 @@ public class TagKeyList {
     );
 
 
+    public static final TagKey<Block> PLANKS_TAG = TagKey.create(
+        Registries.BLOCK, 
+        ResourceLocation.fromNamespaceAndPath("minecraft", "planks")
+    );
+
     public static final TagKey<Block> STONE_PRESSURE_PLATES_TAG = TagKey.create(
         Registries.BLOCK, 
         ResourceLocation.fromNamespaceAndPath("minecraft", "stone_pressure_plates")
@@ -50,10 +55,14 @@ public class TagKeyList {
         ResourceLocation.fromNamespaceAndPath("minecraft", "piglin_repellents")
     );
 
-
     public static final TagKey<Block> CLIMBABLE_TAG = TagKey.create(
         Registries.BLOCK, 
         ResourceLocation.fromNamespaceAndPath("minecraft", "climbable")
+    );
+
+    public static final TagKey<Block> ENCHANTMENT_POWER_PROVIDER_TAG = TagKey.create(
+        Registries.BLOCK, 
+        ResourceLocation.fromNamespaceAndPath("minecraft", "enchantment_power_provider")
     );
 
 

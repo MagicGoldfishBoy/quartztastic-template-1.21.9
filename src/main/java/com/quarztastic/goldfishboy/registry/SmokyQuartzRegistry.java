@@ -318,6 +318,21 @@ public class SmokyQuartzRegistry {
         );
 
 
+        SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF = Quartztastic.BLOCKS.register(
+            "smoky_quartz_bookshelf", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF
+        );
+
+
 
         SmokyQuartzList.SMOKY_QUARTZ_PILLAR = Quartztastic.BLOCKS.register(
             "smoky_quartz_pillar", 

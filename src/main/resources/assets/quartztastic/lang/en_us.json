@@ -45,6 +45,8 @@
 
   "block.quartztastic.smoky_quartz_sink": "Smoky Quartz Sink",
 
+  "block.quartztastic.smoky_quartz_bookshelf": "Smoky Quartz Bookshelf",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

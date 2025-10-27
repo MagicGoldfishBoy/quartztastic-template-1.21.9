@@ -8,10 +8,15 @@ import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.renderer.block.model.Variant;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 public class ModelDatagen extends ModelProvider {
     public ModelDatagen(PackOutput output) {
@@ -133,6 +138,43 @@ public class ModelDatagen extends ModelProvider {
 
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SINK.get(), new Variant(modLocation("block/smoky_quartz_sink")));
+
+
+
+        LOGGER.info("Creating Bookshelf Models");
+
+        for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {
+            String rawName = holder.getId().getPath();
+            if (rawName.contains("bookshelf")) {
+                String name = "block/" + rawName;
+
+                LOGGER.info("Generating model for: {}", name);
+
+                ResourceLocation planter = modLocation(name);
+                Variant plantervariant = new Variant(planter);
+
+                blockModels.blockStateOutput.accept(
+                    MultiVariantGenerator.dispatch(
+                        holder.get(),
+                        BlockModelGenerators.variant(plantervariant)
+                    )
+                );
+            }
+        }
+
+        for (DeferredHolder<Item, ? extends Item> holder : Quartztastic.ITEMS.getEntries()) {
+            String rawName = holder.getId().getPath();
+            if (rawName.contains("bookshelf")) {
+                String name = "block/" + rawName;
+
+                LOGGER.info("Generating model for: {}", name);
+
+                itemModels.itemModelOutput.accept(
+                holder.get(),
+                ItemModelUtils.plainModel(modLocation(name))
+            );
+            }
+        }
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

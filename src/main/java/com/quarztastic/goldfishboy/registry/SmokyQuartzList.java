@@ -133,6 +133,11 @@ public class SmokyQuartzList {
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_PILLAR_ITEM;
 
 
+    public static DeferredBlock<Block> SMOKY_QUARTZ_BOOKSHELF;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_BOOKSHELF_ITEM;
+
+
     public static DeferredBlock<DoorBlock> SMOKY_QUARTZ_DOOR;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_DOOR_ITEM;
