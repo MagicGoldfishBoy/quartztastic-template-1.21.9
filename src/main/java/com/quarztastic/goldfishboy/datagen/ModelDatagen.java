@@ -141,14 +141,12 @@ public class ModelDatagen extends ModelProvider {
 
 
 
-        LOGGER.info("Creating Bookshelf Models");
-
         for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {
+            LOGGER.info("Generating model for: {}", holder.getId().getPath());
             String rawName = holder.getId().getPath();
             if (rawName.contains("bookshelf")) {
-                String name = "block/" + rawName;
 
-                LOGGER.info("Generating model for: {}", name);
+                String name = "block/" + rawName;
 
                 ResourceLocation planter = modLocation(name);
                 Variant plantervariant = new Variant(planter);
@@ -160,11 +158,35 @@ public class ModelDatagen extends ModelProvider {
                     )
                 );
             }
+            if (rawName.contains("furnace") || rawName.contains("oven")) {
+
+                String name = "block/" + rawName;
+                String litName = name + "_lit";
+
+                ResourceLocation unlit_model = modLocation(name);
+                ResourceLocation lit_model = modLocation(litName);
+
+                Variant unlit_variant = new Variant(unlit_model);
+                Variant lit_variant = new Variant(lit_model);
+
+
+                ModelDatagenHelpers.createRotatableFurnaceBlock(blockModels, itemModels, holder.get(), unlit_variant, lit_variant);
+            }
         }
 
         for (DeferredHolder<Item, ? extends Item> holder : Quartztastic.ITEMS.getEntries()) {
             String rawName = holder.getId().getPath();
             if (rawName.contains("bookshelf")) {
+                String name = "block/" + rawName;
+
+                LOGGER.info("Generating model for: {}", name);
+
+                itemModels.itemModelOutput.accept(
+                holder.get(),
+                ItemModelUtils.plainModel(modLocation(name))
+            );
+            }
+            if (rawName.contains("furnace")) {
                 String name = "block/" + rawName;
 
                 LOGGER.info("Generating model for: {}", name);

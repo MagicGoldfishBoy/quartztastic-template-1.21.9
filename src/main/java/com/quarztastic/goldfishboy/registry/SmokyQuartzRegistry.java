@@ -8,9 +8,11 @@ import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBarrelBlock;
+import com.quarztastic.goldfishboy.block.SmokyQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBarrelEntity;
+import com.quarztastic.goldfishboy.entity.SmokyQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzNightstandEntity;
 
 import net.minecraft.core.Direction;
@@ -330,6 +332,31 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF
+        );
+
+
+
+        SmokyQuartzList.SMOKY_QUARTZ_FURNACE_BLOCK = Quartztastic.BLOCKS.register(
+            "smoky_quartz_furnace", 
+            registryName -> new SmokyQuartzFurnaceBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .requiresCorrectToolForDrops()
+                .sound(SoundType.AMETHYST)
+                .noOcclusion()
+            )
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "smoky_quartz_furnace_entity",
+            () -> new BlockEntityType<>(
+                SmokyQuartzFurnaceEntity::new,
+                false,
+                SmokyQuartzList.SMOKY_QUARTZ_FURNACE_BLOCK.get())
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_FURNACE_BLOCK
         );
 
 

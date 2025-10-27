@@ -182,6 +182,27 @@ public class ModelDatagenHelpers extends ModelProvider {
         );
     }
 
+    public static void createRotatableFurnaceBlock(BlockModelGenerators blockModels, ItemModelGenerators itemModels, Block block,
+    Variant unlit_variant, Variant lit_variant) {
+
+        MultiVariant unlit_multivariant = new MultiVariant(WeightedList.of(unlit_variant));
+        MultiVariant lit_multivariant = new MultiVariant(WeightedList.of(lit_variant));
+
+        blockModels.blockStateOutput.accept(
+            MultiVariantGenerator.dispatch(block).with(
+                PropertyDispatch.initial(BlockStateProperties.LIT)
+                    .select(false, unlit_multivariant)
+                    .select(true, lit_multivariant)
+            ).with(
+            PropertyDispatch.modify(HorizontalDirectionalBlock.FACING)
+                .select(Direction.SOUTH, BlockModelGenerators.NOP)
+                .select(Direction.NORTH, BlockModelGenerators.Y_ROT_180)
+                .select(Direction.WEST, BlockModelGenerators.Y_ROT_90)
+                .select(Direction.EAST, BlockModelGenerators.Y_ROT_270)
+            )
+        );
+    }
+
     public static void createTableModel(BlockModelGenerators blockModels, ItemModelGenerators itemModels, Block block, Variant single,
         Variant center, Variant north, Variant east, Variant south, Variant west, Variant north_and_south, Variant east_and_north, Variant east_and_south, 
         Variant east_and_west, Variant west_and_north, Variant west_and_south, Variant north_east_south, Variant north_west_south, Variant east_south_west,
