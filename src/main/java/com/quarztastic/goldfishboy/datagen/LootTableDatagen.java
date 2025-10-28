@@ -6,6 +6,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 
 import net.minecraft.core.HolderLookup;
@@ -43,7 +44,7 @@ public class LootTableDatagen extends LootTableProvider {
                     .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .add(LootItem.lootTableItem(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
-                            .setWeight(10)
+                            .setWeight(5)
                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3)))
                         )
                     )
@@ -56,8 +57,22 @@ public class LootTableDatagen extends LootTableProvider {
                     .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .add(LootItem.lootTableItem(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
-                            .setWeight(5)
+                            .setWeight(3)
                             .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2)))
+                        )
+                    )
+            );
+
+
+            location = ResourceLocation.fromNamespaceAndPath(Quartztastic.MODID, "citrine_crystal_bastion_table");
+            
+            output.accept(ResourceKey.create(Registries.LOOT_TABLE, location), 
+                LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(CitrineList.CITRINE_CRYSTAL.get())
+                            .setWeight(5)
+                            .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3)))
                         )
                     )
             );

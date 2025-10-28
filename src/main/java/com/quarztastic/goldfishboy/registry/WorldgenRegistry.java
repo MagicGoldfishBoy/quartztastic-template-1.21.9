@@ -33,7 +33,7 @@ public class WorldgenRegistry {
                 ResourceLocation.fromNamespaceAndPath(Quartztastic.MODID, name));
     }
 
-    // Smoky Quartz Ore feature keys
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> SMOKY_QUARTZ_ORE_CONFIGURED = 
             createConfiguredFeatureKey("smoky_quartz_ore");
 
@@ -43,6 +43,10 @@ public class WorldgenRegistry {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_QUARTZ_ORE_CONFIGURED = 
             createConfiguredFeatureKey("rose_quartz_ore");
+    
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CITRINE_ORE_CONFIGURED = 
+            createConfiguredFeatureKey("citrine_ore");
 
             
 
@@ -55,6 +59,10 @@ public class WorldgenRegistry {
 
     public static final ResourceKey<PlacedFeature> ROSE_QUARTZ_ORE_PLACED = 
             createPlacedFeatureKey("rose_quartz_ore");
+
+
+    public static final ResourceKey<PlacedFeature> CITRINE_ORE_PLACED = 
+            createPlacedFeatureKey("citrine_ore");
         
 
     public static void bootstrapConfiguredFeatures(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -84,6 +92,15 @@ public class WorldgenRegistry {
             new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(
                 netherrackReplaceables,
                 RoseQuartzList.ROSE_QUARTZ_ORE.get().defaultBlockState(),
+                8
+            ))
+        );
+        
+
+        context.register(CITRINE_ORE_CONFIGURED,
+            new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(
+                netherrackReplaceables,
+                CitrineList.CITRINE_ORE.get().defaultBlockState(),
                 8
             ))
         );
@@ -131,7 +148,24 @@ public class WorldgenRegistry {
             new PlacedFeature(
                 configuredFeatures.getOrThrow(ROSE_QUARTZ_ORE_CONFIGURED),
                 List.of(
-                    CountPlacement.of(30),
+                    CountPlacement.of(25),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(
+                        VerticalAnchor.absolute(0),
+                        VerticalAnchor.absolute(118)
+                    ),
+                    BiomeFilter.biome()
+                )
+            )
+        );
+
+        
+
+        context.register(CITRINE_ORE_PLACED,
+            new PlacedFeature(
+                configuredFeatures.getOrThrow(CITRINE_ORE_CONFIGURED),
+                List.of(
+                    CountPlacement.of(25),
                     InSquarePlacement.spread(),
                     HeightRangePlacement.uniform(
                         VerticalAnchor.absolute(0),

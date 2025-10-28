@@ -57,6 +57,17 @@ public class WorldgenDatagen extends DatapackBuiltinEntriesProvider {
                             GenerationStep.Decoration.UNDERGROUND_ORES
                         )
                     );
+
+
+                    context.register(
+                        ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS,
+                            ResourceLocation.fromNamespaceAndPath(Quartztastic.MODID, "add_citrine_ore")),
+                        new BiomeModifiers.AddFeaturesBiomeModifier(
+                            HolderSet.direct(biomes.getOrThrow(Biomes.CRIMSON_FOREST)),
+                            HolderSet.direct(placedFeatures.getOrThrow(WorldgenRegistry.CITRINE_ORE_PLACED)),
+                            GenerationStep.Decoration.UNDERGROUND_ORES
+                        )
+                    );
                 }),
             Set.of(Quartztastic.MODID));
     }

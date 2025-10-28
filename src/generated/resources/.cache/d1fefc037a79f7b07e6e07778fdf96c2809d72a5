@@ -1,4 +1,5 @@
-// 1.21.9	2025-10-23T16:04:19.614638312	Global Loot Modifiers : quartztastic
-de233f38c6a3986a2a22b3d7a94c9b267a3a855c data/neoforge/loot_modifiers/global_loot_modifiers.json
+// 1.21.9	2025-10-28T15:43:38.60166475	Global Loot Modifiers : quartztastic
+f9dfedf627143e65a8e59813fb55285aaf9fb2f2 data/neoforge/loot_modifiers/global_loot_modifiers.json
+c08be96be517ba7139b84b4cc0175737d5608200 data/quartztastic/loot_modifiers/citrine_crystal_bastion.json
 e452b082b29c067b761e638729fb8b823d2ae351 data/quartztastic/loot_modifiers/smoky_quartz_block_nether_fortress.json
 409ca6d9d936b2e60c5daae4c9d4344b4cada659 data/quartztastic/loot_modifiers/smoky_quartz_nether_fortress.json

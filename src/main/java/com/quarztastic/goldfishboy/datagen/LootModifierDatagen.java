@@ -61,5 +61,19 @@ public class LootModifierDatagen extends GlobalLootModifierProvider {
             ),
             List.of()
         );
+
+
+        add("citrine_crystal_bastion", 
+            new AddTableLootModifier(
+                new LootItemCondition[] {
+                    LootTableIdCondition.builder(
+                        ResourceLocation.withDefaultNamespace("chests/bastion_bridge")
+                    ).build()
+                },
+                ResourceKey.create(Registries.LOOT_TABLE,
+                    ResourceLocation.fromNamespaceAndPath(Quartztastic.MODID, "citrine_crystal_bastion_table"))
+            ),
+            List.of()
+        );
     }
 }

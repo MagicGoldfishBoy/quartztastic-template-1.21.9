@@ -17,12 +17,12 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "quartztastic:smoky_quartz_crystal",
+          "name": "quartztastic:citrine_crystal",
           "weight": 5
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "quartztastic:smoky_quartz_nether_fortress_table"
+  "random_sequence": "quartztastic:citrine_crystal_bastion_table"
 }
