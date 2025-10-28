@@ -63,8 +63,12 @@
   "block.quartztastic.rose_quartz_ore": "Rose Quartz Ore",
 
 
-  "item.quartztastic.citrine": "Citrine",
+  "item.quartztastic.citrine_crystal": "Citrine",
   "block.quartztastic.citrine_ore": "Citrine Ore",
+
+
+  "item.quartztastic.blue_quartz_crystal": "Blue Quartz Crystal",
+  "block.quartztastic.blue_quartz_ore": "Blue Quartz Ore",
 
 
   "quartztastic.configuration.title": "Quartztastic Configs",

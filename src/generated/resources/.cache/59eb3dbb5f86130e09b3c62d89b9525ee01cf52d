@@ -1,5 +1,6 @@
-// 1.21.9	2025-10-28T15:51:10.504045767	Loot Tables
+// 1.21.9	2025-10-28T16:30:26.856755477	Loot Tables
 a16b6486ce082b59de3336e5fe127dd4e56ed83d data/minecraft/loot_table/blocks/torch.json
+082fc00761ac680e590f9874fd40a3f71d68f173 data/quartztastic/loot_table/blocks/blue_quartz_ore.json
 e8d3ce5c1b5383aca9de09320f82dd14dc8c5c99 data/quartztastic/loot_table/blocks/chiseled_smoky_quartz_block.json
 f65cf0dc9df1e2e0d1b3604c264d47c4b7c02898 data/quartztastic/loot_table/blocks/citrine_ore.json
 05c17db151719eadb89b2fd9cb34b5863f386d0f data/quartztastic/loot_table/blocks/rose_quartz_ore.json

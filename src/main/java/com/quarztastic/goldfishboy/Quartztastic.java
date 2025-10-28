@@ -5,6 +5,8 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import com.quarztastic.goldfishboy.datagen.Datagen;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
+import com.quarztastic.goldfishboy.registry.BlueQuartzList;
+import com.quarztastic.goldfishboy.registry.BlueQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
 import com.quarztastic.goldfishboy.registry.RoseQuartzRegistry;
@@ -92,6 +94,8 @@ public class Quartztastic {
         RoseQuartzRegistry.registerAll();
 
         CitrineRegistry.registerAll();
+
+        BlueQuartzRegistry.registerAll();
 
 
         NeoForge.EVENT_BUS.register(this);
