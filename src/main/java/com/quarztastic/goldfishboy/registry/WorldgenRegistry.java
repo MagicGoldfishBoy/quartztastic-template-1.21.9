@@ -51,6 +51,13 @@ public class WorldgenRegistry {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLUE_QUARTZ_ORE_CONFIGURED = 
             createConfiguredFeatureKey("blue_quartz_ore");
+    
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PRASIOLITE_QUARTZ_ORE_CONFIGURED = 
+            createConfiguredFeatureKey("prasiolite_quartz_ore");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PRASIOLITE_QUARTZ_NETHERRACK_ORE_CONFIGURED = 
+            createConfiguredFeatureKey("prasiolite_quartz_netherrack_ore");
 
             
 
@@ -71,12 +78,20 @@ public class WorldgenRegistry {
 
     public static final ResourceKey<PlacedFeature> BLUE_QUARTZ_ORE_PLACED = 
             createPlacedFeatureKey("blue_quartz_ore");
+
+
+    public static final ResourceKey<PlacedFeature> PRASIOLITE_QUARTZ_ORE_PLACED = 
+            createPlacedFeatureKey("prasiolite_quartz_ore");
+
+    public static final ResourceKey<PlacedFeature> PRASIOLITE_QUARTZ_NETHERRACK_ORE_PLACED = 
+            createPlacedFeatureKey("prasiolite_quartz_netherrack_ore");
         
 
     public static void bootstrapConfiguredFeatures(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
         RuleTest basaltReplaceables = new BlockMatchTest(Blocks.BASALT);
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
+        RuleTest soulSoilReplaceables = new BlockMatchTest(Blocks.SOUL_SOIL);
         
 
         context.register(SMOKY_QUARTZ_ORE_CONFIGURED,
@@ -119,6 +134,23 @@ public class WorldgenRegistry {
                 netherrackReplaceables,
                 BlueQuartzList.BLUE_QUARTZ_ORE.get().defaultBlockState(),
                 8
+            ))
+        );
+        
+
+        context.register(PRASIOLITE_QUARTZ_ORE_CONFIGURED,
+            new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(
+                soulSoilReplaceables,
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE.get().defaultBlockState(),
+                8
+            ))
+        );
+
+        context.register(PRASIOLITE_QUARTZ_NETHERRACK_ORE_CONFIGURED,
+            new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(
+                netherrackReplaceables,
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_NETHERRACK_ORE.get().defaultBlockState(),
+                12
             ))
         );
     }
@@ -200,6 +232,38 @@ public class WorldgenRegistry {
                 configuredFeatures.getOrThrow(BLUE_QUARTZ_ORE_CONFIGURED),
                 List.of(
                     CountPlacement.of(25),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(
+                        VerticalAnchor.absolute(0),
+                        VerticalAnchor.absolute(118)
+                    ),
+                    BiomeFilter.biome()
+                )
+            )
+        );
+
+        
+
+        context.register(PRASIOLITE_QUARTZ_ORE_PLACED,
+            new PlacedFeature(
+                configuredFeatures.getOrThrow(PRASIOLITE_QUARTZ_ORE_CONFIGURED),
+                List.of(
+                    CountPlacement.of(25),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(
+                        VerticalAnchor.absolute(0),
+                        VerticalAnchor.absolute(118)
+                    ),
+                    BiomeFilter.biome()
+                )
+            )
+        );
+
+        context.register(PRASIOLITE_QUARTZ_NETHERRACK_ORE_PLACED,
+            new PlacedFeature(
+                configuredFeatures.getOrThrow(PRASIOLITE_QUARTZ_NETHERRACK_ORE_CONFIGURED),
+                List.of(
+                    CountPlacement.of(36),
                     InSquarePlacement.spread(),
                     HeightRangePlacement.uniform(
                         VerticalAnchor.absolute(0),

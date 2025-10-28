@@ -4,6 +4,7 @@ import java.util.concurrent.CompletableFuture;
 
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.CitrineList;
+import com.quarztastic.goldfishboy.registry.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.TagKeyList;
@@ -73,7 +74,11 @@ public class TagDatagen extends BlockTagsProvider {
                 CitrineList.CITRINE_ORE.get(),
 
 
-                BlueQuartzList.BLUE_QUARTZ_ORE.get()
+                BlueQuartzList.BLUE_QUARTZ_ORE.get(),
+
+
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_NETHERRACK_ORE.get()
             );
 
         

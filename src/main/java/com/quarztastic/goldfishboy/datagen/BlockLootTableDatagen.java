@@ -5,6 +5,7 @@ import java.util.Set;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.CitrineList;
+import com.quarztastic.goldfishboy.registry.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 
@@ -77,6 +78,15 @@ public class BlockLootTableDatagen extends BlockLootSubProvider {
     
             if(block.getName().toString().matches(".*blue_quartz_ore.*")) {
             this.add(block, this.createOreDrop(block, BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()));
+            return;
+    }
+
+            if(block.getName().toString().matches(".*prasiolite_quartz_ore.*")) {
+            this.add(block, this.createOreDrop(block, PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()));
+            return;
+    }
+            if(block.getName().toString().matches(".*prasiolite_quartz_netherrack_ore.*")) {
+            this.add(block, this.createOreDrop(block, PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()));
             return;
     }
 

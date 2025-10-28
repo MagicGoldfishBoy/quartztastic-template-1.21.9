@@ -9,6 +9,7 @@ import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.BlueQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
+import com.quarztastic.goldfishboy.registry.PrasioliteQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.RoseQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
@@ -96,6 +97,8 @@ public class Quartztastic {
         CitrineRegistry.registerAll();
 
         BlueQuartzRegistry.registerAll();
+
+        PrasioliteQuartzRegistry.registerAll();
 
 
         NeoForge.EVENT_BUS.register(this);

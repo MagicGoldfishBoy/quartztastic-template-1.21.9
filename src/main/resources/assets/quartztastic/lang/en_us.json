@@ -71,6 +71,11 @@
   "block.quartztastic.blue_quartz_ore": "Blue Quartz Ore",
 
 
+  "item.quartztastic.prasiolite_quartz_crystal": "Prasiolite Quartz Crystal",
+  "block.quartztastic.prasiolite_quartz_ore": "Prasiolite Quartz Ore",
+  "block.quartztastic.prasiolite_quartz_netherrack_ore": "Prasiolite Quartz Ore",
+
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

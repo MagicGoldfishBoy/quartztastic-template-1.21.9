@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "minecraft:soul_sand_valley",
+  "features": "quartztastic:prasiolite_quartz_netherrack_ore",
+  "step": "underground_ores"
+}
