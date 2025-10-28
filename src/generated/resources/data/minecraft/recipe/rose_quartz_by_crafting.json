@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "quartztastic:rose_quartz_block"
+  ],
+  "result": {
+    "count": 4,
+    "id": "quartztastic:rose_quartz_crystal"
+  }
+}

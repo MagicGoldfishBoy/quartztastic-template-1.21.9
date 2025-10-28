@@ -75,6 +75,10 @@
   "block.quartztastic.prasiolite_quartz_ore": "Prasiolite Quartz Ore",
   "block.quartztastic.prasiolite_quartz_netherrack_ore": "Prasiolite Quartz Ore",
 
+  "block.quartztastic.rose_quartz_block": "Rose Quartz Block",
+  "block.quartztastic.rose_quartz_slab": "Rose Quartz Slab",
+  "block.quartztastic.rose_quartz_stairs": "Rose Quartz Stairs",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

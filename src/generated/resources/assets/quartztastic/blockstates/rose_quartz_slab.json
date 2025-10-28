@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "quartztastic:block/rose_quartz_slab"
+    },
+    "type=double": {
+      "model": "quartztastic:block/rose_quartz_block"
+    },
+    "type=top": {
+      "model": "quartztastic:block/rose_quartz_slab_top"
+    }
+  }
+}
