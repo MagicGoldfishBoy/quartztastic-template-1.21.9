@@ -234,5 +234,22 @@ public class RoseQuartzRegistry {
                 RoseQuartzList.ROSE_QUARTZ_BRICK_WALL
             );
 
+
+
+            RoseQuartzList.CHISELED_ROSE_QUARTZ_BLOCK = Quartztastic.BLOCKS.register(
+                "chiseled_rose_quartz_block", 
+                registryName -> new Block(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.CHISELED_ROSE_QUARTZ_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.CHISELED_ROSE_QUARTZ_BLOCK
+            );
+
         }
 }

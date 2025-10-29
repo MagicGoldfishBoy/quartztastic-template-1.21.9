@@ -188,6 +188,18 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get())
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "rose_quartz_bricks_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, RoseQuartzList.CHISELED_ROSE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "chiseled_rose_quartz_block_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, RoseQuartzList.CHISELED_ROSE_QUARTZ_BLOCK_ITEM.get())
+            .pattern("@")
+            .pattern("@")
+            .define('@', RoseQuartzList.ROSE_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_rose_quartz_slab", has(RoseQuartzList.ROSE_QUARTZ_SLAB_ITEM.get()))
+            .save(this.output, "chiseled_rose_quartz_block_by_crafting");
     }
 
     protected void buildSlabRecipes() {
