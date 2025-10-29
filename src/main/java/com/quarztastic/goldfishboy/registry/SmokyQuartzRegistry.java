@@ -340,9 +340,10 @@ public class SmokyQuartzRegistry {
         );
 
 
+        BlockBehaviour.Properties.of();
         SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF = Quartztastic.BLOCKS.register(
             "smoky_quartz_bookshelf", 
-            registryName -> new Block(BlockBehaviour.Properties.of()
+            registryName -> new Block(net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy(Blocks.BOOKSHELF)
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.8f, 4.0f)
                 .sound(SoundType.AMETHYST)
