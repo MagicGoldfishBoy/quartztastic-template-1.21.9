@@ -95,6 +95,8 @@
   "block.quartztastic.rose_quartz_tile_slab": "Rose Quartz Tile Slab",
   "block.quartztastic.rose_quartz_tile_stairs": "Rose Quartz Tile Stairs",
 
+  "block.quartztastic.rose_quartz_pillar": "Rose Quartz Pillar",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

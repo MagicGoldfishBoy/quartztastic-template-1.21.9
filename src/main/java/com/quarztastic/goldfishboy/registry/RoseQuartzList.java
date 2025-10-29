@@ -1,5 +1,7 @@
 package com.quarztastic.goldfishboy.registry;
 
+import com.quarztastic.goldfishboy.block.Pillar;
+
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -104,5 +106,10 @@ public class RoseQuartzList {
     public static DeferredBlock<StairBlock> ROSE_QUARTZ_TILE_STAIRS;
 
     public static DeferredItem<BlockItem> ROSE_QUARTZ_TILE_STAIRS_ITEM;
+
+
+    public static DeferredBlock<Pillar> ROSE_QUARTZ_PILLAR;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_PILLAR_ITEM;
     
 }
