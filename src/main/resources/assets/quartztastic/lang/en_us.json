@@ -97,6 +97,8 @@
 
   "block.quartztastic.rose_quartz_pillar": "Rose Quartz Pillar",
 
+  "block.quartztastic.rose_quartz_bookshelf": "Rose Quartz Bookshelf",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

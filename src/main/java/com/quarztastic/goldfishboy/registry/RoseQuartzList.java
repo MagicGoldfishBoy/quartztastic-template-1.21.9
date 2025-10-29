@@ -111,5 +111,10 @@ public class RoseQuartzList {
     public static DeferredBlock<Pillar> ROSE_QUARTZ_PILLAR;
 
     public static DeferredItem<BlockItem> ROSE_QUARTZ_PILLAR_ITEM;
+
+
+    public static DeferredBlock<Block> ROSE_QUARTZ_BOOKSHELF;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_BOOKSHELF_ITEM;
     
 }

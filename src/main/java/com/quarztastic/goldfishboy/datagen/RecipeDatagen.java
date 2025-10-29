@@ -210,6 +210,17 @@ public class RecipeDatagen extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, RoseQuartzList.ROSE_QUARTZ_PILLAR_ITEM.get())
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_BOOKSHELF_ITEM.get())
+            .pattern("@@@")
+            .pattern("###")
+            .pattern("@@@")
+            .define('@', RoseQuartzList.ROSE_QUARTZ_SLAB_ITEM.get())
+            .define('#', Items.BOOK)
+            .unlockedBy("has_rose_quartz_slab", has(RoseQuartzList.ROSE_QUARTZ_SLAB_ITEM.get()))
+            .unlockedBy("has_book", has(Items.BOOK))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {
