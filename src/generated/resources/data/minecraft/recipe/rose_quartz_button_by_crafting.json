@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    "quartztastic:rose_quartz_block"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:rose_quartz_button"
+  }
+}

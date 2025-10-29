@@ -73,6 +73,11 @@ public class TagDatagen extends BlockTagsProvider {
                 RoseQuartzList.ROSE_QUARTZ_BLOCK.get(), 
                 RoseQuartzList.ROSE_QUARTZ_SLAB.get(), 
                 RoseQuartzList.ROSE_QUARTZ_STAIRS.get(), 
+                RoseQuartzList.ROSE_QUARTZ_BUTTON.get(), 
+                RoseQuartzList.ROSE_QUARTZ_PRESSURE_PLATE.get(), 
+                RoseQuartzList.ROSE_QUARTZ_FENCE.get(), 
+                RoseQuartzList.ROSE_QUARTZ_WALL.get(), 
+                RoseQuartzList.ROSE_QUARTZ_GATE.get(),
 
 
                 CitrineList.CITRINE_ORE.get(),
@@ -88,23 +93,31 @@ public class TagDatagen extends BlockTagsProvider {
         
         this.tag(TagKeyList.STONE_PRESSURE_PLATES_TAG)
             .add(
-                SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE.get()
+                SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE.get(),
+                
+                RoseQuartzList.ROSE_QUARTZ_PRESSURE_PLATE.get()
             );
 
         this.tag(TagKeyList.FENCES_TAG)
             .add(
-                SmokyQuartzList.SMOKY_QUARTZ_FENCE.get()
+                SmokyQuartzList.SMOKY_QUARTZ_FENCE.get(),
+
+                RoseQuartzList.ROSE_QUARTZ_FENCE.get()
             );
 
         this.tag(TagKeyList.WALLS_TAG)
             .add(
                 SmokyQuartzList.SMOKY_QUARTZ_WALL.get(),
-                SmokyQuartzList.SMOKY_QUARTZ_BRICK_WALL.get()
+                SmokyQuartzList.SMOKY_QUARTZ_BRICK_WALL.get(),
+
+                RoseQuartzList.ROSE_QUARTZ_WALL.get()
             );
 
         this.tag(TagKeyList.GATES_TAG)
             .add(
-                SmokyQuartzList.SMOKY_QUARTZ_GATE.get()
+                SmokyQuartzList.SMOKY_QUARTZ_GATE.get(),
+
+                RoseQuartzList.ROSE_QUARTZ_GATE.get()
             );
 
         this.tag(TagKeyList.DOORS_TAG)

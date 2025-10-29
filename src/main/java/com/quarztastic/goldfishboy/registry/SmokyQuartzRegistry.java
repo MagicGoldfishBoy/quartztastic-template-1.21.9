@@ -141,10 +141,10 @@ public class SmokyQuartzRegistry {
             "smoky_quartz_button", 
             registryName -> new ButtonBlock(BlockSetTypes.QUARTZ, 25, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(0.4f, 2.0f)
                 .sound(SoundType.AMETHYST_CLUSTER)
                 .instabreak()
                 .noOcclusion()
+                .noCollision()
             )
         );
 

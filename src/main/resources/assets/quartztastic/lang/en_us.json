@@ -78,6 +78,11 @@
   "block.quartztastic.rose_quartz_block": "Rose Quartz Block",
   "block.quartztastic.rose_quartz_slab": "Rose Quartz Slab",
   "block.quartztastic.rose_quartz_stairs": "Rose Quartz Stairs",
+  "block.quartztastic.rose_quartz_button": "Rose Quartz Button",
+  "block.quartztastic.rose_quartz_pressure_plate": "Rose Quartz Pressure Plate",
+  "block.quartztastic.rose_quartz_fence": "Rose Quartz Fence",
+  "block.quartztastic.rose_quartz_wall": "Rose Quartz Wall",
+  "block.quartztastic.rose_quartz_gate": "Rose Quartz Gate",
 
 
   "quartztastic.configuration.title": "Quartztastic Configs",

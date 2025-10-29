@@ -111,7 +111,12 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.familyWithExistingFullBlock(RoseQuartzList.ROSE_QUARTZ_BLOCK.get())
             .slab(RoseQuartzList.ROSE_QUARTZ_SLAB.get())
-            .stairs(RoseQuartzList.ROSE_QUARTZ_STAIRS.get());
+            .stairs(RoseQuartzList.ROSE_QUARTZ_STAIRS.get())
+            .button(RoseQuartzList.ROSE_QUARTZ_BUTTON.get())
+            .pressurePlate(RoseQuartzList.ROSE_QUARTZ_PRESSURE_PLATE.get())
+            .fence(RoseQuartzList.ROSE_QUARTZ_FENCE.get())
+            .wall(RoseQuartzList.ROSE_QUARTZ_WALL.get())
+            .fenceGate(RoseQuartzList.ROSE_QUARTZ_GATE.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

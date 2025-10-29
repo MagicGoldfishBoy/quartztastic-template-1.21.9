@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": "quartztastic:rose_quartz_crystal",
+    "@": "quartztastic:rose_quartz_block"
+  },
+  "pattern": [
+    "#@#",
+    "#@#"
+  ],
+  "result": {
+    "count": 2,
+    "id": "quartztastic:rose_quartz_gate"
+  }
+}
