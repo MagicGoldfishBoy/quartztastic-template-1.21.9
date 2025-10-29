@@ -2,8 +2,10 @@ package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.RoseQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzOvenBlock;
+import com.quarztastic.goldfishboy.entity.RoseQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzFurnaceEntity;
 
@@ -383,6 +385,29 @@ public class RoseQuartzRegistry {
 
             RoseQuartzList.ROSE_QUARTZ_OVEN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_OVEN
+            );
+
+
+            RoseQuartzList.ROSE_QUARTZ_BLAST_FURNACE = Quartztastic.BLOCKS.register(
+                "rose_quartz_blast_furnace", 
+                registryName -> new RoseQuartzBlastFurnaceBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_BLAST_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+                "rose_quartz_blast_furnace",
+                () -> new BlockEntityType<>(
+                RoseQuartzBlastFurnaceEntity::new,
+                false,
+                RoseQuartzList.ROSE_QUARTZ_BLAST_FURNACE.get())
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_BLAST_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_BLAST_FURNACE
             );
 
         }

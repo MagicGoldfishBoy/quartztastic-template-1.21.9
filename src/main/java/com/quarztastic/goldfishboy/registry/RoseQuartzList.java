@@ -3,8 +3,10 @@ package com.quarztastic.goldfishboy.registry;
 import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.RoseQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzOvenBlock;
+import com.quarztastic.goldfishboy.entity.RoseQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
 
 import net.minecraft.world.item.BlockItem;
@@ -136,5 +138,12 @@ public class RoseQuartzList {
     public static Supplier<BlockEntityType<RoseQuartzFurnaceEntity>> ROSE_QUARTZ_OVEN_ENTITY;
 
     public static DeferredItem<BlockItem> ROSE_QUARTZ_OVEN_ITEM;
+
+    
+    public static DeferredBlock<RoseQuartzBlastFurnaceBlock> ROSE_QUARTZ_BLAST_FURNACE;
+
+    public static Supplier<BlockEntityType<RoseQuartzBlastFurnaceEntity>> ROSE_QUARTZ_BLAST_FURNACE_ENTITY;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_BLAST_FURNACE_ITEM;
     
 }
