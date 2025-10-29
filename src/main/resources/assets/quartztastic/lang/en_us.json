@@ -99,6 +99,9 @@
 
   "block.quartztastic.rose_quartz_bookshelf": "Rose Quartz Bookshelf",
 
+  "block.quartztastic.rose_quartz_furnace": "Rose Quartz Furnace",
+  "container.rose_quartz_furnace": "Rose Quartz Furnace",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
