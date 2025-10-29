@@ -78,6 +78,8 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.createTrivialCube(RoseQuartzList.CHISELED_ROSE_QUARTZ_BLOCK.get());
 
+        blockModels.createTrivialCube(RoseQuartzList.ROSE_QUARTZ_TILES.get());
+
 
 
         blockModels.createTrivialCube(CitrineList.CITRINE_ORE.get());
@@ -130,6 +132,10 @@ public class ModelDatagen extends ModelProvider {
             .slab(RoseQuartzList.ROSE_QUARTZ_BRICK_SLAB.get())
             .stairs(RoseQuartzList.ROSE_QUARTZ_BRICK_STAIRS.get())
             .wall(RoseQuartzList.ROSE_QUARTZ_BRICK_WALL.get());
+
+        blockModels.familyWithExistingFullBlock(RoseQuartzList.ROSE_QUARTZ_TILES.get())
+            .slab(RoseQuartzList.ROSE_QUARTZ_TILE_SLAB.get())
+            .stairs(RoseQuartzList.ROSE_QUARTZ_TILE_STAIRS.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

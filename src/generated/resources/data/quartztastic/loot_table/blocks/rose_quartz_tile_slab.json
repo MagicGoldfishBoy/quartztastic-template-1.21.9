@@ -11,7 +11,7 @@
               "add": false,
               "conditions": [
                 {
-                  "block": "quartztastic:smoky_quartz_tiles_slab",
+                  "block": "quartztastic:rose_quartz_tile_slab",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "type": "double"
@@ -25,11 +25,11 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "quartztastic:smoky_quartz_tiles_slab"
+          "name": "quartztastic:rose_quartz_tile_slab"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "quartztastic:blocks/smoky_quartz_tiles_slab"
+  "random_sequence": "quartztastic:blocks/rose_quartz_tile_slab"
 }

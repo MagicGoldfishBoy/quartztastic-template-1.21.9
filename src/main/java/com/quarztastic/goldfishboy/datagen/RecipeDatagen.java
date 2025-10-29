@@ -200,6 +200,11 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', RoseQuartzList.ROSE_QUARTZ_SLAB_ITEM.get())
             .unlockedBy("has_rose_quartz_slab", has(RoseQuartzList.ROSE_QUARTZ_SLAB_ITEM.get()))
             .save(this.output, "chiseled_rose_quartz_block_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get())
+            .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {
@@ -259,6 +264,17 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', RoseQuartzList.ROSE_QUARTZ_BRICKS_ITEM.get())
             .unlockedBy("has_rose_quartz_bricks_block", has(RoseQuartzList.ROSE_QUARTZ_BRICKS_ITEM.get()))
             .save(this.output, "rose_quartz_bricks_slab_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, RoseQuartzList.ROSE_QUARTZ_TILE_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_rose_quartz_tiles", has(RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get()))
+            .save(this.output, "rose_quartz_tiles_slab_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, RoseQuartzList.ROSE_QUARTZ_TILE_SLAB_ITEM.get(), 6)
+            .pattern("@@@")
+            .define('@', RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get())
+            .unlockedBy("has_rose_quartz_tiles", has(RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get()))
+            .save(this.output, "rose_quartz_tile_slab_by_crafting");
     }
 
     protected void buildStairsRecipes() {
@@ -328,6 +344,19 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', RoseQuartzList.ROSE_QUARTZ_BRICKS_ITEM.get())
             .unlockedBy("has_rose_quartz_bricks_block", has(RoseQuartzList.ROSE_QUARTZ_BRICKS_ITEM.get()))
             .save(this.output, "rose_quartz_bricks_stairs_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, RoseQuartzList.ROSE_QUARTZ_TILE_STAIRS_ITEM.get())
+            .unlockedBy("has_rose_quartz_tiles", has(RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get()))
+            .save(this.output, "rose_quartz_tile_stairs_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, RoseQuartzList.ROSE_QUARTZ_TILE_STAIRS_ITEM.get(), 4)
+            .pattern("@  ")
+            .pattern("@@ ")
+            .pattern("@@@")
+            .define('@', RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get())
+            .unlockedBy("has_rose_quartz_tiles", has(RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get()))
+            .save(this.output, "rose_quartz_tile_stairs_by_crafting");
 
     }
 

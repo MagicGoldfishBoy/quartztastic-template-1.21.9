@@ -18,8 +18,8 @@
   "block.quartztastic.smoky_quartz_brick_wall": "Smoky Quartz Brick Wall",
 
   "block.quartztastic.smoky_quartz_tiles": "Smoky Quartz Tiles",
-  "block.quartztastic.smoky_quartz_tiles_slab": "Smoky Quartz Tiles Slab",
-  "block.quartztastic.smoky_quartz_tiles_stairs": "Smoky Quartz Tiles Stairs",
+  "block.quartztastic.smoky_quartz_tile_slab": "Smoky Quartz Tiles Slab",
+  "block.quartztastic.smoky_quartz_tile_stairs": "Smoky Quartz Tiles Stairs",
 
   "block.quartztastic.chiseled_smoky_quartz_block": "Chiseled Smoky Quartz Block",
 
@@ -90,6 +90,10 @@
   "block.quartztastic.rose_quartz_brick_wall": "Rose Quartz Brick Wall",
 
   "block.quartztastic.chiseled_rose_quartz_block": "Chiseled Rose Quartz Block",
+
+  "block.quartztastic.rose_quartz_tiles": "Rose Quartz Tiles",
+  "block.quartztastic.rose_quartz_tile_slab": "Rose Quartz Tile Slab",
+  "block.quartztastic.rose_quartz_tile_stairs": "Rose Quartz Tile Stairs",
 
 
   "quartztastic.configuration.title": "Quartztastic Configs",

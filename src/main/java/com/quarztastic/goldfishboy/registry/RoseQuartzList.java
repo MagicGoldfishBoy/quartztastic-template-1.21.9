@@ -88,5 +88,21 @@ public class RoseQuartzList {
     public static DeferredBlock<Block> CHISELED_ROSE_QUARTZ_BLOCK;
 
     public static DeferredItem<BlockItem> CHISELED_ROSE_QUARTZ_BLOCK_ITEM;
+
+
+
+    public static DeferredBlock<Block> ROSE_QUARTZ_TILES;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_TILES_ITEM;
+
+
+    public static DeferredBlock<SlabBlock> ROSE_QUARTZ_TILE_SLAB;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_TILE_SLAB_ITEM;
+
+
+    public static DeferredBlock<StairBlock> ROSE_QUARTZ_TILE_STAIRS;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_TILE_STAIRS_ITEM;
     
 }

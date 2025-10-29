@@ -311,7 +311,7 @@ public class SmokyQuartzRegistry {
 
 
         SmokyQuartzList.SMOKY_QUARTZ_TILES_SLAB = Quartztastic.BLOCKS.register(
-            "smoky_quartz_tiles_slab", 
+            "smoky_quartz_tile_slab", 
             registryName -> new SlabBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.8f, 4.0f)
@@ -326,7 +326,7 @@ public class SmokyQuartzRegistry {
 
 
         SmokyQuartzList.SMOKY_QUARTZ_TILES_STAIRS = Quartztastic.BLOCKS.register(
-            "smoky_quartz_tiles_stairs", 
+            "smoky_quartz_tile_stairs", 
             registryName -> new StairBlock(SmokyQuartzList.SMOKY_QUARTZ_TILES.get().defaultBlockState(), BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.8f, 4.0f)

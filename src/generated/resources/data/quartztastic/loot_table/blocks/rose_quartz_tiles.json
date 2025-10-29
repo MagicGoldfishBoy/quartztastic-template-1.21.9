@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "quartztastic:smoky_quartz_tiles_stairs"
+          "name": "quartztastic:rose_quartz_tiles"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "quartztastic:blocks/smoky_quartz_tiles_stairs"
+  "random_sequence": "quartztastic:blocks/rose_quartz_tiles"
 }

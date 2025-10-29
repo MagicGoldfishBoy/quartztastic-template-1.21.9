@@ -86,6 +86,10 @@ public class TagDatagen extends BlockTagsProvider {
 
                 RoseQuartzList.CHISELED_ROSE_QUARTZ_BLOCK.get(),
 
+                RoseQuartzList.ROSE_QUARTZ_TILES.get(),
+                RoseQuartzList.ROSE_QUARTZ_TILE_SLAB.get(),
+                RoseQuartzList.ROSE_QUARTZ_TILE_STAIRS.get(),
+
 
                 CitrineList.CITRINE_ORE.get(),
 

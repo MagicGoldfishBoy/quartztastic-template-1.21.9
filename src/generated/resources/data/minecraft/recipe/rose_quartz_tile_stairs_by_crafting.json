@@ -2,13 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "@": "quartztastic:smoky_quartz_tiles"
+    "@": "quartztastic:rose_quartz_tiles"
   },
   "pattern": [
+    "@  ",
+    "@@ ",
     "@@@"
   ],
   "result": {
-    "count": 6,
-    "id": "quartztastic:smoky_quartz_tile_slab"
+    "count": 4,
+    "id": "quartztastic:rose_quartz_tile_stairs"
   }
 }
