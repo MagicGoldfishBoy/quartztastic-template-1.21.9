@@ -169,5 +169,70 @@ public class RoseQuartzRegistry {
                 RoseQuartzList.ROSE_QUARTZ_GATE
             );
 
+
+
+            RoseQuartzList.ROSE_QUARTZ_BRICKS = Quartztastic.BLOCKS.register(
+                "rose_quartz_bricks", 
+                registryName -> new Block(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_BRICKS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_BRICKS
+            );
+
+
+            RoseQuartzList.ROSE_QUARTZ_BRICK_SLAB = Quartztastic.BLOCKS.register(
+                "rose_quartz_brick_slab", 
+                registryName -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME / 2, ROSE_QUARTZ_BLAST_RESISTANCE / 2)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_BRICK_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_BRICK_SLAB
+            );
+
+
+            RoseQuartzList.ROSE_QUARTZ_BRICK_STAIRS = Quartztastic.BLOCKS.register(
+                "rose_quartz_brick_stairs", 
+                registryName -> new StairBlock(RoseQuartzList.ROSE_QUARTZ_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_BRICK_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_BRICK_STAIRS
+            );
+
+
+            RoseQuartzList.ROSE_QUARTZ_BRICK_WALL = Quartztastic.BLOCKS.register(
+                "rose_quartz_brick_wall", 
+                registryName -> new WallBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_BRICK_WALL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_BRICK_WALL
+            );
+
         }
 }

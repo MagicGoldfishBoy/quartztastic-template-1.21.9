@@ -84,6 +84,11 @@
   "block.quartztastic.rose_quartz_wall": "Rose Quartz Wall",
   "block.quartztastic.rose_quartz_gate": "Rose Quartz Gate",
 
+  "block.quartztastic.rose_quartz_bricks": "Rose Quartz Bricks",
+  "block.quartztastic.rose_quartz_brick_slab": "Rose Quartz Brick Slab",
+  "block.quartztastic.rose_quartz_brick_stairs": "Rose Quartz Brick Stairs",
+  "block.quartztastic.rose_quartz_brick_wall": "Rose Quartz Brick Wall",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

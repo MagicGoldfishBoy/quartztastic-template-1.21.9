@@ -69,7 +69,13 @@ public class ModelDatagen extends ModelProvider {
         blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_LIGHT.get());
 
 
+
         blockModels.createTrivialCube(RoseQuartzList.ROSE_QUARTZ_ORE.get());
+
+        blockModels.createTrivialCube(RoseQuartzList.ROSE_QUARTZ_BLOCK.get());
+
+        blockModels.createTrivialCube(RoseQuartzList.ROSE_QUARTZ_BRICKS.get());
+
 
 
         blockModels.createTrivialCube(CitrineList.CITRINE_ORE.get());
@@ -83,7 +89,7 @@ public class ModelDatagen extends ModelProvider {
         blockModels.createTrivialCube(PrasioliteQuartzList.PRASIOLITE_QUARTZ_NETHERRACK_ORE.get());
 
 
-        blockModels.createTrivialCube(RoseQuartzList.ROSE_QUARTZ_BLOCK.get());
+        
     }
 
     protected void buildBlockFamilies(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
@@ -117,6 +123,11 @@ public class ModelDatagen extends ModelProvider {
             .fence(RoseQuartzList.ROSE_QUARTZ_FENCE.get())
             .wall(RoseQuartzList.ROSE_QUARTZ_WALL.get())
             .fenceGate(RoseQuartzList.ROSE_QUARTZ_GATE.get());
+
+        blockModels.familyWithExistingFullBlock(RoseQuartzList.ROSE_QUARTZ_BRICKS.get())
+            .slab(RoseQuartzList.ROSE_QUARTZ_BRICK_SLAB.get())
+            .stairs(RoseQuartzList.ROSE_QUARTZ_BRICK_STAIRS.get())
+            .wall(RoseQuartzList.ROSE_QUARTZ_BRICK_WALL.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
