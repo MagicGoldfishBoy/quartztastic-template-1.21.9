@@ -3,7 +3,7 @@ package com.quarztastic.goldfishboy.block;
 import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
-import com.quarztastic.goldfishboy.entity.SmokyQuartzBarrelEntity;
+import com.quarztastic.goldfishboy.entity.RoseQuartzBarrelEntity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -30,17 +30,17 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class SmokyQuartzBarrelBlock extends BaseEntityBlock {
-    public static final MapCodec<SmokyQuartzBarrelBlock> CODEC = simpleCodec(SmokyQuartzBarrelBlock::new);
+public class RoseQuartzBarrelBlock extends BaseEntityBlock {
+    public static final MapCodec<RoseQuartzBarrelBlock> CODEC = simpleCodec(RoseQuartzBarrelBlock::new);
     public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
     @Override
-    public MapCodec<SmokyQuartzBarrelBlock> codec() {
+    public MapCodec<RoseQuartzBarrelBlock> codec() {
         return CODEC;
     }
 
-    public SmokyQuartzBarrelBlock(BlockBehaviour.Properties properties) {
+    public RoseQuartzBarrelBlock(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(OPEN, false));
     }
@@ -48,8 +48,8 @@ public class SmokyQuartzBarrelBlock extends BaseEntityBlock {
     @SuppressWarnings("null")
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level instanceof ServerLevel serverlevel && level.getBlockEntity(pos) instanceof SmokyQuartzBarrelEntity SmokyQuartzBarrelEntity) {
-            player.openMenu(SmokyQuartzBarrelEntity);
+        if (level instanceof ServerLevel serverlevel && level.getBlockEntity(pos) instanceof RoseQuartzBarrelEntity RoseQuartzBarrelEntity) {
+            player.openMenu(RoseQuartzBarrelEntity);
             player.awardStat(Stats.OPEN_BARREL);
             PiglinAi.angerNearbyPiglins(serverlevel, player, true);
         }
@@ -67,8 +67,8 @@ public class SmokyQuartzBarrelBlock extends BaseEntityBlock {
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         BlockEntity blockentity = level.getBlockEntity(pos);
-        if (blockentity instanceof SmokyQuartzBarrelEntity) {
-            ((SmokyQuartzBarrelEntity)blockentity).recheckOpen();
+        if (blockentity instanceof RoseQuartzBarrelEntity) {
+            ((RoseQuartzBarrelEntity)blockentity).recheckOpen();
         }
     }
 
@@ -76,7 +76,7 @@ public class SmokyQuartzBarrelBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new SmokyQuartzBarrelEntity(pos, state);
+        return new RoseQuartzBarrelEntity(pos, state);
     }
 
     @SuppressWarnings("null")
@@ -91,18 +91,13 @@ public class SmokyQuartzBarrelBlock extends BaseEntityBlock {
         return AbstractContainerMenu.getRedstoneSignalFromBlockEntity(level.getBlockEntity(pos));
     }
 
-    /**
-     * Returns the blockstate with the given rotation from the passed blockstate. If inapplicable, returns the passed blockstate.
-     */
+
     @SuppressWarnings("null")
     @Override
     protected BlockState rotate(BlockState state, Rotation rotation) {
         return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
     }
 
-    /**
-     * Returns the blockstate with the given mirror of the passed blockstate. If inapplicable, returns the passed blockstate.
-     */
     @SuppressWarnings({ "null", "deprecation" })
     @Override
     protected BlockState mirror(BlockState state, Mirror mirror) {

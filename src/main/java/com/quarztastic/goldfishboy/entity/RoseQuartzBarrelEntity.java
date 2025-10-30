@@ -2,7 +2,7 @@ package com.quarztastic.goldfishboy.entity;
 
 import java.util.List;
 
-import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
+import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
@@ -27,23 +27,23 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 
-public class SmokyQuartzBarrelEntity extends RandomizableContainerBlockEntity {
-    private static final Component DEFAULT_NAME = Component.translatable("container.smoky_quartz_barrel");
+public class RoseQuartzBarrelEntity extends RandomizableContainerBlockEntity {
+    private static final Component DEFAULT_NAME = Component.translatable("container.rose_quartz_barrel");
     private NonNullList<ItemStack> items = NonNullList.withSize(27, ItemStack.EMPTY);
     private final ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
         
         @SuppressWarnings("null")
         @Override
         protected void onOpen(Level p_155062_, BlockPos p_155063_, BlockState p_155064_) {
-            SmokyQuartzBarrelEntity.this.playSound(p_155064_, SoundEvents.AMETHYST_BLOCK_BREAK);
-            SmokyQuartzBarrelEntity.this.updateBlockState(p_155064_, true);
+            RoseQuartzBarrelEntity.this.playSound(p_155064_, SoundEvents.AMETHYST_BLOCK_BREAK);
+            RoseQuartzBarrelEntity.this.updateBlockState(p_155064_, true);
         }
 
         @SuppressWarnings("null")
         @Override
         protected void onClose(Level p_155072_, BlockPos p_155073_, BlockState p_155074_) {
-            SmokyQuartzBarrelEntity.this.playSound(p_155074_, SoundEvents.AMETHYST_BLOCK_BREAK);
-            SmokyQuartzBarrelEntity.this.updateBlockState(p_155074_, false);
+            RoseQuartzBarrelEntity.this.playSound(p_155074_, SoundEvents.AMETHYST_BLOCK_BREAK);
+            RoseQuartzBarrelEntity.this.updateBlockState(p_155074_, false);
         }
 
         @SuppressWarnings("null")
@@ -56,15 +56,15 @@ public class SmokyQuartzBarrelEntity extends RandomizableContainerBlockEntity {
         public boolean isOwnContainer(Player p_155060_) {
             if (p_155060_.containerMenu instanceof ChestMenu) {
                 Container container = ((ChestMenu)p_155060_.containerMenu).getContainer();
-                return container == SmokyQuartzBarrelEntity.this;
+                return container == RoseQuartzBarrelEntity.this;
             } else {
                 return false;
             }
         }
     };
 
-    public SmokyQuartzBarrelEntity(BlockPos pos, BlockState blockState) {
-        super(SmokyQuartzList.SMOKY_QUARTZ_BARREL_ENTITY.get(), pos, blockState);
+    public RoseQuartzBarrelEntity(BlockPos pos, BlockState blockState) {
+        super(RoseQuartzList.ROSE_QUARTZ_BARREL_ENTITY.get(), pos, blockState);
     }
 
     @SuppressWarnings("null")

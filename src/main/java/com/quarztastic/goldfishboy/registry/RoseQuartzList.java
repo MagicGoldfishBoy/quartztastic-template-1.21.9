@@ -4,11 +4,13 @@ import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.RoseQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.entity.RoseQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
 
@@ -214,5 +216,12 @@ public class RoseQuartzList {
     public static DeferredBlock<LadderBlock> ROSE_QUARTZ_LADDER;
 
     public static DeferredItem<BlockItem> ROSE_QUARTZ_LADDER_ITEM;
+
+
+    public static DeferredBlock<RoseQuartzBarrelBlock> ROSE_QUARTZ_BARREL_BLOCK;
+
+    public static Supplier<BlockEntityType<RoseQuartzBarrelEntity>> ROSE_QUARTZ_BARREL_ENTITY;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_BARREL_ITEM;
     
 }

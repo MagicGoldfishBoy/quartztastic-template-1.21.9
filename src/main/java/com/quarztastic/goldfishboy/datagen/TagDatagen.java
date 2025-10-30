@@ -98,6 +98,7 @@ public class TagDatagen extends BlockTagsProvider {
                 RoseQuartzList.ROSE_QUARTZ_CHAIN.get(),
 
                 RoseQuartzList.ROSE_QUARTZ_LADDER.get(),
+                RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK.get(),
                 RoseQuartzList.ROSE_QUARTZ_BOOKSHELF.get(),
 
                 RoseQuartzList.ROSE_QUARTZ_FURNACE.get(),
@@ -160,7 +161,8 @@ public class TagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.BARRELS_TAG)
             .add(
-                SmokyQuartzList.SMOKY_QUARTZ_BARREL.get()
+                SmokyQuartzList.SMOKY_QUARTZ_BARREL.get(),
+                RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK.get()
             );
 
 

@@ -3,11 +3,13 @@ package com.quarztastic.goldfishboy.registry;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.RoseQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.entity.RoseQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzFurnaceEntity;
@@ -628,6 +630,30 @@ public class RoseQuartzRegistry {
 
             RoseQuartzList.ROSE_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_LADDER
+            );
+
+
+            RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK = Quartztastic.BLOCKS.register(
+                "rose_quartz_barrel", 
+                registryName -> new RoseQuartzBarrelBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_BARREL_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+                "rose_quartz_barrel",
+                () -> new BlockEntityType<>(
+                RoseQuartzBarrelEntity::new,
+                false,
+                RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK.get())
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK
             );
 
         }
