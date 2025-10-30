@@ -614,5 +614,21 @@ public class RoseQuartzRegistry {
                         .setId(ResourceKey.create(Registries.ITEM, registryName))
             ));
 
+
+            RoseQuartzList.ROSE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
+                "rose_quartz_ladder", 
+                registryName -> new net.minecraft.world.level.block.LadderBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_LADDER
+            );
+
         }
 }

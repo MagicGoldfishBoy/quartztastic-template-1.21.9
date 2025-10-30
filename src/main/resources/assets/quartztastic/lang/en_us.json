@@ -122,6 +122,8 @@
   "item.quartztastic.rose_quartz_torch": "Rose Quartz Torch",
   "item.quartztastic.rose_quartz_soul_torch": "Rose Quartz Soul Torch",
 
+  "block.quartztastic.rose_quartz_ladder": "Rose Quartz Ladder",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

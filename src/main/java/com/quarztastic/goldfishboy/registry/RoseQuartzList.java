@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -208,5 +209,10 @@ public class RoseQuartzList {
     public static DeferredBlock<WallTorchBlock> ROSE_QUARTZ_WALL_SOUL_TORCH;
 
     public static DeferredItem<StandingAndWallBlockItem> ROSE_QUARTZ_SOUL_TORCH_ITEM;
+
+
+    public static DeferredBlock<LadderBlock> ROSE_QUARTZ_LADDER;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_LADDER_ITEM;
     
 }

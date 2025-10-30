@@ -304,6 +304,10 @@ public class ModelDatagen extends ModelProvider {
             RoseQuartzList.ROSE_QUARTZ_SHELF_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/rose_quartz_shelf"))
         );
+
+
+        ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_LADDER.get(), RoseQuartzList.ROSE_QUARTZ_LADDER_ITEM.get(), 
+            new Variant(modLocation("block/rose_quartz_ladder")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
