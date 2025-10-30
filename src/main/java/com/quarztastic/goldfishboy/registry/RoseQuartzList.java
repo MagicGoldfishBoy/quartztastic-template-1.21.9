@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.RoseQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
 
@@ -157,5 +158,10 @@ public class RoseQuartzList {
     public static DeferredBlock<Chair> ROSE_QUARTZ_CHAIR;
 
     public static DeferredItem<BlockItem> ROSE_QUARTZ_CHAIR_ITEM;
+
+
+    public static DeferredBlock<Table> ROSE_QUARTZ_TABLE;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_TABLE_ITEM;
     
 }

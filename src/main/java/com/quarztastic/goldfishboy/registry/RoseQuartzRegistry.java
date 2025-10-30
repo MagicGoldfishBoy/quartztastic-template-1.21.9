@@ -6,6 +6,7 @@ import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.RoseQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzFurnaceEntity;
@@ -433,13 +434,31 @@ public class RoseQuartzRegistry {
                 "rose_quartz_chair", 
                 registryName -> new Chair("royal", BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                    .strength(0.8f, 4.0f)
-                    .sound(SoundType.AMETHYST)
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
                 )
             );
 
             RoseQuartzList.ROSE_QUARTZ_CHAIR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_CHAIR
+            );
+
+
+            RoseQuartzList.ROSE_QUARTZ_TABLE = Quartztastic.BLOCKS.register(
+                "rose_quartz_table", 
+                registryName -> new Table(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_TABLE
             );
 
         }

@@ -278,6 +278,20 @@ public class ModelDatagen extends ModelProvider {
             RoseQuartzList.ROSE_QUARTZ_CHAIR_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/rose_quartz_chair"))
         );
+
+        ModelDatagenHelpers.createTableModel(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_TABLE.get(), new Variant(modLocation("block/rose_quartz_table_single")), 
+            new Variant(modLocation("block/rose_quartz_table_center")), new Variant(modLocation("block/rose_quartz_table_north")), new Variant(modLocation("block/rose_quartz_table_east")), 
+            new Variant(modLocation("block/rose_quartz_table_south")), new Variant(modLocation("block/rose_quartz_table_west")), new Variant(modLocation("block/rose_quartz_table_center")), 
+            new Variant(modLocation("block/rose_quartz_table_east_and_north")), new Variant(modLocation("block/rose_quartz_table_east_and_south")), 
+            new Variant(modLocation("block/rose_quartz_table_center")), new Variant(modLocation("block/rose_quartz_table_west_and_north")), 
+            new Variant(modLocation("block/rose_quartz_table_west_and_south")), new Variant(modLocation("block/rose_quartz_table_center")),
+            new Variant(modLocation("block/rose_quartz_table_center")), new Variant(modLocation("block/rose_quartz_table_center")), 
+            new Variant(modLocation("block/rose_quartz_table_center")));
+
+        itemModels.itemModelOutput.accept(
+            RoseQuartzList.ROSE_QUARTZ_TABLE_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/rose_quartz_table_single"))
+        );
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
