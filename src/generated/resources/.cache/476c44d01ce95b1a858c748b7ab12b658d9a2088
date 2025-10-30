@@ -1,4 +1,4 @@
-// 1.21.9	2025-10-30T11:18:18.676064919	Model Definitions - quartztastic
+// 1.21.9	2025-10-30T11:28:35.032305474	Model Definitions - quartztastic
 6949a6ee96a435324a6e89dc57acda2e795fa0e0 assets/quartztastic/blockstates/blue_quartz_ore.json
 e024828faf3948c9c99e410416603d90e1562e79 assets/quartztastic/blockstates/chiseled_rose_quartz_block.json
 6b8d68d8af352c24aad6403b6b1c147333701061 assets/quartztastic/blockstates/chiseled_smoky_quartz_block.json
@@ -22,6 +22,7 @@ dad16619daf87715f81ca881ec15aa35b293d7ad assets/quartztastic/blockstates/rose_qu
 91df09ab26bd042ed9ddaab9af4806048c9e63ef assets/quartztastic/blockstates/rose_quartz_oven.json
 ca4c2e5d4bef39c0ce53b574d7631579a5e1fb48 assets/quartztastic/blockstates/rose_quartz_pillar.json
 ca7b3a5245052c149fa9ea31c30001f07bbd219e assets/quartztastic/blockstates/rose_quartz_pressure_plate.json
+77d0b0613b713198f5b3cb7e965efdaf0ec7e191 assets/quartztastic/blockstates/rose_quartz_shelf.json
 274b6cdce41c813bceb61d4541e2caec816f4574 assets/quartztastic/blockstates/rose_quartz_slab.json
 0fda81ed7b7282ac58ecc021567edbd4de9c126e assets/quartztastic/blockstates/rose_quartz_stairs.json
 dab468c7f31c22f6b17e007def853f8b196ff472 assets/quartztastic/blockstates/rose_quartz_table.json
@@ -94,6 +95,7 @@ ecf3a229fd8635a5a4b8e68e8afb7ca3e965a5f8 assets/quartztastic/items/rose_quartz_o
 22cb337df380d447d80144fbc675a0f34ac118cc assets/quartztastic/items/rose_quartz_oven.json
 23eeb6636b72aaf024304f2703b98939ca28b22d assets/quartztastic/items/rose_quartz_pillar.json
 7a9a6b2970ba78361fa25fa42717e43678b49c62 assets/quartztastic/items/rose_quartz_pressure_plate.json
+7e9fd639e2d18e1f1e4fe85e4747b9f881339972 assets/quartztastic/items/rose_quartz_shelf.json
 970a9e456bce74601257b350b64ef0599124e612 assets/quartztastic/items/rose_quartz_slab.json
 007753128429ffa64d6675fe671e8c332be09171 assets/quartztastic/items/rose_quartz_stairs.json
 6a22aaf0c54e0d5c866a3bd1f15c84ce5418d5f4 assets/quartztastic/items/rose_quartz_table.json
