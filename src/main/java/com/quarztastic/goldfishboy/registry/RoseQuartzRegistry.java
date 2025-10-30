@@ -478,5 +478,21 @@ public class RoseQuartzRegistry {
                 RoseQuartzList.ROSE_QUARTZ_SHELF
             );
 
+
+            RoseQuartzList.ROSE_QUARTZ_LIGHT = Quartztastic.BLOCKS.register(
+                "rose_quartz_light", 
+                registryName -> new Block(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> 15)
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_LIGHT
+            );
+
         }
 }

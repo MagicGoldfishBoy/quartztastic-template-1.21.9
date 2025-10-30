@@ -47,6 +47,12 @@ public class TagDatagen extends BlockTagsProvider {
                 
                 SmokyQuartzList.SMOKY_QUARTZ_PILLAR.get(),
 
+                SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF.get(),
+
+                SmokyQuartzList.SMOKY_QUARTZ_FURNACE_BLOCK.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_OVEN_BLOCK.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_BLOCK.get(),
+
                 SmokyQuartzList.SMOKY_QUARTZ_DOOR.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_CHAIR.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_TABLE.get(),
@@ -60,12 +66,6 @@ public class TagDatagen extends BlockTagsProvider {
                 SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND.get(),
 
                 SmokyQuartzList.SMOKY_QUARTZ_SINK.get(),
-
-                SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF.get(),
-
-                SmokyQuartzList.SMOKY_QUARTZ_FURNACE_BLOCK.get(),
-                SmokyQuartzList.SMOKY_QUARTZ_OVEN_BLOCK.get(),
-                SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_BLOCK.get(),
 
 
                 RoseQuartzList.ROSE_QUARTZ_ORE.get(),
@@ -91,6 +91,8 @@ public class TagDatagen extends BlockTagsProvider {
                 RoseQuartzList.ROSE_QUARTZ_TILE_STAIRS.get(),
 
                 RoseQuartzList.ROSE_QUARTZ_PILLAR.get(),
+
+                RoseQuartzList.ROSE_QUARTZ_LIGHT.get(),
 
                 RoseQuartzList.ROSE_QUARTZ_BOOKSHELF.get(),
 

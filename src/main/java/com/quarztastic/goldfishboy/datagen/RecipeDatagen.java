@@ -211,6 +211,14 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output);
 
+        
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_LIGHT_ITEM.get())
+            .requires(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get())
+            .requires(Items.GLOWSTONE)
+            .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
+            .unlockedBy("has_glowstone", has(Items.GLOWSTONE))
+            .save(this.output);
+
 
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_BOOKSHELF_ITEM.get())
             .pattern("@@@")
@@ -621,7 +629,7 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .unlockedBy("has_smoky_quartz_slab", has(SmokyQuartzList.SMOKY_QUARTZ_SLAB.get()))
             .save(this.output);
-            
+
             
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_SHELF_ITEM.get(), 2)
             .pattern("###")

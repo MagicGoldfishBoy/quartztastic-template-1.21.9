@@ -169,5 +169,10 @@ public class RoseQuartzList {
     public static DeferredBlock<Shelf> ROSE_QUARTZ_SHELF;
 
     public static DeferredItem<BlockItem> ROSE_QUARTZ_SHELF_ITEM;
+
+
+    public static DeferredBlock<Block> ROSE_QUARTZ_LIGHT;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_LIGHT_ITEM;
     
 }
