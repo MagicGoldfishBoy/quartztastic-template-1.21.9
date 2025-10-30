@@ -108,6 +108,8 @@
   "block.quartztastic.rose_quartz_blast_furnace": "Rose Quartz Blast Furnace",
   "container.rose_quartz_blast_furnace": "Rose Quartz Blast Furnace",
 
+  "block.quartztastic.rose_quartz_door": "Rose Quartz Door",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

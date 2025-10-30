@@ -159,7 +159,10 @@ public class ModelDatagen extends ModelProvider {
     }
 
     protected void buildDoorModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
         blockModels.createDoor(SmokyQuartzList.SMOKY_QUARTZ_DOOR.get());
+
+        blockModels.createDoor(RoseQuartzList.ROSE_QUARTZ_DOOR.get());
     }
 
     protected void buildBlockbenchBlockstates(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

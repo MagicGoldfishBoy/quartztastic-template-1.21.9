@@ -13,6 +13,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
@@ -145,5 +146,10 @@ public class RoseQuartzList {
     public static Supplier<BlockEntityType<RoseQuartzBlastFurnaceEntity>> ROSE_QUARTZ_BLAST_FURNACE_ENTITY;
 
     public static DeferredItem<BlockItem> ROSE_QUARTZ_BLAST_FURNACE_ITEM;
+
+
+    public static DeferredBlock<DoorBlock> ROSE_QUARTZ_DOOR;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_DOOR_ITEM;
     
 }
