@@ -165,7 +165,11 @@ public class TagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.PIGLIN_REPELLENT_TAG)
             .add(
-                SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN.get()
+                SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_SOUL_TORCH.get(),
+
+                RoseQuartzList.ROSE_QUARTZ_SOUL_LANTERN.get(),
+                RoseQuartzList.ROSE_QUARTZ_SOUL_TORCH.get()
             );
 
         this.tag(TagKeyList.CLIMBABLE_TAG)

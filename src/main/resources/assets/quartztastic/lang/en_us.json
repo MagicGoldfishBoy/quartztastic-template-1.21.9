@@ -119,6 +119,8 @@
   "block.quartztastic.rose_quartz_lantern": "Rose Quartz Lantern",
   "block.quartztastic.rose_quartz_soul_lantern": "Rose Quartz Soul Lantern",
   "block.quartztastic.rose_quartz_chain": "Rose Quartz Chain",
+  "item.quartztastic.rose_quartz_torch": "Rose Quartz Torch",
+  "item.quartztastic.rose_quartz_soul_torch": "Rose Quartz Soul Torch",
 
 
   "quartztastic.configuration.title": "Quartztastic Configs",

@@ -12,8 +12,12 @@ import com.quarztastic.goldfishboy.entity.RoseQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzFurnaceEntity;
 
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
@@ -23,6 +27,7 @@ import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -542,6 +547,72 @@ public class RoseQuartzRegistry {
             RoseQuartzList.ROSE_QUARTZ_CHAIN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_CHAIN
             );
+
+
+            RoseQuartzList.ROSE_QUARTZ_TORCH = Quartztastic.BLOCKS.register(
+                "rose_quartz_torch", 
+                registryName -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .instabreak()
+                    .lightLevel(state -> 15)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_WALL_TORCH = Quartztastic.BLOCKS.register(
+                "rose_quartz_wall_torch", 
+                registryName -> new net.minecraft.world.level.block.WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .instabreak()
+                    .lightLevel(state -> 15)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_TORCH_ITEM = Quartztastic.ITEMS.register(
+                "rose_quartz_torch", 
+                registryName -> new StandingAndWallBlockItem(
+                    RoseQuartzList.ROSE_QUARTZ_TORCH.get(),
+                    RoseQuartzList.ROSE_QUARTZ_WALL_TORCH.get(), 
+                    Direction.DOWN, 
+                    new Item.Properties()
+                        .setId(ResourceKey.create(Registries.ITEM, registryName))
+            ));
+
+
+            RoseQuartzList.ROSE_QUARTZ_SOUL_TORCH = Quartztastic.BLOCKS.register(
+                "rose_quartz_soul_torch", 
+                registryName -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .instabreak()
+                    .lightLevel(state -> 10)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_WALL_SOUL_TORCH = Quartztastic.BLOCKS.register(
+                "rose_quartz_wall_soul_torch", 
+                registryName -> new net.minecraft.world.level.block.WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .instabreak()
+                    .lightLevel(state -> 10)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_SOUL_TORCH_ITEM = Quartztastic.ITEMS.register(
+                "rose_quartz_soul_torch", 
+                registryName -> new StandingAndWallBlockItem(
+                    RoseQuartzList.ROSE_QUARTZ_SOUL_TORCH.get(),
+                    RoseQuartzList.ROSE_QUARTZ_WALL_SOUL_TORCH.get(), 
+                    Direction.DOWN, 
+                    new Item.Properties()
+                        .setId(ResourceKey.create(Registries.ITEM, registryName))
+            ));
 
         }
 }

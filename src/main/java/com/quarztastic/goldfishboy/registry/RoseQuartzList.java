@@ -14,6 +14,7 @@ import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.ChainBlock;
@@ -24,7 +25,9 @@ import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -191,5 +194,19 @@ public class RoseQuartzList {
     public static DeferredBlock<ChainBlock> ROSE_QUARTZ_CHAIN;
 
     public static DeferredItem<BlockItem> ROSE_QUARTZ_CHAIN_ITEM;
+
+
+    public static DeferredBlock<TorchBlock> ROSE_QUARTZ_TORCH;
+
+    public static DeferredBlock<WallTorchBlock> ROSE_QUARTZ_WALL_TORCH;
+
+    public static DeferredItem<StandingAndWallBlockItem> ROSE_QUARTZ_TORCH_ITEM;
+
+
+    public static DeferredBlock<TorchBlock> ROSE_QUARTZ_SOUL_TORCH;
+
+    public static DeferredBlock<WallTorchBlock> ROSE_QUARTZ_WALL_SOUL_TORCH;
+
+    public static DeferredItem<StandingAndWallBlockItem> ROSE_QUARTZ_SOUL_TORCH_ITEM;
     
 }

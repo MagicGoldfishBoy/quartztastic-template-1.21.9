@@ -1,5 +1,8 @@
 {
   "values": [
-    "quartztastic:smoky_quartz_soul_lantern"
+    "quartztastic:smoky_quartz_soul_lantern",
+    "quartztastic:smoky_quartz_soul_torch",
+    "quartztastic:rose_quartz_soul_lantern",
+    "quartztastic:rose_quartz_soul_torch"
   ]
 }

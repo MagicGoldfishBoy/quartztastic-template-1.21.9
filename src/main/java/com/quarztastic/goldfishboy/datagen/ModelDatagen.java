@@ -328,6 +328,11 @@ public class ModelDatagen extends ModelProvider {
         blockModels.createNormalTorch(SmokyQuartzList.SMOKY_QUARTZ_TORCH.get(), SmokyQuartzList.SMOKY_QUARTZ_WALL_TORCH.get());
 
         blockModels.createNormalTorch(SmokyQuartzList.SMOKY_QUARTZ_SOUL_TORCH.get(), SmokyQuartzList.SMOKY_QUARTZ_WALL_SOUL_TORCH.get());
+
+
+        blockModels.createNormalTorch(RoseQuartzList.ROSE_QUARTZ_TORCH.get(), RoseQuartzList.ROSE_QUARTZ_WALL_TORCH.get());
+
+        blockModels.createNormalTorch(RoseQuartzList.ROSE_QUARTZ_SOUL_TORCH.get(), RoseQuartzList.ROSE_QUARTZ_WALL_SOUL_TORCH.get());
     }
 }
 
