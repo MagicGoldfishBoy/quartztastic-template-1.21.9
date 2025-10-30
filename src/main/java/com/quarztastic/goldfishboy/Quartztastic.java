@@ -170,6 +170,10 @@ public class Quartztastic {
 
 
         ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_DOOR.get(), ChunkSectionLayer.TRANSLUCENT);
+
+        ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_LANTERN.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_SOUL_LANTERN.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_CHAIN.get(), ChunkSectionLayer.TRANSLUCENT);
     }
 
 

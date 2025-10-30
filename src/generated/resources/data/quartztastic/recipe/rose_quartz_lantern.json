@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:torch",
+    "@": "quartztastic:rose_quartz_crystal"
+  },
+  "pattern": [
+    "@@@",
+    "@#@",
+    "@@@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:rose_quartz_lantern"
+  }
+}

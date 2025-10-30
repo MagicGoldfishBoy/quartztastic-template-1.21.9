@@ -116,6 +116,10 @@
   "block.quartztastic.rose_quartz_table": "Rose Quartz Table",
   "block.quartztastic.rose_quartz_shelf": "Rose Quartz Shelf",
 
+  "block.quartztastic.rose_quartz_lantern": "Rose Quartz Lantern",
+  "block.quartztastic.rose_quartz_soul_lantern": "Rose Quartz Soul Lantern",
+  "block.quartztastic.rose_quartz_chain": "Rose Quartz Chain",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

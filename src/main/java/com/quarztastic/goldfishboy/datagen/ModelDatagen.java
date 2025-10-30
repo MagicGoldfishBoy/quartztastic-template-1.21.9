@@ -314,6 +314,13 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createChainBlockstates(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_CHAIN.get(), SmokyQuartzList.SMOKY_QUARTZ_CHAIN_ITEM.get());
 
+
+        blockModels.createLantern(RoseQuartzList.ROSE_QUARTZ_LANTERN.get());
+
+        blockModels.createLantern(RoseQuartzList.ROSE_QUARTZ_SOUL_LANTERN.get());
+
+        ModelDatagenHelpers.createChainBlockstates(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_CHAIN.get(), RoseQuartzList.ROSE_QUARTZ_CHAIN_ITEM.get());
+
     }
 
     protected void buildTorchModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

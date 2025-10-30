@@ -670,6 +670,35 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
             .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_LANTERN_ITEM.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get())
+            .define('#', Items.TORCH)
+            .unlockedBy("has_rose_quartz_crystal", has(RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get()))
+            .unlockedBy("has_torch", has(Items.TORCH))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_SOUL_LANTERN_ITEM.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get())
+            .define('#', Items.SOUL_TORCH)
+            .unlockedBy("has_rose_quartz_crystal", has(RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get()))
+            .unlockedBy("has_soul_torch", has(Items.SOUL_TORCH))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_CHAIN.get())
+            .pattern("@")
+            .pattern("@")
+            .pattern("@")
+            .define('@', RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_rose_quartz_crystal", has(RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
     }
 
     protected void buildTorchRecipes() {

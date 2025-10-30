@@ -17,6 +17,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -492,6 +493,54 @@ public class RoseQuartzRegistry {
 
             RoseQuartzList.ROSE_QUARTZ_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_LIGHT
+            );
+
+
+            RoseQuartzList.ROSE_QUARTZ_LANTERN = Quartztastic.BLOCKS.register(
+                "rose_quartz_lantern", 
+                registryName -> new net.minecraft.world.level.block.LanternBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> 15)
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_LANTERN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_LANTERN
+            );
+
+
+            RoseQuartzList.ROSE_QUARTZ_SOUL_LANTERN = Quartztastic.BLOCKS.register(
+                "rose_quartz_soul_lantern", 
+                registryName -> new net.minecraft.world.level.block.LanternBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> 10)
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_SOUL_LANTERN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_SOUL_LANTERN
+            );
+
+
+            RoseQuartzList.ROSE_QUARTZ_CHAIN = Quartztastic.BLOCKS.register(
+                "rose_quartz_chain", 
+                registryName -> new ChainBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_CHAIN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_CHAIN
             );
 
         }
