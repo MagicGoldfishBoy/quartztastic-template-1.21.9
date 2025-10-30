@@ -256,9 +256,9 @@ public class ModelDatagen extends ModelProvider {
                 LOGGER.info("Generating model for: {}", name);
 
                 itemModels.itemModelOutput.accept(
-                holder.get(),
-                ItemModelUtils.plainModel(modLocation(name))
-            );
+                    holder.get(),
+                    ItemModelUtils.plainModel(modLocation(name))
+                );
             }
             if (rawName.contains("furnace") || rawName.contains("oven")) {
                 String name = "block/" + rawName;
@@ -266,11 +266,18 @@ public class ModelDatagen extends ModelProvider {
                 LOGGER.info("Generating model for: {}", name);
 
                 itemModels.itemModelOutput.accept(
-                holder.get(),
-                ItemModelUtils.plainModel(modLocation(name))
-            );
+                    holder.get(),
+                    ItemModelUtils.plainModel(modLocation(name))
+                );
             }
         }
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_CHAIR.get(), new Variant(modLocation("block/rose_quartz_chair")));
+
+        itemModels.itemModelOutput.accept(
+            RoseQuartzList.ROSE_QUARTZ_CHAIR_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/rose_quartz_chair"))
+        );
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

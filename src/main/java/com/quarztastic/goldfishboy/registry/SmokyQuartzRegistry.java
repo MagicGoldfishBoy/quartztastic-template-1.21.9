@@ -465,7 +465,7 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_CHAIR = Quartztastic.BLOCKS.register(
             "smoky_quartz_chair", 
-            registryName -> new Chair(BlockBehaviour.Properties.of()
+            registryName -> new Chair("diner", BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(0.8f, 4.0f)
                 .sound(SoundType.AMETHYST)

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "quartztastic:rose_quartz_slab",
+    "@": "quartztastic:rose_quartz_crystal"
+  },
+  "pattern": [
+    "  @",
+    "##@",
+    "@ @"
+  ],
+  "result": {
+    "count": 4,
+    "id": "quartztastic:rose_quartz_chair"
+  }
+}

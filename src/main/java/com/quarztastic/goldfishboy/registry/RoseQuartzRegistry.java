@@ -1,6 +1,7 @@
 package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.RoseQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzFurnaceBlock;
@@ -425,6 +426,20 @@ public class RoseQuartzRegistry {
 
             RoseQuartzList.ROSE_QUARTZ_DOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_DOOR
+            );
+
+
+            RoseQuartzList.ROSE_QUARTZ_CHAIR = Quartztastic.BLOCKS.register(
+                "rose_quartz_chair", 
+                registryName -> new Chair("royal", BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(0.8f, 4.0f)
+                    .sound(SoundType.AMETHYST)
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_CHAIR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_CHAIR
             );
 
         }

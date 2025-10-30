@@ -4,7 +4,9 @@ import java.util.Map;
 
 import javax.annotation.Nullable;
 
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.entity.ChairEntity;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
@@ -30,13 +32,21 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class Chair extends HorizontalDirectionalBlock {
 
-    public static final MapCodec<Chair> CODEC = simpleCodec(Chair::new);
+    public static final MapCodec<Chair> CODEC = RecordCodecBuilder.mapCodec(instance ->
+        instance.group(
+            Codec.STRING.fieldOf("chair_shape").forGetter(chair -> chair.chairShape),
+            propertiesCodec()
+        ).apply(instance, Chair::new)
+    );
 
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
+    private final String chairShape;
 
-    public Chair(Properties properties) {
+
+    public Chair(String chairShape, Properties properties) {
         super(properties);
+        this.chairShape = chairShape;
     }
 
     @Override
@@ -44,8 +54,7 @@ public class Chair extends HorizontalDirectionalBlock {
         return CODEC;
     }
 
-
-    public static final Map<Direction, VoxelShape> SHAPES = Shapes.rotateHorizontal(
+    public static final Map<Direction, VoxelShape> DINER_SHAPE = Shapes.rotateHorizontal(
         Shapes.or(Block.box(6, 0, 6, 10, 2, 10),
         Block.box(6.799999999999999, 2, 6.8, 9.2, 6, 9.2),
         Block.box(6, 6, 6, 10, 7, 10),
@@ -69,6 +78,40 @@ public class Chair extends HorizontalDirectionalBlock {
         Block.box(12.5, 9, 5, 13.5, 12, 6),
         Block.box(2, 12, 4, 4, 13, 10.5),
         Block.box(12, 12, 4, 14, 13, 10.5)
+        )
+    );
+
+    public static final Map<Direction, VoxelShape> ROYAL_SHAPE = Shapes.rotateHorizontal(
+        Shapes.or(Block.box(3, 0, 4, 4, 6, 5),
+        Block.box(4, 0, 3, 5, 6, 6),
+        Block.box(5, 0, 4, 6, 6, 5),
+        Block.box(3, 0, 10, 4, 6, 11),
+        Block.box(4, 0, 9, 5, 6, 12),
+        Block.box(5, 0, 10, 6, 6, 11),
+        Block.box(10, 0, 4, 11, 6, 5),
+        Block.box(11, 0, 3, 12, 6, 6),
+        Block.box(12, 0, 4, 13, 6, 5),
+        Block.box(10, 0, 10, 11, 6, 11),
+        Block.box(11, 0, 9, 12, 6, 12),
+        Block.box(12, 0, 10, 13, 6, 11),
+        Block.box(2, 6, 3, 3, 9, 11),
+        Block.box(3, 6, 2, 13, 9, 13),
+        Block.box(4, 6, 13, 12, 9, 14),
+        Block.box(13, 6, 3, 14, 9, 11),
+        Block.box(3, 9, 2, 13, 17, 3),
+        Block.box(2, 9, 3, 14, 17, 4),
+        Block.box(3, 17, 2, 13, 18, 4),
+        Block.box(4, 18, 2, 12, 19, 4),
+        Block.box(5, 19, 2, 11, 20, 4),
+        Block.box(7, 20, 2, 9, 21, 4),
+        Block.box(2, 10, 7, 4, 11, 8),
+        Block.box(2, 9, 8, 4, 11, 9),
+        Block.box(2, 11, 4, 4, 13, 9),
+        Block.box(2, 9, 9, 4, 12, 10),
+        Block.box(12, 9, 9, 14, 12, 10),
+        Block.box(12, 9, 8, 14, 11, 9),
+        Block.box(12, 10, 7, 14, 11, 8),
+        Block.box(12, 11, 4, 14, 13, 9)
         )
     );
 
@@ -111,10 +154,18 @@ public class Chair extends HorizontalDirectionalBlock {
         }
         return InteractionResult.SUCCESS;
     }
+
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-
-        return SHAPES.get(state.getValue(FACING).getOpposite());
+        
+        switch (this.chairShape) {
+            case "diner":
+               return DINER_SHAPE.get(state.getValue(FACING).getOpposite());
+            case "royal":
+                return ROYAL_SHAPE.get(state.getValue(FACING).getOpposite());
+            default:
+                return DINER_SHAPE.get(state.getValue(FACING).getOpposite());
+        }
     }
 
     @Nullable

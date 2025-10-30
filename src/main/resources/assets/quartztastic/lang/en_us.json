@@ -110,6 +110,8 @@
 
   "block.quartztastic.rose_quartz_door": "Rose Quartz Door",
 
+  "block.quartztastic.rose_quartz_chair": "Rose Quartz Chair",
+
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
