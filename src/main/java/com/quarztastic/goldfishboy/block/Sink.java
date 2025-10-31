@@ -4,7 +4,9 @@ import java.util.Map;
 
 import javax.annotation.Nullable;
 
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,11 +33,21 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class Sink extends HorizontalDirectionalBlock {
 
-    public static final MapCodec<Sink> CODEC = simpleCodec(Sink::new);
+    public static final MapCodec<Sink> CODEC = RecordCodecBuilder.mapCodec(instance ->
+        instance.group(
+            Codec.STRING.fieldOf("sink_shape").forGetter(sink -> sink.sinkShape),
+            propertiesCodec()
+        ).apply(instance, Sink::new)
+    );
+
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    public Sink(Properties properties) {
+    private final String sinkShape;
+
+
+    public Sink(String sinkShape, Properties properties) {
         super(properties);
+        this.sinkShape = sinkShape;
     }
 
     @Override
@@ -43,7 +55,7 @@ public class Sink extends HorizontalDirectionalBlock {
         return CODEC;
     }
 
-    public static final Map<Direction, VoxelShape> SHAPES = Shapes.rotateHorizontal(
+    public static final Map<Direction, VoxelShape> BATHROOM_SHAPE = Shapes.rotateHorizontal(
         Shapes.or(Block.box(4, 0, 5, 5, 2, 11),
             Block.box(5, 0, 4, 11, 2, 12),
             Block.box(11, 0, 5, 12, 2, 11),
@@ -66,6 +78,25 @@ public class Sink extends HorizontalDirectionalBlock {
             Block.box(5.25, 15, 4.5, 6.25, 15.75, 5.5),
             Block.box(9.75, 15, 4.5, 10.75, 15.75, 5.5),
             Block.box(7.25, 16.25, 6, 8.75, 17.5, 8)
+        )
+    );
+
+    public static final Map<Direction, VoxelShape> BASIN_WITH_SHELVES_SHAPE = Shapes.rotateHorizontal(
+        Shapes.or(Block.box(0, 2, 0, 3, 3, 1),
+        Block.box(13, 2, 0, 16, 3, 1),
+        Block.box(0, 3, 0, 3, 4, 2),
+        Block.box(6.5, 3, 0, 9.5, 4, 2),
+        Block.box(6.5, 2, 0, 9.5, 3, 1),
+        Block.box(13, 3, 0, 16, 4, 2),
+        Block.box(0, 4, 0, 16, 6, 13),
+        Block.box(0, 10, 0, 16, 12, 16),
+        Block.box(0, 12, 0, 2, 15, 16),
+        Block.box(2, 12, 0, 14, 15, 4),
+        Block.box(7, 15, 2, 9, 16, 6),
+        Block.box(3, 15, 1, 5, 16, 3),
+        Block.box(11, 15, 1, 13, 16, 3),
+        Block.box(2, 12, 14, 14, 15, 16),
+        Block.box(14, 12, 0, 16, 15, 16)
         )
     );
 
@@ -128,7 +159,14 @@ public class Sink extends HorizontalDirectionalBlock {
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPES.get(state.getValue(FACING).getOpposite());
+        switch (this.sinkShape) {
+            case "bathroom":
+               return BATHROOM_SHAPE.get(state.getValue(FACING).getOpposite());
+            case "basin_with_shelves":
+                return BASIN_WITH_SHELVES_SHAPE.get(state.getValue(FACING).getOpposite());
+            default:
+                return BATHROOM_SHAPE.get(state.getValue(FACING).getOpposite());
+        }
     }
     
 }

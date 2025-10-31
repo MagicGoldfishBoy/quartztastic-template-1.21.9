@@ -790,7 +790,7 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_chest", has(Items.CHEST))
             .save(this.output);
 
-            
+
 
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, RoseQuartzList.ROSE_QUARTZ_BARREL_ITEM.get())
             .pattern("@#@")
@@ -823,6 +823,16 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
             .define('#', Items.WATER_BUCKET)
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_SINK_ITEM.get())
+            .pattern("@#@")
+            .pattern(" @ ")
+            .pattern(" @ ")
+            .define('@', RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get())
+            .define('#', Items.WATER_BUCKET)
+            .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output);
     }
 

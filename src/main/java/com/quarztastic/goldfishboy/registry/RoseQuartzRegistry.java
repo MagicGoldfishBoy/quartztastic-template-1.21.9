@@ -9,6 +9,7 @@ import com.quarztastic.goldfishboy.block.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzNightstand;
 import com.quarztastic.goldfishboy.block.RoseQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
+import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBlastFurnaceEntity;
@@ -680,6 +681,22 @@ public class RoseQuartzRegistry {
 
             RoseQuartzList.ROSE_QUARTZ_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_NIGHTSTAND_BLOCK
+            );
+
+
+            RoseQuartzList.ROSE_QUARTZ_SINK = Quartztastic.BLOCKS.register(
+                "rose_quartz_sink", 
+                registryName -> new Sink("basin_with_shelves", BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_SINK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_SINK
             );
 
         }
