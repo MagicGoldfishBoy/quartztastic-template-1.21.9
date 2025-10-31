@@ -11,6 +11,7 @@ import com.quarztastic.goldfishboy.block.RoseQuartzNightstand;
 import com.quarztastic.goldfishboy.block.RoseQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
+import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBlastFurnaceEntity;
@@ -644,7 +645,6 @@ public class RoseQuartzRegistry {
                     .noOcclusion()
                 )
             );
-
             RoseQuartzList.ROSE_QUARTZ_WALL_SOUL_TORCH = Quartztastic.BLOCKS.register(
                 "rose_quartz_wall_soul_torch", 
                 registryName -> new net.minecraft.world.level.block.WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.of()
@@ -655,7 +655,6 @@ public class RoseQuartzRegistry {
                     .noOcclusion()
                 )
             );
-
             RoseQuartzList.ROSE_QUARTZ_SOUL_TORCH_ITEM = Quartztastic.ITEMS.register(
                 "rose_quartz_soul_torch", 
                 registryName -> new StandingAndWallBlockItem(
@@ -677,11 +676,9 @@ public class RoseQuartzRegistry {
                     .noOcclusion()
                 )
             );
-
             RoseQuartzList.ROSE_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_LADDER
             );
-
 
             RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK = Quartztastic.BLOCKS.register(
                 "rose_quartz_barrel", 
@@ -701,11 +698,9 @@ public class RoseQuartzRegistry {
                 false,
                 RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK.get())
             );
-
             RoseQuartzList.ROSE_QUARTZ_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK
             );
-
 
             RoseQuartzList.ROSE_QUARTZ_NIGHTSTAND_BLOCK = Quartztastic.BLOCKS.register(
                 "rose_quartz_nightstand", 
@@ -717,7 +712,6 @@ public class RoseQuartzRegistry {
                     .noOcclusion()
                 )
             );
-
             RoseQuartzList.ROSE_QUARTZ_NIGHTSTAND_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
                 "rose_quartz_nightstand",
                 () -> new BlockEntityType<>(
@@ -725,11 +719,9 @@ public class RoseQuartzRegistry {
                 false,
                 RoseQuartzList.ROSE_QUARTZ_NIGHTSTAND_BLOCK.get())
             );
-
             RoseQuartzList.ROSE_QUARTZ_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_NIGHTSTAND_BLOCK
             );
-
 
             RoseQuartzList.ROSE_QUARTZ_SINK = Quartztastic.BLOCKS.register(
                 "rose_quartz_sink", 
@@ -741,11 +733,9 @@ public class RoseQuartzRegistry {
                     .noOcclusion()
                 )
             );
-
             RoseQuartzList.ROSE_QUARTZ_SINK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_SINK
             );
-
 
             RoseQuartzList.ROSE_QUARTZ_PATH = Quartztastic.BLOCKS.register(
                 "rose_quartz_path", 
@@ -757,9 +747,22 @@ public class RoseQuartzRegistry {
                     .noOcclusion()
                 )
             );
-
             RoseQuartzList.ROSE_QUARTZ_PATH_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 RoseQuartzList.ROSE_QUARTZ_PATH
+            );
+
+            RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE = Quartztastic.BLOCKS.register(
+                "rose_quartz_skull_statuette", 
+                registryName -> new Statuette("skull", BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(ROSE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+            RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE
             );
 
         }

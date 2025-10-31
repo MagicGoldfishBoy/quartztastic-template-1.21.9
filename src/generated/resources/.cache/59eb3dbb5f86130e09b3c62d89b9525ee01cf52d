@@ -1,4 +1,4 @@
-// 1.21.9	2025-10-31T14:23:12.517506163	Loot Tables
+// 1.21.9	2025-10-31T14:35:46.508024601	Loot Tables
 a16b6486ce082b59de3336e5fe127dd4e56ed83d data/minecraft/loot_table/blocks/torch.json
 082fc00761ac680e590f9874fd40a3f71d68f173 data/quartztastic/loot_table/blocks/blue_quartz_ore.json
 43beb9e6456d916a78af765125031ce1756d029d data/quartztastic/loot_table/blocks/chiseled_rose_quartz_block.json
@@ -34,6 +34,7 @@ d13e790974bc8341faf2ef0507659a32847d77d9 data/quartztastic/loot_table/blocks/ros
 ab1e0b56a1db86984cfbab39d016d242e621d4c2 data/quartztastic/loot_table/blocks/rose_quartz_pressure_plate.json
 a7161e0568bf4e3e30797e0b1e4800e7c97c87cf data/quartztastic/loot_table/blocks/rose_quartz_shelf.json
 15994e2eb1b2f5b35fe18bb94b434398ff6f2d58 data/quartztastic/loot_table/blocks/rose_quartz_sink.json
+026abfa1ca7c89858d8d1156d1bda93b5b4d01ad data/quartztastic/loot_table/blocks/rose_quartz_skull_statuette.json
 aa4ef7392ea3d3a91d6a39f794b358eeb4f63ca5 data/quartztastic/loot_table/blocks/rose_quartz_slab.json
 51b22e2cfd805d0468d5b3905d57f2a746b7eb82 data/quartztastic/loot_table/blocks/rose_quartz_soul_lantern.json
 f4808d8403c39c71b4b9f6a4feee7881fbdcf772 data/quartztastic/loot_table/blocks/rose_quartz_soul_torch.json

@@ -131,6 +131,8 @@ public class TagDatagen extends BlockTagsProvider {
 
                 RoseQuartzList.ROSE_QUARTZ_PATH.get(),
 
+                RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE.get(),
+
 
                 CitrineList.CITRINE_ORE.get(),
 
@@ -200,7 +202,8 @@ public class TagDatagen extends BlockTagsProvider {
                 SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE.get(),
 
                 RoseQuartzList.ROSE_QUARTZ_SOUL_LANTERN.get(),
-                RoseQuartzList.ROSE_QUARTZ_SOUL_TORCH.get()
+                RoseQuartzList.ROSE_QUARTZ_SOUL_TORCH.get(),
+                RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE.get()
             );
 
         this.tag(TagKeyList.CLIMBABLE_TAG)
