@@ -351,6 +351,11 @@ public class ModelDatagen extends ModelProvider {
 
     protected void buildBarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
+        blockModels.createBarsAndItem(SmokyQuartzList.SMOKY_QUARTZ_PANE.get());
+
+        blockModels.createGlassBlocks(SmokyQuartzList.SMOKY_QUARTZ_BARS_BLOCK.get(), SmokyQuartzList.SMOKY_QUARTZ_BARS.get());
+        
+
         blockModels.createGlassBlocks(RoseQuartzList.ROSE_QUARTZ_BARS_BLOCK.get(), RoseQuartzList.ROSE_QUARTZ_BARS.get());
     }
 }

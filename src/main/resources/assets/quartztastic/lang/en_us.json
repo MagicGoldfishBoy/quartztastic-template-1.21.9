@@ -25,6 +25,11 @@
 
   "block.quartztastic.smoky_quartz_pillar": "Smoky Quartz Pillar",
 
+  "block.quartztastic.smoky_quartz_pane": "Smoky Quartz Pane",
+
+  "block.quartztastic.smoky_quartz_bars": "Smoky Quartz Bars",
+  "block.quartztastic.smoky_quartz_bars_block": "Smoky Quartz Bars Block",
+
   "block.quartztastic.smoky_quartz_door": "Smoky Quartz Door",
   "block.quartztastic.smoky_quartz_chair": "Smoky Quartz Chair",
   "block.quartztastic.smoky_quartz_table": "Smoky Quartz Table",
@@ -98,7 +103,7 @@
   "block.quartztastic.rose_quartz_pillar": "Rose Quartz Pillar",
 
   "block.quartztastic.rose_quartz_bars": "Rose Quartz Bars",
-  "block.quartztastic.rose_quartz_bars_block": "Rose Quartz Bars",
+  "block.quartztastic.rose_quartz_bars_block": "Rose Quartz Bars Block",
 
   "block.quartztastic.rose_quartz_light": "Rose Quartz Light",
 

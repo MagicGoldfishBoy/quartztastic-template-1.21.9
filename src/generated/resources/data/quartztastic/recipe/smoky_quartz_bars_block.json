@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": "quartztastic:smoky_quartz_bars"
+  },
+  "pattern": [
+    "@@@",
+    "@@@",
+    "@@@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:smoky_quartz_bars_block"
+  }
+}

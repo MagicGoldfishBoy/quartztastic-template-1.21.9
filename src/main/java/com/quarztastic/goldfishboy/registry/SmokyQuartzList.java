@@ -26,6 +26,7 @@ import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
@@ -142,6 +143,21 @@ public class SmokyQuartzList {
     public static DeferredBlock<Pillar> SMOKY_QUARTZ_PILLAR;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_PILLAR_ITEM;
+
+
+    public static DeferredBlock<IronBarsBlock> SMOKY_QUARTZ_PANE;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_PANE_ITEM;
+
+
+    public static DeferredBlock<Block> SMOKY_QUARTZ_BARS_BLOCK;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_BARS_BLOCK_ITEM;
+
+
+    public static DeferredBlock<IronBarsBlock> SMOKY_QUARTZ_BARS;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_BARS_ITEM;
 
 
 
