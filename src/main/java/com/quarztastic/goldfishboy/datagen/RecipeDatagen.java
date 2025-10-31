@@ -617,6 +617,12 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get())
             .unlockedBy("has_rose_quartz_crystal", has(RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get()))
             .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_TRAPDOOR_ITEM.get(), 3)
+            .pattern("@@")
+            .define('@', RoseQuartzList.ROSE_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_rose_quartz_slab", has(RoseQuartzList.ROSE_QUARTZ_SLAB_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildChairRecipes() {

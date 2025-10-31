@@ -1,4 +1,4 @@
-// 1.21.9	2025-10-31T13:29:54.051796203	Loot Tables
+// 1.21.9	2025-10-31T13:50:03.690067585	Loot Tables
 a16b6486ce082b59de3336e5fe127dd4e56ed83d data/minecraft/loot_table/blocks/torch.json
 082fc00761ac680e590f9874fd40a3f71d68f173 data/quartztastic/loot_table/blocks/blue_quartz_ore.json
 43beb9e6456d916a78af765125031ce1756d029d data/quartztastic/loot_table/blocks/chiseled_rose_quartz_block.json
@@ -43,6 +43,7 @@ f4808d8403c39c71b4b9f6a4feee7881fbdcf772 data/quartztastic/loot_table/blocks/ros
 e16025662a4801645b3b518d5e8e7f0136609419 data/quartztastic/loot_table/blocks/rose_quartz_tile_stairs.json
 8880b1ff5d5a11aa3f5b1ccf7147b1dbf3b82196 data/quartztastic/loot_table/blocks/rose_quartz_tiles.json
 16c0e6d99587ae1ae8267ee4f9e60217bc5636ac data/quartztastic/loot_table/blocks/rose_quartz_torch.json
+55dd1d3ecc87481a07ae35b6d19c5ee04273f2d1 data/quartztastic/loot_table/blocks/rose_quartz_trapdoor.json
 744326d89deecbc0a07ce42492c75c8967e1ce7c data/quartztastic/loot_table/blocks/rose_quartz_wall.json
 539c06e648c87f37de1569cc2ef0832463407a33 data/quartztastic/loot_table/blocks/rose_quartz_wall_soul_torch.json
 e79a68c8d3f7d4f52a05486ded48029e03e887e1 data/quartztastic/loot_table/blocks/rose_quartz_wall_torch.json

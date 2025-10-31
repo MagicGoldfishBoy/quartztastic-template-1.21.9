@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_orientable_trapdoor_open",
   "textures": {
-    "texture": "quartztastic:block/smoky_quartz_trapdoor"
+    "texture": "quartztastic:block/rose_quartz_trapdoor"
   }
 }

@@ -34,6 +34,7 @@ import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.TorchBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -177,6 +178,11 @@ public class RoseQuartzList {
     public static DeferredBlock<DoorBlock> ROSE_QUARTZ_DOOR;
 
     public static DeferredItem<BlockItem> ROSE_QUARTZ_DOOR_ITEM;
+
+
+    public static DeferredBlock<TrapDoorBlock> ROSE_QUARTZ_TRAPDOOR;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_TRAPDOOR_ITEM;
 
 
     public static DeferredBlock<Chair> ROSE_QUARTZ_CHAIR;
