@@ -1,4 +1,4 @@
-// 1.21.9	2025-10-31T12:33:49.944647099	Quartztastic Recipes
+// 1.21.9	2025-10-31T13:29:54.056306603	Quartztastic Recipes
 7afec9bd074fbc918fbdc48a42b6642a5de55746 data/minecraft/advancement/recipes/building_blocks/chiseled_rose_quartz_block_by_crafting.json
 837072bd7e5953209fb718ce9358a1a121b0fc17 data/minecraft/advancement/recipes/building_blocks/chiseled_rose_quartz_block_by_stonecutting.json
 367d43f2eb95c2e8fe829bdc58b46822abf49e51 data/minecraft/advancement/recipes/building_blocks/chiseled_smoky_quartz_block_by_crafting.json
@@ -165,6 +165,7 @@ a51333cd6ccd5df012cb2ec3de708d116d7dd6f2 data/quartztastic/advancement/recipes/d
 df14500203c306e5a3de37a90d067a42af123e06 data/quartztastic/advancement/recipes/decorations/smoky_quartz_soul_torch.json
 5311bd25a2277201b90259fa1a90ebbb2dd0c6b4 data/quartztastic/advancement/recipes/decorations/smoky_quartz_table.json
 3690ebe033647b7d3f2938d710909b4b25e371a5 data/quartztastic/advancement/recipes/decorations/smoky_quartz_torch.json
+1c9ea1cb2fc582146e240c7d6c4a9f5ff4981da0 data/quartztastic/advancement/recipes/decorations/smoky_quartz_trapdoor.json
 78d96e7f5677a1076d5d3c35949d492e1b1d7fb8 data/quartztastic/advancement/recipes/redstone/rose_quartz_gate.json
 2f7e9cf9d41b939e933aa66201fd326c56ab8a25 data/quartztastic/advancement/recipes/redstone/smoky_quartz_gate.json
 733d84153dfdd957bf4776a99b5b5e3d2c62cf28 data/quartztastic/recipe/rose_quartz_barrel.json
@@ -217,3 +218,4 @@ f453232bc592146656b2e6be76bfaf2ee70a288b data/quartztastic/recipe/smoky_quartz_o
 ffd6efb31335e5374fab53a3dd49ea0e9d46b9ff data/quartztastic/recipe/smoky_quartz_table.json
 f98c3b6aa092952831d950b8d10b7ccd5ba9f11f data/quartztastic/recipe/smoky_quartz_tiles.json
 5faca92b9ec179048124653f58535ecc7ac77cd5 data/quartztastic/recipe/smoky_quartz_torch.json
+e5eb621791059c9d08c785f687c73798825e3bc4 data/quartztastic/recipe/smoky_quartz_trapdoor.json

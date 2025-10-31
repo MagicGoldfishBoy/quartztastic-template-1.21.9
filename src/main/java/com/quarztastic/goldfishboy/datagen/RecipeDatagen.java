@@ -603,6 +603,12 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .save(this.output);
 
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_TRAPDOOR_ITEM.get(), 3)
+            .pattern("@@")
+            .define('@', SmokyQuartzList.SMOKY_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_smoky_quartz_slab", has(SmokyQuartzList.SMOKY_QUARTZ_SLAB_ITEM.get()))
+            .save(this.output);
+
 
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_DOOR_ITEM.get(), 3)
             .pattern("@@")
@@ -887,7 +893,7 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_smoky_quartz_slab", has(SmokyQuartzList.SMOKY_QUARTZ_SLAB_ITEM.get()))
             .save(this.output, "smoky_quartz_path_by_crafting");
 
-            
+
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, RoseQuartzList.ROSE_QUARTZ_PATH_ITEM.get(), 16)
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "rose_quartz_path_by_stonecutting");

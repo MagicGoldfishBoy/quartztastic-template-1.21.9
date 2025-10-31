@@ -44,6 +44,11 @@ public class TagKeyList {
         ResourceLocation.fromNamespaceAndPath("minecraft", "doors")
     );
 
+    public static final TagKey<Block> TRAP_DOORS_TAG = TagKey.create(
+        Registries.BLOCK, 
+        ResourceLocation.fromNamespaceAndPath("minecraft", "trapdoors")
+    );
+
     public static final TagKey<Block> BARRELS_TAG = TagKey.create(
         Registries.BLOCK, 
         ResourceLocation.fromNamespaceAndPath("minecraft", "barrels")

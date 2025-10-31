@@ -34,6 +34,7 @@ import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.TorchBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -182,18 +183,18 @@ public class SmokyQuartzList {
 
 
     public static DeferredBlock<SmokyQuartzBlastFurnaceBlock> SMOKY_QUARTZ_BLAST_FURNACE_BLOCK;
-
     public static Supplier<BlockEntityType<SmokyQuartzBlastFurnaceEntity>> SMOKY_QUARTZ_BLAST_FURNACE_ENTITY;
-
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_BLAST_FURNACE_ITEM;
 
 
-
     public static DeferredBlock<DoorBlock> SMOKY_QUARTZ_DOOR;
-
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_DOOR_ITEM;
 
 
+    public static DeferredBlock<TrapDoorBlock> SMOKY_QUARTZ_TRAPDOOR;
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_TRAPDOOR_ITEM;
+
+    
     public static DeferredBlock<Chair> SMOKY_QUARTZ_CHAIR;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_CHAIR_ITEM;

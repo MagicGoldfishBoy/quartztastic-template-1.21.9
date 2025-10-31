@@ -59,6 +59,8 @@ public class TagDatagen extends BlockTagsProvider {
                 SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_BLOCK.get(),
 
                 SmokyQuartzList.SMOKY_QUARTZ_DOOR.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_TRAPDOOR.get(),
+                
                 SmokyQuartzList.SMOKY_QUARTZ_CHAIR.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_TABLE.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_SHELF.get(),
@@ -173,6 +175,11 @@ public class TagDatagen extends BlockTagsProvider {
                 SmokyQuartzList.SMOKY_QUARTZ_DOOR.get(),
 
                 RoseQuartzList.ROSE_QUARTZ_DOOR.get()
+            );
+
+        this.tag(TagKeyList.TRAP_DOORS_TAG)
+            .add(
+                SmokyQuartzList.SMOKY_QUARTZ_TRAPDOOR.get()
             );
 
         this.tag(TagKeyList.BARRELS_TAG)

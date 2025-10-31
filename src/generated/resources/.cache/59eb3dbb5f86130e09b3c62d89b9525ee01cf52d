@@ -1,4 +1,4 @@
-// 1.21.9	2025-10-31T12:33:49.942146675	Loot Tables
+// 1.21.9	2025-10-31T13:29:54.051796203	Loot Tables
 a16b6486ce082b59de3336e5fe127dd4e56ed83d data/minecraft/loot_table/blocks/torch.json
 082fc00761ac680e590f9874fd40a3f71d68f173 data/quartztastic/loot_table/blocks/blue_quartz_ore.json
 43beb9e6456d916a78af765125031ce1756d029d data/quartztastic/loot_table/blocks/chiseled_rose_quartz_block.json
@@ -85,6 +85,7 @@ f3f0a6350f52fafe0440f2b358b26d386795b90e data/quartztastic/loot_table/blocks/smo
 6b077ea3d28e0bf01c70ad5bf9b35723213a8a48 data/quartztastic/loot_table/blocks/smoky_quartz_tile_stairs.json
 606a44693823aed67b6b537f9fe9c7feb54efc5d data/quartztastic/loot_table/blocks/smoky_quartz_tiles.json
 cfaafbd708b5b7df62576b260121e7c7f4119a6e data/quartztastic/loot_table/blocks/smoky_quartz_torch.json
+9a38d4f94ba6da37abc2f95e70b3662639bfd227 data/quartztastic/loot_table/blocks/smoky_quartz_trapdoor.json
 c3103cb9c5f0efbb80d87efaac338c4df8516c3b data/quartztastic/loot_table/blocks/smoky_quartz_wall.json
 d7a6c6b08ca2d0a340240e5f8284be187770b7b4 data/quartztastic/loot_table/blocks/smoky_quartz_wall_soul_torch.json
 25ae64a3552fc718daa1ea51f568be6102d00d51 data/quartztastic/loot_table/citrine_crystal_bastion_table.json

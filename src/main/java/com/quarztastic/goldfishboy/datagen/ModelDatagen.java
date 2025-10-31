@@ -165,6 +165,9 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.createDoor(SmokyQuartzList.SMOKY_QUARTZ_DOOR.get());
 
+        blockModels.createTrapdoor(SmokyQuartzList.SMOKY_QUARTZ_TRAPDOOR.get());
+        
+
         blockModels.createDoor(RoseQuartzList.ROSE_QUARTZ_DOOR.get());
     }
 
