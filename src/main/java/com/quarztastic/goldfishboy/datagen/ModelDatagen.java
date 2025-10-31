@@ -87,6 +87,8 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.createTrivialCube(CitrineList.CITRINE_ORE.get());
 
+        blockModels.createTrivialCube(CitrineList.CITRINE_BLOCK.get());
+
 
         blockModels.createTrivialCube(BlueQuartzList.BLUE_QUARTZ_ORE.get());
 

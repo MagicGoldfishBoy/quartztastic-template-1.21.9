@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy.datagen;
 import java.rmi.registry.Registry;
 import java.util.concurrent.CompletableFuture;
 
+import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.TagKeyList;
@@ -299,6 +300,16 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get())
             .define('#', Items.BLAST_FURNACE)
             .unlockedBy("has_rose_quartz_crystal", has(RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
+
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_BLOCK_ITEM.get())
+            .pattern("@@")
+            .pattern("@@")
+            .define('@', CitrineList.CITRINE_CRYSTAL.get())
+            .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
             .save(this.output);
     }
 
@@ -917,7 +928,7 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "smoky_quartz_skull_statuette_by_stonecutting");
 
-            
+
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE_ITEM.get())
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "rose_quartz_skull_statuette_by_stonecutting");

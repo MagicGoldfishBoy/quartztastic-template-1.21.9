@@ -27,9 +27,22 @@ public class CitrineRegistry {
                 .noOcclusion()
             )
         );
-
         CitrineList.CITRINE_ORE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_ORE
+        );
+
+        CitrineList.CITRINE_BLOCK = Quartztastic.BLOCKS.register(
+            "citrine_block", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(3.0f, 6.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_BLOCK
         );
     }
 }

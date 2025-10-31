@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.datagen.Datagen;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.BlueQuartzRegistry;
+import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
 import com.quarztastic.goldfishboy.registry.PrasioliteQuartzRegistry;
@@ -185,6 +186,9 @@ public class Quartztastic {
 
         ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_BARS.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_BARS_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
+
+
+        ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
     }
 
 

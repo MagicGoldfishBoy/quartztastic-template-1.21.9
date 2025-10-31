@@ -10,8 +10,9 @@ public class CitrineList {
     
     public static DeferredItem<Item> CITRINE_CRYSTAL;
 
-    
     public static DeferredBlock<Block> CITRINE_ORE;
-
     public static DeferredItem<BlockItem> CITRINE_ORE_ITEM;
+
+    public static DeferredBlock<Block> CITRINE_BLOCK;
+    public static DeferredItem<BlockItem> CITRINE_BLOCK_ITEM;
 }
