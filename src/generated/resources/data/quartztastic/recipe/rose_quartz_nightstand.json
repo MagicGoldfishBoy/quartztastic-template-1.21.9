@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "quartztastic:rose_quartz_slab",
+    "$": "minecraft:chest",
+    "@": "quartztastic:rose_quartz_block"
+  },
+  "pattern": [
+    "###",
+    "@$@",
+    "@@@"
+  ],
+  "result": {
+    "count": 2,
+    "id": "quartztastic:rose_quartz_nightstand"
+  }
+}

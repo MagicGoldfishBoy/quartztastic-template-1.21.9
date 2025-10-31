@@ -7,12 +7,14 @@ import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.RoseQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.block.RoseQuartzNightstand;
 import com.quarztastic.goldfishboy.block.RoseQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
+import com.quarztastic.goldfishboy.entity.RoseQuartzNightstandEntity;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -223,5 +225,12 @@ public class RoseQuartzList {
     public static Supplier<BlockEntityType<RoseQuartzBarrelEntity>> ROSE_QUARTZ_BARREL_ENTITY;
 
     public static DeferredItem<BlockItem> ROSE_QUARTZ_BARREL_ITEM;
+
+
+    public static DeferredBlock<RoseQuartzNightstand> ROSE_QUARTZ_NIGHTSTAND_BLOCK;
+
+    public static Supplier<BlockEntityType<RoseQuartzNightstandEntity>> ROSE_QUARTZ_NIGHTSTAND_ENTITY;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_NIGHTSTAND_ITEM;
     
 }

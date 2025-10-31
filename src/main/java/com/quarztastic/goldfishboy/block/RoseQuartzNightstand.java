@@ -3,7 +3,8 @@ package com.quarztastic.goldfishboy.block;
 import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
-import com.quarztastic.goldfishboy.entity.SmokyQuartzNightstandEntity;
+import com.quarztastic.goldfishboy.entity.RoseQuartzNightstandEntity;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -27,17 +28,17 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class SmokyQuartzNightstand extends BaseEntityBlock {
-    public static final MapCodec<SmokyQuartzNightstand> CODEC = simpleCodec(SmokyQuartzNightstand::new);
+public class RoseQuartzNightstand extends BaseEntityBlock {
+    public static final MapCodec<RoseQuartzNightstand> CODEC = simpleCodec(RoseQuartzNightstand::new);
     public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
     @Override
-    public MapCodec<SmokyQuartzNightstand> codec() {
+    public MapCodec<RoseQuartzNightstand> codec() {
         return CODEC;
     }
 
-    public SmokyQuartzNightstand(BlockBehaviour.Properties properties) {
+    public RoseQuartzNightstand(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(OPEN, false));
     }
@@ -45,8 +46,8 @@ public class SmokyQuartzNightstand extends BaseEntityBlock {
     @SuppressWarnings("null")
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level instanceof @SuppressWarnings("unused") ServerLevel serverlevel && level.getBlockEntity(pos) instanceof SmokyQuartzNightstandEntity SmokyQuartzNightstandEntity) {
-            player.openMenu(SmokyQuartzNightstandEntity);
+        if (level instanceof @SuppressWarnings("unused") ServerLevel serverlevel && level.getBlockEntity(pos) instanceof RoseQuartzNightstandEntity RoseQuartzNightstandEntity) {
+            player.openMenu(RoseQuartzNightstandEntity);
         }
 
         return InteractionResult.SUCCESS;
@@ -62,8 +63,8 @@ public class SmokyQuartzNightstand extends BaseEntityBlock {
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         BlockEntity blockentity = level.getBlockEntity(pos);
-        if (blockentity instanceof SmokyQuartzNightstandEntity) {
-            ((SmokyQuartzNightstandEntity)blockentity).recheckOpen();
+        if (blockentity instanceof RoseQuartzNightstandEntity) {
+            ((RoseQuartzNightstandEntity)blockentity).recheckOpen();
         }
     }
 
@@ -71,7 +72,7 @@ public class SmokyQuartzNightstand extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new SmokyQuartzNightstandEntity(pos, state);
+        return new RoseQuartzNightstandEntity(pos, state);
     }
 
     @SuppressWarnings("null")

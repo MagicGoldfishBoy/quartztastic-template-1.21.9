@@ -2,8 +2,8 @@ package com.quarztastic.goldfishboy.entity;
 
 import java.util.List;
 
-import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
-import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
+import com.quarztastic.goldfishboy.block.RoseQuartzNightstand;
+import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
@@ -28,22 +28,22 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 
-public class SmokyQuartzNightstandEntity extends RandomizableContainerBlockEntity {
-    private static final Component DEFAULT_NAME = Component.translatable("container.smoky_quartz_nightstand");
+public class RoseQuartzNightstandEntity extends RandomizableContainerBlockEntity {
+    private static final Component DEFAULT_NAME = Component.translatable("container.rose_quartz_nightstand");
     private NonNullList<ItemStack> items = NonNullList.withSize(18, ItemStack.EMPTY);
     private final ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
         @SuppressWarnings("null")
         @Override
         protected void onOpen(Level p_155062_, BlockPos p_155063_, BlockState p_155064_) {
-            SmokyQuartzNightstandEntity.this.playSound(p_155064_, SoundEvents.AMETHYST_BLOCK_BREAK);
-            SmokyQuartzNightstandEntity.this.updateBlockState(p_155064_, true);
+            RoseQuartzNightstandEntity.this.playSound(p_155064_, SoundEvents.AMETHYST_BLOCK_BREAK);
+            RoseQuartzNightstandEntity.this.updateBlockState(p_155064_, true);
         }
 
         @SuppressWarnings("null")
         @Override
         protected void onClose(Level p_155072_, BlockPos p_155073_, BlockState p_155074_) {
-            SmokyQuartzNightstandEntity.this.playSound(p_155074_, SoundEvents.AMETHYST_BLOCK_BREAK);
-            SmokyQuartzNightstandEntity.this.updateBlockState(p_155074_, false);
+            RoseQuartzNightstandEntity.this.playSound(p_155074_, SoundEvents.AMETHYST_BLOCK_BREAK);
+            RoseQuartzNightstandEntity.this.updateBlockState(p_155074_, false);
         }
 
         @SuppressWarnings("null")
@@ -56,15 +56,15 @@ public class SmokyQuartzNightstandEntity extends RandomizableContainerBlockEntit
         public boolean isOwnContainer(Player p_155060_) {
             if (p_155060_.containerMenu instanceof ChestMenu) {
                 Container container = ((ChestMenu)p_155060_.containerMenu).getContainer();
-                return container == SmokyQuartzNightstandEntity.this;
+                return container == RoseQuartzNightstandEntity.this;
             } else {
                 return false;
             }
         }
     };
 
-    public SmokyQuartzNightstandEntity(BlockPos pos, BlockState blockState) {
-        super(SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND_ENTITY.get(), pos, blockState);
+    public RoseQuartzNightstandEntity(BlockPos pos, BlockState blockState) {
+        super(RoseQuartzList.ROSE_QUARTZ_NIGHTSTAND_ENTITY.get(), pos, blockState);
     }
 
     @SuppressWarnings("null")
@@ -147,12 +147,12 @@ public class SmokyQuartzNightstandEntity extends RandomizableContainerBlockEntit
 
     @SuppressWarnings("null")
     void updateBlockState(BlockState state, boolean open) {
-        this.level.setBlock(this.getBlockPos(), state.setValue(SmokyQuartzNightstand.OPEN, open), 3);
+        this.level.setBlock(this.getBlockPos(), state.setValue(RoseQuartzNightstand.OPEN, open), 3);
     }
 
     @SuppressWarnings("null")
     void playSound(BlockState state, SoundEvent sound) {
-        Vec3i vec3i = state.getValue(SmokyQuartzNightstand.FACING).getUnitVec3i();
+        Vec3i vec3i = state.getValue(RoseQuartzNightstand.FACING).getUnitVec3i();
         double d0 = this.worldPosition.getX() + 0.5 + vec3i.getX() / 2.0;
         double d1 = this.worldPosition.getY() + 0.5 + vec3i.getY() / 2.0;
         double d2 = this.worldPosition.getZ() + 0.5 + vec3i.getZ() / 2.0;
