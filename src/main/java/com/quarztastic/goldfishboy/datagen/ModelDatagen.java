@@ -221,17 +221,17 @@ public class ModelDatagen extends ModelProvider {
         for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {
             LOGGER.info("Generating model for: {}", holder.getId().getPath());
             String rawName = holder.getId().getPath();
-            if (rawName.contains("bookshelf")) {
+            if (rawName.contains("bookshelf") || rawName.contains("path")) {
 
                 String name = "block/" + rawName;
 
-                ResourceLocation planter = modLocation(name);
-                Variant plantervariant = new Variant(planter);
+                ResourceLocation block = modLocation(name);
+                Variant blockvariant = new Variant(block);
 
                 blockModels.blockStateOutput.accept(
                     MultiVariantGenerator.dispatch(
                         holder.get(),
-                        BlockModelGenerators.variant(plantervariant)
+                        BlockModelGenerators.variant(blockvariant)
                     )
                 );
             }
@@ -354,7 +354,7 @@ public class ModelDatagen extends ModelProvider {
         blockModels.createBarsAndItem(SmokyQuartzList.SMOKY_QUARTZ_PANE.get());
 
         blockModels.createGlassBlocks(SmokyQuartzList.SMOKY_QUARTZ_BARS_BLOCK.get(), SmokyQuartzList.SMOKY_QUARTZ_BARS.get());
-        
+
 
         blockModels.createGlassBlocks(RoseQuartzList.ROSE_QUARTZ_BARS_BLOCK.get(), RoseQuartzList.ROSE_QUARTZ_BARS.get());
     }

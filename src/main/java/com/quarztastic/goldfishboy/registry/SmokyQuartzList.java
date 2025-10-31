@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy.registry;
 import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.Chair;
+import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
@@ -264,5 +265,10 @@ public class SmokyQuartzList {
     public static DeferredBlock<Sink> SMOKY_QUARTZ_SINK;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_SINK_ITEM;
+
+
+    public static DeferredBlock<Path> SMOKY_QUARTZ_PATH;
+
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_PATH_ITEM;
     
 }

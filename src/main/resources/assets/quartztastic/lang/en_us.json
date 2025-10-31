@@ -62,23 +62,12 @@
   "block.quartztastic.smoky_quartz_blast_furnace": "Smoky Quartz Blast Furnace",
   "container.smoky_quartz_blast_furnace": "Smoky Quartz Blast Furnace",
 
+  "block.quartztastic.smoky_quartz_path": "Smoky Quartz Path",
+
 
 
   "item.quartztastic.rose_quartz_crystal": "Rose Quartz Crystal",
   "block.quartztastic.rose_quartz_ore": "Rose Quartz Ore",
-
-
-  "item.quartztastic.citrine_crystal": "Citrine",
-  "block.quartztastic.citrine_ore": "Citrine Ore",
-
-
-  "item.quartztastic.blue_quartz_crystal": "Blue Quartz Crystal",
-  "block.quartztastic.blue_quartz_ore": "Blue Quartz Ore",
-
-
-  "item.quartztastic.prasiolite_quartz_crystal": "Prasiolite Quartz Crystal",
-  "block.quartztastic.prasiolite_quartz_ore": "Prasiolite Quartz Ore",
-  "block.quartztastic.prasiolite_quartz_netherrack_ore": "Prasiolite Quartz Ore",
 
   "block.quartztastic.rose_quartz_block": "Rose Quartz Block",
   "block.quartztastic.rose_quartz_slab": "Rose Quartz Slab",
@@ -140,6 +129,17 @@
 
   "block.quartztastic.rose_quartz_sink": "Rose Quartz Sink",
 
+
+  "item.quartztastic.citrine_crystal": "Citrine",
+  "block.quartztastic.citrine_ore": "Citrine Ore",
+
+
+  "item.quartztastic.prasiolite_quartz_crystal": "Prasiolite Quartz Crystal",
+  "block.quartztastic.prasiolite_quartz_ore": "Prasiolite Quartz Ore",
+  "block.quartztastic.prasiolite_quartz_netherrack_ore": "Prasiolite Quartz Ore",
+
+  "item.quartztastic.blue_quartz_crystal": "Blue Quartz Crystal",
+  "block.quartztastic.blue_quartz_ore": "Blue Quartz Ore",
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

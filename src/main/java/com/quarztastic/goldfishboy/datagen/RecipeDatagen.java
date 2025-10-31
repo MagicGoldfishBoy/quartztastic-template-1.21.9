@@ -46,6 +46,7 @@ public class RecipeDatagen extends RecipeProvider {
         buildLadderRecipes();
         buildContainerRecipes();
         buildSinkRecipes();
+        buildPathRecipes();
     }
 
     protected void buildItemRecipes() {
@@ -873,6 +874,18 @@ public class RecipeDatagen extends RecipeProvider {
             .define('#', Items.WATER_BUCKET)
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output);
+    }
+
+    protected void buildPathRecipes() {
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_PATH_ITEM.get(), 16)
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "smoky_quartz_path_by_stonecutting");
+
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_PATH_ITEM.get(), 8)
+            .requires(SmokyQuartzList.SMOKY_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_smoky_quartz_slab", has(SmokyQuartzList.SMOKY_QUARTZ_SLAB_ITEM.get()))
+            .save(this.output, "smoky_quartz_path_by_crafting");
     }
 
     public static class Runner extends RecipeProvider.Runner {

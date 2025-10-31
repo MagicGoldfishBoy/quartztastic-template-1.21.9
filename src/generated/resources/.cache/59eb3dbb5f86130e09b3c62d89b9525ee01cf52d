@@ -1,4 +1,4 @@
-// 1.21.9	2025-10-31T11:49:09.985808913	Loot Tables
+// 1.21.9	2025-10-31T12:14:15.12234971	Loot Tables
 a16b6486ce082b59de3336e5fe127dd4e56ed83d data/minecraft/loot_table/blocks/torch.json
 082fc00761ac680e590f9874fd40a3f71d68f173 data/quartztastic/loot_table/blocks/blue_quartz_ore.json
 43beb9e6456d916a78af765125031ce1756d029d data/quartztastic/loot_table/blocks/chiseled_rose_quartz_block.json
@@ -70,6 +70,7 @@ d4b7ccec7622b082c0aa937375f4e3046b1edaee data/quartztastic/loot_table/blocks/smo
 838955f4f0e9d709c9ac61db9d4c2586275f5c18 data/quartztastic/loot_table/blocks/smoky_quartz_ore.json
 f51c5289b4a643915214121c574df97b19dc8cc2 data/quartztastic/loot_table/blocks/smoky_quartz_oven.json
 6e3932bec37ad1a7edfe8062ac11d275a75bbdd1 data/quartztastic/loot_table/blocks/smoky_quartz_pane.json
+22b07f6ce5f3cf71cf99d1f664ba541765ef8d8f data/quartztastic/loot_table/blocks/smoky_quartz_path.json
 aa9e74726427350963fe48f3a32b41aa1b9ebe7b data/quartztastic/loot_table/blocks/smoky_quartz_pillar.json
 a8fbe62b2ef2939526cdbc960584c1bf6df3bdae data/quartztastic/loot_table/blocks/smoky_quartz_pressure_plate.json
 46332e9bff057ae94cbeb6ac834600d7adaf97db data/quartztastic/loot_table/blocks/smoky_quartz_shelf.json
