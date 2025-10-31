@@ -26,6 +26,7 @@ import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
@@ -134,6 +135,16 @@ public class RoseQuartzList {
     public static DeferredBlock<Pillar> ROSE_QUARTZ_PILLAR;
 
     public static DeferredItem<BlockItem> ROSE_QUARTZ_PILLAR_ITEM;
+
+
+    public static DeferredBlock<Block> ROSE_QUARTZ_BARS_BLOCK;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_BARS_BLOCK_ITEM;
+
+
+    public static DeferredBlock<IronBarsBlock> ROSE_QUARTZ_BARS;
+
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_BARS_ITEM;
 
 
     public static DeferredBlock<Block> ROSE_QUARTZ_BOOKSHELF;

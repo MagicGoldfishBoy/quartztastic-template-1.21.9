@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_glass_pane_noside",
+  "textures": {
+    "pane": "quartztastic:block/rose_quartz_bars_block"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side_alt",
+  "textures": {
+    "edge": "quartztastic:block/rose_quartz_bars_top",
+    "pane": "quartztastic:block/rose_quartz_bars_block"
+  }
+}

@@ -15,7 +15,6 @@ import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.model.Model;
 import net.minecraft.client.renderer.block.model.Variant;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -38,6 +37,7 @@ public class ModelDatagen extends ModelProvider {
         buildBlockbenchBlockstates(blockModels, itemModels);
         buildLanternModels(blockModels, itemModels);
         buildTorchModels(blockModels, itemModels);
+        buildBarModels(blockModels, itemModels);
     }
 
     protected void buildSimpleItemModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
@@ -347,6 +347,11 @@ public class ModelDatagen extends ModelProvider {
         blockModels.createNormalTorch(RoseQuartzList.ROSE_QUARTZ_TORCH.get(), RoseQuartzList.ROSE_QUARTZ_WALL_TORCH.get());
 
         blockModels.createNormalTorch(RoseQuartzList.ROSE_QUARTZ_SOUL_TORCH.get(), RoseQuartzList.ROSE_QUARTZ_WALL_SOUL_TORCH.get());
+    }
+
+    protected void buildBarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
+        blockModels.createGlassBlocks(RoseQuartzList.ROSE_QUARTZ_BARS_BLOCK.get(), RoseQuartzList.ROSE_QUARTZ_BARS.get());
     }
 }
 
