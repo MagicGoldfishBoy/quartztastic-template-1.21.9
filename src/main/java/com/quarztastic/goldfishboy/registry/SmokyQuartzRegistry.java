@@ -13,6 +13,7 @@ import com.quarztastic.goldfishboy.block.SmokyQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
 import com.quarztastic.goldfishboy.block.SmokyQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBlastFurnaceEntity;
@@ -750,7 +751,6 @@ public class SmokyQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
             "smoky_quartz_nightstand_entity",
             () -> new BlockEntityType<>(
@@ -758,7 +758,6 @@ public class SmokyQuartzRegistry {
                 false,
                 SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND.get())
         );
-
         SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND
         );
@@ -774,7 +773,6 @@ public class SmokyQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         SmokyQuartzList.SMOKY_QUARTZ_SINK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_SINK
         );
@@ -790,9 +788,23 @@ public class SmokyQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         SmokyQuartzList.SMOKY_QUARTZ_PATH_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_PATH
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE = Quartztastic.BLOCKS.register(
+            "smoky_quartz_skull_statuette", 
+            registryName -> new Statuette("skull", BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.8f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+                .lightLevel(state -> 5)
+            )
+        );
+        SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE
         );
 
     }

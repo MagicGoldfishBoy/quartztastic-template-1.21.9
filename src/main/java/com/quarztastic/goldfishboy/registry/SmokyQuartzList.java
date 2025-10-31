@@ -12,6 +12,7 @@ import com.quarztastic.goldfishboy.block.SmokyQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
 import com.quarztastic.goldfishboy.block.SmokyQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBlastFurnaceEntity;
@@ -271,5 +272,9 @@ public class SmokyQuartzList {
     public static DeferredBlock<Path> SMOKY_QUARTZ_PATH;
 
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_PATH_ITEM;
+
+
+    public static DeferredBlock<Statuette> SMOKY_QUARTZ_SKULL_STATUETTE;
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_SKULL_STATUETTE_ITEM;
     
 }

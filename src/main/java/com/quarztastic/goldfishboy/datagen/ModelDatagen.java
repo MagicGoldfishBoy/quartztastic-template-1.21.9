@@ -221,6 +221,13 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SINK.get(), new Variant(modLocation("block/smoky_quartz_sink")));
 
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE.get(), new Variant(modLocation("block/smoky_quartz_skull")));
+
+        itemModels.itemModelOutput.accept(
+            SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/smoky_quartz_skull"))
+        );
+
 
 
         for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {

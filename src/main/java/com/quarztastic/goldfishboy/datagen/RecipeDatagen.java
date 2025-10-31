@@ -47,6 +47,7 @@ public class RecipeDatagen extends RecipeProvider {
         buildContainerRecipes();
         buildSinkRecipes();
         buildPathRecipes();
+        buildStatueRecipes();
     }
 
     protected void buildItemRecipes() {
@@ -910,6 +911,12 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output, "rose_quartz_path_by_crafting");
     }
 
+    protected void buildStatueRecipes() {
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE_ITEM.get())
+            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "smoky_quartz_skull_statuette_by_stonecutting");
+    }
     public static class Runner extends RecipeProvider.Runner {
 
         public Runner(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
