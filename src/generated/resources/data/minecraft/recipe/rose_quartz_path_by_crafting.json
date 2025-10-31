@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "quartztastic:rose_quartz_slab"
+  ],
+  "result": {
+    "count": 8,
+    "id": "quartztastic:rose_quartz_path"
+  }
+}
