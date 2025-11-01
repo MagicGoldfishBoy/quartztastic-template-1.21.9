@@ -141,6 +141,12 @@ public class ModelDatagen extends ModelProvider {
         blockModels.familyWithExistingFullBlock(RoseQuartzList.ROSE_QUARTZ_TILES.get())
             .slab(RoseQuartzList.ROSE_QUARTZ_TILE_SLAB.get())
             .stairs(RoseQuartzList.ROSE_QUARTZ_TILE_STAIRS.get());
+
+
+
+        blockModels.familyWithExistingFullBlock(CitrineList.CITRINE_BLOCK.get())
+            .slab(CitrineList.CITRINE_SLAB.get())
+            .stairs(CitrineList.CITRINE_STAIRS.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

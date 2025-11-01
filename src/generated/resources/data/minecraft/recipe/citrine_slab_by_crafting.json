@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "@": "quartztastic:citrine_block"
+  },
+  "pattern": [
+    "@@@"
+  ],
+  "result": {
+    "count": 6,
+    "id": "quartztastic:citrine_slab"
+  }
+}

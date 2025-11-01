@@ -1,6 +1,5 @@
 package com.quarztastic.goldfishboy.datagen;
 
-import java.rmi.registry.Registry;
 import java.util.concurrent.CompletableFuture;
 
 import com.quarztastic.goldfishboy.registry.CitrineList;
@@ -19,7 +18,6 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -381,6 +379,18 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get())
             .unlockedBy("has_rose_quartz_tiles", has(RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get()))
             .save(this.output, "rose_quartz_tile_slab_by_crafting");
+
+
+        
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output, "citrine_slab_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_SLAB_ITEM.get(), 6)
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_BLOCK_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output, "citrine_slab_by_crafting");
     }
 
     protected void buildStairsRecipes() {
@@ -463,6 +473,20 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get())
             .unlockedBy("has_rose_quartz_tiles", has(RoseQuartzList.ROSE_QUARTZ_TILES_ITEM.get()))
             .save(this.output, "rose_quartz_tile_stairs_by_crafting");
+
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_STAIRS_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output, "citrine_stairs_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_STAIRS_ITEM.get(), 4)
+            .pattern("@  ")
+            .pattern("@@ ")
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_BLOCK_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output, "citrine_stairs_by_crafting");
 
     }
 

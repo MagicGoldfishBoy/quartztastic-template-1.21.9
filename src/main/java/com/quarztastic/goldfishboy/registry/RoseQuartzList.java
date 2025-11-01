@@ -45,7 +45,6 @@ import net.neoforged.neoforge.registries.DeferredItem;
 public class RoseQuartzList {
 
     public static DeferredItem<Item> ROSE_QUARTZ_CRYSTAL;
-
     
     public static DeferredBlock<Block> ROSE_QUARTZ_ORE;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_ORE_ITEM;
@@ -54,10 +53,8 @@ public class RoseQuartzList {
     public static DeferredBlock<Block> ROSE_QUARTZ_BLOCK;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_BLOCK_ITEM;
 
-
     public static DeferredBlock<SlabBlock> ROSE_QUARTZ_SLAB;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_SLAB_ITEM;
-
 
     public static DeferredBlock<StairBlock> ROSE_QUARTZ_STAIRS;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_STAIRS_ITEM;
@@ -66,7 +63,6 @@ public class RoseQuartzList {
     public static DeferredBlock<ButtonBlock> ROSE_QUARTZ_BUTTON;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_BUTTON_ITEM;
 
-
     public static DeferredBlock<PressurePlateBlock> ROSE_QUARTZ_PRESSURE_PLATE;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_PRESSURE_PLATE_ITEM;
 
@@ -74,10 +70,8 @@ public class RoseQuartzList {
     public static DeferredBlock<FenceBlock> ROSE_QUARTZ_FENCE;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_FENCE_ITEM;
 
-
     public static DeferredBlock<WallBlock> ROSE_QUARTZ_WALL;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_WALL_ITEM;
-
 
     public static DeferredBlock<FenceGateBlock> ROSE_QUARTZ_GATE;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_GATE_ITEM;
