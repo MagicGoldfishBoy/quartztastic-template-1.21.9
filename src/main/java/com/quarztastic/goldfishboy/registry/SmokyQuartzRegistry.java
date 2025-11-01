@@ -643,7 +643,7 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_TORCH = Quartztastic.BLOCKS.register(
             "smoky_quartz_torch", 
-            registryName -> new TorchBlock(ParticleTypes.FLAME , BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)
+            registryName -> new TorchBlock(ParticleTypes.FLAME , BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .sound(SoundType.AMETHYST)
                 .instabreak()
@@ -654,7 +654,7 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_WALL_TORCH = Quartztastic.BLOCKS.register(
             "smoky_quartz_wall_torch", 
-            registryName -> new WallTorchBlock(ParticleTypes.FLAME , BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)
+            registryName -> new WallTorchBlock(ParticleTypes.FLAME , BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .sound(SoundType.AMETHYST)
                 .instabreak()

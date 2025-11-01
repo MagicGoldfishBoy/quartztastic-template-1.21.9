@@ -15,7 +15,7 @@ public class CitrineList {
     public static DeferredBlock<Block> CITRINE_ORE;
     public static DeferredItem<BlockItem> CITRINE_ORE_ITEM;
 
-    
+
     public static DeferredBlock<Block> CITRINE_BLOCK;
     public static DeferredItem<BlockItem> CITRINE_BLOCK_ITEM;
 
@@ -24,4 +24,8 @@ public class CitrineList {
 
     public static DeferredBlock<StairBlock> CITRINE_STAIRS;
     public static DeferredItem<BlockItem> CITRINE_STAIRS_ITEM;
+
+
+    public static DeferredBlock<Block> CITRINE_BRICKS;
+    public static DeferredItem<BlockItem> CITRINE_BRICKS_ITEM;
 }
