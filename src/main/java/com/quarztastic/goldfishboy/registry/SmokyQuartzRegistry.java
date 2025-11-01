@@ -649,6 +649,7 @@ public class SmokyQuartzRegistry {
                 .instabreak()
                 .noOcclusion()
                 .noCollision()
+                .lightLevel(state -> 15)
             )
         );
 
@@ -660,6 +661,7 @@ public class SmokyQuartzRegistry {
                 .instabreak()
                 .noOcclusion()
                 .noCollision()
+                .lightLevel(state -> 15)
             )
         );
 
