@@ -120,5 +120,35 @@ public class CitrineRegistry {
         CitrineList.CITRINE_BRICKS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_BRICKS
         );
+
+        CitrineList.CITRINE_BRICK_SLAB = Quartztastic.BLOCKS.register(
+            "citrine_brick_slab", 
+            registryName -> new SlabBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(3.0f, 6.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_BRICK_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_BRICK_SLAB
+        );
+
+        CitrineList.CITRINE_BRICK_STAIRS = Quartztastic.BLOCKS.register(
+            "citrine_brick_stairs", 
+            registryName -> new StairBlock(
+                CitrineList.CITRINE_BRICKS.get().defaultBlockState(),
+                BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(3.0f, 6.0f)
+                    .sound(SoundType.AMETHYST)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_BRICK_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_BRICK_STAIRS
+        );
     }
 }

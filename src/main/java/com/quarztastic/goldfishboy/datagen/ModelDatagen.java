@@ -153,6 +153,10 @@ public class ModelDatagen extends ModelProvider {
             .stairs(CitrineList.CITRINE_STAIRS.get())
             .button(CitrineList.CITRINE_BUTTON.get())
             .pressurePlate(CitrineList.CITRINE_PRESSURE_PLATE.get());
+
+        blockModels.familyWithExistingFullBlock(CitrineList.CITRINE_BRICKS.get())
+            .slab(CitrineList.CITRINE_BRICK_SLAB.get())
+            .stairs(CitrineList.CITRINE_BRICK_STAIRS.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

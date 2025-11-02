@@ -77,18 +77,14 @@ public class RoseQuartzList {
     public static DeferredItem<BlockItem> ROSE_QUARTZ_GATE_ITEM;
 
 
-
     public static DeferredBlock<Block> ROSE_QUARTZ_BRICKS;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_BRICKS_ITEM;
-
 
     public static DeferredBlock<SlabBlock> ROSE_QUARTZ_BRICK_SLAB;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_BRICK_SLAB_ITEM;
 
-
     public static DeferredBlock<StairBlock> ROSE_QUARTZ_BRICK_STAIRS;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_BRICK_STAIRS_ITEM;
-
 
     public static DeferredBlock<WallBlock> ROSE_QUARTZ_BRICK_WALL;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_BRICK_WALL_ITEM;

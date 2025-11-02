@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "quartztastic:block/citrine_brick_slab"
+    },
+    "type=double": {
+      "model": "quartztastic:block/citrine_bricks"
+    },
+    "type=top": {
+      "model": "quartztastic:block/citrine_brick_slab_top"
+    }
+  }
+}
