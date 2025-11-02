@@ -2,8 +2,10 @@ package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
+import com.quarztastic.goldfishboy.block.CitrineOvenBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
+import com.quarztastic.goldfishboy.entity.CitrineOvenEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
 
 import net.minecraft.core.registries.Registries;
@@ -364,6 +366,27 @@ public class CitrineRegistry {
         );
         CitrineList.CITRINE_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_FURNACE
+        );
+
+        CitrineList.CITRINE_OVEN = Quartztastic.BLOCKS.register(
+            "citrine_oven", 
+            registryName -> new CitrineOvenBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_OVEN_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "citrine_oven", 
+            () -> new BlockEntityType<>(
+                CitrineOvenEntity::new, 
+                false,
+                CitrineList.CITRINE_OVEN.get())
+        );
+        CitrineList.CITRINE_OVEN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_OVEN
         );
     }
 }

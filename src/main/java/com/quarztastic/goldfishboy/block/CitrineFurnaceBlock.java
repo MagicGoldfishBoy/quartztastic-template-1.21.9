@@ -99,6 +99,7 @@ public class CitrineFurnaceBlock extends AbstractFurnaceBlock {
         super.stepOn(level, pos, state, entity);
     }
 
+    @SuppressWarnings("null")
     @Override
     public int getLightEmission(BlockState state, BlockGetter level, BlockPos pos) {
         return state.getValue(LIT) ? 15 : 0;

@@ -3,8 +3,10 @@ package com.quarztastic.goldfishboy.registry;
 import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
+import com.quarztastic.goldfishboy.block.CitrineOvenBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
+import com.quarztastic.goldfishboy.entity.CitrineOvenEntity;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -95,6 +97,10 @@ public class CitrineList {
     public static DeferredBlock<CitrineFurnaceBlock> CITRINE_FURNACE;
     public static Supplier<BlockEntityType<CitrineFurnaceEntity>> CITRINE_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> CITRINE_FURNACE_ITEM;
+
+    public static DeferredBlock<CitrineOvenBlock> CITRINE_OVEN;
+    public static Supplier<BlockEntityType<CitrineOvenEntity>> CITRINE_OVEN_ENTITY;
+    public static DeferredItem<BlockItem> CITRINE_OVEN_ITEM;
 
 
 }
