@@ -1,7 +1,10 @@
 package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
+import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -15,6 +18,7 @@ import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -326,6 +330,7 @@ public class CitrineRegistry {
             CitrineList.CITRINE_BARS
         );
 
+
         CitrineList.CITRINE_BOOKSHELF = Quartztastic.BLOCKS.register(
             "citrine_bookshelf", 
             registryName -> new Block(BlockBehaviour.Properties.of()
@@ -338,6 +343,27 @@ public class CitrineRegistry {
         );
         CitrineList.CITRINE_BOOKSHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_BOOKSHELF
+        );
+
+        CitrineList.CITRINE_FURNACE = Quartztastic.BLOCKS.register(
+            "citrine_furnace", 
+            registryName -> new CitrineFurnaceBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "citrine_furnace",
+            () -> new BlockEntityType<>(
+            CitrineFurnaceEntity::new,
+            false,
+            CitrineList.CITRINE_FURNACE.get())
+        );
+        CitrineList.CITRINE_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_FURNACE
         );
     }
 }

@@ -1,6 +1,10 @@
 package com.quarztastic.goldfishboy.registry;
 
+import java.util.function.Supplier;
+
+import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -11,6 +15,7 @@ import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 
@@ -86,6 +91,10 @@ public class CitrineList {
 
     public static DeferredBlock<Block> CITRINE_BOOKSHELF;
     public static DeferredItem<BlockItem> CITRINE_BOOKSHELF_ITEM;
+
+    public static DeferredBlock<CitrineFurnaceBlock> CITRINE_FURNACE;
+    public static Supplier<BlockEntityType<CitrineFurnaceEntity>> CITRINE_FURNACE_ENTITY;
+    public static DeferredItem<BlockItem> CITRINE_FURNACE_ITEM;
 
 
 }
