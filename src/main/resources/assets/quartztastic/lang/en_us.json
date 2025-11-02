@@ -168,12 +168,15 @@
   "block.quartztastic.citrine_bars": "Citrine Bars",
 
   "block.quartztastic.citrine_bookshelf": "Citrine Bookshelf",
-  
+
   "block.quartztastic.citrine_furnace": "Citrine Furnace",
   "container.citrine_furnace": "Citrine Furnace",
 
   "block.quartztastic.citrine_oven": "Citrine Oven",
   "container.citrine_oven": "Citrine Oven",
+
+  "block.quartztastic.citrine_blast_furnace": "Citrine Blast Furnace",
+  "container.citrine_blast_furnace": "Citrine Blast Furnace",
 
 
   "item.quartztastic.prasiolite_quartz_crystal": "Prasiolite Quartz Crystal",

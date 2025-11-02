@@ -2,9 +2,11 @@ package com.quarztastic.goldfishboy.registry;
 
 import java.util.function.Supplier;
 
+import com.quarztastic.goldfishboy.block.CitrineBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineOvenBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.entity.CitrineBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineOvenEntity;
 
@@ -102,5 +104,7 @@ public class CitrineList {
     public static Supplier<BlockEntityType<CitrineOvenEntity>> CITRINE_OVEN_ENTITY;
     public static DeferredItem<BlockItem> CITRINE_OVEN_ITEM;
 
-
+    public static DeferredBlock<CitrineBlastFurnaceBlock> CITRINE_BLAST_FURNACE;
+    public static Supplier<BlockEntityType<CitrineBlastFurnaceEntity>> CITRINE_BLAST_FURNACE_ENTITY;
+    public static DeferredItem<BlockItem> CITRINE_BLAST_FURNACE_ITEM;
 }
