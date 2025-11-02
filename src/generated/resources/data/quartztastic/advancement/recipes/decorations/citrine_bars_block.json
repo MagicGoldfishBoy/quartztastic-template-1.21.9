@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_citrine_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "quartztastic:citrine_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "quartztastic:citrine_bars_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_citrine_bars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "quartztastic:citrine_bars_block"
+    ]
+  }
+}

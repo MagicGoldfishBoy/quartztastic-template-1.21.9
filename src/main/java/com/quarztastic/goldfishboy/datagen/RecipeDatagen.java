@@ -344,6 +344,23 @@ public class RecipeDatagen extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_PILLAR_ITEM.get())
             .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
             .save(this.output);
+
+            
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_BARS_ITEM.get(), 18)
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_CRYSTAL.get())
+            .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
+            .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_BARS_BLOCK_ITEM.get())
+            .pattern("@@@")
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_BARS_ITEM.get())
+            .unlockedBy("has_citrine_bars", has(CitrineList.CITRINE_BARS_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {

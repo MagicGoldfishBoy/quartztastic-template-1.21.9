@@ -158,6 +158,9 @@ public class TagDatagen extends BlockTagsProvider {
 
                 CitrineList.CITRINE_PILLAR.get(),
 
+                CitrineList.CITRINE_BARS_BLOCK.get(),
+                CitrineList.CITRINE_BARS.get(),
+
 
                 BlueQuartzList.BLUE_QUARTZ_ORE.get(),
 

@@ -7,6 +7,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
@@ -75,4 +76,13 @@ public class CitrineList {
 
     public static DeferredBlock<Pillar> CITRINE_PILLAR;
     public static DeferredItem<BlockItem> CITRINE_PILLAR_ITEM;
+
+
+    public static DeferredBlock<Block> CITRINE_BARS_BLOCK;
+    public static DeferredItem<BlockItem> CITRINE_BARS_BLOCK_ITEM;
+    
+    public static DeferredBlock<IronBarsBlock> CITRINE_BARS;
+    public static DeferredItem<BlockItem> CITRINE_BARS_ITEM;
+
+
 }

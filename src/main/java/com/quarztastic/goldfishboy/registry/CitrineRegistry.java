@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -294,6 +295,35 @@ public class CitrineRegistry {
         );
         CitrineList.CITRINE_PILLAR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_PILLAR
+        );
+
+
+        CitrineList.CITRINE_BARS_BLOCK = Quartztastic.BLOCKS.register(
+            "citrine_bars_block", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_BARS_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_BARS_BLOCK
+        );
+
+        CitrineList.CITRINE_BARS = Quartztastic.BLOCKS.register(
+            "citrine_bars", 
+            registryName  -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME / 2, CITRINE_EXPLOSION_RESISTANCE / 2)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_BARS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_BARS
         );
     }
 }

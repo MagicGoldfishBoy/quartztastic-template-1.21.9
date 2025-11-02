@@ -414,6 +414,9 @@ public class ModelDatagen extends ModelProvider {
 
 
         blockModels.createGlassBlocks(RoseQuartzList.ROSE_QUARTZ_BARS_BLOCK.get(), RoseQuartzList.ROSE_QUARTZ_BARS.get());
+
+
+        blockModels.createGlassBlocks(CitrineList.CITRINE_BARS_BLOCK.get(), CitrineList.CITRINE_BARS.get());
     }
 }
 
