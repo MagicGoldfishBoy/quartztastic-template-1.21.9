@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "@": "quartztastic:citrine_block"
+  },
+  "pattern": [
+    "@@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:citrine_pressure_plate"
+  }
+}

@@ -2,6 +2,8 @@ package com.quarztastic.goldfishboy.datagen;
 
 import javax.annotation.Nonnull;
 
+import org.checkerframework.checker.units.qual.C;
+
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.CitrineList;
@@ -148,7 +150,9 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.familyWithExistingFullBlock(CitrineList.CITRINE_BLOCK.get())
             .slab(CitrineList.CITRINE_SLAB.get())
-            .stairs(CitrineList.CITRINE_STAIRS.get());
+            .stairs(CitrineList.CITRINE_STAIRS.get())
+            .button(CitrineList.CITRINE_BUTTON.get())
+            .pressurePlate(CitrineList.CITRINE_PRESSURE_PLATE.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

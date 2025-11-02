@@ -5,6 +5,8 @@ import com.quarztastic.goldfishboy.Quartztastic;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
@@ -75,6 +77,33 @@ public class CitrineRegistry {
         );
         CitrineList.CITRINE_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_STAIRS
+        );
+
+
+        CitrineList.CITRINE_BUTTON = Quartztastic.BLOCKS.register(
+            "citrine_button", 
+            registryName -> new ButtonBlock(BlockSetTypes.QUARTZ, 25, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(2.0f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+            )
+        );
+        CitrineList.CITRINE_BUTTON_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_BUTTON
+        );
+
+        CitrineList.CITRINE_PRESSURE_PLATE = Quartztastic.BLOCKS.register(
+            "citrine_pressure_plate", 
+            registryName -> new PressurePlateBlock(BlockSetTypes.QUARTZ, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(2.0f, 4.0f)
+                .sound(SoundType.AMETHYST)
+                .requiresCorrectToolForDrops()
+            )
+        );
+        CitrineList.CITRINE_PRESSURE_PLATE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_PRESSURE_PLATE
         );
 
 

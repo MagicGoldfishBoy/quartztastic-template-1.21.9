@@ -515,7 +515,6 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output, "smoky_quartz_button_by_crafting");
 
 
-
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, RoseQuartzList.ROSE_QUARTZ_BUTTON_ITEM.get(), 2)
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "rose_quartz_button_by_stonecutting");
@@ -524,6 +523,16 @@ public class RecipeDatagen extends RecipeProvider {
             .requires(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get())
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "rose_quartz_button_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, CitrineList.CITRINE_BUTTON_ITEM.get(), 2)
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output, "citrine_button_by_stonecutting");
+
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, CitrineList.CITRINE_BUTTON_ITEM.get())
+            .requires(CitrineList.CITRINE_BLOCK_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output, "citrine_button_by_crafting");
     }
 
     protected void buildPressurePlateRecipes() {
@@ -539,7 +548,6 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output, "smoky_quartz_pressure_plate_by_crafting");
 
 
-
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, RoseQuartzList.ROSE_QUARTZ_PRESSURE_PLATE_ITEM.get())
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "rose_quartz_pressure_plate_by_stonecutting");
@@ -549,6 +557,17 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get())
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "rose_quartz_pressure_plate_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, CitrineList.CITRINE_PRESSURE_PLATE_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output, "citrine_pressure_plate_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, CitrineList.CITRINE_PRESSURE_PLATE_ITEM.get())
+            .pattern("@@")
+            .define('@', CitrineList.CITRINE_BLOCK_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output, "citrine_pressure_plate_by_crafting");
     }
 
     protected void buildFenceWallGateRecipes() {

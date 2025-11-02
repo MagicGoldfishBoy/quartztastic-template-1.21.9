@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    "quartztastic:citrine_block"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:citrine_button"
+  }
+}

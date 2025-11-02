@@ -140,6 +140,9 @@ public class TagDatagen extends BlockTagsProvider {
                 CitrineList.CITRINE_SLAB.get(),
                 CitrineList.CITRINE_STAIRS.get(),
 
+                CitrineList.CITRINE_BUTTON.get(),
+                CitrineList.CITRINE_PRESSURE_PLATE.get(),
+
                 CitrineList.CITRINE_BRICKS.get(),
 
 
@@ -155,7 +158,9 @@ public class TagDatagen extends BlockTagsProvider {
             .add(
                 SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE.get(),
 
-                RoseQuartzList.ROSE_QUARTZ_PRESSURE_PLATE.get()
+                RoseQuartzList.ROSE_QUARTZ_PRESSURE_PLATE.get(),
+
+                CitrineList.CITRINE_PRESSURE_PLATE.get()
             );
 
         this.tag(TagKeyList.FENCES_TAG)
