@@ -59,4 +59,14 @@ public class CitrineList {
 
     public static DeferredBlock<Block> CHISELED_CITRINE_BLOCK;
     public static DeferredItem<BlockItem> CHISELED_CITRINE_BLOCK_ITEM;
+
+
+    public static DeferredBlock<Block> CITRINE_TILES;
+    public static DeferredItem<BlockItem> CITRINE_TILES_ITEM;
+
+    public static DeferredBlock<SlabBlock> CITRINE_TILE_SLAB;
+    public static DeferredItem<BlockItem> CITRINE_TILE_SLAB_ITEM;
+
+    public static DeferredBlock<StairBlock> CITRINE_TILE_STAIRS;
+    public static DeferredItem<BlockItem> CITRINE_TILE_STAIRS_ITEM;
 }

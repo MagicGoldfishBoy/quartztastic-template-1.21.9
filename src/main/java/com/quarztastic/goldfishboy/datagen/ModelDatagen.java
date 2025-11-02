@@ -95,6 +95,8 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.createTrivialCube(CitrineList.CHISELED_CITRINE_BLOCK.get());
 
+        blockModels.createTrivialCube(CitrineList.CITRINE_TILES.get());
+
 
         blockModels.createTrivialCube(BlueQuartzList.BLUE_QUARTZ_ORE.get());
 
@@ -163,6 +165,10 @@ public class ModelDatagen extends ModelProvider {
             .slab(CitrineList.CITRINE_BRICK_SLAB.get())
             .stairs(CitrineList.CITRINE_BRICK_STAIRS.get())
             .wall(CitrineList.CITRINE_BRICK_WALL.get());
+
+        blockModels.familyWithExistingFullBlock(CitrineList.CITRINE_TILES.get())
+            .slab(CitrineList.CITRINE_TILE_SLAB.get())
+            .stairs(CitrineList.CITRINE_TILE_STAIRS.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

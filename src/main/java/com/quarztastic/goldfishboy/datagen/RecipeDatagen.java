@@ -334,6 +334,11 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', CitrineList.CITRINE_SLAB_ITEM.get())
             .unlockedBy("has_citrine_slab", has(CitrineList.CITRINE_SLAB_ITEM.get()))
             .save(this.output, "chiseled_citrine_block_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_TILES_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {
@@ -427,6 +432,17 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', CitrineList.CITRINE_BRICKS_ITEM.get())
             .unlockedBy("has_citrine_bricks_block", has(CitrineList.CITRINE_BRICKS_ITEM.get()))
             .save(this.output, "citrine_bricks_slab_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_TILES_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_TILE_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_citrine_tiles", has(CitrineList.CITRINE_TILES_ITEM.get()))
+            .save(this.output, "citrine_tiles_slab_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_TILE_SLAB_ITEM.get(), 6)
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_TILES_ITEM.get())
+            .unlockedBy("has_citrine_tiles", has(CitrineList.CITRINE_TILES_ITEM.get()))
+            .save(this.output, "citrine_tiles_slab_by_crafting");
     }
 
     protected void buildStairsRecipes() {
@@ -536,6 +552,19 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', CitrineList.CITRINE_BRICKS_ITEM.get())
             .unlockedBy("has_citrine_bricks_block", has(CitrineList.CITRINE_BRICKS_ITEM.get()))
             .save(this.output, "citrine_bricks_stairs_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_TILES_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_TILE_STAIRS_ITEM.get())
+            .unlockedBy("has_citrine_tiles", has(CitrineList.CITRINE_TILES_ITEM.get()))
+            .save(this.output, "citrine_tiles_stairs_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_TILE_STAIRS_ITEM.get(), 4)
+            .pattern("@  ")
+            .pattern("@@ ")
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_TILES_ITEM.get())
+            .unlockedBy("has_citrine_tiles", has(CitrineList.CITRINE_TILES_ITEM.get()))
+            .save(this.output, "citrine_tiles_stairs_by_crafting");
 
     }
 

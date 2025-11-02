@@ -234,5 +234,50 @@ public class CitrineRegistry {
         CitrineList.CHISELED_CITRINE_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CHISELED_CITRINE_BLOCK
         );
+
+
+        CitrineList.CITRINE_TILES = Quartztastic.BLOCKS.register(
+            "citrine_tiles", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_TILES_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_TILES
+        );
+
+        CitrineList.CITRINE_TILE_SLAB = Quartztastic.BLOCKS.register(
+            "citrine_tile_slab", 
+            registryName -> new SlabBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_TILE_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_TILE_SLAB
+        );
+
+        CitrineList.CITRINE_TILE_STAIRS = Quartztastic.BLOCKS.register(
+            "citrine_tile_stairs", 
+            registryName -> new StairBlock(
+                CitrineList.CITRINE_TILES.get().defaultBlockState(),
+                BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                    .sound(CITRINE_SOUND_TYPE)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_TILE_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_TILE_STAIRS
+        );
     }
 }
