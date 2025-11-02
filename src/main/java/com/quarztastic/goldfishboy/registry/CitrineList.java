@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 
@@ -51,4 +52,7 @@ public class CitrineList {
 
     public static DeferredBlock<StairBlock> CITRINE_BRICK_STAIRS;
     public static DeferredItem<BlockItem> CITRINE_BRICK_STAIRS_ITEM;
+
+    public static DeferredBlock<WallBlock> CITRINE_BRICK_WALL;
+    public static DeferredItem<BlockItem> CITRINE_BRICK_WALL_ITEM;
 }

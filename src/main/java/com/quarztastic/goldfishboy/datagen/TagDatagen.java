@@ -148,6 +148,7 @@ public class TagDatagen extends BlockTagsProvider {
                 CitrineList.CITRINE_BRICKS.get(),
                 CitrineList.CITRINE_BRICK_SLAB.get(),
                 CitrineList.CITRINE_BRICK_STAIRS.get(),
+                CitrineList.CITRINE_BRICK_WALL.get(),
 
 
                 BlueQuartzList.BLUE_QUARTZ_ORE.get(),
@@ -184,7 +185,8 @@ public class TagDatagen extends BlockTagsProvider {
                 RoseQuartzList.ROSE_QUARTZ_WALL.get(),
                 RoseQuartzList.ROSE_QUARTZ_BRICK_WALL.get(),
 
-                CitrineList.CITRINE_WALL.get()
+                CitrineList.CITRINE_WALL.get(),
+                CitrineList.CITRINE_BRICK_WALL.get()
             );
 
         this.tag(TagKeyList.GATES_TAG)

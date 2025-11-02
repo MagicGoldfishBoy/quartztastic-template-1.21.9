@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "quartztastic:citrine_bricks",
+  "result": {
+    "count": 1,
+    "id": "quartztastic:citrine_brick_wall"
+  }
+}

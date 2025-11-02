@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": "quartztastic:citrine_bricks"
+  },
+  "pattern": [
+    "@@@",
+    "@@@"
+  ],
+  "result": {
+    "count": 6,
+    "id": "quartztastic:citrine_brick_wall"
+  }
+}

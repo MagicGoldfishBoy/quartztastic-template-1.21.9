@@ -716,6 +716,18 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', CitrineList.CITRINE_BLOCK_ITEM.get())
             .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
             .save(this.output, "citrine_wall_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BRICKS_ITEM.get()), RecipeCategory.DECORATIONS, CitrineList.CITRINE_BRICK_WALL_ITEM.get())
+            .unlockedBy("has_citrine_bricks", has(CitrineList.CITRINE_BRICKS_ITEM.get()))
+            .save(this.output, "citrine_brick_wall_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_BRICK_WALL_ITEM.get(), 6)
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_BRICKS_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BRICKS_ITEM.get()))
+            .save(this.output, "citrine_brick_wall_by_crafting");
     }
 
     protected void buildDoorRecipes() {

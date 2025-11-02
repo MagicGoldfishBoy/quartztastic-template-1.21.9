@@ -159,7 +159,8 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.familyWithExistingFullBlock(CitrineList.CITRINE_BRICKS.get())
             .slab(CitrineList.CITRINE_BRICK_SLAB.get())
-            .stairs(CitrineList.CITRINE_BRICK_STAIRS.get());
+            .stairs(CitrineList.CITRINE_BRICK_STAIRS.get())
+            .wall(CitrineList.CITRINE_BRICK_WALL.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
