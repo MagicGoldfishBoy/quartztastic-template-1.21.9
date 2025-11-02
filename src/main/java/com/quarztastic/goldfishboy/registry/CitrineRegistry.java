@@ -6,13 +6,26 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class CitrineRegistry {
+
+    static SoundType CITRINE_SOUND_TYPE = SoundType.AMETHYST;
+
+    static Float CITRINE_DESTROY_TIME = 3.0f;
+    static Float CITRINE_EXPLOSION_RESISTANCE = 6.0f;
+
+    static BlockSetType CITRINE_BLOCK_SET_TYPE = BlockSetTypes.QUARTZ;
+    static WoodType CITRINE_WOOD_TYPE = WoodType.CRIMSON;
     
     public static void registerAll() {
 
@@ -24,8 +37,8 @@ public class CitrineRegistry {
             "citrine_ore", 
             registryName -> new Block(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(2.0f, 4.0f)
-                .sound(SoundType.AMETHYST)
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
                 .requiresCorrectToolForDrops()
                 .noOcclusion()
             )
@@ -39,8 +52,8 @@ public class CitrineRegistry {
             "citrine_block", 
             registryName -> new Block(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(3.0f, 6.0f)
-                .sound(SoundType.AMETHYST)
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
                 .requiresCorrectToolForDrops()
                 .noOcclusion()
             )
@@ -53,8 +66,8 @@ public class CitrineRegistry {
             "citrine_slab", 
             registryName -> new SlabBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(3.0f, 6.0f)
-                .sound(SoundType.AMETHYST)
+                .strength(CITRINE_DESTROY_TIME / 2, CITRINE_EXPLOSION_RESISTANCE / 2)
+                .sound(CITRINE_SOUND_TYPE)
                 .requiresCorrectToolForDrops()
                 .noOcclusion()
             )
@@ -69,8 +82,8 @@ public class CitrineRegistry {
                 CitrineList.CITRINE_BLOCK.get().defaultBlockState(),
                 BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                    .strength(3.0f, 6.0f)
-                    .sound(SoundType.AMETHYST)
+                    .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                    .sound(CITRINE_SOUND_TYPE)
                     .requiresCorrectToolForDrops()
                     .noOcclusion()
             )
@@ -79,14 +92,14 @@ public class CitrineRegistry {
             CitrineList.CITRINE_STAIRS
         );
 
-
         CitrineList.CITRINE_BUTTON = Quartztastic.BLOCKS.register(
             "citrine_button", 
-            registryName -> new ButtonBlock(BlockSetTypes.QUARTZ, 25, BlockBehaviour.Properties.of()
+            registryName -> new ButtonBlock(CITRINE_BLOCK_SET_TYPE, 25, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(2.0f, 4.0f)
-                .sound(SoundType.AMETHYST)
-                .requiresCorrectToolForDrops()
+                .instabreak()
+                .noCollision()
+                .sound(CITRINE_SOUND_TYPE)
+                .noOcclusion()
             )
         );
         CitrineList.CITRINE_BUTTON_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
@@ -95,10 +108,10 @@ public class CitrineRegistry {
 
         CitrineList.CITRINE_PRESSURE_PLATE = Quartztastic.BLOCKS.register(
             "citrine_pressure_plate", 
-            registryName -> new PressurePlateBlock(BlockSetTypes.QUARTZ, BlockBehaviour.Properties.of()
+            registryName -> new PressurePlateBlock(CITRINE_BLOCK_SET_TYPE, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(2.0f, 4.0f)
-                .sound(SoundType.AMETHYST)
+                .strength(CITRINE_DESTROY_TIME / 4, CITRINE_EXPLOSION_RESISTANCE / 4)
+                .sound(CITRINE_SOUND_TYPE)
                 .requiresCorrectToolForDrops()
             )
         );
@@ -106,13 +119,55 @@ public class CitrineRegistry {
             CitrineList.CITRINE_PRESSURE_PLATE
         );
 
+        CitrineList.CITRINE_FENCE = Quartztastic.BLOCKS.register(
+            "citrine_fence", 
+            registryName -> new FenceBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_FENCE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_FENCE
+        );
+
+        CitrineList.CITRINE_WALL = Quartztastic.BLOCKS.register(
+            "citrine_wall", 
+            registryName -> new WallBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_WALL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_WALL
+        );
+
+        CitrineList.CITRINE_GATE = Quartztastic.BLOCKS.register(
+            "citrine_gate", 
+            registryName -> new FenceGateBlock(CITRINE_WOOD_TYPE, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_GATE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_GATE
+        );
+
 
         CitrineList.CITRINE_BRICKS = Quartztastic.BLOCKS.register(
             "citrine_bricks", 
             registryName -> new Block(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(3.0f, 6.0f)
-                .sound(SoundType.AMETHYST)
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
                 .requiresCorrectToolForDrops()
                 .noOcclusion()
             )
@@ -125,8 +180,8 @@ public class CitrineRegistry {
             "citrine_brick_slab", 
             registryName -> new SlabBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(3.0f, 6.0f)
-                .sound(SoundType.AMETHYST)
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
                 .requiresCorrectToolForDrops()
                 .noOcclusion()
             )
@@ -141,8 +196,8 @@ public class CitrineRegistry {
                 CitrineList.CITRINE_BRICKS.get().defaultBlockState(),
                 BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                    .strength(3.0f, 6.0f)
-                    .sound(SoundType.AMETHYST)
+                    .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                    .sound(CITRINE_SOUND_TYPE)
                     .requiresCorrectToolForDrops()
                     .noOcclusion()
             )

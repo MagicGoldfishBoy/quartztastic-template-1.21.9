@@ -145,9 +145,11 @@
   "block.quartztastic.citrine_block": "Citrine Block",
   "block.quartztastic.citrine_slab": "Citrine Slab",
   "block.quartztastic.citrine_stairs": "Citrine Stairs",
-
   "block.quartztastic.citrine_button": "Citrine Button",
   "block.quartztastic.citrine_pressure_plate": "Citrine Pressure Plate",
+  "block.quartztastic.citrine_fence": "Citrine Fence",
+  "block.quartztastic.citrine_wall": "Citrine Wall",
+  "block.quartztastic.citrine_gate": "Citrine Gate",
 
   "block.quartztastic.citrine_bricks": "Citrine Bricks",
   "block.quartztastic.citrine_brick_slab": "Citrine Brick Slab",

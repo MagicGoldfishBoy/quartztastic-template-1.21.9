@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "quartztastic:citrine_crystal",
+    "@": "quartztastic:citrine_block"
+  },
+  "pattern": [
+    "#@#",
+    "#@#"
+  ],
+  "result": {
+    "count": 2,
+    "id": "quartztastic:citrine_gate"
+  }
+}

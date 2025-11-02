@@ -152,7 +152,10 @@ public class ModelDatagen extends ModelProvider {
             .slab(CitrineList.CITRINE_SLAB.get())
             .stairs(CitrineList.CITRINE_STAIRS.get())
             .button(CitrineList.CITRINE_BUTTON.get())
-            .pressurePlate(CitrineList.CITRINE_PRESSURE_PLATE.get());
+            .pressurePlate(CitrineList.CITRINE_PRESSURE_PLATE.get())
+            .fence(CitrineList.CITRINE_FENCE.get())
+            .wall(CitrineList.CITRINE_WALL.get())
+            .fenceGate(CitrineList.CITRINE_GATE.get());
 
         blockModels.familyWithExistingFullBlock(CitrineList.CITRINE_BRICKS.get())
             .slab(CitrineList.CITRINE_BRICK_SLAB.get())

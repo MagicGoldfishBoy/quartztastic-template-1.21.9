@@ -683,6 +683,39 @@ public class RecipeDatagen extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_BRICKS_ITEM.get()), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_BRICK_WALL_ITEM.get())
             .unlockedBy("has_rose_quartz_bricks", has(RoseQuartzList.ROSE_QUARTZ_BRICKS_ITEM.get()))
             .save(this.output, "rose_quartz_brick_wall_by_stonecutting");
+
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_FENCE_ITEM.get(), 6)
+            .pattern("@#@")
+            .pattern("@#@")
+            .define('@', CitrineList.CITRINE_BLOCK_ITEM.get())
+            .define('#', CitrineList.CITRINE_CRYSTAL.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
+            .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_GATE_ITEM.get(), 2)
+            .pattern("#@#")
+            .pattern("#@#")
+            .define('@', CitrineList.CITRINE_BLOCK_ITEM.get())
+            .define('#', CitrineList.CITRINE_CRYSTAL.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
+            .save(this.output);
+
+        
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, CitrineList.CITRINE_WALL_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))       
+            .save(this.output, "citrine_wall_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_WALL_ITEM.get(), 6)
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_BLOCK_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output, "citrine_wall_by_crafting");
     }
 
     protected void buildDoorRecipes() {
