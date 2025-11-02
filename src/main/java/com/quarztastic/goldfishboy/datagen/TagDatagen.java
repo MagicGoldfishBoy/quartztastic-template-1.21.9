@@ -161,6 +161,8 @@ public class TagDatagen extends BlockTagsProvider {
                 CitrineList.CITRINE_BARS_BLOCK.get(),
                 CitrineList.CITRINE_BARS.get(),
 
+                CitrineList.CITRINE_BOOKSHELF.get(),
+
 
                 BlueQuartzList.BLUE_QUARTZ_ORE.get(),
 
@@ -249,7 +251,8 @@ public class TagDatagen extends BlockTagsProvider {
         this.tag(TagKeyList.ENCHANTMENT_POWER_PROVIDER_TAG)
             .add(
                 SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF.get(),
-                RoseQuartzList.ROSE_QUARTZ_BOOKSHELF.get()
+                RoseQuartzList.ROSE_QUARTZ_BOOKSHELF.get(),
+                CitrineList.CITRINE_BOOKSHELF.get()
             );
     }
     

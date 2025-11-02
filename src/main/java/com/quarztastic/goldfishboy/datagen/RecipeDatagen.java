@@ -361,6 +361,16 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', CitrineList.CITRINE_BARS_ITEM.get())
             .unlockedBy("has_citrine_bars", has(CitrineList.CITRINE_BARS_ITEM.get()))
             .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_BOOKSHELF_ITEM.get())
+            .pattern("@@@")
+            .pattern("###")
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_SLAB_ITEM.get())
+            .define('#', Items.BOOK)
+            .unlockedBy("has_citrine_slab", has(CitrineList.CITRINE_SLAB_ITEM.get()))
+            .unlockedBy("has_book", has(Items.BOOK))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {

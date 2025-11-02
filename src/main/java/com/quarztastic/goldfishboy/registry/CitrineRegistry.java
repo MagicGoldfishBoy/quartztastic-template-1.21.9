@@ -325,5 +325,19 @@ public class CitrineRegistry {
         CitrineList.CITRINE_BARS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_BARS
         );
+
+        CitrineList.CITRINE_BOOKSHELF = Quartztastic.BLOCKS.register(
+            "citrine_bookshelf", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_BOOKSHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_BOOKSHELF
+        );
     }
 }

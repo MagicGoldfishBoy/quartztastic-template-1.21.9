@@ -80,9 +80,12 @@ public class CitrineList {
 
     public static DeferredBlock<Block> CITRINE_BARS_BLOCK;
     public static DeferredItem<BlockItem> CITRINE_BARS_BLOCK_ITEM;
-    
+
     public static DeferredBlock<IronBarsBlock> CITRINE_BARS;
     public static DeferredItem<BlockItem> CITRINE_BARS_ITEM;
+
+    public static DeferredBlock<Block> CITRINE_BOOKSHELF;
+    public static DeferredItem<BlockItem> CITRINE_BOOKSHELF_ITEM;
 
 
 }
