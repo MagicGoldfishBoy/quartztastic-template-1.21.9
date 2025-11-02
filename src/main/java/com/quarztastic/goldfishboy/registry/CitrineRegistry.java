@@ -219,5 +219,20 @@ public class CitrineRegistry {
         CitrineList.CITRINE_BRICK_WALL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_BRICK_WALL
         );
+
+
+        CitrineList.CHISELED_CITRINE_BLOCK = Quartztastic.BLOCKS.register(
+            "chiseled_citrine_block", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CHISELED_CITRINE_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CHISELED_CITRINE_BLOCK
+        );
     }
 }

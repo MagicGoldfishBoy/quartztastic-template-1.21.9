@@ -55,4 +55,8 @@ public class CitrineList {
 
     public static DeferredBlock<WallBlock> CITRINE_BRICK_WALL;
     public static DeferredItem<BlockItem> CITRINE_BRICK_WALL_ITEM;
+
+
+    public static DeferredBlock<Block> CHISELED_CITRINE_BLOCK;
+    public static DeferredItem<BlockItem> CHISELED_CITRINE_BLOCK_ITEM;
 }

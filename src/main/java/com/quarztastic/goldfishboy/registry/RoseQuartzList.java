@@ -90,7 +90,6 @@ public class RoseQuartzList {
     public static DeferredItem<BlockItem> ROSE_QUARTZ_BRICK_WALL_ITEM;
 
 
-
     public static DeferredBlock<Block> CHISELED_ROSE_QUARTZ_BLOCK;
     public static DeferredItem<BlockItem> CHISELED_ROSE_QUARTZ_BLOCK_ITEM;
 
