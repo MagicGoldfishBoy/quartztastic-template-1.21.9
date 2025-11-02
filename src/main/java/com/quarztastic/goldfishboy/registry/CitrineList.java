@@ -1,5 +1,7 @@
 package com.quarztastic.goldfishboy.registry;
 
+import com.quarztastic.goldfishboy.block.Pillar;
+
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -69,4 +71,8 @@ public class CitrineList {
 
     public static DeferredBlock<StairBlock> CITRINE_TILE_STAIRS;
     public static DeferredItem<BlockItem> CITRINE_TILE_STAIRS_ITEM;
+
+
+    public static DeferredBlock<Pillar> CITRINE_PILLAR;
+    public static DeferredItem<BlockItem> CITRINE_PILLAR_ITEM;
 }
