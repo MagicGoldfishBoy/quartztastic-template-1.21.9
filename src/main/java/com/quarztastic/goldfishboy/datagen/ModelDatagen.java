@@ -435,6 +435,8 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.createLantern(CitrineList.CITRINE_SOUL_LANTERN.get());
 
+        ModelDatagenHelpers.createChainBlockstates(blockModels, itemModels, CitrineList.CITRINE_CHAIN.get(), CitrineList.CITRINE_CHAIN_ITEM.get());
+
     }
 
     protected void buildTorchModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

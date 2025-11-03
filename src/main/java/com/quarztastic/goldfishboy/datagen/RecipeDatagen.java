@@ -1063,6 +1063,14 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
             .unlockedBy("has_soul_torch", has(Items.SOUL_TORCH))
             .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_CHAIN.get())
+            .pattern("@")
+            .pattern("@")
+            .pattern("@")
+            .define('@', CitrineList.CITRINE_CRYSTAL.get())
+            .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
+            .save(this.output);
     }
 
     protected void buildTorchRecipes() {

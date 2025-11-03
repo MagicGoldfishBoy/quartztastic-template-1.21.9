@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-03T13:04:30.993048953	Quartztastic Recipes
+// 1.21.9	2025-11-03T13:25:12.551649178	Quartztastic Recipes
 aec00c59766de42e50d7db16cdae3a80c835b719 data/minecraft/advancement/recipes/building_blocks/chiseled_citrine_block_by_crafting.json
 d3bfd27edcbd0bbc77e21378784839fa4f712244 data/minecraft/advancement/recipes/building_blocks/chiseled_citrine_block_by_stonecutting.json
 7afec9bd074fbc918fbdc48a42b6642a5de55746 data/minecraft/advancement/recipes/building_blocks/chiseled_rose_quartz_block_by_crafting.json
@@ -194,6 +194,7 @@ c60c36025f8502b04d5773b36c25520593062fab data/quartztastic/advancement/recipes/b
 b949ed3b317e50ce792bfd9f30ac80830739c6c9 data/quartztastic/advancement/recipes/decorations/citrine_bars.json
 0938255f9444b085b551e3439df8b88eef95897a data/quartztastic/advancement/recipes/decorations/citrine_bars_block.json
 c85e788c5511b0f8b811aede86d09f8afd04a5e4 data/quartztastic/advancement/recipes/decorations/citrine_bookshelf.json
+c77397e0ad98de1b959cf4326e563a1bc0269a55 data/quartztastic/advancement/recipes/decorations/citrine_chain.json
 071769eb226666d1cf681788aa96cbbc0c0976b5 data/quartztastic/advancement/recipes/decorations/citrine_chair.json
 cc1a30438d96d89ab55749f279871a456166349f data/quartztastic/advancement/recipes/decorations/citrine_door.json
 b5e3e6b7ac2faa090c400b286dd9b0a15a1db3e6 data/quartztastic/advancement/recipes/decorations/citrine_fence.json
@@ -245,6 +246,7 @@ a8e02592de4c3b3e0d48415a99c539f25a95b62b data/quartztastic/recipe/citrine_bars_b
 b5717261829a8521c171fc72fb120dc50f62dfe7 data/quartztastic/recipe/citrine_blast_furnace.json
 f98cf4162a899534a451cff40060e434a742123e data/quartztastic/recipe/citrine_block.json
 6ff8161e60a9c3c5c8b00211acad8749cdf617a7 data/quartztastic/recipe/citrine_bookshelf.json
+1001e613bb4a0edc6aa9c7006b414a00a39ae3b1 data/quartztastic/recipe/citrine_chain.json
 0e31163cc84fe87aa1a73b1ecee59f7c2f8a6e04 data/quartztastic/recipe/citrine_chair.json
 4b906e57ce97187567b32ba0b1237b676b0fc851 data/quartztastic/recipe/citrine_door.json
 20661cb133b9e2a72abef2b8ef0f3ddbc04c22c7 data/quartztastic/recipe/citrine_fence.json

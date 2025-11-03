@@ -17,6 +17,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
@@ -130,7 +131,7 @@ public class CitrineList {
 
     public static DeferredBlock<Shelf> CITRINE_SHELF;
     public static DeferredItem<BlockItem> CITRINE_SHELF_ITEM;
-    
+
 
     public static DeferredBlock<Block> CITRINE_LIGHT;
     public static DeferredItem<BlockItem> CITRINE_LIGHT_ITEM;
@@ -140,4 +141,7 @@ public class CitrineList {
 
     public static DeferredBlock<LanternBlock> CITRINE_SOUL_LANTERN;
     public static DeferredItem<BlockItem> CITRINE_SOUL_LANTERN_ITEM;
+
+    public static DeferredBlock<ChainBlock> CITRINE_CHAIN;
+    public static DeferredItem<BlockItem> CITRINE_CHAIN_ITEM;
 }
