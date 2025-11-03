@@ -19,6 +19,7 @@ import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -112,4 +113,7 @@ public class CitrineList {
 
     public static DeferredBlock<DoorBlock> CITRINE_DOOR;
     public static DeferredItem <BlockItem> CITRINE_DOOR_ITEM;
+
+    public static DeferredBlock<TrapDoorBlock> CITRINE_TRAPDOOR;
+    public static DeferredItem<BlockItem> CITRINE_TRAPDOOR_ITEM;
 }
