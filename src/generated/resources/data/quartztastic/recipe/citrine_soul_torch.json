@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "quartztastic:citrine_crystal",
+    "$": "minecraft:soul_sand",
+    "@": "#minecraft:coals"
+  },
+  "pattern": [
+    "@",
+    "$",
+    "#"
+  ],
+  "result": {
+    "count": 4,
+    "id": "quartztastic:citrine_soul_torch"
+  }
+}

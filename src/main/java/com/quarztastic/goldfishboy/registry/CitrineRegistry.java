@@ -13,8 +13,12 @@ import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineOvenEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
 
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.ChainBlock;
@@ -27,6 +31,7 @@ import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -550,5 +555,69 @@ public class CitrineRegistry {
         CitrineList.CITRINE_CHAIN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_CHAIN
         );
+
+
+        CitrineList.CITRINE_TORCH = Quartztastic.BLOCKS.register(
+            "citrine_torch", 
+            registryName -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .lightLevel(state -> 15)
+                .sound(CITRINE_SOUND_TYPE)
+                .noOcclusion()
+            )
+        );
+
+        CitrineList.CITRINE_WALL_TORCH = Quartztastic.BLOCKS.register(
+            "citrine_wall_torch", 
+            registryName -> new net.minecraft.world.level.block.WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .lightLevel(state -> 15)
+                .sound(CITRINE_SOUND_TYPE)
+                .noOcclusion()
+            )
+        );
+
+        CitrineList.CITRINE_TORCH_ITEM = Quartztastic.ITEMS.register(
+            "citrine_torch", 
+            registryName -> new StandingAndWallBlockItem(
+                CitrineList.CITRINE_TORCH.get(),
+                CitrineList.CITRINE_WALL_TORCH.get(), 
+                Direction.DOWN, 
+                new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, registryName))
+        ));
+
+
+        CitrineList.CITRINE_SOUL_TORCH = Quartztastic.BLOCKS.register(
+            "citrine_soul_torch", 
+            registryName -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .lightLevel(state -> 10)
+                .sound(CITRINE_SOUND_TYPE)
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_WALL_SOUL_TORCH = Quartztastic.BLOCKS.register(
+            "citrine_wall_soul_torch", 
+            registryName -> new net.minecraft.world.level.block.WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .lightLevel(state -> 10)
+                .sound(CITRINE_SOUND_TYPE)
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_SOUL_TORCH_ITEM = Quartztastic.ITEMS.register(
+            "citrine_soul_torch", 
+            registryName -> new StandingAndWallBlockItem(
+                CitrineList.CITRINE_SOUL_TORCH.get(),
+                CitrineList.CITRINE_WALL_SOUL_TORCH.get(), 
+                Direction.DOWN, 
+                new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, registryName))
+        ));
     }
 }
