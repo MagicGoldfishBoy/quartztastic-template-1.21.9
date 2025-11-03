@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-03T12:08:35.882446427	Model Definitions - quartztastic
+// 1.21.9	2025-11-03T12:22:58.964932996	Model Definitions - quartztastic
 6949a6ee96a435324a6e89dc57acda2e795fa0e0 assets/quartztastic/blockstates/blue_quartz_ore.json
 c97e5104e6eb53ad8fc5ee203ec9d68d5e520737 assets/quartztastic/blockstates/chiseled_citrine_block.json
 e024828faf3948c9c99e410416603d90e1562e79 assets/quartztastic/blockstates/chiseled_rose_quartz_block.json
@@ -18,6 +18,7 @@ c0ebee7ba343d2a2d062b022118d86ed73ba1a41 assets/quartztastic/blockstates/citrine
 24794d7059dae71fcd78cc5d93ff8e3dff4bf7f7 assets/quartztastic/blockstates/citrine_fence.json
 b2004dea90dc50b5a0644a6a7ec0982c4fad39e1 assets/quartztastic/blockstates/citrine_furnace.json
 da647081f0b6298b90ebe7225438770f29681a9d assets/quartztastic/blockstates/citrine_gate.json
+f82b6a5b1b63fd4d5b0b51009101f081484c4021 assets/quartztastic/blockstates/citrine_light.json
 1087a2ac66738ea1bc3c93a3b97cf4223225af99 assets/quartztastic/blockstates/citrine_ore.json
 5e92a2f59cc34cc7673ab9c4be23a886f9c95e99 assets/quartztastic/blockstates/citrine_oven.json
 3e37c188fd826d974c34a7cfb4c8bfbe4b524e94 assets/quartztastic/blockstates/citrine_pillar.json
@@ -140,6 +141,7 @@ d60c3b1b7e8c255a0f4c42681d1f473b3d762935 assets/quartztastic/items/citrine_butto
 c590a5020522daf39559902eae645a4ad3406974 assets/quartztastic/items/citrine_fence.json
 e40c6b0444cd5dfcca80a7ac714eeb9de5a8afd8 assets/quartztastic/items/citrine_furnace.json
 f37da9bc355101639e889d1bc3cfa2cac838ffdb assets/quartztastic/items/citrine_gate.json
+2ef3fc5093db4a59b65edf0dd553efb68bfc7586 assets/quartztastic/items/citrine_light.json
 aed1f41e1470c93932f3522a45c49530a8a932de assets/quartztastic/items/citrine_ore.json
 71caf3a7f8f4cb5b94f54edbb50ef718380b1198 assets/quartztastic/items/citrine_oven.json
 3b9fcccdd7f34d296e7471c3f2f0b94a09850840 assets/quartztastic/items/citrine_pillar.json
@@ -279,6 +281,7 @@ aaac7f291077abdb405d3637e347e60462724f14 assets/quartztastic/models/block/citrin
 7aba2da652c91c256283654868314c5f229dbc89 assets/quartztastic/models/block/citrine_gate_open.json
 03b627ef4afec541125fb24183de548242e6b434 assets/quartztastic/models/block/citrine_gate_wall.json
 e30481ad9347b820be1f583cd0d8500c91fc7907 assets/quartztastic/models/block/citrine_gate_wall_open.json
+e076714b3d96ab3ac5ce5b2631b32c1d658f3a28 assets/quartztastic/models/block/citrine_light.json
 a63b2341b829e9ee83dd74b2a8dcbc41be7397a4 assets/quartztastic/models/block/citrine_ore.json
 837ef47d08563e25f9f993eda22d71df0446a5a2 assets/quartztastic/models/block/citrine_pressure_plate.json
 5ecfc6e984d15d04d26d348471fa4483afd7ecc8 assets/quartztastic/models/block/citrine_pressure_plate_down.json

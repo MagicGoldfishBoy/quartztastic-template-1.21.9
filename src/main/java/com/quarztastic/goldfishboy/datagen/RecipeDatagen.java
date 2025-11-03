@@ -398,6 +398,14 @@ public class RecipeDatagen extends RecipeProvider {
             .define('#', Items.BLAST_FURNACE)
             .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
             .save(this.output);
+
+        
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_LIGHT_ITEM.get())
+            .requires(CitrineList.CITRINE_BLOCK_ITEM.get())
+            .requires(Items.GLOWSTONE)
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .unlockedBy("has_glowstone", has(Items.GLOWSTONE))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {

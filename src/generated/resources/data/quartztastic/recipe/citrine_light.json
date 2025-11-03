@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "quartztastic:citrine_block",
+    "minecraft:glowstone"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:citrine_light"
+  }
+}

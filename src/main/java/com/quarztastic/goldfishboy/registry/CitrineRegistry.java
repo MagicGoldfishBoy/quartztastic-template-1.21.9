@@ -489,5 +489,20 @@ public class CitrineRegistry {
         CitrineList.CITRINE_SHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_SHELF
         );
+
+        CitrineList.CITRINE_LIGHT = Quartztastic.BLOCKS.register(
+            "citrine_light", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+                .lightLevel(state -> 15)
+            )
+        );
+        CitrineList.CITRINE_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_LIGHT
+        );
     }
 }

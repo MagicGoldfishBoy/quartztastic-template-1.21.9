@@ -129,4 +129,7 @@ public class CitrineList {
 
     public static DeferredBlock<Shelf> CITRINE_SHELF;
     public static DeferredItem<BlockItem> CITRINE_SHELF_ITEM;
+
+    public static DeferredBlock<Block> CITRINE_LIGHT;
+    public static DeferredItem<BlockItem> CITRINE_LIGHT_ITEM;
 }
