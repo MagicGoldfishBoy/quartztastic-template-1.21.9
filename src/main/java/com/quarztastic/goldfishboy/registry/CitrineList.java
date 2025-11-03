@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.block.CitrineBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineOvenBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.CitrineBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineOvenEntity;
@@ -121,4 +122,7 @@ public class CitrineList {
 
     public static DeferredBlock<Chair> CITRINE_CHAIR;
     public static DeferredItem<BlockItem> CITRINE_CHAIR_ITEM;
+
+    public static DeferredBlock<Table> CITRINE_TABLE;
+    public static DeferredItem<BlockItem> CITRINE_TABLE_ITEM;
 }

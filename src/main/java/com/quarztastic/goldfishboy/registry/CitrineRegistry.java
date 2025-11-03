@@ -6,6 +6,7 @@ import com.quarztastic.goldfishboy.block.CitrineBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineOvenBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.CitrineBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineOvenEntity;
@@ -458,6 +459,20 @@ public class CitrineRegistry {
         );
         CitrineList.CITRINE_CHAIR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_CHAIR
+        );
+
+        CitrineList.CITRINE_TABLE = Quartztastic.BLOCKS.register(
+            "citrine_table", 
+            registryName -> new Table(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_TABLE
         );
     }
 }

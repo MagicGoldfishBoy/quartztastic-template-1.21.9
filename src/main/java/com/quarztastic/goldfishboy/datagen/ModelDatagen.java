@@ -388,6 +388,21 @@ public class ModelDatagen extends ModelProvider {
             CitrineList.CITRINE_CHAIR_ITEM.get(), 
             ItemModelUtils.plainModel(modLocation("block/citrine_chair"))
         );
+
+
+        ModelDatagenHelpers.createTableModel(blockModels, itemModels, CitrineList.CITRINE_TABLE.get(), new Variant(modLocation("block/citrine_table_single")), 
+            new Variant(modLocation("block/citrine_table_center")), new Variant(modLocation("block/citrine_table_north")), new Variant(modLocation("block/citrine_table_east")), 
+            new Variant(modLocation("block/citrine_table_south")), new Variant(modLocation("block/citrine_table_west")), new Variant(modLocation("block/citrine_table_center")), 
+            new Variant(modLocation("block/citrine_table_east_and_north")), new Variant(modLocation("block/citrine_table_east_and_south")), 
+            new Variant(modLocation("block/citrine_table_center")), new Variant(modLocation("block/citrine_table_west_and_north")), 
+            new Variant(modLocation("block/citrine_table_west_and_south")), new Variant(modLocation("block/citrine_table_center")),
+            new Variant(modLocation("block/citrine_table_center")), new Variant(modLocation("block/citrine_table_center")), 
+            new Variant(modLocation("block/citrine_table_center")));
+
+        itemModels.itemModelOutput.accept(
+            CitrineList.CITRINE_TABLE_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/citrine_table_single"))
+        );
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

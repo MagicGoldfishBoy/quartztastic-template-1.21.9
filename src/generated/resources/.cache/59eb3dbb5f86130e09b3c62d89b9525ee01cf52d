@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-03T11:27:57.548592238	Loot Tables
+// 1.21.9	2025-11-03T11:56:08.202689571	Loot Tables
 082fc00761ac680e590f9874fd40a3f71d68f173 data/quartztastic/loot_table/blocks/blue_quartz_ore.json
 e0074092987d24f082873df7a6df646ea3dbbf2d data/quartztastic/loot_table/blocks/chiseled_citrine_block.json
 43beb9e6456d916a78af765125031ce1756d029d data/quartztastic/loot_table/blocks/chiseled_rose_quartz_block.json
@@ -24,6 +24,7 @@ ce249eeba735bfc659a1e44b0cb9be68ee6a2be6 data/quartztastic/loot_table/blocks/cit
 c825f2961ec435fe63d47a507f8a07a16566b17a data/quartztastic/loot_table/blocks/citrine_pressure_plate.json
 6726ad73bbe84ca63dbf432794a3d4a517e2882e data/quartztastic/loot_table/blocks/citrine_slab.json
 980734d0a32ff32bc1ed1cf1feadbb24efaa8bcd data/quartztastic/loot_table/blocks/citrine_stairs.json
+2afd05aab0400bf249d23ef84e65a54b1b7b5a29 data/quartztastic/loot_table/blocks/citrine_table.json
 8df616e536540b5ad490bcb37f3c430bcc6d515f data/quartztastic/loot_table/blocks/citrine_tile_slab.json
 bb41dba8ae631f4e01e4ad952cf840f58af36660 data/quartztastic/loot_table/blocks/citrine_tile_stairs.json
 d9886b7368c73dd1dfe310b696f10787bd3a05cb data/quartztastic/loot_table/blocks/citrine_tiles.json

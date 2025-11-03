@@ -932,6 +932,16 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_rose_quartz_crystal", has(RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get()))
             .unlockedBy("has_rose_quartz_slab", has(RoseQuartzList.ROSE_QUARTZ_SLAB.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_TABLE_ITEM.get(), 2)
+            .pattern("###")
+            .pattern("@ @")
+            .define('@', CitrineList.CITRINE_CRYSTAL.get())
+            .define('#', CitrineList.CITRINE_SLAB_ITEM.get())
+            .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
+            .unlockedBy("has_citrine_slab", has(CitrineList.CITRINE_SLAB_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildShelfRecipes() {

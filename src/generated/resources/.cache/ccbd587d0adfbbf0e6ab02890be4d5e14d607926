@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-03T11:27:57.551821845	Quartztastic Recipes
+// 1.21.9	2025-11-03T11:56:08.206042854	Quartztastic Recipes
 aec00c59766de42e50d7db16cdae3a80c835b719 data/minecraft/advancement/recipes/building_blocks/chiseled_citrine_block_by_crafting.json
 d3bfd27edcbd0bbc77e21378784839fa4f712244 data/minecraft/advancement/recipes/building_blocks/chiseled_citrine_block_by_stonecutting.json
 7afec9bd074fbc918fbdc48a42b6642a5de55746 data/minecraft/advancement/recipes/building_blocks/chiseled_rose_quartz_block_by_crafting.json
@@ -198,6 +198,7 @@ c85e788c5511b0f8b811aede86d09f8afd04a5e4 data/quartztastic/advancement/recipes/d
 cc1a30438d96d89ab55749f279871a456166349f data/quartztastic/advancement/recipes/decorations/citrine_door.json
 b5e3e6b7ac2faa090c400b286dd9b0a15a1db3e6 data/quartztastic/advancement/recipes/decorations/citrine_fence.json
 5b92eaccc4b0539aa8c39e3f40d5656e7d6de199 data/quartztastic/advancement/recipes/decorations/citrine_gate.json
+48eeb109b8bacaef446399f4b1a28b66f848f2c6 data/quartztastic/advancement/recipes/decorations/citrine_table.json
 bb1d1b42648594be403686a61bbee7ee5c2e0b4a data/quartztastic/advancement/recipes/decorations/citrine_trapdoor.json
 cab400f3ce41fd2d336bb6d03289d272ab411509 data/quartztastic/advancement/recipes/decorations/rose_quartz_bars.json
 5d54e12774821f9e0a2f9643d5baf61009d0b6a4 data/quartztastic/advancement/recipes/decorations/rose_quartz_bars_block.json
@@ -247,6 +248,7 @@ f98cf4162a899534a451cff40060e434a742123e data/quartztastic/recipe/citrine_block.
 22b2a04f53235b3a0c8046576d27512375092237 data/quartztastic/recipe/citrine_gate.json
 aebfa630485e4d75d82ca872b66238bf9b6eb79e data/quartztastic/recipe/citrine_oven.json
 01e8fe43f599dbd95b95cf33963f849a5f02d086 data/quartztastic/recipe/citrine_pillar.json
+69ad72fb5e1b4a7fac13b75c3fef6a152a9c6f2c data/quartztastic/recipe/citrine_table.json
 cd883d7ae478e0ef74c8ba8795fdf875e27941de data/quartztastic/recipe/citrine_tiles.json
 92b11ed04100d507fd5c39e4b597c4970fbd6fe4 data/quartztastic/recipe/citrine_trapdoor.json
 733d84153dfdd957bf4776a99b5b5e3d2c62cf28 data/quartztastic/recipe/rose_quartz_barrel.json
