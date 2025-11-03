@@ -380,6 +380,14 @@ public class ModelDatagen extends ModelProvider {
             RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/rose_quartz_skull"))
         );
+
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_CHAIR.get(), new Variant(modLocation("block/citrine_chair")));
+
+        itemModels.itemModelOutput.accept(
+            CitrineList.CITRINE_CHAIR_ITEM.get(), 
+            ItemModelUtils.plainModel(modLocation("block/citrine_chair"))
+        );
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

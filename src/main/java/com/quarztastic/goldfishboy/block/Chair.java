@@ -115,7 +115,25 @@ public class Chair extends HorizontalDirectionalBlock {
         )
     );
 
+    public static final Map<Direction, VoxelShape> DINING_SHAPE = Shapes.rotateHorizontal(
+        Shapes.or(Block.box(3, 0, 3, 6, 6, 6),
+        Block.box(10, 0, 3, 13, 6, 6),
+        Block.box(3, 0, 10, 6, 6, 13),
+        Block.box(10, 0, 10, 13, 6, 13),
+        Block.box(2, 6, 2, 3, 9, 14),
+        Block.box(3, 6, 2, 13, 9, 3),
+        Block.box(3, 6, 3, 13, 9, 13),
+        Block.box(3, 6, 13, 13, 9, 14),
+        Block.box(13, 6, 2, 14, 9, 14),
+        Block.box(2, 9, 2, 6, 19, 3.5),
+        Block.box(6.75, 9, 2, 9.25, 19, 3.5),
+        Block.box(10, 9, 2, 14, 19, 3.5),
+        Block.box(2, 19, 2, 14, 24, 3.5)
+        )
+    );
 
+
+    @SuppressWarnings("null")
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if(!level.isClientSide()) {
@@ -155,6 +173,7 @@ public class Chair extends HorizontalDirectionalBlock {
         return InteractionResult.SUCCESS;
     }
 
+    @SuppressWarnings("null")
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         
@@ -163,16 +182,20 @@ public class Chair extends HorizontalDirectionalBlock {
                return DINER_SHAPE.get(state.getValue(FACING).getOpposite());
             case "royal":
                 return ROYAL_SHAPE.get(state.getValue(FACING).getOpposite());
+            case "dining":
+                return DINING_SHAPE.get(state.getValue(FACING).getOpposite());
             default:
                 return DINER_SHAPE.get(state.getValue(FACING).getOpposite());
         }
     }
 
+    @SuppressWarnings("null")
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite());
     }
+    @SuppressWarnings("null")
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);

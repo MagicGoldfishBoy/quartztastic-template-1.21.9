@@ -2,6 +2,7 @@ package com.quarztastic.goldfishboy.registry;
 
 import java.util.function.Supplier;
 
+import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.CitrineBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineOvenBlock;
@@ -116,4 +117,8 @@ public class CitrineList {
 
     public static DeferredBlock<TrapDoorBlock> CITRINE_TRAPDOOR;
     public static DeferredItem<BlockItem> CITRINE_TRAPDOOR_ITEM;
+
+
+    public static DeferredBlock<Chair> CITRINE_CHAIR;
+    public static DeferredItem<BlockItem> CITRINE_CHAIR_ITEM;
 }

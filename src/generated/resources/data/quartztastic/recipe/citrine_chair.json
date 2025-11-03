@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "quartztastic:citrine_slab",
+    "@": "quartztastic:citrine_crystal"
+  },
+  "pattern": [
+    "  @",
+    "##@",
+    "@ @"
+  ],
+  "result": {
+    "count": 4,
+    "id": "quartztastic:citrine_chair"
+  }
+}

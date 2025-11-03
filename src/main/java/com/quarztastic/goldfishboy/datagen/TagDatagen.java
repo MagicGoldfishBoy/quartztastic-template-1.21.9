@@ -169,6 +169,8 @@ public class TagDatagen extends BlockTagsProvider {
                 CitrineList.CITRINE_DOOR.get(),
                 CitrineList.CITRINE_TRAPDOOR.get(),
 
+                CitrineList.CITRINE_CHAIR.get(),
+
 
                 BlueQuartzList.BLUE_QUARTZ_ORE.get(),
 
@@ -220,14 +222,15 @@ public class TagDatagen extends BlockTagsProvider {
         this.tag(TagKeyList.DOORS_TAG)
             .add(
                 SmokyQuartzList.SMOKY_QUARTZ_DOOR.get(),
-
-                RoseQuartzList.ROSE_QUARTZ_DOOR.get()
+                RoseQuartzList.ROSE_QUARTZ_DOOR.get(),
+                CitrineList.CITRINE_DOOR.get()
             );
 
         this.tag(TagKeyList.TRAP_DOORS_TAG)
             .add(
                 SmokyQuartzList.SMOKY_QUARTZ_TRAPDOOR.get(),
-                RoseQuartzList.ROSE_QUARTZ_TRAPDOOR.get()
+                RoseQuartzList.ROSE_QUARTZ_TRAPDOOR.get(),
+                CitrineList.CITRINE_TRAPDOOR.get()
             );
 
         this.tag(TagKeyList.BARRELS_TAG)
