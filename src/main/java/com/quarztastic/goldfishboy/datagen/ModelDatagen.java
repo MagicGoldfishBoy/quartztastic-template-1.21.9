@@ -403,6 +403,14 @@ public class ModelDatagen extends ModelProvider {
             CitrineList.CITRINE_TABLE_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/citrine_table_single"))
         );
+
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_SHELF.get(), new Variant(modLocation("block/citrine_shelf")));
+
+        itemModels.itemModelOutput.accept(
+            CitrineList.CITRINE_SHELF_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/citrine_shelf"))
+        );
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
