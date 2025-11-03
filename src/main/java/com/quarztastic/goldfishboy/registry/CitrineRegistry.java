@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -503,6 +504,36 @@ public class CitrineRegistry {
         );
         CitrineList.CITRINE_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_LIGHT
+        );
+
+        CitrineList.CITRINE_LANTERN = Quartztastic.BLOCKS.register(
+            "citrine_lantern", 
+            registryName -> new LanternBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+                .lightLevel(state -> 15)
+            )
+        );
+        CitrineList.CITRINE_LANTERN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_LANTERN
+        );
+
+        CitrineList.CITRINE_SOUL_LANTERN = Quartztastic.BLOCKS.register(
+            "citrine_soul_lantern", 
+            registryName -> new LanternBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+                .lightLevel(state -> 10)
+            )
+        );
+        CitrineList.CITRINE_SOUL_LANTERN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_SOUL_LANTERN
         );
     }
 }

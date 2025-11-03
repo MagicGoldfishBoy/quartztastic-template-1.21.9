@@ -1042,6 +1042,27 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get())
             .unlockedBy("has_rose_quartz_crystal", has(RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_LANTERN.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_CRYSTAL.get())
+            .define('#', Items.TORCH)
+            .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
+            .unlockedBy("has_torch", has(Items.TORCH))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_SOUL_LANTERN.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_CRYSTAL.get())
+            .define('#', Items.SOUL_TORCH)
+            .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
+            .unlockedBy("has_soul_torch", has(Items.SOUL_TORCH))
+            .save(this.output);
     }
 
     protected void buildTorchRecipes() {

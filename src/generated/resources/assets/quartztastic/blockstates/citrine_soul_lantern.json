@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "quartztastic:block/citrine_soul_lantern"
+    },
+    "hanging=true": {
+      "model": "quartztastic:block/citrine_soul_lantern_hanging"
+    }
+  }
+}
