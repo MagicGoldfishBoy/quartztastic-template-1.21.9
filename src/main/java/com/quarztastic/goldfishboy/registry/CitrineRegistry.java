@@ -14,6 +14,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
@@ -411,6 +412,21 @@ public class CitrineRegistry {
         );
         CitrineList.CITRINE_BLAST_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_BLAST_FURNACE
+        );
+
+
+        CitrineList.CITRINE_DOOR = Quartztastic.BLOCKS.register(
+            "citrine_door", 
+            registryName -> new DoorBlock(CITRINE_BLOCK_SET_TYPE, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_DOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_DOOR
         );
     }
 }

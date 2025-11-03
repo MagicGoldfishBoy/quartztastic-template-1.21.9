@@ -14,6 +14,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -107,4 +108,8 @@ public class CitrineList {
     public static DeferredBlock<CitrineBlastFurnaceBlock> CITRINE_BLAST_FURNACE;
     public static Supplier<BlockEntityType<CitrineBlastFurnaceEntity>> CITRINE_BLAST_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> CITRINE_BLAST_FURNACE_ITEM;
+
+
+    public static DeferredBlock<DoorBlock> CITRINE_DOOR;
+    public static DeferredItem <BlockItem> CITRINE_DOOR_ITEM;
 }

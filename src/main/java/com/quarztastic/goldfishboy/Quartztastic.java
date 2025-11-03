@@ -5,7 +5,6 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import com.quarztastic.goldfishboy.datagen.Datagen;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
-import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.BlueQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.CitrineRegistry;
@@ -22,11 +21,8 @@ import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -120,6 +116,7 @@ public class Quartztastic {
     }
 
 
+    @SuppressWarnings("deprecation")
     public void onClientSetup(FMLClientSetupEvent event)
     {
         LOGGER.info("Setting Render Layers");
@@ -217,6 +214,8 @@ public class Quartztastic {
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_FURNACE.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_OVEN.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_BLAST_FURNACE.get(), ChunkSectionLayer.TRANSLUCENT);
+
+        ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_DOOR.get(), ChunkSectionLayer.TRANSLUCENT);
     }
 
 
