@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-04T09:53:47.009391478	Model Definitions - quartztastic
+// 1.21.9	2025-11-04T15:00:22.014778445	Model Definitions - quartztastic
 6949a6ee96a435324a6e89dc57acda2e795fa0e0 assets/quartztastic/blockstates/blue_quartz_ore.json
 c97e5104e6eb53ad8fc5ee203ec9d68d5e520737 assets/quartztastic/blockstates/chiseled_citrine_block.json
 e024828faf3948c9c99e410416603d90e1562e79 assets/quartztastic/blockstates/chiseled_rose_quartz_block.json
@@ -26,6 +26,7 @@ f82b6a5b1b63fd4d5b0b51009101f081484c4021 assets/quartztastic/blockstates/citrine
 d9dca7f284f07cf630dfc8307024916c8aa76bce assets/quartztastic/blockstates/citrine_nightstand.json
 1087a2ac66738ea1bc3c93a3b97cf4223225af99 assets/quartztastic/blockstates/citrine_ore.json
 5e92a2f59cc34cc7673ab9c4be23a886f9c95e99 assets/quartztastic/blockstates/citrine_oven.json
+4892344a51fd299d233b27dd1f4b3e97cd3e5b7c assets/quartztastic/blockstates/citrine_path.json
 3e37c188fd826d974c34a7cfb4c8bfbe4b524e94 assets/quartztastic/blockstates/citrine_pillar.json
 0e72324b3fbfe0e809d8c22ae844e2b00a2b161f assets/quartztastic/blockstates/citrine_pressure_plate.json
 bcab3a87674a49b188366224076cf835d47e5b74 assets/quartztastic/blockstates/citrine_shelf.json
@@ -160,6 +161,7 @@ eb96df84a0085eb5606482c26080aa6969eeddd2 assets/quartztastic/items/citrine_lante
 135755b92297530fd6a68499caa2499863e8d64e assets/quartztastic/items/citrine_nightstand.json
 aed1f41e1470c93932f3522a45c49530a8a932de assets/quartztastic/items/citrine_ore.json
 71caf3a7f8f4cb5b94f54edbb50ef718380b1198 assets/quartztastic/items/citrine_oven.json
+0cbfcc152566e7c5497bb5fcf0414eae897850bd assets/quartztastic/items/citrine_path.json
 3b9fcccdd7f34d296e7471c3f2f0b94a09850840 assets/quartztastic/items/citrine_pillar.json
 ad3380cc4691fe338a3d03e5b4c38fade4d89eb4 assets/quartztastic/items/citrine_pressure_plate.json
 ebf26765545d3c47a068a0868ef2c6e776957b02 assets/quartztastic/items/citrine_shelf.json

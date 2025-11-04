@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "quartztastic:citrine_slab"
+  ],
+  "result": {
+    "count": 8,
+    "id": "quartztastic:citrine_path"
+  }
+}
