@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-04T09:28:34.645541533	Quartztastic Recipes
+// 1.21.9	2025-11-04T09:53:47.006706868	Quartztastic Recipes
 aec00c59766de42e50d7db16cdae3a80c835b719 data/minecraft/advancement/recipes/building_blocks/chiseled_citrine_block_by_crafting.json
 d3bfd27edcbd0bbc77e21378784839fa4f712244 data/minecraft/advancement/recipes/building_blocks/chiseled_citrine_block_by_stonecutting.json
 7afec9bd074fbc918fbdc48a42b6642a5de55746 data/minecraft/advancement/recipes/building_blocks/chiseled_rose_quartz_block_by_crafting.json
@@ -205,6 +205,7 @@ b5e3e6b7ac2faa090c400b286dd9b0a15a1db3e6 data/quartztastic/advancement/recipes/d
 60e4d4082ce3d7e0260e95b5f5678b57b1fb496a data/quartztastic/advancement/recipes/decorations/citrine_lantern.json
 794643101732d61d39fcc390eb10b4556740b5c5 data/quartztastic/advancement/recipes/decorations/citrine_light.json
 8dfd5627c162909fe0214cdc637d4c34b210a918 data/quartztastic/advancement/recipes/decorations/citrine_shelf.json
+e693c9877f7113c089f9794e2fa929424b78e48b data/quartztastic/advancement/recipes/decorations/citrine_sink.json
 76341a431925a7df9fa04327aac72862def6cdd8 data/quartztastic/advancement/recipes/decorations/citrine_soul_lantern.json
 25f67332f18fbf1da935b1b18b3711f55d98ddd6 data/quartztastic/advancement/recipes/decorations/citrine_soul_torch.json
 48eeb109b8bacaef446399f4b1a28b66f848f2c6 data/quartztastic/advancement/recipes/decorations/citrine_table.json
@@ -265,6 +266,7 @@ fdb73cdd51d82f73405704f5f2fbf2a8284b1ce7 data/quartztastic/recipe/citrine_nights
 aebfa630485e4d75d82ca872b66238bf9b6eb79e data/quartztastic/recipe/citrine_oven.json
 01e8fe43f599dbd95b95cf33963f849a5f02d086 data/quartztastic/recipe/citrine_pillar.json
 6ebe9adbde489893626fb5f34bf43203f6df6f28 data/quartztastic/recipe/citrine_shelf.json
+1a5bd20aab48ee755af9c5bf179bb0eb3d1304cc data/quartztastic/recipe/citrine_sink.json
 837c7bd9e5d67fbf351e0197aef1536af2ded996 data/quartztastic/recipe/citrine_soul_lantern.json
 3f071edc7a74a0836c992b232882f4fd7f82cdd7 data/quartztastic/recipe/citrine_soul_torch.json
 69ad72fb5e1b4a7fac13b75c3fef6a152a9c6f2c data/quartztastic/recipe/citrine_table.json

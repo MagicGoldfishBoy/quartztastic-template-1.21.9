@@ -425,6 +425,9 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, CitrineList.CITRINE_NIGHTSTAND_BLOCK.get(), CitrineList.CITRINE_NIGHTSTAND_ITEM.get(), 
             new Variant(modLocation("block/citrine_nightstand")), new Variant(modLocation("block/citrine_nightstand_open")));
+
+            
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_SINK.get(), new Variant(modLocation("block/citrine_sink")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

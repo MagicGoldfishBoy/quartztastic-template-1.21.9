@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "quartztastic:block/citrine_sink",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "quartztastic:block/citrine_sink",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "quartztastic:block/citrine_sink"
+    },
+    "facing=west": {
+      "model": "quartztastic:block/citrine_sink",
+      "y": 90
+    }
+  }
+}

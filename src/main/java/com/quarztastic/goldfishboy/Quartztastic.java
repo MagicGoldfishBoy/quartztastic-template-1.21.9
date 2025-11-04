@@ -229,6 +229,8 @@ public class Quartztastic {
 
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_BARREL_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_NIGHTSTAND_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
+        
+        ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_SINK.get(), ChunkSectionLayer.TRANSLUCENT);
     }
 
 

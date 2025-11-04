@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-04T09:28:34.642363139	Loot Tables
+// 1.21.9	2025-11-04T09:53:47.003261704	Loot Tables
 082fc00761ac680e590f9874fd40a3f71d68f173 data/quartztastic/loot_table/blocks/blue_quartz_ore.json
 e0074092987d24f082873df7a6df646ea3dbbf2d data/quartztastic/loot_table/blocks/chiseled_citrine_block.json
 43beb9e6456d916a78af765125031ce1756d029d data/quartztastic/loot_table/blocks/chiseled_rose_quartz_block.json
@@ -29,6 +29,7 @@ f65cf0dc9df1e2e0d1b3604c264d47c4b7c02898 data/quartztastic/loot_table/blocks/cit
 ce249eeba735bfc659a1e44b0cb9be68ee6a2be6 data/quartztastic/loot_table/blocks/citrine_pillar.json
 c825f2961ec435fe63d47a507f8a07a16566b17a data/quartztastic/loot_table/blocks/citrine_pressure_plate.json
 cb88f2774297846d04529075f5a863868addf290 data/quartztastic/loot_table/blocks/citrine_shelf.json
+426cc36c7d889c5f0dd65b1749c38dee45c330f1 data/quartztastic/loot_table/blocks/citrine_sink.json
 6726ad73bbe84ca63dbf432794a3d4a517e2882e data/quartztastic/loot_table/blocks/citrine_slab.json
 36407666aabca528c9b1461f452df0724999b44b data/quartztastic/loot_table/blocks/citrine_soul_lantern.json
 1cc15058b7eb7987df3bacac0835ead4e84e1261 data/quartztastic/loot_table/blocks/citrine_soul_torch.json

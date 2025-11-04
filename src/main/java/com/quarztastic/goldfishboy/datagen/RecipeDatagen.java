@@ -1260,6 +1260,16 @@ public class RecipeDatagen extends RecipeProvider {
             .define('#', Items.WATER_BUCKET)
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_SINK_ITEM.get())
+            .pattern("@#@")
+            .pattern(" @ ")
+            .pattern(" @ ")
+            .define('@', CitrineList.CITRINE_BLOCK_ITEM.get())
+            .define('#', Items.WATER_BUCKET)
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildPathRecipes() {

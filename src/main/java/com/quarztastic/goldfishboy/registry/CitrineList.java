@@ -10,6 +10,7 @@ import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.CitrineNightstand;
 import com.quarztastic.goldfishboy.block.CitrineBarrelBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
+import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.CitrineBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
@@ -173,4 +174,8 @@ public class CitrineList {
     public static DeferredBlock<CitrineNightstand> CITRINE_NIGHTSTAND_BLOCK;
     public static Supplier<BlockEntityType<CitrineNightstandEntity>> CITRINE_NIGHTSTAND_ENTITY;
     public static DeferredItem<BlockItem> CITRINE_NIGHTSTAND_ITEM;
+
+
+    public static DeferredBlock<Sink> CITRINE_SINK;
+    public static DeferredItem<BlockItem> CITRINE_SINK_ITEM;
 }
