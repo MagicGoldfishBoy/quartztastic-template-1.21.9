@@ -213,6 +213,8 @@
   "item.quartztastic.blue_quartz_crystal": "Blue Quartz Crystal",
   "block.quartztastic.blue_quartz_ore": "Blue Quartz Ore",
 
+  "block.quartztastic.blue_quartz_block": "Blue Quartz Block",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

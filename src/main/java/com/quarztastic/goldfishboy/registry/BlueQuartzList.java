@@ -14,4 +14,8 @@ public class BlueQuartzList {
     public static DeferredBlock<Block> BLUE_QUARTZ_ORE;
 
     public static DeferredItem<BlockItem> BLUE_QUARTZ_ORE_ITEM;
+
+
+    public static DeferredBlock<Block> BLUE_QUARTZ_BLOCK;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_BLOCK_ITEM;
 }

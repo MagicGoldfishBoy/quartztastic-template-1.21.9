@@ -2,6 +2,7 @@ package com.quarztastic.goldfishboy.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
+import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
@@ -405,6 +406,16 @@ public class RecipeDatagen extends RecipeProvider {
             .requires(Items.GLOWSTONE)
             .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
             .unlockedBy("has_glowstone", has(Items.GLOWSTONE))
+            .save(this.output);
+
+
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
+            .pattern("@@")
+            .pattern("@@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
             .save(this.output);
     }
 
