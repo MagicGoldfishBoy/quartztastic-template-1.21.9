@@ -6,12 +6,14 @@ import com.quarztastic.goldfishboy.block.CitrineBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineOvenBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.CitrineNightstand;
 import com.quarztastic.goldfishboy.block.CitrineBarrelBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.CitrineBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineOvenEntity;
+import com.quarztastic.goldfishboy.entity.CitrineNightstandEntity;
 import com.quarztastic.goldfishboy.entity.CitrineBarrelEntity;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
 
@@ -638,6 +640,7 @@ public class CitrineRegistry {
             CitrineList.CITRINE_LADDER
         );
 
+
         CitrineList.CITRINE_BARREL_BLOCK = Quartztastic.BLOCKS.register(
             "citrine_barrel", 
             registryName -> new CitrineBarrelBlock(BlockBehaviour.Properties.of()
@@ -648,7 +651,6 @@ public class CitrineRegistry {
                 .noOcclusion()
             )
         );
-
         CitrineList.CITRINE_BARREL_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
             "citrine_barrel",
             () -> new BlockEntityType<>(
@@ -658,6 +660,27 @@ public class CitrineRegistry {
         );
         CitrineList.CITRINE_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_BARREL_BLOCK
+        );
+
+        CitrineList.CITRINE_NIGHTSTAND_BLOCK = Quartztastic.BLOCKS.register(
+            "citrine_nightstand", 
+            registryName -> new CitrineNightstand(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_NIGHTSTAND_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "citrine_nightstand",
+            () -> new BlockEntityType<>(
+            CitrineNightstandEntity::new,
+            false,
+            CitrineList.CITRINE_NIGHTSTAND_BLOCK.get())
+        );
+        CitrineList.CITRINE_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_NIGHTSTAND_BLOCK
         );
     }
 }

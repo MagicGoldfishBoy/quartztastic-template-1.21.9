@@ -1226,6 +1226,18 @@ public class RecipeDatagen extends RecipeProvider {
             .define('#', CitrineList.CITRINE_SLAB_ITEM.get())
             .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, CitrineList.CITRINE_NIGHTSTAND_ITEM.get(), 2)
+            .pattern("###")
+            .pattern("@$@")
+            .pattern("@@@")
+            .define('@', CitrineList.CITRINE_BLOCK_ITEM.get())
+            .define('#', CitrineList.CITRINE_SLAB_ITEM.get())
+            .define('$', Items.CHEST)
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .unlockedBy("has_chest", has(Items.CHEST))
+            .save(this.output);
     }
 
     protected void buildSinkRecipes() {

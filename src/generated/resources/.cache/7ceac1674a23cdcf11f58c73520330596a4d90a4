@@ -1,11 +1,11 @@
-// 1.21.9	2025-11-04T09:11:24.131891821	Tags for minecraft:block mod id quartztastic
+// 1.21.9	2025-11-04T09:28:34.645175908	Tags for minecraft:block mod id quartztastic
 cf96bac1f1ac3c828d156310ddeb9b1bc4cd0438 data/minecraft/tags/block/barrels.json
 19d1d1c11735788a147a5259919275759fc545fa data/minecraft/tags/block/climbable.json
 b0f459481e7ffb8914d9335893977b6a9576c396 data/minecraft/tags/block/doors.json
 dcbd0864514f0eb4454b72525b30f57a79d20fb1 data/minecraft/tags/block/enchantment_power_provider.json
 d4e9bf3963a8cab2aa237f5d1e5f2560f3832f1d data/minecraft/tags/block/fence_gates.json
 dc444e322f905b084b03087fe2b68145b5f05db4 data/minecraft/tags/block/fences.json
-627be541f8f7e640dc11cb6348698894400289b4 data/minecraft/tags/block/mineable/pickaxe.json
+88d9fd220e9d2c21c2214412997c664796a7460b data/minecraft/tags/block/mineable/pickaxe.json
 cd29dadfcd8c781a16741916964a8ce074186ca8 data/minecraft/tags/block/piglin_repellents.json
 a6deddef545c0cb913e7b334ba7f32ca04fe9721 data/minecraft/tags/block/stone_pressure_plates.json
 8a460e2cb7fd7a5d50ad7ddacbd5e10a863971c2 data/minecraft/tags/block/trapdoors.json
