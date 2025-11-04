@@ -759,6 +759,7 @@ public class RoseQuartzRegistry {
                     .sound(ROSE_QUARTZ_SOUND)
                     .requiresCorrectToolForDrops()
                     .noOcclusion()
+                    .lightLevel(state -> 5)
                 )
             );
             RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(

@@ -428,6 +428,12 @@ public class ModelDatagen extends ModelProvider {
 
             
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_SINK.get(), new Variant(modLocation("block/citrine_sink")));
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_SKULL_STATUETTE.get(), new Variant(modLocation("block/citrine_skull")));
+        itemModels.itemModelOutput.accept(
+            CitrineList.CITRINE_SKULL_STATUETTE_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/citrine_skull"))
+        );
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

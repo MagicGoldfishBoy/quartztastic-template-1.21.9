@@ -12,6 +12,7 @@ import com.quarztastic.goldfishboy.block.CitrineNightstand;
 import com.quarztastic.goldfishboy.block.CitrineBarrelBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
+import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.CitrineBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
@@ -183,4 +184,8 @@ public class CitrineList {
 
     public static DeferredBlock<Path> CITRINE_PATH;
     public static DeferredItem<BlockItem> CITRINE_PATH_ITEM;
+
+
+    public static DeferredBlock<Statuette> CITRINE_SKULL_STATUETTE;
+    public static DeferredItem<BlockItem> CITRINE_SKULL_STATUETTE_ITEM;
 }
