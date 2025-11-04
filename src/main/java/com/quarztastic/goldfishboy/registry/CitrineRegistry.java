@@ -6,12 +6,14 @@ import com.quarztastic.goldfishboy.block.CitrineBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineOvenBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.CitrineBarrelBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.CitrineBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineOvenEntity;
-import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
+import com.quarztastic.goldfishboy.entity.CitrineBarrelEntity;
+import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
 
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -634,6 +636,28 @@ public class CitrineRegistry {
         );
         CitrineList.CITRINE_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_LADDER
+        );
+
+        CitrineList.CITRINE_BARREL_BLOCK = Quartztastic.BLOCKS.register(
+            "citrine_barrel", 
+            registryName -> new CitrineBarrelBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
+                .sound(CITRINE_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        CitrineList.CITRINE_BARREL_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "citrine_barrel",
+            () -> new BlockEntityType<>(
+            CitrineBarrelEntity::new,
+            false,
+            CitrineList.CITRINE_BARREL_BLOCK.get())
+        );
+        CitrineList.CITRINE_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_BARREL_BLOCK
         );
     }
 }

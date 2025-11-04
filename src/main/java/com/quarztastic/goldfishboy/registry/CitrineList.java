@@ -7,11 +7,13 @@ import com.quarztastic.goldfishboy.block.CitrineBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineOvenBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.CitrineBarrelBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.CitrineBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.CitrineOvenEntity;
+import com.quarztastic.goldfishboy.entity.CitrineBarrelEntity;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -159,4 +161,9 @@ public class CitrineList {
 
     public static DeferredBlock<LadderBlock> CITRINE_LADDER;
     public static DeferredItem<BlockItem> CITRINE_LADDER_ITEM;
+
+
+    public static DeferredBlock<CitrineBarrelBlock> CITRINE_BARREL_BLOCK;
+    public static Supplier<BlockEntityType<CitrineBarrelEntity>> CITRINE_BARREL_ENTITY;
+    public static DeferredItem<BlockItem> CITRINE_BARREL_ITEM;
 }

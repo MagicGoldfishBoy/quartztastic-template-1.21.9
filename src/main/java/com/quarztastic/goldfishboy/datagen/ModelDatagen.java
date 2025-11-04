@@ -417,6 +417,10 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, CitrineList.CITRINE_LADDER.get(), CitrineList.CITRINE_LADDER_ITEM.get(), 
             new Variant(modLocation("block/citrine_ladder")));
+
+
+        ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, CitrineList.CITRINE_BARREL_BLOCK.get(), CitrineList.CITRINE_BARREL_ITEM.get(), 
+            new Variant(modLocation("block/citrine_barrel")), new Variant(modLocation("block/citrine_barrel_open")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
