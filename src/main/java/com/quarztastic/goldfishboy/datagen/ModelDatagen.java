@@ -413,6 +413,10 @@ public class ModelDatagen extends ModelProvider {
             CitrineList.CITRINE_SHELF_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/citrine_shelf"))
         );
+
+
+        ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, CitrineList.CITRINE_LADDER.get(), CitrineList.CITRINE_LADDER_ITEM.get(), 
+            new Variant(modLocation("block/citrine_ladder")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

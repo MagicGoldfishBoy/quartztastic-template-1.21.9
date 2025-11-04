@@ -22,6 +22,7 @@ import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
@@ -155,4 +156,7 @@ public class CitrineList {
     public static DeferredBlock<TorchBlock> CITRINE_SOUL_TORCH;
     public static DeferredBlock<WallTorchBlock> CITRINE_WALL_SOUL_TORCH;
     public static DeferredItem<StandingAndWallBlockItem> CITRINE_SOUL_TORCH_ITEM;
+
+    public static DeferredBlock<LadderBlock> CITRINE_LADDER;
+    public static DeferredItem<BlockItem> CITRINE_LADDER_ITEM;
 }
