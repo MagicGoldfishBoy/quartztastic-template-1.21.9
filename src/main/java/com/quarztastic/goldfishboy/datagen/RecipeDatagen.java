@@ -521,6 +521,18 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', CitrineList.CITRINE_TILES_ITEM.get())
             .unlockedBy("has_citrine_tiles", has(CitrineList.CITRINE_TILES_ITEM.get()))
             .save(this.output, "citrine_tiles_slab_by_crafting");
+
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "blue_quartz_slab_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get(), 6)
+            .pattern("@@@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "blue_quartz_slab_by_crafting");
     }
 
     protected void buildStairsRecipes() {
@@ -644,37 +656,49 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_citrine_tiles", has(CitrineList.CITRINE_TILES_ITEM.get()))
             .save(this.output, "citrine_tiles_stairs_by_crafting");
 
+            
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_STAIRS_ITEM.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "blue_quartz_stairs_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_STAIRS_ITEM.get(), 4)
+            .pattern("@  ")
+            .pattern("@@ ")
+            .pattern("@@@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "blue_quartz_stairs_by_crafting");
     }
 
     protected void buildButtonRecipes() {
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, SmokyQuartzList.SMOKY_QUARTZ_BUTTON_ITEM.get(), 2)
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, SmokyQuartzList.SMOKY_QUARTZ_BUTTON_ITEM.get(), 4)
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "smoky_quartz_button_by_stonecutting");
 
         ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, SmokyQuartzList.SMOKY_QUARTZ_BUTTON_ITEM.get())
-            .requires(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
-            .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
+            .requires(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .save(this.output, "smoky_quartz_button_by_crafting");
 
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, RoseQuartzList.ROSE_QUARTZ_BUTTON_ITEM.get(), 2)
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, RoseQuartzList.ROSE_QUARTZ_BUTTON_ITEM.get(), 4)
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "rose_quartz_button_by_stonecutting");
 
         ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, RoseQuartzList.ROSE_QUARTZ_BUTTON_ITEM.get())
-            .requires(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get())
-            .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
+            .requires(RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_rose_quartz_crystal", has(RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get()))
             .save(this.output, "rose_quartz_button_by_crafting");
 
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, CitrineList.CITRINE_BUTTON_ITEM.get(), 2)
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, CitrineList.CITRINE_BUTTON_ITEM.get(), 4)
             .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
             .save(this.output, "citrine_button_by_stonecutting");
 
         ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, CitrineList.CITRINE_BUTTON_ITEM.get())
-            .requires(CitrineList.CITRINE_BLOCK_ITEM.get())
-            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .requires(CitrineList.CITRINE_CRYSTAL.get())
+            .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
             .save(this.output, "citrine_button_by_crafting");
     }
 

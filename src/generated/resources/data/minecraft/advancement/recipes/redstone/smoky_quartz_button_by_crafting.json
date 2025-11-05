@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_smoky_quartz_block": {
+    "has_smoky_quartz_crystal": {
       "conditions": {
         "items": [
           {
-            "items": "quartztastic:smoky_quartz_block"
+            "items": "quartztastic:smoky_quartz_crystal"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_smoky_quartz_block"
+      "has_smoky_quartz_crystal"
     ]
   ],
   "rewards": {

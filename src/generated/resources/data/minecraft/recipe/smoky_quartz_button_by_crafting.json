@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "redstone",
   "ingredients": [
-    "quartztastic:smoky_quartz_block"
+    "quartztastic:smoky_quartz_crystal"
   ],
   "result": {
     "count": 1,

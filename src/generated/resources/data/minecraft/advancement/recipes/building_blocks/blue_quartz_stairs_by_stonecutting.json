@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rose_quartz_crystal": {
+    "has_blue_quartz_block": {
       "conditions": {
         "items": [
           {
-            "items": "quartztastic:rose_quartz_crystal"
+            "items": "quartztastic:blue_quartz_block"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:rose_quartz_button_by_crafting"
+        "recipe": "minecraft:blue_quartz_stairs_by_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_rose_quartz_crystal"
+      "has_blue_quartz_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:rose_quartz_button_by_crafting"
+      "minecraft:blue_quartz_stairs_by_stonecutting"
     ]
   }
 }

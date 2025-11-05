@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "redstone",
   "ingredients": [
-    "quartztastic:rose_quartz_block"
+    "quartztastic:rose_quartz_crystal"
   ],
   "result": {
     "count": 1,

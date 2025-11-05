@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_citrine_block": {
+    "has_citrine_crystal": {
       "conditions": {
         "items": [
           {
-            "items": "quartztastic:citrine_block"
+            "items": "quartztastic:citrine_crystal"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_citrine_block"
+      "has_citrine_crystal"
     ]
   ],
   "rewards": {
