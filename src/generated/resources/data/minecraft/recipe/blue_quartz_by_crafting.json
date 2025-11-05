@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    "quartztastic:blue_quartz_crystal"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:blue_quartz_button"
+  }
+}

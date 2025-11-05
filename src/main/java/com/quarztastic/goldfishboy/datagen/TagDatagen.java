@@ -192,6 +192,11 @@ public class TagDatagen extends BlockTagsProvider {
                 BlueQuartzList.BLUE_QUARTZ_BLOCK.get(),
                 BlueQuartzList.BLUE_QUARTZ_SLAB.get(),
                 BlueQuartzList.BLUE_QUARTZ_STAIRS.get(),
+                BlueQuartzList.BLUE_QUARTZ_BUTTON.get(),
+                BlueQuartzList.BLUE_QUARTZ_PRESSURE_PLATE.get(),
+                BlueQuartzList.BLUE_QUARTZ_FENCE.get(),
+                BlueQuartzList.BLUE_QUARTZ_WALL.get(),
+                BlueQuartzList.BLUE_QUARTZ_GATE.get(),
 
 
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE.get(),
@@ -205,7 +210,9 @@ public class TagDatagen extends BlockTagsProvider {
 
                 RoseQuartzList.ROSE_QUARTZ_PRESSURE_PLATE.get(),
 
-                CitrineList.CITRINE_PRESSURE_PLATE.get()
+                CitrineList.CITRINE_PRESSURE_PLATE.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_PRESSURE_PLATE.get()
             );
 
         this.tag(TagKeyList.FENCES_TAG)
@@ -214,7 +221,9 @@ public class TagDatagen extends BlockTagsProvider {
 
                 RoseQuartzList.ROSE_QUARTZ_FENCE.get(),
 
-                CitrineList.CITRINE_FENCE.get()
+                CitrineList.CITRINE_FENCE.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_FENCE.get()
             );
 
         this.tag(TagKeyList.WALLS_TAG)
@@ -226,7 +235,9 @@ public class TagDatagen extends BlockTagsProvider {
                 RoseQuartzList.ROSE_QUARTZ_BRICK_WALL.get(),
 
                 CitrineList.CITRINE_WALL.get(),
-                CitrineList.CITRINE_BRICK_WALL.get()
+                CitrineList.CITRINE_BRICK_WALL.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_WALL.get()
             );
 
         this.tag(TagKeyList.GATES_TAG)
@@ -235,7 +246,9 @@ public class TagDatagen extends BlockTagsProvider {
 
                 RoseQuartzList.ROSE_QUARTZ_GATE.get(),
 
-                CitrineList.CITRINE_GATE.get()
+                CitrineList.CITRINE_GATE.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_GATE.get()
             );
 
         this.tag(TagKeyList.DOORS_TAG)

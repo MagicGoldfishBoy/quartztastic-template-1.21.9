@@ -216,6 +216,11 @@
   "block.quartztastic.blue_quartz_block": "Blue Quartz Block",
   "block.quartztastic.blue_quartz_slab": "Blue Quartz Slab",
   "block.quartztastic.blue_quartz_stairs": "Blue Quartz Stairs",
+  "block.quartztastic.blue_quartz_button": "Blue Quartz Button",
+  "block.quartztastic.blue_quartz_pressure_plate": "Blue Quartz Pressure Plate",
+  "block.quartztastic.blue_quartz_fence": "Blue Quartz Fence",
+  "block.quartztastic.blue_quartz_wall": "Blue Quartz Wall",
+  "block.quartztastic.blue_quartz_gate": "Blue Quartz Gate",
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

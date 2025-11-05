@@ -178,7 +178,12 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.familyWithExistingFullBlock(BlueQuartzList.BLUE_QUARTZ_BLOCK.get())
             .slab(BlueQuartzList.BLUE_QUARTZ_SLAB.get())
-            .stairs(BlueQuartzList.BLUE_QUARTZ_STAIRS.get());
+            .stairs(BlueQuartzList.BLUE_QUARTZ_STAIRS.get())
+            .button(BlueQuartzList.BLUE_QUARTZ_BUTTON.get())
+            .pressurePlate(BlueQuartzList.BLUE_QUARTZ_PRESSURE_PLATE.get())
+            .fence(BlueQuartzList.BLUE_QUARTZ_FENCE.get())
+            .wall(BlueQuartzList.BLUE_QUARTZ_WALL.get())
+            .fenceGate(BlueQuartzList.BLUE_QUARTZ_GATE.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "quartztastic:blue_quartz_crystal",
+    "@": "quartztastic:blue_quartz_block"
+  },
+  "pattern": [
+    "@#@",
+    "@#@"
+  ],
+  "result": {
+    "count": 6,
+    "id": "quartztastic:blue_quartz_fence"
+  }
+}

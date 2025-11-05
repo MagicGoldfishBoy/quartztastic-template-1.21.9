@@ -123,6 +123,11 @@
     "quartztastic:blue_quartz_block",
     "quartztastic:blue_quartz_slab",
     "quartztastic:blue_quartz_stairs",
+    "quartztastic:blue_quartz_button",
+    "quartztastic:blue_quartz_pressure_plate",
+    "quartztastic:blue_quartz_fence",
+    "quartztastic:blue_quartz_wall",
+    "quartztastic:blue_quartz_gate",
     "quartztastic:prasiolite_quartz_ore",
     "quartztastic:prasiolite_quartz_netherrack_ore"
   ]

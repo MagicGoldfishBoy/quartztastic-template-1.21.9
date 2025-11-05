@@ -700,6 +700,16 @@ public class RecipeDatagen extends RecipeProvider {
             .requires(CitrineList.CITRINE_CRYSTAL.get())
             .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
             .save(this.output, "citrine_button_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, BlueQuartzList.BLUE_QUARTZ_BUTTON_ITEM.get(), 4)
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "blue_quartz_by_stonecutting");
+
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, BlueQuartzList.BLUE_QUARTZ_BUTTON_ITEM.get())
+            .requires(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
+            .save(this.output, "blue_quartz_by_crafting");
     }
 
     protected void buildPressurePlateRecipes() {
@@ -735,6 +745,17 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', CitrineList.CITRINE_BLOCK_ITEM.get())
             .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
             .save(this.output, "citrine_pressure_plate_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, BlueQuartzList.BLUE_QUARTZ_PRESSURE_PLATE_ITEM.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "blue_quartz_pressure_plate_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, BlueQuartzList.BLUE_QUARTZ_PRESSURE_PLATE_ITEM.get())
+            .pattern("@@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "blue_quartz_pressure_plate_by_crafting");
     }
 
     protected void buildFenceWallGateRecipes() {
@@ -871,6 +892,39 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', CitrineList.CITRINE_BRICKS_ITEM.get())
             .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BRICKS_ITEM.get()))
             .save(this.output, "citrine_brick_wall_by_crafting");
+
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_FENCE_ITEM.get(), 6)
+            .pattern("@#@")
+            .pattern("@#@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
+            .define('#', BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_GATE_ITEM.get(), 2)
+            .pattern("#@#")
+            .pattern("#@#")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
+            .define('#', BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
+        
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_WALL_ITEM.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))       
+            .save(this.output, "blue_quartz_wall_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_WALL_ITEM.get(), 6)
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "blue_quartz_wall_by_crafting");
     }
 
     protected void buildDoorRecipes() {
