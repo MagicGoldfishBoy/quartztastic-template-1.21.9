@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-07T12:43:25.251552248	Model Definitions - quartztastic
+// 1.21.9	2025-11-07T14:38:47.25920729	Model Definitions - quartztastic
 e2755adce4ad7e44b364bb8faf9c5036dc042932 assets/quartztastic/blockstates/blue_quartz_block.json
 9bba3b933eb6673d2ac5536f5c293c0ef66faab4 assets/quartztastic/blockstates/blue_quartz_brick_slab.json
 1d64fd12e7f0efd8981005e43479937fa38eabe4 assets/quartztastic/blockstates/blue_quartz_brick_stairs.json
@@ -8,6 +8,7 @@ d6dcc82f720e0e05ee4c034a73b1102748f2727b assets/quartztastic/blockstates/blue_qu
 7f523bf521ff5c1c8419db2e076607fd081d2988 assets/quartztastic/blockstates/blue_quartz_fence.json
 884216249e9b96ce32bf022f3b7d19a8e53510c8 assets/quartztastic/blockstates/blue_quartz_gate.json
 6949a6ee96a435324a6e89dc57acda2e795fa0e0 assets/quartztastic/blockstates/blue_quartz_ore.json
+bfc993a2f5688dde72389154ccc1aac791e18dfb assets/quartztastic/blockstates/blue_quartz_pillar.json
 05db3726685217dc4a5a2b1c3e61523c3e42f962 assets/quartztastic/blockstates/blue_quartz_pressure_plate.json
 7688fc4657f9744e08d3edd3bd4183dc729eaec5 assets/quartztastic/blockstates/blue_quartz_slab.json
 0eec0a95dd32f107fbe5b95f63079d4628fb68c6 assets/quartztastic/blockstates/blue_quartz_stairs.json
@@ -159,6 +160,7 @@ bc29c43b8a5d865fa5ec1206b6e7cb44dbd46b19 assets/quartztastic/items/blue_quartz_b
 b3fa11c9bea80936905035932e167ddffa5cf77e assets/quartztastic/items/blue_quartz_fence.json
 c44b5e1e095ae5d238204d961f40e23da3e9efb5 assets/quartztastic/items/blue_quartz_gate.json
 5205b448ba97d2a531a51babb8f87738f0966ba7 assets/quartztastic/items/blue_quartz_ore.json
+331c33f64f0509b2fb5f4891a45c0f67655c1364 assets/quartztastic/items/blue_quartz_pillar.json
 47ed7943f9aa706fb810e2fef9003c001ec7cbd1 assets/quartztastic/items/blue_quartz_pressure_plate.json
 fd0cab47b4ddf8b32e1cad2c09b1ab7c88bcc8f6 assets/quartztastic/items/blue_quartz_slab.json
 772236db6bfd558d58d4ba235cbf6586fa3f931c assets/quartztastic/items/blue_quartz_stairs.json

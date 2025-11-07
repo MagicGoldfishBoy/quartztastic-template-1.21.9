@@ -446,6 +446,11 @@ public class RecipeDatagen extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_TILES_ITEM.get())
             .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output);
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_PILLAR_ITEM.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {

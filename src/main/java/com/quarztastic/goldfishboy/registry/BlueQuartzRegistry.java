@@ -2,6 +2,7 @@ package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.OreBlock;
+import com.quarztastic.goldfishboy.block.Pillar;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -283,6 +284,22 @@ public class BlueQuartzRegistry {
 
             BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
                 BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS
+            );
+
+
+            BlueQuartzList.BLUE_QUARTZ_PILLAR = Quartztastic.BLOCKS.register(
+                "blue_quartz_pillar", 
+                registryName -> new Pillar(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(BLUE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                )
+            );
+
+            BlueQuartzList.BLUE_QUARTZ_PILLAR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+                BlueQuartzList.BLUE_QUARTZ_PILLAR
             );
     }
     

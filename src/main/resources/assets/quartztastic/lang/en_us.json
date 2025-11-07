@@ -233,6 +233,8 @@
   "block.quartztastic.blue_quartz_tile_slab": "Blue Quartz Tile Slab",
   "block.quartztastic.blue_quartz_tile_stairs": "Blue Quartz Tile Stairs",
 
+  "block.quartztastic.blue_quartz_pillar": "Blue Quartz Pillar",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

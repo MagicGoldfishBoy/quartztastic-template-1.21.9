@@ -228,6 +228,15 @@ public class ModelDatagen extends ModelProvider {
             CitrineList.CITRINE_PILLAR_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/citrine_pillar_single"))
         );
+
+
+        ModelDatagenHelpers.createPillarModels(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_PILLAR.get(), new Variant(modLocation("block/blue_quartz_pillar_top")), 
+        new Variant(modLocation("block/blue_quartz_pillar_middle")), new Variant(modLocation("block/blue_quartz_pillar_bottom")), new Variant(modLocation("block/blue_quartz_pillar_single")));
+
+        itemModels.itemModelOutput.accept(
+            BlueQuartzList.BLUE_QUARTZ_PILLAR_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/blue_quartz_pillar_single"))
+        );
     }
 
     protected void buildDoorModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
