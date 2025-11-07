@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "quartztastic:block/blue_quartz_bricks"
+  }
+}

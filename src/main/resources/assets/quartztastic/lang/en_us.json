@@ -222,6 +222,11 @@
   "block.quartztastic.blue_quartz_wall": "Blue Quartz Wall",
   "block.quartztastic.blue_quartz_gate": "Blue Quartz Gate",
 
+  "block.quartztastic.blue_quartz_bricks": "Blue Quartz Bricks",
+  "block.quartztastic.blue_quartz_brick_slab": "Blue Quartz Brick Slab",
+  "block.quartztastic.blue_quartz_brick_stairs": "Blue Quartz Brick Stairs",
+  "block.quartztastic.blue_quartz_brick_wall": "Blue Quartz Brick Wall",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

@@ -158,6 +158,65 @@ public class BlueQuartzRegistry {
         BlueQuartzList.BLUE_QUARTZ_GATE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_GATE
         );
+
+
+        BlueQuartzList.BLUE_QUARTZ_BRICKS = Quartztastic.BLOCKS.register(
+            "blue_quartz_bricks", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_EXPLOSION_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_BRICKS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_BRICKS
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_BRICK_SLAB = Quartztastic.BLOCKS.register(
+            "blue_quartz_brick_slab", 
+            registryName -> new SlabBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_EXPLOSION_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_BRICK_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_BRICK_SLAB
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_BRICK_STAIRS = Quartztastic.BLOCKS.register(
+            "blue_quartz_brick_stairs", 
+            registryName -> new StairBlock(
+                BlueQuartzList.BLUE_QUARTZ_BRICKS.get().defaultBlockState(),
+                BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_EXPLOSION_RESISTANCE)
+                    .sound(BLUE_QUARTZ_SOUND_TYPE)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_BRICK_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_BRICK_STAIRS
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_BRICK_WALL = Quartztastic.BLOCKS.register(
+            "blue_quartz_brick_wall", 
+            registryName -> new WallBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_EXPLOSION_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_BRICK_WALL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_BRICK_WALL
+        );
     }
     
 }
