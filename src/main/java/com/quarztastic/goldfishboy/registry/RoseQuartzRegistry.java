@@ -2,6 +2,7 @@ package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.Chair;
+import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.RoseQuartzBarrelBlock;
@@ -55,7 +56,7 @@ public class RoseQuartzRegistry {
 
             RoseQuartzList.ROSE_QUARTZ_ORE = Quartztastic.BLOCKS.register(
                 "rose_quartz_ore", 
-                registryName -> new Block(BlockBehaviour.Properties.of()
+                registryName -> new OreBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, registryName))
                     .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
                     .sound(ROSE_QUARTZ_SOUND)

@@ -1,6 +1,7 @@
 package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.block.OreBlock;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -19,7 +20,7 @@ public class PrasioliteQuartzRegistry {
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_ore", 
-            registryName -> new Block(BlockBehaviour.Properties.of()
+            registryName -> new OreBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(2.0f, 4.0f)
                 .sound(SoundType.AMETHYST)
@@ -35,7 +36,7 @@ public class PrasioliteQuartzRegistry {
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_NETHERRACK_ORE = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_netherrack_ore", 
-            registryName -> new Block(BlockBehaviour.Properties.of()
+            registryName -> new OreBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(2.0f, 4.0f)
                 .sound(SoundType.AMETHYST)

@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.Chair;
+import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.Shelf;
@@ -63,7 +64,7 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_ORE = Quartztastic.BLOCKS.register(
             "smoky_quartz_ore", 
-            registryName -> new Block(BlockBehaviour.Properties.of()
+            registryName -> new OreBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(2.0f, 4.0f)
                 .sound(SoundType.AMETHYST)
@@ -79,7 +80,7 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE = Quartztastic.BLOCKS.register(
             "smoky_quartz_netherrack_ore", 
-            registryName -> new Block(BlockBehaviour.Properties.of()
+            registryName -> new OreBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(2.0f, 4.0f)
                 .sound(SoundType.AMETHYST)

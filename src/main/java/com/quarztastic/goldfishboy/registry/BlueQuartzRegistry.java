@@ -1,6 +1,7 @@
 package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.block.OreBlock;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -35,7 +36,7 @@ public class BlueQuartzRegistry {
 
         BlueQuartzList.BLUE_QUARTZ_ORE = Quartztastic.BLOCKS.register(
             "blue_quartz_ore", 
-            registryName -> new Block(BlockBehaviour.Properties.of()
+            registryName -> new OreBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_EXPLOSION_RESISTANCE)
                 .sound(BLUE_QUARTZ_SOUND_TYPE)

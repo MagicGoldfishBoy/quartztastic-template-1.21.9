@@ -5,6 +5,7 @@ import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.CitrineBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.CitrineOvenBlock;
+import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.CitrineNightstand;
@@ -66,7 +67,7 @@ public class CitrineRegistry {
 
         CitrineList.CITRINE_ORE = Quartztastic.BLOCKS.register(
             "citrine_ore", 
-            registryName -> new Block(BlockBehaviour.Properties.of()
+            registryName -> new OreBlock(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(CITRINE_DESTROY_TIME, CITRINE_EXPLOSION_RESISTANCE)
                 .sound(CITRINE_SOUND_TYPE)

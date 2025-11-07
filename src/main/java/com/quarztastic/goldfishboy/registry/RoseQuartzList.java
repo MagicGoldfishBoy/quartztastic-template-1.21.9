@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy.registry;
 import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.Chair;
+import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.RoseQuartzBarrelBlock;
@@ -46,7 +47,7 @@ public class RoseQuartzList {
 
     public static DeferredItem<Item> ROSE_QUARTZ_CRYSTAL;
     
-    public static DeferredBlock<Block> ROSE_QUARTZ_ORE;
+    public static DeferredBlock<OreBlock> ROSE_QUARTZ_ORE;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_ORE_ITEM;
 
 

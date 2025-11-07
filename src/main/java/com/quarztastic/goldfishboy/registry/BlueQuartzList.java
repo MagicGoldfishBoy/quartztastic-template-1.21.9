@@ -1,5 +1,7 @@
 package com.quarztastic.goldfishboy.registry;
 
+import com.quarztastic.goldfishboy.block.OreBlock;
+
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -18,7 +20,7 @@ public class BlueQuartzList {
     public static DeferredItem<Item> BLUE_QUARTZ_CRYSTAL;
 
     
-    public static DeferredBlock<Block> BLUE_QUARTZ_ORE;
+    public static DeferredBlock<OreBlock> BLUE_QUARTZ_ORE;
 
     public static DeferredItem<BlockItem> BLUE_QUARTZ_ORE_ITEM;
 
