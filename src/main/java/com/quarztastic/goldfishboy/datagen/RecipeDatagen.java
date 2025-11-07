@@ -429,6 +429,18 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
             .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "blue_quartz_bricks_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.CHISELED_BLUE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "chiseled_blue_quartz_block_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.CHISELED_BLUE_QUARTZ_BLOCK_ITEM.get())
+            .pattern("@")
+            .pattern("@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_blue_quartz_slab", has(BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get()))
+            .save(this.output, "chiseled_blue_quartz_block_by_crafting");
     }
 
     protected void buildSlabRecipes() {

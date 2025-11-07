@@ -218,6 +218,23 @@ public class BlueQuartzRegistry {
         BlueQuartzList.BLUE_QUARTZ_BRICK_WALL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_BRICK_WALL
         );
+
+
+
+        BlueQuartzList.CHISELED_BLUE_QUARTZ_BLOCK = Quartztastic.BLOCKS.register(
+            "chiseled_blue_quartz_block", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_EXPLOSION_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND_TYPE)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        BlueQuartzList.CHISELED_BLUE_QUARTZ_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.CHISELED_BLUE_QUARTZ_BLOCK
+        );
     }
     
 }

@@ -227,6 +227,8 @@
   "block.quartztastic.blue_quartz_brick_stairs": "Blue Quartz Brick Stairs",
   "block.quartztastic.blue_quartz_brick_wall": "Blue Quartz Brick Wall",
 
+  "block.quartztastic.chiseled_blue_quartz_block": "Chiseled Blue Quartz Block",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",
