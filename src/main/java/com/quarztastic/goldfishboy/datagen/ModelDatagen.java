@@ -108,6 +108,8 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.createTrivialCube(BlueQuartzList.CHISELED_BLUE_QUARTZ_BLOCK.get());
 
+        blockModels.createTrivialCube(BlueQuartzList.BLUE_QUARTZ_TILES.get());
+
 
         blockModels.createTrivialCube(PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE.get());
 
@@ -193,6 +195,10 @@ public class ModelDatagen extends ModelProvider {
             .slab(BlueQuartzList.BLUE_QUARTZ_BRICK_SLAB.get())
             .stairs(BlueQuartzList.BLUE_QUARTZ_BRICK_STAIRS.get())
             .wall(BlueQuartzList.BLUE_QUARTZ_BRICK_WALL.get());
+
+        blockModels.familyWithExistingFullBlock(BlueQuartzList.BLUE_QUARTZ_TILES.get())
+            .slab(BlueQuartzList.BLUE_QUARTZ_TILE_SLAB.get())
+            .stairs(BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

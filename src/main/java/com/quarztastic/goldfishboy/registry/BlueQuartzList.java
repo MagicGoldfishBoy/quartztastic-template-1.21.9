@@ -65,4 +65,14 @@ public class BlueQuartzList {
 
     public static DeferredBlock<Block> CHISELED_BLUE_QUARTZ_BLOCK;
     public static DeferredItem<BlockItem> CHISELED_BLUE_QUARTZ_BLOCK_ITEM;
+
+
+    public static DeferredBlock<Block> BLUE_QUARTZ_TILES;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_TILES_ITEM;
+
+    public static DeferredBlock<SlabBlock> BLUE_QUARTZ_TILE_SLAB;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_TILE_SLAB_ITEM;
+
+    public static DeferredBlock<StairBlock> BLUE_QUARTZ_TILE_STAIRS;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_TILE_STAIRS_ITEM;
 }

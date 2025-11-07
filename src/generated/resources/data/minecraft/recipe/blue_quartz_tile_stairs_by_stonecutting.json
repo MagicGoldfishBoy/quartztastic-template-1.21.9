@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "quartztastic:blue_quartz_tiles",
+  "result": {
+    "count": 1,
+    "id": "quartztastic:blue_quartz_tile_stairs"
+  }
+}
