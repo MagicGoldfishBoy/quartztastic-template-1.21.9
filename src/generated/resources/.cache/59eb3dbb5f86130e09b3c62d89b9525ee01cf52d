@@ -1,6 +1,7 @@
-// 1.21.9	2025-11-10T11:12:50.755466834	Loot Tables
+// 1.21.9	2025-11-10T11:41:57.437017368	Loot Tables
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
+ccc0240565a178138b03d40be36262a67d6ecd3d data/quartztastic/loot_table/blocks/blue_quartz_blast_furnace.json
 4a94d72c16dff76bfd47ecc2e89eb67c590fe9be data/quartztastic/loot_table/blocks/blue_quartz_block.json
 28b79bee0a7e38b53ab3c2ef636eed0d5a883c12 data/quartztastic/loot_table/blocks/blue_quartz_bookshelf.json
 88742e11cee044d081ff0886c7bf27b8b3a7fbf1 data/quartztastic/loot_table/blocks/blue_quartz_brick_slab.json

@@ -504,6 +504,16 @@ public class RecipeDatagen extends RecipeProvider {
             .define('#', Items.SMOKER)
             .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE_ITEM.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
+            .define('#', Items.BLAST_FURNACE)
+            .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {
