@@ -4,7 +4,9 @@ import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.BlueQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
 
 import net.minecraft.world.item.BlockItem;
@@ -105,4 +107,9 @@ public class BlueQuartzList {
     public static DeferredBlock<BlueQuartzFurnaceBlock> BLUE_QUARTZ_FURNACE;
     public static Supplier<BlockEntityType<BlueQuartzFurnaceEntity>> BLUE_QUARTZ_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_FURNACE_ITEM;
+
+
+    public static DeferredBlock<BlueQuartzOvenBlock> BLUE_QUARTZ_OVEN;
+    public static Supplier<BlockEntityType<BlueQuartzFurnaceEntity>> BLUE_QUARTZ_OVEN_ENTITY;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_OVEN_ITEM;
 }

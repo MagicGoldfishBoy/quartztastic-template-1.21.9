@@ -244,6 +244,9 @@
   "block.quartztastic.blue_quartz_furnace": "Blue Quartz Furnace",
   "container.blue_quartz_furnace": "Blue Quartz Furnace",
 
+  "block.quartztastic.blue_quartz_oven": "Blue Quartz Oven",
+  "container.blue_quartz_oven": "Blue Quartz Oven",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

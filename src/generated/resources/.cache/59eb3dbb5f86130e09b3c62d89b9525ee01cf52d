@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-10T10:43:23.732582558	Loot Tables
+// 1.21.9	2025-11-10T11:12:50.755466834	Loot Tables
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
 4a94d72c16dff76bfd47ecc2e89eb67c590fe9be data/quartztastic/loot_table/blocks/blue_quartz_block.json
@@ -12,6 +12,7 @@ a95dd3b602d678a271479f18cf88669b46419cc2 data/quartztastic/loot_table/blocks/blu
 174f5011c9c3c2b1d29c0d1ac5675d45a107e9a2 data/quartztastic/loot_table/blocks/blue_quartz_furnace.json
 530c891a73b5c846d7119f73360bd5fe498f13f9 data/quartztastic/loot_table/blocks/blue_quartz_gate.json
 082fc00761ac680e590f9874fd40a3f71d68f173 data/quartztastic/loot_table/blocks/blue_quartz_ore.json
+7d41af638579c02dcf7166f1e6d5f4a5ce947fd5 data/quartztastic/loot_table/blocks/blue_quartz_oven.json
 678ff352ac314a8b01b6bdae9ded7705c6978382 data/quartztastic/loot_table/blocks/blue_quartz_pane.json
 d91d3c989eaef70fb6eb343b86205ce7ec335bf9 data/quartztastic/loot_table/blocks/blue_quartz_pillar.json
 7bb87500bf14fdce93198f3ec5245662a02e790b data/quartztastic/loot_table/blocks/blue_quartz_pressure_plate.json

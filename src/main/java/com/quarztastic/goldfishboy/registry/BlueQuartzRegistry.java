@@ -3,7 +3,9 @@ package com.quarztastic.goldfishboy.registry;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.BlueQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
 
 import net.minecraft.core.registries.Registries;
@@ -390,6 +392,29 @@ public class BlueQuartzRegistry {
 
         BlueQuartzList.BLUE_QUARTZ_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_FURNACE
+        );
+
+
+        BlueQuartzList.BLUE_QUARTZ_OVEN = Quartztastic.BLOCKS.register(
+            "blue_quartz_oven", 
+            registryName -> new BlueQuartzOvenBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+            )
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_OVEN_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "blue_quartz_oven",
+            () -> new BlockEntityType<>(
+            BlueQuartzFurnaceEntity::new,
+            false,
+            BlueQuartzList.BLUE_QUARTZ_OVEN.get())
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_OVEN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_OVEN
         );
     }
     

@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-10T10:43:23.738498533	Model Definitions - quartztastic
+// 1.21.9	2025-11-10T11:12:50.761414738	Model Definitions - quartztastic
 87f5a387c9f9e176346342479b272c9db56f4ef6 assets/quartztastic/blockstates/blue_quartz_bars.json
 bd90a0e030a076b4a84cdaee3a4697681f4f982a assets/quartztastic/blockstates/blue_quartz_bars_block.json
 e2755adce4ad7e44b364bb8faf9c5036dc042932 assets/quartztastic/blockstates/blue_quartz_block.json
@@ -12,6 +12,7 @@ d6dcc82f720e0e05ee4c034a73b1102748f2727b assets/quartztastic/blockstates/blue_qu
 f3336e2e49e460919de1fcc06630d01585a80003 assets/quartztastic/blockstates/blue_quartz_furnace.json
 884216249e9b96ce32bf022f3b7d19a8e53510c8 assets/quartztastic/blockstates/blue_quartz_gate.json
 6949a6ee96a435324a6e89dc57acda2e795fa0e0 assets/quartztastic/blockstates/blue_quartz_ore.json
+98d24aac212eec9d687c8621069cd0899938f07d assets/quartztastic/blockstates/blue_quartz_oven.json
 b53f63bb7e8334d808e2af69f0b791d4266e2a96 assets/quartztastic/blockstates/blue_quartz_pane.json
 bfc993a2f5688dde72389154ccc1aac791e18dfb assets/quartztastic/blockstates/blue_quartz_pillar.json
 05db3726685217dc4a5a2b1c3e61523c3e42f962 assets/quartztastic/blockstates/blue_quartz_pressure_plate.json
@@ -169,6 +170,7 @@ b3fa11c9bea80936905035932e167ddffa5cf77e assets/quartztastic/items/blue_quartz_f
 3a5061da73c1e6b50b58862602aec0eece2c5a51 assets/quartztastic/items/blue_quartz_furnace.json
 c44b5e1e095ae5d238204d961f40e23da3e9efb5 assets/quartztastic/items/blue_quartz_gate.json
 5205b448ba97d2a531a51babb8f87738f0966ba7 assets/quartztastic/items/blue_quartz_ore.json
+463f31469a33e2a22f6f955a4d633cf0627c584d assets/quartztastic/items/blue_quartz_oven.json
 b1f5223b609ad381d8d1af0c7e34572c2b9b7283 assets/quartztastic/items/blue_quartz_pane.json
 331c33f64f0509b2fb5f4891a45c0f67655c1364 assets/quartztastic/items/blue_quartz_pillar.json
 47ed7943f9aa706fb810e2fef9003c001ec7cbd1 assets/quartztastic/items/blue_quartz_pressure_plate.json
