@@ -102,7 +102,6 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.createTrivialCube(BlueQuartzList.BLUE_QUARTZ_ORE.get());
 
-        //blockModels.createTrivialCube(BlueQuartzList.BLUE_QUARTZ_BLOCK.get());
         blockModels.createGlassBlocks(BlueQuartzList.BLUE_QUARTZ_BLOCK.get(), BlueQuartzList.BLUE_QUARTZ_PANE.get());
 
         blockModels.createTrivialCube(BlueQuartzList.BLUE_QUARTZ_BRICKS.get());
@@ -526,6 +525,9 @@ public class ModelDatagen extends ModelProvider {
 
 
         blockModels.createGlassBlocks(CitrineList.CITRINE_BARS_BLOCK.get(), CitrineList.CITRINE_BARS.get());
+
+
+        blockModels.createGlassBlocks(BlueQuartzList.BLUE_QUARTZ_BARS_BLOCK.get(), BlueQuartzList.BLUE_QUARTZ_BARS.get());
     }
 }
 

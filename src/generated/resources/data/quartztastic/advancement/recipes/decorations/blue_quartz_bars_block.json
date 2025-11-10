@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_quartz_bars": {
+      "conditions": {
+        "items": [
+          {
+            "items": "quartztastic:blue_quartz_bars"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "quartztastic:blue_quartz_bars_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blue_quartz_bars"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "quartztastic:blue_quartz_bars_block"
+    ]
+  }
+}

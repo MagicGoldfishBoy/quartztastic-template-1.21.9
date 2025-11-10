@@ -254,68 +254,100 @@ public class BlueQuartzRegistry {
 
 
 
-            BlueQuartzList.BLUE_QUARTZ_TILES = Quartztastic.BLOCKS.register(
-                "blue_quartz_tiles", 
-                registryName -> new Block(BlockBehaviour.Properties.of()
-                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                    .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
-                    .sound(BLUE_QUARTZ_SOUND)
-                    .requiresCorrectToolForDrops()
-                    .noOcclusion()
-                )
-            );
+        BlueQuartzList.BLUE_QUARTZ_TILES = Quartztastic.BLOCKS.register(
+            "blue_quartz_tiles", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
 
-            BlueQuartzList.BLUE_QUARTZ_TILES_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-                BlueQuartzList.BLUE_QUARTZ_TILES
-            );
-
-
-            BlueQuartzList.BLUE_QUARTZ_TILE_SLAB = Quartztastic.BLOCKS.register(
-                "blue_quartz_tile_slab", 
-                registryName -> new SlabBlock(BlockBehaviour.Properties.of()
-                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                    .strength(BLUE_QUARTZ_DESTROY_TIME / 2, BLUE_QUARTZ_BLAST_RESISTANCE / 2)
-                    .sound(BLUE_QUARTZ_SOUND)
-                    .requiresCorrectToolForDrops()
-                    .noOcclusion()
-                )
-            );
-
-            BlueQuartzList.BLUE_QUARTZ_TILE_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-                BlueQuartzList.BLUE_QUARTZ_TILE_SLAB
-            );
+        BlueQuartzList.BLUE_QUARTZ_TILES_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_TILES
+        );
 
 
-            BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS = Quartztastic.BLOCKS.register(
-                "blue_quartz_tile_stairs", 
-                registryName -> new StairBlock(BlueQuartzList.BLUE_QUARTZ_TILES.get().defaultBlockState(), BlockBehaviour.Properties.of()
-                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                    .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
-                    .sound(BLUE_QUARTZ_SOUND)
-                    .requiresCorrectToolForDrops()
-                    .noOcclusion()
-                )
-            );
+        BlueQuartzList.BLUE_QUARTZ_TILE_SLAB = Quartztastic.BLOCKS.register(
+            "blue_quartz_tile_slab", 
+            registryName -> new SlabBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME / 2, BLUE_QUARTZ_BLAST_RESISTANCE / 2)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
 
-            BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-                BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS
-            );
+        BlueQuartzList.BLUE_QUARTZ_TILE_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_TILE_SLAB
+        );
 
 
-            BlueQuartzList.BLUE_QUARTZ_PILLAR = Quartztastic.BLOCKS.register(
-                "blue_quartz_pillar", 
-                registryName -> new Pillar(BlockBehaviour.Properties.of()
-                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                    .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
-                    .sound(BLUE_QUARTZ_SOUND)
-                    .requiresCorrectToolForDrops()
-                    .noOcclusion()
-                )
-            );
+        BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS = Quartztastic.BLOCKS.register(
+            "blue_quartz_tile_stairs", 
+            registryName -> new StairBlock(BlueQuartzList.BLUE_QUARTZ_TILES.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
 
-            BlueQuartzList.BLUE_QUARTZ_PILLAR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-                BlueQuartzList.BLUE_QUARTZ_PILLAR
-            );
+        BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS
+        );
+
+
+        BlueQuartzList.BLUE_QUARTZ_PILLAR = Quartztastic.BLOCKS.register(
+            "blue_quartz_pillar", 
+            registryName -> new Pillar(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_PILLAR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_PILLAR
+        );
+
+
+        BlueQuartzList.BLUE_QUARTZ_BARS_BLOCK = Quartztastic.BLOCKS.register(
+            "blue_quartz_bars_block", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_BARS_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_BARS_BLOCK
+        );
+
+
+        BlueQuartzList.BLUE_QUARTZ_BARS = Quartztastic.BLOCKS.register(
+            "blue_quartz_bars", 
+            registryName -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_BARS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_BARS
+        );
     }
     
 }
