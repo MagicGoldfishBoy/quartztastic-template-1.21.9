@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -61,6 +62,20 @@ public class BlueQuartzRegistry {
         );
         BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_BLOCK
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_PANE = Quartztastic.BLOCKS.register(
+            "blue_quartz_pane", 
+            registryName -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME / 2, BLUE_QUARTZ_BLAST_RESISTANCE / 2)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_PANE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_PANE
         );
 
         BlueQuartzList.BLUE_QUARTZ_SLAB = Quartztastic.BLOCKS.register(

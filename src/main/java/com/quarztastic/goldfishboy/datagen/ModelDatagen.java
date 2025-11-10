@@ -102,7 +102,8 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.createTrivialCube(BlueQuartzList.BLUE_QUARTZ_ORE.get());
 
-        blockModels.createTrivialCube(BlueQuartzList.BLUE_QUARTZ_BLOCK.get());
+        //blockModels.createTrivialCube(BlueQuartzList.BLUE_QUARTZ_BLOCK.get());
+        blockModels.createGlassBlocks(BlueQuartzList.BLUE_QUARTZ_BLOCK.get(), BlueQuartzList.BLUE_QUARTZ_PANE.get());
 
         blockModels.createTrivialCube(BlueQuartzList.BLUE_QUARTZ_BRICKS.get());
 

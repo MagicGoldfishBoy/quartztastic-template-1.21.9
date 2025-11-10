@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
@@ -28,6 +29,9 @@ public class BlueQuartzList {
 
     public static DeferredBlock<Block> BLUE_QUARTZ_BLOCK;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_BLOCK_ITEM;
+
+    public static DeferredBlock<IronBarsBlock> BLUE_QUARTZ_PANE;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_PANE_ITEM;
 
     public static DeferredBlock<SlabBlock> BLUE_QUARTZ_SLAB;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_SLAB_ITEM;
