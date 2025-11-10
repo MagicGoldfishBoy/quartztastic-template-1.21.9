@@ -241,6 +241,9 @@
 
   "block.quartztastic.blue_quartz_bookshelf": "Blue Quartz Bookshelf",
 
+  "block.quartztastic.blue_quartz_furnace": "Blue Quartz Furnace",
+  "container.blue_quartz_furnace": "Blue Quartz Furnace",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

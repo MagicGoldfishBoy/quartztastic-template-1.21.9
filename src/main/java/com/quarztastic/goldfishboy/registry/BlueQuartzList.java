@@ -1,7 +1,11 @@
 package com.quarztastic.goldfishboy.registry;
 
+import java.util.function.Supplier;
+
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.BlueQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -14,6 +18,7 @@ import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 
@@ -95,4 +100,9 @@ public class BlueQuartzList {
 
     public static DeferredBlock<Block> BLUE_QUARTZ_BOOKSHELF;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_BOOKSHELF_ITEM;
+
+
+    public static DeferredBlock<BlueQuartzFurnaceBlock> BLUE_QUARTZ_FURNACE;
+    public static Supplier<BlockEntityType<BlueQuartzFurnaceEntity>> BLUE_QUARTZ_FURNACE_ENTITY;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_FURNACE_ITEM;
 }
