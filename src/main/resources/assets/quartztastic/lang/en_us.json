@@ -239,6 +239,8 @@
   "block.quartztastic.blue_quartz_bars": "Blue Quartz Bars",
   "block.quartztastic.blue_quartz_bars_block": "Blue Quartz Bars Block",
 
+  "block.quartztastic.blue_quartz_bookshelf": "Blue Quartz Bookshelf",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

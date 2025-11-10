@@ -91,4 +91,8 @@ public class BlueQuartzList {
 
     public static DeferredBlock<IronBarsBlock> BLUE_QUARTZ_BARS;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_BARS_ITEM;
+
+
+    public static DeferredBlock<Block> BLUE_QUARTZ_BOOKSHELF;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_BOOKSHELF_ITEM;
 }

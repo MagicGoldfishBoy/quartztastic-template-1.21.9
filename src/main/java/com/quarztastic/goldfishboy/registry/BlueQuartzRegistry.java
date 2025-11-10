@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.block.Pillar;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
@@ -347,6 +348,22 @@ public class BlueQuartzRegistry {
 
         BlueQuartzList.BLUE_QUARTZ_BARS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_BARS
+        );
+
+
+        BlueQuartzList.BLUE_QUARTZ_BOOKSHELF = Quartztastic.BLOCKS.register(
+            "blue_quartz_bookshelf", 
+            registryName -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BOOKSHELF)
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_BOOKSHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_BOOKSHELF
         );
     }
     
