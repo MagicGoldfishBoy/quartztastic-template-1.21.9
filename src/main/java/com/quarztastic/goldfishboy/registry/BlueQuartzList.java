@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Chair;
@@ -131,4 +132,7 @@ public class BlueQuartzList {
 
     public static DeferredBlock<Chair> BLUE_QUARTZ_CHAIR;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_CHAIR_ITEM;
+
+    public static DeferredBlock<Table> BLUE_QUARTZ_TABLE;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_TABLE_ITEM;
 }
