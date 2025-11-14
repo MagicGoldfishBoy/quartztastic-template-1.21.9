@@ -250,6 +250,8 @@
   "block.quartztastic.blue_quartz_blast_furnace": "Blue Quartz Blast Furnace",
   "container.blue_quartz_blast_furnace": "Blue Quartz Blast Furnace",
 
+  "block.quartztastic.blue_quartz_door": "Blue Quartz Door",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

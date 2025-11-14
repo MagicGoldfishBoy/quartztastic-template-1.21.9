@@ -16,6 +16,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
@@ -120,4 +121,8 @@ public class BlueQuartzList {
     public static DeferredBlock<BlueQuartzBlastFurnaceBlock> BLUE_QUARTZ_BLAST_FURNACE;
     public static Supplier<BlockEntityType<BlueQuartzBlastFurnaceEntity>> BLUE_QUARTZ_BLAST_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_BLAST_FURNACE_ITEM;
+
+
+    public static DeferredBlock<DoorBlock> BLUE_QUARTZ_DOOR;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_DOOR_ITEM;
 }

@@ -254,6 +254,9 @@ public class ModelDatagen extends ModelProvider {
         blockModels.createDoor(CitrineList.CITRINE_DOOR.get());
 
         blockModels.createOrientableTrapdoor(CitrineList.CITRINE_TRAPDOOR.get());
+        
+
+        blockModels.createDoor(BlueQuartzList.BLUE_QUARTZ_DOOR.get());
     }
 
     protected void buildBlockbenchBlockstates(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

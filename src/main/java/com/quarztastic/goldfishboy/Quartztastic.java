@@ -264,6 +264,8 @@ public class Quartztastic {
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_BARS_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
 
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_BOOKSHELF.get(), ChunkSectionLayer.TRANSLUCENT);
+
+        ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_DOOR.get(), ChunkSectionLayer.TRANSLUCENT);
     }
 
 
