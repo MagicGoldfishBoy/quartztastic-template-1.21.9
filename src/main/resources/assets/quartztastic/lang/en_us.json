@@ -206,10 +206,6 @@
   "block.quartztastic.citrine_skull_statuette": "Citrine Skull Statuette",
 
 
-  "item.quartztastic.prasiolite_quartz_crystal": "Prasiolite Quartz Crystal",
-  "block.quartztastic.prasiolite_quartz_ore": "Prasiolite Quartz Ore",
-  "block.quartztastic.prasiolite_quartz_netherrack_ore": "Prasiolite Quartz Ore",
-
   "item.quartztastic.blue_quartz_crystal": "Blue Quartz Crystal",
   "block.quartztastic.blue_quartz_ore": "Blue Quartz Ore",
 
@@ -255,7 +251,13 @@
 
   "block.quartztastic.blue_quartz_chair": "Blue Quartz Chair",
   "block.quartztastic.blue_quartz_table": "Blue Quartz Table",
+  "block.quartztastic.blue_quartz_shelf": "Blue Quartz Shelf",
 
+
+  "item.quartztastic.prasiolite_quartz_crystal": "Prasiolite Quartz Crystal",
+  "block.quartztastic.prasiolite_quartz_ore": "Prasiolite Quartz Ore",
+  "block.quartztastic.prasiolite_quartz_netherrack_ore": "Prasiolite Quartz Ore",
+  
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

@@ -499,6 +499,14 @@ public class ModelDatagen extends ModelProvider {
             BlueQuartzList.BLUE_QUARTZ_TABLE_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/blue_quartz_table_single"))
         );
+
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_SHELF.get(), new Variant(modLocation("block/blue_quartz_shelf")));
+
+        itemModels.itemModelOutput.accept(
+            BlueQuartzList.BLUE_QUARTZ_SHELF_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/blue_quartz_shelf"))
+        );
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
