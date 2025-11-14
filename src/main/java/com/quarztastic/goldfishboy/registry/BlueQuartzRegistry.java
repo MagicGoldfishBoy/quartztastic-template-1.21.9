@@ -525,6 +525,22 @@ public class BlueQuartzRegistry {
         BlueQuartzList.BLUE_QUARTZ_SHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_SHELF
         );
+
+
+        BlueQuartzList.BLUE_QUARTZ_LIGHT = Quartztastic.BLOCKS.register(
+            "blue_quartz_light", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .lightLevel(state -> 15)
+            )
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_LIGHT
+        );
     }
     
 }

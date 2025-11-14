@@ -514,6 +514,14 @@ public class RecipeDatagen extends RecipeProvider {
             .define('#', Items.BLAST_FURNACE)
             .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
             .save(this.output);
+
+        
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_LIGHT_ITEM.get())
+            .requires(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
+            .requires(Items.GLOWSTONE)
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .unlockedBy("has_glowstone", has(Items.GLOWSTONE))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {
