@@ -24,6 +24,7 @@ import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -457,6 +458,21 @@ public class BlueQuartzRegistry {
         );
         BlueQuartzList.BLUE_QUARTZ_DOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_DOOR
+        );
+
+
+        BlueQuartzList.BLUE_QUARTZ_TRAPDOOR = Quartztastic.BLOCKS.register(
+            "blue_quartz_trapdoor", 
+            registryName -> new TrapDoorBlock(BlockSetTypes.QUARTZ, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_TRAPDOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_TRAPDOOR
         );
     }
     

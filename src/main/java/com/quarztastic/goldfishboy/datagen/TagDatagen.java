@@ -222,6 +222,7 @@ public class TagDatagen extends BlockTagsProvider {
                 BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE.get(),
 
                 BlueQuartzList.BLUE_QUARTZ_DOOR.get(),
+                BlueQuartzList.BLUE_QUARTZ_TRAPDOOR.get(),
 
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE.get(),
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_NETHERRACK_ORE.get()

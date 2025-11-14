@@ -23,6 +23,7 @@ import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -125,4 +126,8 @@ public class BlueQuartzList {
 
     public static DeferredBlock<DoorBlock> BLUE_QUARTZ_DOOR;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_DOOR_ITEM;
+
+
+    public static DeferredBlock<TrapDoorBlock> BLUE_QUARTZ_TRAPDOOR;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_TRAPDOOR_ITEM;
 }

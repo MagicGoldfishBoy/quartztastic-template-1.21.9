@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-14T10:11:02.356867362	Loot Tables
+// 1.21.9	2025-11-14T10:25:29.783152145	Loot Tables
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
 ccc0240565a178138b03d40be36262a67d6ecd3d data/quartztastic/loot_table/blocks/blue_quartz_blast_furnace.json
@@ -23,6 +23,7 @@ d5b1c0da73dfb953aed0e9ec964596bfe8c1186f data/quartztastic/loot_table/blocks/blu
 5dcbfb5c1c43865ac478ef4a439bd063c3364e34 data/quartztastic/loot_table/blocks/blue_quartz_tile_slab.json
 72025d65593e0723aed6ae3edb32801738143305 data/quartztastic/loot_table/blocks/blue_quartz_tile_stairs.json
 157f8dd102bff06b22a8f4b1810aa2220f841507 data/quartztastic/loot_table/blocks/blue_quartz_tiles.json
+fd42118bad0dc2805fe505e17f739fe55cf8ed6d data/quartztastic/loot_table/blocks/blue_quartz_trapdoor.json
 8c0078bffca82d7917f487b316d375697ae80b13 data/quartztastic/loot_table/blocks/blue_quartz_wall.json
 b22ef4e2da7c036da903e9a04b0753e3587016ee data/quartztastic/loot_table/blocks/chiseled_blue_quartz_block.json
 e0074092987d24f082873df7a6df646ea3dbbf2d data/quartztastic/loot_table/blocks/chiseled_citrine_block.json
