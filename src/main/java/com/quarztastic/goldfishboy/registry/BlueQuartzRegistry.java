@@ -5,6 +5,7 @@ import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.BlueQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzOvenEntity;
@@ -473,6 +474,22 @@ public class BlueQuartzRegistry {
         );
         BlueQuartzList.BLUE_QUARTZ_TRAPDOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_TRAPDOOR
+        );
+
+
+        BlueQuartzList.BLUE_QUARTZ_CHAIR = Quartztastic.BLOCKS.register(
+            "blue_quartz_chair", 
+            registryName -> new Chair("dining", BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_CHAIR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_CHAIR
         );
     }
     

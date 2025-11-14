@@ -476,6 +476,14 @@ public class ModelDatagen extends ModelProvider {
             CitrineList.CITRINE_SKULL_STATUETTE_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/citrine_skull"))
         );
+
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_CHAIR.get(), new Variant(modLocation("block/blue_quartz_chair")));
+
+        itemModels.itemModelOutput.accept(
+            BlueQuartzList.BLUE_QUARTZ_CHAIR_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/blue_quartz_chair"))
+        );
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

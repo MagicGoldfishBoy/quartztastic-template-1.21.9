@@ -6,6 +6,7 @@ import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.BlueQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzOvenEntity;
@@ -108,17 +109,14 @@ public class BlueQuartzList {
     public static DeferredBlock<Block> BLUE_QUARTZ_BOOKSHELF;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_BOOKSHELF_ITEM;
 
-
     public static DeferredBlock<BlueQuartzFurnaceBlock> BLUE_QUARTZ_FURNACE;
     public static Supplier<BlockEntityType<BlueQuartzFurnaceEntity>> BLUE_QUARTZ_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_FURNACE_ITEM;
-
 
     public static DeferredBlock<BlueQuartzOvenBlock> BLUE_QUARTZ_OVEN;
     public static Supplier<BlockEntityType<BlueQuartzOvenEntity>> BLUE_QUARTZ_OVEN_ENTITY;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_OVEN_ITEM;
 
-    
     public static DeferredBlock<BlueQuartzBlastFurnaceBlock> BLUE_QUARTZ_BLAST_FURNACE;
     public static Supplier<BlockEntityType<BlueQuartzBlastFurnaceEntity>> BLUE_QUARTZ_BLAST_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_BLAST_FURNACE_ITEM;
@@ -127,7 +125,10 @@ public class BlueQuartzList {
     public static DeferredBlock<DoorBlock> BLUE_QUARTZ_DOOR;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_DOOR_ITEM;
 
-
     public static DeferredBlock<TrapDoorBlock> BLUE_QUARTZ_TRAPDOOR;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_TRAPDOOR_ITEM;
+
+
+    public static DeferredBlock<Chair> BLUE_QUARTZ_CHAIR;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_CHAIR_ITEM;
 }
