@@ -527,6 +527,13 @@ public class ModelDatagen extends ModelProvider {
         ModelDatagenHelpers.createChainBlockstates(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_CHAIN.get(), RoseQuartzList.ROSE_QUARTZ_CHAIN_ITEM.get());
 
 
+        blockModels.createLantern(BlueQuartzList.BLUE_QUARTZ_LANTERN.get());
+
+        blockModels.createLantern(BlueQuartzList.BLUE_QUARTZ_SOUL_LANTERN.get());
+
+        ModelDatagenHelpers.createChainBlockstates(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_CHAIN.get(), BlueQuartzList.BLUE_QUARTZ_CHAIN_ITEM.get());
+
+
         blockModels.createLantern(CitrineList.CITRINE_LANTERN.get());
 
         blockModels.createLantern(CitrineList.CITRINE_SOUL_LANTERN.get());

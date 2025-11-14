@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "quartztastic:item/blue_quartz_soul_lantern"
+  }
+}

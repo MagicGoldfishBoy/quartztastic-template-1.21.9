@@ -1371,6 +1371,35 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', CitrineList.CITRINE_CRYSTAL.get())
             .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_LANTERN_ITEM.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
+            .define('#', Items.TORCH)
+            .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
+            .unlockedBy("has_torch", has(Items.TORCH))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_SOUL_LANTERN_ITEM.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
+            .define('#', Items.SOUL_TORCH)
+            .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
+            .unlockedBy("has_soul_torch", has(Items.SOUL_TORCH))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_CHAIN.get())
+            .pattern("@")
+            .pattern("@")
+            .pattern("@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
     }
 
     protected void buildTorchRecipes() {

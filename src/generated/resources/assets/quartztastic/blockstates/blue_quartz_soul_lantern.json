@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "quartztastic:block/blue_quartz_soul_lantern"
+    },
+    "hanging=true": {
+      "model": "quartztastic:block/blue_quartz_soul_lantern_hanging"
+    }
+  }
+}
