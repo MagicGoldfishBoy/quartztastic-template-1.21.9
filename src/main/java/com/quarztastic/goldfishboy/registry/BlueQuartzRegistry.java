@@ -14,8 +14,12 @@ import com.quarztastic.goldfishboy.entity.BlueQuartzOvenEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
 
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
@@ -28,6 +32,7 @@ import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -590,6 +595,70 @@ public class BlueQuartzRegistry {
         BlueQuartzList.BLUE_QUARTZ_CHAIN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_CHAIN
         );
+
+
+        BlueQuartzList.BLUE_QUARTZ_TORCH = Quartztastic.BLOCKS.register(
+            "blue_quartz_torch", 
+            registryName -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .lightLevel(state -> 15)
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_WALL_TORCH = Quartztastic.BLOCKS.register(
+            "blue_quartz_wall_torch", 
+            registryName -> new net.minecraft.world.level.block.WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .lightLevel(state -> 15)
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_TORCH_ITEM = Quartztastic.ITEMS.register(
+            "blue_quartz_torch", 
+            registryName -> new StandingAndWallBlockItem(
+                BlueQuartzList.BLUE_QUARTZ_TORCH.get(),
+                BlueQuartzList.BLUE_QUARTZ_WALL_TORCH.get(), 
+                Direction.DOWN, 
+                new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, registryName))
+        ));
+
+
+        BlueQuartzList.BLUE_QUARTZ_SOUL_TORCH = Quartztastic.BLOCKS.register(
+            "blue_quartz_soul_torch", 
+            registryName -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .lightLevel(state -> 10)
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_WALL_SOUL_TORCH = Quartztastic.BLOCKS.register(
+            "blue_quartz_wall_soul_torch", 
+            registryName -> new net.minecraft.world.level.block.WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .lightLevel(state -> 10)
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_SOUL_TORCH_ITEM = Quartztastic.ITEMS.register(
+            "blue_quartz_soul_torch", 
+            registryName -> new StandingAndWallBlockItem(
+                BlueQuartzList.BLUE_QUARTZ_SOUL_TORCH.get(),
+                BlueQuartzList.BLUE_QUARTZ_WALL_SOUL_TORCH.get(), 
+                Direction.DOWN, 
+                new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, registryName))
+        ));
     }
     
 }

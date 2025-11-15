@@ -557,6 +557,11 @@ public class ModelDatagen extends ModelProvider {
         blockModels.createNormalTorch(CitrineList.CITRINE_TORCH.get(), CitrineList.CITRINE_WALL_TORCH.get());
 
         blockModels.createNormalTorch(CitrineList.CITRINE_SOUL_TORCH.get(), CitrineList.CITRINE_WALL_SOUL_TORCH.get());
+
+
+        blockModels.createNormalTorch(BlueQuartzList.BLUE_QUARTZ_TORCH.get(), BlueQuartzList.BLUE_QUARTZ_WALL_TORCH.get());
+
+        blockModels.createNormalTorch(BlueQuartzList.BLUE_QUARTZ_SOUL_TORCH.get(), BlueQuartzList.BLUE_QUARTZ_WALL_SOUL_TORCH.get());
     }
 
     protected void buildBarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

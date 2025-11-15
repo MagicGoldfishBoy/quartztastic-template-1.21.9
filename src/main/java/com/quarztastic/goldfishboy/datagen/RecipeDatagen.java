@@ -1468,6 +1468,28 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_soul_sand", has(Items.SOUL_SAND))
             .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_TORCH_ITEM.get(), 4)
+            .pattern("@")
+            .pattern("#")
+            .define('@', TagKeyList.COALS_TAG)
+            .define('#', BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_coal_or_charcoal", has(TagKeyList.COALS_TAG))
+            .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_SOUL_TORCH_ITEM.get(), 4)
+            .pattern("@")
+            .pattern("$")
+            .pattern("#")
+            .define('@', TagKeyList.COALS_TAG)
+            .define('$',Items.SOUL_SAND)
+            .define('#', BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_coal_or_charcoal", has(TagKeyList.COALS_TAG))
+            .unlockedBy("has_soul_sand", has(Items.SOUL_SAND))
+            .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
     }
 
     protected void buildLadderRecipes() {

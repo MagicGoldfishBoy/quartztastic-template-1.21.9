@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "quartztastic:block/blue_quartz_wall_soul_torch"
+    },
+    "facing=north": {
+      "model": "quartztastic:block/blue_quartz_wall_soul_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "quartztastic:block/blue_quartz_wall_soul_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "quartztastic:block/blue_quartz_wall_soul_torch",
+      "y": 180
+    }
+  }
+}
