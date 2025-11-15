@@ -233,6 +233,8 @@ public class TagDatagen extends BlockTagsProvider {
                 BlueQuartzList.BLUE_QUARTZ_SOUL_LANTERN.get(),
                 BlueQuartzList.BLUE_QUARTZ_CHAIN.get(),
 
+                BlueQuartzList.BLUE_QUARTZ_LADDER.get(),
+
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE.get(),
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_NETHERRACK_ORE.get()
             );
@@ -316,14 +318,23 @@ public class TagDatagen extends BlockTagsProvider {
 
                 RoseQuartzList.ROSE_QUARTZ_SOUL_LANTERN.get(),
                 RoseQuartzList.ROSE_QUARTZ_SOUL_TORCH.get(),
-                RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE.get()
+                RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE.get(),
+
+                CitrineList.CITRINE_SOUL_LANTERN.get(),
+                CitrineList.CITRINE_SOUL_TORCH.get(),
+                CitrineList.CITRINE_SKULL_STATUETTE.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_SOUL_LANTERN.get(),
+                BlueQuartzList.BLUE_QUARTZ_SOUL_TORCH.get()
+                //BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE.get()
             );
 
         this.tag(TagKeyList.CLIMBABLE_TAG)
             .add(
                 SmokyQuartzList.SMOKY_QUARTZ_LADDER.get(),
                 RoseQuartzList.ROSE_QUARTZ_LADDER.get(),
-                CitrineList.CITRINE_LADDER.get()
+                CitrineList.CITRINE_LADDER.get(),
+                BlueQuartzList.BLUE_QUARTZ_LADDER.get()
             );
 
         this.tag(TagKeyList.ENCHANTMENT_POWER_PROVIDER_TAG)

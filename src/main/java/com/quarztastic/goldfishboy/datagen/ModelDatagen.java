@@ -509,6 +509,10 @@ public class ModelDatagen extends ModelProvider {
             BlueQuartzList.BLUE_QUARTZ_SHELF_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/blue_quartz_shelf"))
         );
+
+
+        ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_LADDER.get(), BlueQuartzList.BLUE_QUARTZ_LADDER_ITEM.get(), 
+            new Variant(modLocation("block/blue_quartz_ladder")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

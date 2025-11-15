@@ -659,6 +659,21 @@ public class BlueQuartzRegistry {
                 new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM, registryName))
         ));
+
+
+        BlueQuartzList.BLUE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
+            "blue_quartz_ladder", 
+            registryName -> new net.minecraft.world.level.block.LadderBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_LADDER
+        );
     }
     
 }
