@@ -1494,7 +1494,7 @@ public class RecipeDatagen extends RecipeProvider {
 
     protected void buildLadderRecipes() {
 
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_LADDER.get())
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_LADDER.get(), 3)
             .pattern("@ @")
             .pattern("@@@")
             .pattern("@ @")
@@ -1503,7 +1503,7 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
 
 
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_LADDER.get())
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_LADDER.get(), 3)
             .pattern("@ @")
             .pattern("@@@")
             .pattern("@ @")
@@ -1512,7 +1512,7 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
 
 
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_LADDER.get())
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_LADDER.get(), 3)
             .pattern("@ @")
             .pattern("@@@")
             .pattern("@ @")
@@ -1521,7 +1521,7 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
 
 
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_LADDER.get())
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_LADDER.get(), 3)
             .pattern("@ @")
             .pattern("@@@")
             .pattern("@ @")
@@ -1597,6 +1597,17 @@ public class RecipeDatagen extends RecipeProvider {
             .define('$', Items.CHEST)
             .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
             .unlockedBy("has_chest", has(Items.CHEST))
+            .save(this.output);
+
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_BARREL_ITEM.get())
+            .pattern("@#@")
+            .pattern("@ @")
+            .pattern("@#@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
+            .define('#', BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output);
     }
 

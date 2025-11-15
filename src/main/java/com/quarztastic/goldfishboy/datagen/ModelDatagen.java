@@ -513,6 +513,10 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_LADDER.get(), BlueQuartzList.BLUE_QUARTZ_LADDER_ITEM.get(), 
             new Variant(modLocation("block/blue_quartz_ladder")));
+
+
+        ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK.get(), BlueQuartzList.BLUE_QUARTZ_BARREL_ITEM.get(), 
+            new Variant(modLocation("block/blue_quartz_barrel")), new Variant(modLocation("block/blue_quartz_barrel_open")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

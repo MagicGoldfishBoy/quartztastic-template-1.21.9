@@ -280,6 +280,8 @@ public class Quartztastic {
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_SOUL_TORCH.get(), ChunkSectionLayer.TRANSLUCENT);
 
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_LADDER.get(), ChunkSectionLayer.TRANSLUCENT);
+
+        ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
     }
 
 

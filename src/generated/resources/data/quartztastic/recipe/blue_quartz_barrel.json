@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "quartztastic:blue_quartz_slab",
+    "@": "quartztastic:blue_quartz_block"
+  },
+  "pattern": [
+    "@#@",
+    "@ @",
+    "@#@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:blue_quartz_barrel"
+  }
+}
