@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blue_quartz_block": {
+    "has_prasiolite_quartz_block": {
       "conditions": {
         "items": [
           {
-            "items": "quartztastic:blue_quartz_block"
+            "items": "quartztastic:prasiolite_quartz_block"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:blue_quartz_by_stonecutting"
+        "recipe": "quartztastic:prasiolite_quartz_pane"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_blue_quartz_block"
+      "has_prasiolite_quartz_block"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:blue_quartz_by_stonecutting"
+      "quartztastic:prasiolite_quartz_pane"
     ]
   }
 }

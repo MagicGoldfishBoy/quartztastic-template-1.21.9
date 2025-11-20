@@ -280,6 +280,9 @@
   "block.quartztastic.prasiolite_quartz_ore": "Prasiolite Quartz Ore",
   "block.quartztastic.prasiolite_quartz_netherrack_ore": "Prasiolite Quartz Ore",
 
+  "block.quartztastic.prasiolite_quartz_block": "Prasiolite Quartz Block",
+  "block.quartztastic.prasiolite_quartz_pane": "Prasiolite Quartz Pane",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

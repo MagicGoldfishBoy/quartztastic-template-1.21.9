@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 30,
+  "experience": 0.4,
+  "ingredient": "quartztastic:citrine_ore",
+  "result": {
+    "count": 1,
+    "id": "quartztastic:citrine_crystal"
+  }
+}

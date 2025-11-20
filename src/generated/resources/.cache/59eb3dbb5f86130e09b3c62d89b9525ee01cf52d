@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-20T09:09:26.674546467	Loot Tables
+// 1.21.9	2025-11-20T12:09:28.770130815	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -88,8 +88,10 @@ d9886b7368c73dd1dfe310b696f10787bd3a05cb data/quartztastic/loot_table/blocks/cit
 fede2a73aef578bda1ca27c2564dd3605b6f7f17 data/quartztastic/loot_table/blocks/citrine_wall.json
 931d79a2611a07719b43d77c35febc3b0fcb2018 data/quartztastic/loot_table/blocks/citrine_wall_soul_torch.json
 4445470f8300349316e111f18b3cee091a7897cb data/quartztastic/loot_table/blocks/citrine_wall_torch.json
+4b720fc021885c75cc90bbe3c04bc87cdceeeac5 data/quartztastic/loot_table/blocks/prasiolite_quartz_block.json
 28a32a08ab4bce5ae4784d61165790152a8eeb8e data/quartztastic/loot_table/blocks/prasiolite_quartz_netherrack_ore.json
 1b8b97e45a99b9e93ac5990311c939d9b944291d data/quartztastic/loot_table/blocks/prasiolite_quartz_ore.json
+c1e2c0ae0e61d531062421e367b2a40a02b11709 data/quartztastic/loot_table/blocks/prasiolite_quartz_pane.json
 b0571a9c2e1a3ae7eda63b321cf07d7ef9e5a689 data/quartztastic/loot_table/blocks/rose_quartz_barrel.json
 039dfb70c214fcfd88a19088a00ece06d69109d5 data/quartztastic/loot_table/blocks/rose_quartz_bars.json
 183207cf4e04708a973febcbe518ad40a116b584 data/quartztastic/loot_table/blocks/rose_quartz_bars_block.json

@@ -159,6 +159,8 @@
     "quartztastic:blue_quartz_sink",
     "quartztastic:blue_quartz_path",
     "quartztastic:prasiolite_quartz_ore",
-    "quartztastic:prasiolite_quartz_netherrack_ore"
+    "quartztastic:prasiolite_quartz_netherrack_ore",
+    "quartztastic:prasiolite_quartz_block",
+    "quartztastic:prasiolite_quartz_pane"
   ]
 }

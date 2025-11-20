@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 30,
+  "experience": 0.4,
+  "ingredient": "quartztastic:blue_quartz_ore",
+  "result": {
+    "count": 1,
+    "id": "quartztastic:blue_quartz_crystal"
+  }
+}

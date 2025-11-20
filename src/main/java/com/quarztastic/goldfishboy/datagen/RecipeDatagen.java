@@ -4,6 +4,7 @@ import java.util.concurrent.CompletableFuture;
 
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.CitrineList;
+import com.quarztastic.goldfishboy.registry.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.TagKeyList;
@@ -67,6 +68,20 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output, "smoky_quartz_by_crafting");
 
 
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(CitrineList.CITRINE_ORE_ITEM.get()), RecipeCategory.MISC, CitrineList.CITRINE_CRYSTAL.get(), 0.4f, 60)
+            .unlockedBy("has_citrine_ore", has(CitrineList.CITRINE_ORE_ITEM.get()))
+            .save(this.output, "citrine_by_smelting");
+
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(CitrineList.CITRINE_ORE_ITEM.get()), RecipeCategory.MISC, CitrineList.CITRINE_CRYSTAL.get(), 0.4f, 30)
+            .unlockedBy("has_citrine_ore", has(CitrineList.CITRINE_ORE_ITEM.get()))
+            .save(this.output, "citrine_by_blasting");
+
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.MISC, CitrineList.CITRINE_CRYSTAL.get(), 4)
+            .requires(CitrineList.CITRINE_BLOCK_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output, "citrine_by_crafting");
+
+
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_ORE_ITEM.get()), RecipeCategory.MISC, RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get(), 0.4f, 60)
             .unlockedBy("has_rose_quartz_ore", has(RoseQuartzList.ROSE_QUARTZ_ORE_ITEM.get()))
             .save(this.output, "rose_quartz_by_smelting");
@@ -79,6 +94,34 @@ public class RecipeDatagen extends RecipeProvider {
             .requires(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get())
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "rose_quartz_by_crafting");
+
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_ORE_ITEM.get()), RecipeCategory.MISC, BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get(), 0.4f, 60)
+            .unlockedBy("has_blue_quartz_ore", has(BlueQuartzList.BLUE_QUARTZ_ORE_ITEM.get()))
+            .save(this.output, "blue_quartz_by_smelting");
+
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_ORE_ITEM.get()), RecipeCategory.MISC, BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get(), 0.4f, 30)
+            .unlockedBy("has_blue_quartz_ore", has(BlueQuartzList.BLUE_QUARTZ_ORE_ITEM.get()))
+            .save(this.output, "blue_quartz_by_blasting");
+
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.MISC, BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get(), 4)
+            .requires(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "blue_quartz_by_crafting");
+
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE_ITEM.get()), RecipeCategory.MISC, PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get(), 0.4f, 60)
+            .unlockedBy("has_prasiolite_quartz_ore", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_by_smelting");
+
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE_ITEM.get()), RecipeCategory.MISC, PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get(), 0.4f, 30)
+            .unlockedBy("has_prasiolite_quartz_ore", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_by_blasting");
+
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.MISC, PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get(), 4)
+            .requires(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_by_crafting");
     }
 
     protected void buildBlockRecipes() {
@@ -522,6 +565,21 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
             .unlockedBy("has_glowstone", has(Items.GLOWSTONE))
             .save(this.output);
+
+
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get())
+            .pattern("@@")
+            .pattern("@@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_prasiolite_quartz_crystal", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
+        
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_PANE_ITEM.get(), 16)
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {
@@ -857,12 +915,12 @@ public class RecipeDatagen extends RecipeProvider {
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, BlueQuartzList.BLUE_QUARTZ_BUTTON_ITEM.get(), 4)
             .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
-            .save(this.output, "blue_quartz_by_stonecutting");
+            .save(this.output, "blue_quartz_button_by_stonecutting");
 
         ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, BlueQuartzList.BLUE_QUARTZ_BUTTON_ITEM.get())
             .requires(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
             .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
-            .save(this.output, "blue_quartz_by_crafting");
+            .save(this.output, "blue_quartz_button_by_crafting");
     }
 
     protected void buildPressurePlateRecipes() {

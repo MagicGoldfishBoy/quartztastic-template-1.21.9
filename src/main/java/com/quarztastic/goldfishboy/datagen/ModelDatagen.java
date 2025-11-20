@@ -117,6 +117,8 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.createTrivialCube(PrasioliteQuartzList.PRASIOLITE_QUARTZ_NETHERRACK_ORE.get());
 
+        blockModels.createGlassBlocks(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK.get(), PrasioliteQuartzList.PRASIOLITE_QUARTZ_PANE.get());
+
 
         
     }
