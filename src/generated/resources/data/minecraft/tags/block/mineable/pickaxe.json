@@ -161,6 +161,8 @@
     "quartztastic:prasiolite_quartz_ore",
     "quartztastic:prasiolite_quartz_netherrack_ore",
     "quartztastic:prasiolite_quartz_block",
-    "quartztastic:prasiolite_quartz_pane"
+    "quartztastic:prasiolite_quartz_pane",
+    "quartztastic:prasiolite_quartz_slab",
+    "quartztastic:prasiolite_quartz_stairs"
   ]
 }

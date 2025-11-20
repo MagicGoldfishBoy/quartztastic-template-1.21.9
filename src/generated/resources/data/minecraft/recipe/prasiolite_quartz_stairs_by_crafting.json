@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "@": "quartztastic:prasiolite_quartz_block"
+  },
+  "pattern": [
+    "@  ",
+    "@@ ",
+    "@@@"
+  ],
+  "result": {
+    "count": 4,
+    "id": "quartztastic:prasiolite_quartz_stairs"
+  }
+}

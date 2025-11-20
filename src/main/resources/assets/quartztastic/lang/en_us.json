@@ -282,6 +282,8 @@
 
   "block.quartztastic.prasiolite_quartz_block": "Prasiolite Quartz Block",
   "block.quartztastic.prasiolite_quartz_pane": "Prasiolite Quartz Pane",
+  "block.quartztastic.prasiolite_quartz_slab": "Prasiolite Quartz Slab",
+  "block.quartztastic.prasiolite_quartz_stairs": "Prasiolite Quartz Stairs",
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

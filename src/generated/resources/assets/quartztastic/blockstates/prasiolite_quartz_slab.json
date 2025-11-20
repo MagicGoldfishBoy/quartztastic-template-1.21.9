@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "quartztastic:block/prasiolite_quartz_slab"
+    },
+    "type=double": {
+      "model": "quartztastic:block/prasiolite_quartz_block"
+    },
+    "type=top": {
+      "model": "quartztastic:block/prasiolite_quartz_slab_top"
+    }
+  }
+}

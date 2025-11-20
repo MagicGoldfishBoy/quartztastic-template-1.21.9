@@ -718,6 +718,18 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', BlueQuartzList.BLUE_QUARTZ_TILES_ITEM.get())
             .unlockedBy("has_blue_quartz_tiles", has(BlueQuartzList.BLUE_QUARTZ_TILES_ITEM.get()))
             .save(this.output, "blue_quartz_tile_slab_by_crafting");
+
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB_ITEM.get(), 2)
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_slab_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB_ITEM.get(), 6)
+            .pattern("@@@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_slab_by_crafting");
     }
 
     protected void buildStairsRecipes() {
@@ -879,6 +891,19 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', BlueQuartzList.BLUE_QUARTZ_TILES_ITEM.get())
             .unlockedBy("has_blue_quartz_tiles", has(BlueQuartzList.BLUE_QUARTZ_TILES_ITEM.get()))
             .save(this.output, "blue_quartz_tile_stairs_by_crafting");
+
+            
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_STAIRS_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_stairs_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_STAIRS_ITEM.get(), 4)
+            .pattern("@  ")
+            .pattern("@@ ")
+            .pattern("@@@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_stairs_by_crafting");
     }
 
     protected void buildButtonRecipes() {

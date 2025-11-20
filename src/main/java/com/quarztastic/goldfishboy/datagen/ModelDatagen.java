@@ -203,6 +203,11 @@ public class ModelDatagen extends ModelProvider {
         blockModels.familyWithExistingFullBlock(BlueQuartzList.BLUE_QUARTZ_TILES.get())
             .slab(BlueQuartzList.BLUE_QUARTZ_TILE_SLAB.get())
             .stairs(BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS.get());
+
+
+        blockModels.familyWithExistingFullBlock(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK.get())
+            .slab(PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB.get())
+            .stairs(PrasioliteQuartzList.PRASIOLITE_QUARTZ_STAIRS.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
