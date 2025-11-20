@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.BlueQuartzNightstand;
 import com.quarztastic.goldfishboy.block.BlueQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
+import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzOvenBlock;
@@ -189,4 +190,8 @@ public class BlueQuartzList {
     public static DeferredBlock<BlueQuartzNightstand> BLUE_QUARTZ_NIGHTSTAND_BLOCK;
     public static Supplier<BlockEntityType<BlueQuartzNightstandEntity>> BLUE_QUARTZ_NIGHTSTAND_ENTITY;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_NIGHTSTAND_ITEM;
+
+
+    public static DeferredBlock<Sink> BLUE_QUARTZ_SINK;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_SINK_ITEM;
 }
