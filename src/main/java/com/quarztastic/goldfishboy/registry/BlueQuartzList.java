@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.block.BlueQuartzNightstand;
 import com.quarztastic.goldfishboy.block.BlueQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
@@ -13,6 +14,7 @@ import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.BlueQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzOvenEntity;
+import com.quarztastic.goldfishboy.entity.BlueQuartzNightstandEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
@@ -182,4 +184,9 @@ public class BlueQuartzList {
     public static DeferredBlock<BlueQuartzBarrelBlock> BLUE_QUARTZ_BARREL_BLOCK;
     public static Supplier<BlockEntityType<BlueQuartzBarrelEntity>> BLUE_QUARTZ_BARREL_ENTITY;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_BARREL_ITEM;
+
+
+    public static DeferredBlock<BlueQuartzNightstand> BLUE_QUARTZ_NIGHTSTAND_BLOCK;
+    public static Supplier<BlockEntityType<BlueQuartzNightstandEntity>> BLUE_QUARTZ_NIGHTSTAND_ENTITY;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_NIGHTSTAND_ITEM;
 }

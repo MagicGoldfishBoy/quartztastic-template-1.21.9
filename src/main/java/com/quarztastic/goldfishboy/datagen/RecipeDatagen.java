@@ -1609,6 +1609,18 @@ public class RecipeDatagen extends RecipeProvider {
             .define('#', BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get())
             .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_ITEM.get(), 2)
+            .pattern("###")
+            .pattern("@$@")
+            .pattern("@@@")
+            .define('@', BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
+            .define('#', BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get())
+            .define('$', Items.CHEST)
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .unlockedBy("has_chest", has(Items.CHEST))
+            .save(this.output);
     }
 
     protected void buildSinkRecipes() {

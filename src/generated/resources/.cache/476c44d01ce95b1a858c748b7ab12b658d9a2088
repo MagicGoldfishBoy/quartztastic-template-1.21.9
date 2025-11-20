@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-15T10:37:06.760490074	Model Definitions - quartztastic
+// 1.21.9	2025-11-20T08:18:10.690897744	Model Definitions - quartztastic
 acd699d636e5749fa609419032360eef24335e8f assets/quartztastic/blockstates/blue_quartz_barrel.json
 87f5a387c9f9e176346342479b272c9db56f4ef6 assets/quartztastic/blockstates/blue_quartz_bars.json
 bd90a0e030a076b4a84cdaee3a4697681f4f982a assets/quartztastic/blockstates/blue_quartz_bars_block.json
@@ -19,6 +19,7 @@ f3336e2e49e460919de1fcc06630d01585a80003 assets/quartztastic/blockstates/blue_qu
 26603a2aa2512b8505200e091a0e571c99857f61 assets/quartztastic/blockstates/blue_quartz_ladder.json
 e6c979eabce55525ea9af1f80e50c1f3fedf31ff assets/quartztastic/blockstates/blue_quartz_lantern.json
 f6314c5bdadbabc64e050aa2eb272b01d832a8c9 assets/quartztastic/blockstates/blue_quartz_light.json
+7e1d89e59ac8a311f50f8df74bbe965ee5d4a933 assets/quartztastic/blockstates/blue_quartz_nightstand.json
 6949a6ee96a435324a6e89dc57acda2e795fa0e0 assets/quartztastic/blockstates/blue_quartz_ore.json
 98d24aac212eec9d687c8621069cd0899938f07d assets/quartztastic/blockstates/blue_quartz_oven.json
 b53f63bb7e8334d808e2af69f0b791d4266e2a96 assets/quartztastic/blockstates/blue_quartz_pane.json
@@ -193,6 +194,7 @@ c44b5e1e095ae5d238204d961f40e23da3e9efb5 assets/quartztastic/items/blue_quartz_g
 62d6ba76b36a39da1fa30eacae9e024d86c43ffd assets/quartztastic/items/blue_quartz_ladder.json
 8bf0200d9872172c83ab698591f7ea1261c4dbcc assets/quartztastic/items/blue_quartz_lantern.json
 9c1b6f9e3281dfae9c16f8fb63c621152380d1e3 assets/quartztastic/items/blue_quartz_light.json
+76e2576c886d25363a70a4810c99971a2058cce7 assets/quartztastic/items/blue_quartz_nightstand.json
 5205b448ba97d2a531a51babb8f87738f0966ba7 assets/quartztastic/items/blue_quartz_ore.json
 463f31469a33e2a22f6f955a4d633cf0627c584d assets/quartztastic/items/blue_quartz_oven.json
 b1f5223b609ad381d8d1af0c7e34572c2b9b7283 assets/quartztastic/items/blue_quartz_pane.json
