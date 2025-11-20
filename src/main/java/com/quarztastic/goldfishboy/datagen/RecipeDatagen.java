@@ -946,6 +946,16 @@ public class RecipeDatagen extends RecipeProvider {
             .requires(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
             .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
             .save(this.output, "blue_quartz_button_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, PrasioliteQuartzList.PRASIOLITE_QUARTZ_BUTTON_ITEM.get(), 4)
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_button_by_stonecutting");
+
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, PrasioliteQuartzList.PRASIOLITE_QUARTZ_BUTTON_ITEM.get())
+            .requires(PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_prasiolite_quartz_crystal", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()))
+            .save(this.output, "prasiolite_quartz_button_by_crafting");
     }
 
     protected void buildPressurePlateRecipes() {
@@ -992,6 +1002,17 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get())
             .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "blue_quartz_pressure_plate_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, PrasioliteQuartzList.PRASIOLITE_QUARTZ_PRESSURE_PLATE_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_pressure_plate_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, PrasioliteQuartzList.PRASIOLITE_QUARTZ_PRESSURE_PLATE_ITEM.get())
+            .pattern("@@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_pressure_plate_by_crafting");
     }
 
     protected void buildFenceWallGateRecipes() {
@@ -1173,6 +1194,39 @@ public class RecipeDatagen extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BRICKS_ITEM.get()), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_BRICK_WALL_ITEM.get())
             .unlockedBy("has_blue_quartz_bricks", has(BlueQuartzList.BLUE_QUARTZ_BRICKS_ITEM.get()))
             .save(this.output, "blue_quartz_brick_wall_by_stonecutting");
+
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_FENCE_ITEM.get(), 6)
+            .pattern("@#@")
+            .pattern("@#@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get())
+            .define('#', PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .unlockedBy("has_prasiolite_quartz_crystal", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_GATE_ITEM.get(), 2)
+            .pattern("#@#")
+            .pattern("#@#")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get())
+            .define('#', PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .unlockedBy("has_prasiolite_quartz_crystal", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
+        
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_WALL_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))       
+            .save(this.output, "prasiolite_quartz_wall_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_WALL_ITEM.get(), 6)
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_wall_by_crafting");
     }
 
     protected void buildDoorRecipes() {

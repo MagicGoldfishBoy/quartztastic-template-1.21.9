@@ -163,6 +163,11 @@
     "quartztastic:prasiolite_quartz_block",
     "quartztastic:prasiolite_quartz_pane",
     "quartztastic:prasiolite_quartz_slab",
-    "quartztastic:prasiolite_quartz_stairs"
+    "quartztastic:prasiolite_quartz_stairs",
+    "quartztastic:prasiolite_quartz_button",
+    "quartztastic:prasiolite_quartz_pressure_plate",
+    "quartztastic:prasiolite_quartz_fence",
+    "quartztastic:prasiolite_quartz_wall",
+    "quartztastic:prasiolite_quartz_gate"
   ]
 }

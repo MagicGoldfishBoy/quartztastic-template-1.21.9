@@ -247,7 +247,12 @@ public class TagDatagen extends BlockTagsProvider {
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK.get(),
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_PANE.get(),
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB.get(),
-                PrasioliteQuartzList.PRASIOLITE_QUARTZ_STAIRS.get()
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_STAIRS.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_BUTTON.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_PRESSURE_PLATE.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_FENCE.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_WALL.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_GATE.get()
             );
 
         
@@ -259,7 +264,9 @@ public class TagDatagen extends BlockTagsProvider {
 
                 CitrineList.CITRINE_PRESSURE_PLATE.get(),
 
-                BlueQuartzList.BLUE_QUARTZ_PRESSURE_PLATE.get()
+                BlueQuartzList.BLUE_QUARTZ_PRESSURE_PLATE.get(),
+
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_PRESSURE_PLATE.get()
             );
 
         this.tag(TagKeyList.FENCES_TAG)
@@ -270,7 +277,9 @@ public class TagDatagen extends BlockTagsProvider {
 
                 CitrineList.CITRINE_FENCE.get(),
 
-                BlueQuartzList.BLUE_QUARTZ_FENCE.get()
+                BlueQuartzList.BLUE_QUARTZ_FENCE.get(),
+
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_FENCE.get()
             );
 
         this.tag(TagKeyList.WALLS_TAG)
@@ -285,7 +294,9 @@ public class TagDatagen extends BlockTagsProvider {
                 CitrineList.CITRINE_BRICK_WALL.get(),
 
                 BlueQuartzList.BLUE_QUARTZ_WALL.get(),
-                BlueQuartzList.BLUE_QUARTZ_BRICK_WALL.get()
+                BlueQuartzList.BLUE_QUARTZ_BRICK_WALL.get(),
+
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_WALL.get()
             );
 
         this.tag(TagKeyList.GATES_TAG)
@@ -296,7 +307,9 @@ public class TagDatagen extends BlockTagsProvider {
 
                 CitrineList.CITRINE_GATE.get(),
 
-                BlueQuartzList.BLUE_QUARTZ_GATE.get()
+                BlueQuartzList.BLUE_QUARTZ_GATE.get(),
+
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_GATE.get()
             );
 
         this.tag(TagKeyList.DOORS_TAG)
@@ -336,8 +349,8 @@ public class TagDatagen extends BlockTagsProvider {
                 CitrineList.CITRINE_SKULL_STATUETTE.get(),
 
                 BlueQuartzList.BLUE_QUARTZ_SOUL_LANTERN.get(),
-                BlueQuartzList.BLUE_QUARTZ_SOUL_TORCH.get()
-                //BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE.get()
+                BlueQuartzList.BLUE_QUARTZ_SOUL_TORCH.get(),
+                BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE.get()
             );
 
         this.tag(TagKeyList.CLIMBABLE_TAG)

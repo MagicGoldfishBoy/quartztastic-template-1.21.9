@@ -207,7 +207,12 @@ public class ModelDatagen extends ModelProvider {
 
         blockModels.familyWithExistingFullBlock(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK.get())
             .slab(PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB.get())
-            .stairs(PrasioliteQuartzList.PRASIOLITE_QUARTZ_STAIRS.get());
+            .stairs(PrasioliteQuartzList.PRASIOLITE_QUARTZ_STAIRS.get())
+            .button(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BUTTON.get())
+            .pressurePlate(PrasioliteQuartzList.PRASIOLITE_QUARTZ_PRESSURE_PLATE.get())
+            .fence(PrasioliteQuartzList.PRASIOLITE_QUARTZ_FENCE.get())
+            .wall(PrasioliteQuartzList.PRASIOLITE_QUARTZ_WALL.get())
+            .fenceGate(PrasioliteQuartzList.PRASIOLITE_QUARTZ_GATE.get());
     }
 
     protected void buildPillarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
