@@ -1695,6 +1695,16 @@ public class RecipeDatagen extends RecipeProvider {
             .requires(CitrineList.CITRINE_SLAB_ITEM.get())
             .unlockedBy("has_citrine_slab", has(CitrineList.CITRINE_SLAB_ITEM.get()))
             .save(this.output, "citrine_path_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_PATH_ITEM.get(), 16)
+            .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "blue_quartz_path_by_stonecutting");
+
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, BlueQuartzList.BLUE_QUARTZ_PATH_ITEM.get(), 8)
+            .requires(BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_blue_quartz_slab", has(BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get()))
+            .save(this.output, "blue_quartz_path_by_crafting");
     }
 
     protected void buildStatueRecipes() {

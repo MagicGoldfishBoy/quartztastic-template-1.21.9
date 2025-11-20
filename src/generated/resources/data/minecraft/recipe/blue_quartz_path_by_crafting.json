@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "quartztastic:blue_quartz_slab"
+  ],
+  "result": {
+    "count": 8,
+    "id": "quartztastic:blue_quartz_path"
+  }
+}

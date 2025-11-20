@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy.registry;
 import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.OreBlock;
+import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.block.BlueQuartzNightstand;
 import com.quarztastic.goldfishboy.block.BlueQuartzBarrelBlock;
@@ -194,4 +195,8 @@ public class BlueQuartzList {
 
     public static DeferredBlock<Sink> BLUE_QUARTZ_SINK;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_SINK_ITEM;
+
+
+    public static DeferredBlock<Path> BLUE_QUARTZ_PATH;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_PATH_ITEM;
 }
