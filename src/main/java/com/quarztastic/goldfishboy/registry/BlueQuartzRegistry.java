@@ -8,6 +8,7 @@ import com.quarztastic.goldfishboy.block.BlueQuartzNightstand;
 import com.quarztastic.goldfishboy.block.BlueQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
+import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzOvenBlock;
@@ -749,6 +750,21 @@ public class BlueQuartzRegistry {
         );
         BlueQuartzList.BLUE_QUARTZ_PATH_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_PATH
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE = Quartztastic.BLOCKS.register(
+            "blue_quartz_skull_statuette", 
+            registryName -> new Statuette("skull", BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+                .lightLevel(state -> 5)
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE
         );
     }
     

@@ -9,6 +9,7 @@ import com.quarztastic.goldfishboy.block.BlueQuartzNightstand;
 import com.quarztastic.goldfishboy.block.BlueQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
+import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzOvenBlock;
@@ -199,4 +200,8 @@ public class BlueQuartzList {
 
     public static DeferredBlock<Path> BLUE_QUARTZ_PATH;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_PATH_ITEM;
+
+
+    public static DeferredBlock<Statuette> BLUE_QUARTZ_SKULL_STATUETTE;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_SKULL_STATUETTE_ITEM;
 }
