@@ -67,4 +67,8 @@ public class PrasioliteQuartzList {
 
     public static DeferredBlock<WallBlock> PRASIOLITE_QUARTZ_BRICK_WALL;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_BRICK_WALL_ITEM; 
+
+
+    public static DeferredBlock<Block> CHISELED_PRASIOLITE_QUARTZ_BLOCK;
+    public static DeferredItem<BlockItem> CHISELED_PRASIOLITE_QUARTZ_BLOCK_ITEM;
 }

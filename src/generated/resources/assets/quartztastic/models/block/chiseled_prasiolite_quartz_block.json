@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "quartztastic:block/chiseled_prasiolite_quartz_block"
+  }
+}

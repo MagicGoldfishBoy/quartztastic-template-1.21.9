@@ -242,6 +242,7 @@ public class TagDatagen extends BlockTagsProvider {
 
                 BlueQuartzList.BLUE_QUARTZ_PATH.get(),
 
+                
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE.get(),
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_NETHERRACK_ORE.get(),
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK.get(),
@@ -257,7 +258,9 @@ public class TagDatagen extends BlockTagsProvider {
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICKS.get(), 
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_SLAB.get(), 
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_STAIRS.get(), 
-                PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_WALL.get()
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_WALL.get(),
+
+                PrasioliteQuartzList.CHISELED_PRASIOLITE_QUARTZ_BLOCK.get()
             );
 
         

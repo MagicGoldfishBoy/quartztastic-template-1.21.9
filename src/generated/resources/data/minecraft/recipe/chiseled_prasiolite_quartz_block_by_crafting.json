@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "@": "quartztastic:prasiolite_quartz_slab"
+  },
+  "pattern": [
+    "@",
+    "@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:chiseled_prasiolite_quartz_block"
+  }
+}

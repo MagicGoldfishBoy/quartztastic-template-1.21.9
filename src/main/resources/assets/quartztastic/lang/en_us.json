@@ -295,6 +295,8 @@
   "block.quartztastic.prasiolite_quartz_brick_stairs": "Prasiolite Quartz Brick Stairs",
   "block.quartztastic.prasiolite_quartz_brick_wall": "Prasiolite Quartz Brick Wall",
 
+  "block.quartztastic.chiseled_prasiolite_quartz_block": "Chiseled Prasiolite Quartz Block",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",
