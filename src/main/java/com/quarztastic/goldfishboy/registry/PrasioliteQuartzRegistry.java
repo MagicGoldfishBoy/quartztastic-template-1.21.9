@@ -263,9 +263,51 @@ public class PrasioliteQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         PrasioliteQuartzList.CHISELED_PRASIOLITE_QUARTZ_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.CHISELED_PRASIOLITE_QUARTZ_BLOCK
+        );
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILES = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_tiles", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILES_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILES
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILE_SLAB = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_tile_slab", 
+            registryName -> new SlabBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME / 2, PRASIOLITE_QUARTZ_BLAST_RESISTANCE / 2)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILE_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILE_SLAB
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILE_STAIRS = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_tile_stairs", 
+            registryName -> new StairBlock(PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILES.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILE_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILE_STAIRS
         );
     }
 }

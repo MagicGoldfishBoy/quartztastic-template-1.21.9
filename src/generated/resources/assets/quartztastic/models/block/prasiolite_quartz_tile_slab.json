@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "quartztastic:block/prasiolite_quartz_tiles",
+    "side": "quartztastic:block/prasiolite_quartz_tiles",
+    "top": "quartztastic:block/prasiolite_quartz_tiles"
+  }
+}
