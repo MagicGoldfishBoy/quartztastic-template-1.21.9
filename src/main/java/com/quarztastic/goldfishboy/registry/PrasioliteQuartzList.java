@@ -93,4 +93,8 @@ public class PrasioliteQuartzList {
 
     public static DeferredBlock<IronBarsBlock> PRASIOLITE_QUARTZ_BARS;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_BARS_ITEM;
+
+
+    public static DeferredBlock<Block> PRASIOLITE_QUARTZ_BOOKSHELF;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_BOOKSHELF_ITEM;
 }

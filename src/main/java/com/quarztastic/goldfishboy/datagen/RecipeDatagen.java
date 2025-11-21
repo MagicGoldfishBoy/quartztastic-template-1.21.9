@@ -631,6 +631,17 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS_ITEM.get())
             .unlockedBy("has_prasiolite_quartz_bars", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS_ITEM.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_BOOKSHELF_ITEM.get())
+            .pattern("@@@")
+            .pattern("###")
+            .pattern("@@@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB_ITEM.get())
+            .define('#', Items.BOOK)
+            .unlockedBy("has_prasiolite_quartz_slab", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB_ITEM.get()))
+            .unlockedBy("has_book", has(Items.BOOK))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {

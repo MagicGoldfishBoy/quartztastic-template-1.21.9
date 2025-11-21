@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-21T12:41:20.955620923	Loot Tables
+// 1.21.9	2025-11-21T13:51:50.010879252	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -92,6 +92,7 @@ fede2a73aef578bda1ca27c2564dd3605b6f7f17 data/quartztastic/loot_table/blocks/cit
 e0846949b12f885cd9139b70bfcbcc69c7eeaa36 data/quartztastic/loot_table/blocks/prasiolite_quartz_bars.json
 99333923247397c418e414f36d57bb8fd7859d90 data/quartztastic/loot_table/blocks/prasiolite_quartz_bars_block.json
 4b720fc021885c75cc90bbe3c04bc87cdceeeac5 data/quartztastic/loot_table/blocks/prasiolite_quartz_block.json
+99bc7a9d9fdbb98f3f2b4698ec3922612f909ff2 data/quartztastic/loot_table/blocks/prasiolite_quartz_bookshelf.json
 cbe118111d096aeaec95dbd3f3ea0404cf2c8e81 data/quartztastic/loot_table/blocks/prasiolite_quartz_brick_slab.json
 a7d8e25db81fb660ab61d1ffdc4f9f34c163182b data/quartztastic/loot_table/blocks/prasiolite_quartz_brick_stairs.json
 5476209868ab75936d5ab3c3e69ec296402a40ee data/quartztastic/loot_table/blocks/prasiolite_quartz_brick_wall.json
