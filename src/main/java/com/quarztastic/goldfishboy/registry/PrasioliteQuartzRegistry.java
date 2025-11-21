@@ -192,5 +192,64 @@ public class PrasioliteQuartzRegistry {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_GATE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_GATE
         );
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICKS = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_bricks", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICKS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICKS
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_SLAB = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_brick_slab", 
+            registryName -> new SlabBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_SLAB
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_STAIRS = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_brick_stairs", 
+            registryName -> new StairBlock(
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICKS.get().defaultBlockState(),
+                BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                    .sound(PRASIOLITE_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_STAIRS
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_WALL = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_brick_wall", 
+            registryName -> new WallBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_WALL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_WALL
+        );
     }
 }

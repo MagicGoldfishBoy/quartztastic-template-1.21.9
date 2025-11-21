@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "quartztastic:block/prasiolite_quartz_bricks",
+    "side": "quartztastic:block/prasiolite_quartz_bricks",
+    "top": "quartztastic:block/prasiolite_quartz_bricks"
+  }
+}

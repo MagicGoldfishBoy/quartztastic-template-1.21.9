@@ -54,5 +54,17 @@ public class PrasioliteQuartzList {
 
     public static DeferredBlock<FenceGateBlock> PRASIOLITE_QUARTZ_GATE;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_GATE_ITEM;
-    
+
+
+    public static DeferredBlock<Block> PRASIOLITE_QUARTZ_BRICKS;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_BRICKS_ITEM;
+
+    public static DeferredBlock<SlabBlock> PRASIOLITE_QUARTZ_BRICK_SLAB;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_BRICK_SLAB_ITEM;
+
+    public static DeferredBlock<StairBlock> PRASIOLITE_QUARTZ_BRICK_STAIRS;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_BRICK_STAIRS_ITEM;
+
+    public static DeferredBlock<WallBlock> PRASIOLITE_QUARTZ_BRICK_WALL;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_BRICK_WALL_ITEM; 
 }

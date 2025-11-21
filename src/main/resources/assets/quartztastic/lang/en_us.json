@@ -290,6 +290,11 @@
   "block.quartztastic.prasiolite_quartz_wall": "Prasiolite Quartz Wall",
   "block.quartztastic.prasiolite_quartz_gate": "Prasiolite Quartz Gate",
 
+  "block.quartztastic.prasiolite_quartz_bricks": "Prasiolite Quartz Bricks",
+  "block.quartztastic.prasiolite_quartz_brick_slab": "Prasiolite Quartz Brick Slab",
+  "block.quartztastic.prasiolite_quartz_brick_stairs": "Prasiolite Quartz Brick Stairs",
+  "block.quartztastic.prasiolite_quartz_brick_wall": "Prasiolite Quartz Brick Wall",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",
