@@ -177,6 +177,8 @@
     "quartztastic:prasiolite_quartz_tiles",
     "quartztastic:prasiolite_quartz_tile_slab",
     "quartztastic:prasiolite_quartz_tile_stairs",
-    "quartztastic:prasiolite_quartz_pillar"
+    "quartztastic:prasiolite_quartz_pillar",
+    "quartztastic:prasiolite_quartz_bars_block",
+    "quartztastic:prasiolite_quartz_bars"
   ]
 }

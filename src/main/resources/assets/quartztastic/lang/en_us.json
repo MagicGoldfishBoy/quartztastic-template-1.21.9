@@ -303,6 +303,9 @@
 
   "block.quartztastic.prasiolite_quartz_pillar": "Prasiolite Quartz Pillar",
 
+  "block.quartztastic.prasiolite_quartz_bars": "Prasiolite Quartz Bars",
+  "block.quartztastic.prasiolite_quartz_bars_block": "Prasiolite Quartz Bars Block",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

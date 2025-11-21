@@ -324,5 +324,37 @@ public class PrasioliteQuartzRegistry {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_PILLAR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_PILLAR
         );
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS_BLOCK = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_bars_block", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS_BLOCK
+        );
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_bars", 
+            registryName -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS
+        );
     }
 }

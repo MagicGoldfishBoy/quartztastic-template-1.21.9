@@ -614,6 +614,23 @@ public class RecipeDatagen extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_PILLAR_ITEM.get())
             .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS_ITEM.get(), 18)
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_prasiolite_quartz_crystal", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS_BLOCK_ITEM.get())
+            .pattern("@@@")
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_bars", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildSlabRecipes() {

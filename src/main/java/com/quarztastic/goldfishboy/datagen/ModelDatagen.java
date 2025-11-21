@@ -634,6 +634,9 @@ public class ModelDatagen extends ModelProvider {
 
 
         blockModels.createGlassBlocks(BlueQuartzList.BLUE_QUARTZ_BARS_BLOCK.get(), BlueQuartzList.BLUE_QUARTZ_BARS.get());
+
+
+        blockModels.createGlassBlocks(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS_BLOCK.get(), PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARS.get());
     }
 }
 

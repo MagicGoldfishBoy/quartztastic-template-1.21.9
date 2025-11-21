@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "edge": "quartztastic:block/prasiolite_quartz_bars_top",
+    "pane": "quartztastic:block/prasiolite_quartz_bars_block"
+  }
+}
