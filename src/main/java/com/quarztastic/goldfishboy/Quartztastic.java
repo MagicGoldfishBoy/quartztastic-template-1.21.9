@@ -1,6 +1,7 @@
 package com.quarztastic.goldfishboy;
 
 import org.slf4j.Logger;
+import java.time.LocalTime;
 
 import com.mojang.logging.LogUtils;
 import com.quarztastic.goldfishboy.datagen.Datagen;
@@ -323,7 +324,11 @@ public class Quartztastic {
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("HELLO from server starting");
+        LocalTime currentTime = LocalTime.now();
+        LOGGER.info("Server Starting Time: " + currentTime.toString());
+        if (currentTime.isAfter(LocalTime.of(23, 0))) {
+            LOGGER.info("Hello?");
+        }
     }
 
     public void gatherData(GatherDataEvent.Client event) {
