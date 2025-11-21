@@ -309,6 +309,12 @@ public class Quartztastic {
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BRICK_WALL.get(), ChunkSectionLayer.TRANSLUCENT);
 
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.CHISELED_PRASIOLITE_QUARTZ_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
+
+        ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILES.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILE_SLAB.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILE_STAIRS.get(), ChunkSectionLayer.TRANSLUCENT);
+
+        ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_PILLAR.get(), ChunkSectionLayer.TRANSLUCENT);
     }
 
 

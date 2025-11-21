@@ -1,6 +1,7 @@
 package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.block.OreBlock;
+import com.quarztastic.goldfishboy.block.Pillar;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -81,4 +82,8 @@ public class PrasioliteQuartzList {
 
     public static DeferredBlock<StairBlock> PRASIOLITE_QUARTZ_TILE_STAIRS;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_TILE_STAIRS_ITEM;
+
+
+    public static DeferredBlock<Pillar> PRASIOLITE_QUARTZ_PILLAR;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_PILLAR_ITEM;
 }

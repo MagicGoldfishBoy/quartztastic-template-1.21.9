@@ -301,6 +301,8 @@
   "block.quartztastic.prasiolite_quartz_tile_slab": "Prasiolite Quartz Tile Slab",
   "block.quartztastic.prasiolite_quartz_tile_stairs": "Prasiolite Quartz Tile Stairs",
 
+  "block.quartztastic.prasiolite_quartz_pillar": "Prasiolite Quartz Pillar",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

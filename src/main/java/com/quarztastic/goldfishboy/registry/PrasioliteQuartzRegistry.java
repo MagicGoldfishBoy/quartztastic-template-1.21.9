@@ -2,6 +2,7 @@ package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.OreBlock;
+import com.quarztastic.goldfishboy.block.Pillar;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -308,6 +309,20 @@ public class PrasioliteQuartzRegistry {
         );
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILE_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_TILE_STAIRS
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_PILLAR = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_pillar", 
+            registryName -> new Pillar(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_PILLAR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_PILLAR
         );
     }
 }
