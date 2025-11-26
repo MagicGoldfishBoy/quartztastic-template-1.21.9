@@ -308,6 +308,9 @@
 
   "block.quartztastic.prasiolite_quartz_bookshelf": "Prasiolite Quartz Bookshelf",
 
+  "block.quartztastic.prasiolite_quartz_furnace": "Prasiolite Quartz Furnace",
+  "container.prasiolite_quartz_furnace": "Prasiolite Quartz Furnace",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

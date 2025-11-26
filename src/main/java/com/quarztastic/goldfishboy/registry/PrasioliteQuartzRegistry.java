@@ -1,8 +1,10 @@
 package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.block.PrasioliteQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.entity.PrasioliteQuartzFurnaceEntity;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -17,6 +19,7 @@ import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -372,6 +375,29 @@ public class PrasioliteQuartzRegistry {
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_BOOKSHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_BOOKSHELF
+        );
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_FURNACE = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_furnace", 
+            registryName -> new PrasioliteQuartzFurnaceBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+            )
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "prasiolite_quartz_furnace",
+            () -> new BlockEntityType<>(
+            PrasioliteQuartzFurnaceEntity::new,
+            false,
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_FURNACE.get())
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_FURNACE
         );
     }
 }
