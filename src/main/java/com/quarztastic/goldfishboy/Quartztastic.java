@@ -113,9 +113,11 @@ public class Quartztastic {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-
-        LOGGER.info("HELLO FROM COMMON SETUP");
-
+        LocalTime currentTime = LocalTime.now();
+        LOGGER.info("Common Setup Starting Time: " + currentTime.toString());
+        if (currentTime.isAfter(LocalTime.of(23, 30))) {
+            LOGGER.info("Hello?");
+        }
     }
 
 
