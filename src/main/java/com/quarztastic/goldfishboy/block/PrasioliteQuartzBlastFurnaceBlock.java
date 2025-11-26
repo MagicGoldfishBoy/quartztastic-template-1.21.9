@@ -3,8 +3,8 @@ package com.quarztastic.goldfishboy.block;
 import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
-import com.quarztastic.goldfishboy.entity.BlueQuartzBlastFurnaceEntity;
-import com.quarztastic.goldfishboy.registry.BlueQuartzList;
+import com.quarztastic.goldfishboy.entity.PrasioliteQuartzBlastFurnaceEntity;
+import com.quarztastic.goldfishboy.registry.PrasioliteQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -25,22 +25,22 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class BlueQuartzBlastFurnaceBlock extends AbstractFurnaceBlock {
-    public static final MapCodec<BlueQuartzBlastFurnaceBlock> CODEC = simpleCodec(BlueQuartzBlastFurnaceBlock::new);
+public class PrasioliteQuartzBlastFurnaceBlock extends AbstractFurnaceBlock {
+    public static final MapCodec<PrasioliteQuartzBlastFurnaceBlock> CODEC = simpleCodec(PrasioliteQuartzBlastFurnaceBlock::new);
 
     @Override
-    public MapCodec<BlueQuartzBlastFurnaceBlock> codec() {
+    public MapCodec<PrasioliteQuartzBlastFurnaceBlock> codec() {
         return CODEC;
     }
 
-    public BlueQuartzBlastFurnaceBlock(BlockBehaviour.Properties properties) {
+    public PrasioliteQuartzBlastFurnaceBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
     @SuppressWarnings("null")
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new BlueQuartzBlastFurnaceEntity(pos, state);
+        return new PrasioliteQuartzBlastFurnaceEntity(pos, state);
     }
 
     @SuppressWarnings("null")
@@ -48,8 +48,8 @@ public class BlueQuartzBlastFurnaceBlock extends AbstractFurnaceBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         if (level.isClientSide()) return null;
-        if (blockEntityType != BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE_ENTITY.get()) return null;
-        return (BlockEntityTicker<T>) (lvl, pos, st, entity) -> BlueQuartzBlastFurnaceEntity.serverTick((ServerLevel) lvl, pos, st, (BlueQuartzBlastFurnaceEntity) entity);
+        if (blockEntityType != PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLAST_FURNACE_ENTITY.get()) return null;
+        return (BlockEntityTicker<T>) (lvl, pos, st, entity) -> PrasioliteQuartzBlastFurnaceEntity.serverTick((ServerLevel) lvl, pos, st, (PrasioliteQuartzBlastFurnaceEntity) entity);
     }
     /**
      * Called to open this furnace's container.
@@ -60,7 +60,7 @@ public class BlueQuartzBlastFurnaceBlock extends AbstractFurnaceBlock {
     @Override
     protected void openContainer(Level level, BlockPos pos, Player player) {
         BlockEntity blockentity = level.getBlockEntity(pos);
-        if (blockentity instanceof BlueQuartzBlastFurnaceEntity) {
+        if (blockentity instanceof PrasioliteQuartzBlastFurnaceEntity) {
             player.openMenu((MenuProvider)blockentity);
             player.awardStat(Stats.INTERACT_WITH_FURNACE);
         }
