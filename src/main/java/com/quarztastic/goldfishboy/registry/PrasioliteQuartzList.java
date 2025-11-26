@@ -4,8 +4,10 @@ import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBlastFurnaceBlock;
+import com.quarztastic.goldfishboy.block.PrasioliteQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.entity.PrasioliteQuartzOvenEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzFurnaceEntity;
 
@@ -108,6 +110,10 @@ public class PrasioliteQuartzList {
     public static DeferredBlock<PrasioliteQuartzFurnaceBlock> PRASIOLITE_QUARTZ_FURNACE;
     public static Supplier<BlockEntityType<PrasioliteQuartzFurnaceEntity>> PRASIOLITE_QUARTZ_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_FURNACE_ITEM;
+
+    public static DeferredBlock<PrasioliteQuartzOvenBlock> PRASIOLITE_QUARTZ_OVEN;
+    public static Supplier<BlockEntityType<PrasioliteQuartzOvenEntity>> PRASIOLITE_QUARTZ_OVEN_ENTITY;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_OVEN_ITEM;
 
     public static DeferredBlock<PrasioliteQuartzBlastFurnaceBlock> PRASIOLITE_QUARTZ_BLAST_FURNACE;
     public static Supplier<BlockEntityType<PrasioliteQuartzBlastFurnaceEntity>> PRASIOLITE_QUARTZ_BLAST_FURNACE_ENTITY;

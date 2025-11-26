@@ -3,8 +3,10 @@ package com.quarztastic.goldfishboy.registry;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBlastFurnaceBlock;
+import com.quarztastic.goldfishboy.block.PrasioliteQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
+import com.quarztastic.goldfishboy.entity.PrasioliteQuartzOvenEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzFurnaceEntity;
 
@@ -400,6 +402,29 @@ public class PrasioliteQuartzRegistry {
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_FURNACE
+        );
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_OVEN = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_oven", 
+            registryName -> new PrasioliteQuartzOvenBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+            )
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_OVEN_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "prasiolite_quartz_oven",
+            () -> new BlockEntityType<>(
+            PrasioliteQuartzOvenEntity::new,
+            false,
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_OVEN.get())
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_OVEN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_OVEN
         );
 
 
