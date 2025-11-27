@@ -322,6 +322,7 @@
 
   "block.quartztastic.prasiolite_quartz_chair": "Prasiolite Quartz Chair",
   "block.quartztastic.prasiolite_quartz_table": "Prasiolite Quartz Table",
+  "block.quartztastic.prasiolite_quartz_shelf": "Prasiolite Quartz Shelf",
 
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",

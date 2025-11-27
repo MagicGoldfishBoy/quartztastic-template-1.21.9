@@ -1607,6 +1607,16 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
             .unlockedBy("has_blue_quartz_slab", has(BlueQuartzList.BLUE_QUARTZ_SLAB.get()))
             .save(this.output);
+
+            
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_SHELF_ITEM.get(), 2)
+            .pattern("###")
+            .pattern("  @")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get())
+            .define('#', PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_crystal", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()))
+            .unlockedBy("has_prasiolite_quartz_slab", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB.get()))
+            .save(this.output);
     }
 
     protected void buildLanternChainRecipes() {
