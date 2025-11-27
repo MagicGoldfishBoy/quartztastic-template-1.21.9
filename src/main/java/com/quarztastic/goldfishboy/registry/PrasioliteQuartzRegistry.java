@@ -6,6 +6,7 @@ import com.quarztastic.goldfishboy.block.PrasioliteQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
+import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzNightstand;
@@ -756,6 +757,21 @@ public class PrasioliteQuartzRegistry {
         );
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_PATH_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_PATH
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_skull_statuette", 
+            registryName -> new Statuette("skull", BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+                .lightLevel(state -> 5)
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE
         );
     }
 }

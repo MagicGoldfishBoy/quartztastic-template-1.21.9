@@ -344,6 +344,8 @@
 
   "block.quartztastic.prasiolite_quartz_path": "Prasiolite Quartz Path",
 
+  "block.quartztastic.prasiolite_quartz_skull_statuette": "Prasiolite Quartz Skull Statuette",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

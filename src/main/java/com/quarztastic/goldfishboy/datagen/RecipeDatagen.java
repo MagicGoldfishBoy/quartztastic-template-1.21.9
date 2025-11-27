@@ -2173,6 +2173,11 @@ public class RecipeDatagen extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE_ITEM.get())
             .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "blue_quartz_skull_statuette_by_stonecutting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_skull_statuette_by_stonecutting");
     }
     public static class Runner extends RecipeProvider.Runner {
 

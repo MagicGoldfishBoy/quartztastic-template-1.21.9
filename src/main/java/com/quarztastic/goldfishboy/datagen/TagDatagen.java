@@ -296,6 +296,8 @@ public class TagDatagen extends BlockTagsProvider {
 
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK.get(),
 
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_PATH.get(),
+
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_PATH.get()
             );
 

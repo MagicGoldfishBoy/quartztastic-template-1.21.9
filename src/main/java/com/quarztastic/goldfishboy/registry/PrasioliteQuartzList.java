@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.block.PrasioliteQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
+import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzNightstand;
@@ -200,4 +201,8 @@ public class PrasioliteQuartzList {
 
     public static DeferredBlock<Path> PRASIOLITE_QUARTZ_PATH;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_PATH_ITEM;
+
+
+    public static DeferredBlock<Statuette> PRASIOLITE_QUARTZ_SKULL_STATUETTE;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_SKULL_STATUETTE_ITEM;
 }
