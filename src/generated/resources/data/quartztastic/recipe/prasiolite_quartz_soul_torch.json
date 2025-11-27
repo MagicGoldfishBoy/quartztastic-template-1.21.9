@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "quartztastic:prasiolite_quartz_crystal",
+    "$": "minecraft:soul_sand",
+    "@": "#minecraft:coals"
+  },
+  "pattern": [
+    "@",
+    "$",
+    "#"
+  ],
+  "result": {
+    "count": 4,
+    "id": "quartztastic:prasiolite_quartz_soul_torch"
+  }
+}

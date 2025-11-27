@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_torch",
+  "textures": {
+    "torch": "quartztastic:block/prasiolite_quartz_soul_torch"
+  }
+}

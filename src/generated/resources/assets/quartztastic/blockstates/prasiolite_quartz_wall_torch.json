@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "quartztastic:block/prasiolite_quartz_wall_torch"
+    },
+    "facing=north": {
+      "model": "quartztastic:block/prasiolite_quartz_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "quartztastic:block/prasiolite_quartz_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "quartztastic:block/prasiolite_quartz_wall_torch",
+      "y": 180
+    }
+  }
+}
