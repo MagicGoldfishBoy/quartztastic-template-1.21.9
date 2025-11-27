@@ -18,6 +18,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
@@ -547,6 +548,54 @@ public class PrasioliteQuartzRegistry {
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_LIGHT
+        );
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LANTERN = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_lantern", 
+            registryName -> new net.minecraft.world.level.block.LanternBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .lightLevel(state -> 15)
+            )
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LANTERN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_LANTERN
+        );
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_SOUL_LANTERN = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_soul_lantern", 
+            registryName -> new net.minecraft.world.level.block.LanternBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .lightLevel(state -> 10)
+            )
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_SOUL_LANTERN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_SOUL_LANTERN
+        );
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIN = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_chain", 
+            registryName -> new ChainBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIN
         );
     }
 }

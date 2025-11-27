@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:soul_torch",
+    "@": "quartztastic:prasiolite_quartz_crystal"
+  },
+  "pattern": [
+    "@@@",
+    "@#@",
+    "@@@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:prasiolite_quartz_soul_lantern"
+  }
+}

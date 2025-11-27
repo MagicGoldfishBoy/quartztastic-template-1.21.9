@@ -189,6 +189,9 @@
     "quartztastic:prasiolite_quartz_chair",
     "quartztastic:prasiolite_quartz_table",
     "quartztastic:prasiolite_quartz_shelf",
-    "quartztastic:prasiolite_quartz_light"
+    "quartztastic:prasiolite_quartz_light",
+    "quartztastic:prasiolite_quartz_lantern",
+    "quartztastic:prasiolite_quartz_soul_lantern",
+    "quartztastic:prasiolite_quartz_chain"
   ]
 }

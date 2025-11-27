@@ -326,6 +326,10 @@
 
   "block.quartztastic.prasiolite_quartz_light": "Prasiolite Quartz Light",
 
+  "block.quartztastic.prasiolite_quartz_lantern": "Prasiolite Quartz Lantern",
+  "block.quartztastic.prasiolite_quartz_soul_lantern": "Prasiolite Quartz Soul Lantern",
+  "block.quartztastic.prasiolite_quartz_chain": "Prasiolite Quartz Chain",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

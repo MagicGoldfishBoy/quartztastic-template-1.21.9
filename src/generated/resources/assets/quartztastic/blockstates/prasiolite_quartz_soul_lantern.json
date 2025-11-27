@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "quartztastic:block/prasiolite_quartz_soul_lantern"
+    },
+    "hanging=true": {
+      "model": "quartztastic:block/prasiolite_quartz_soul_lantern_hanging"
+    }
+  }
+}
