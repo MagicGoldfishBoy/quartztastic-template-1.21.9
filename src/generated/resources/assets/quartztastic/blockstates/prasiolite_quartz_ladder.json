@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "quartztastic:block/prasiolite_quartz_ladder",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "quartztastic:block/prasiolite_quartz_ladder",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "quartztastic:block/prasiolite_quartz_ladder"
+    },
+    "facing=west": {
+      "model": "quartztastic:block/prasiolite_quartz_ladder",
+      "y": 90
+    }
+  }
+}

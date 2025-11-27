@@ -603,6 +603,10 @@ public class ModelDatagen extends ModelProvider {
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_SHELF_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/prasiolite_quartz_shelf"))
         );
+
+
+        ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER.get(), PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER_ITEM.get(), 
+            new Variant(modLocation("block/prasiolite_quartz_ladder")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

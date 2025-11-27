@@ -24,6 +24,7 @@ import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -171,4 +172,8 @@ public class PrasioliteQuartzList {
     public static DeferredBlock<TorchBlock> PRASIOLITE_QUARTZ_SOUL_TORCH;
     public static DeferredBlock<WallTorchBlock> PRASIOLITE_QUARTZ_WALL_SOUL_TORCH;
     public static DeferredItem<StandingAndWallBlockItem> PRASIOLITE_QUARTZ_SOUL_TORCH_ITEM;
+
+
+    public static DeferredBlock<LadderBlock> PRASIOLITE_QUARTZ_LADDER;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_LADDER_ITEM;
 }

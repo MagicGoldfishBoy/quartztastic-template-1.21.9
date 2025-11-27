@@ -666,5 +666,20 @@ public class PrasioliteQuartzRegistry {
                 new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM, registryName))
         ));
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_ladder", 
+            registryName -> new net.minecraft.world.level.block.LadderBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER
+        );
     }
 }
