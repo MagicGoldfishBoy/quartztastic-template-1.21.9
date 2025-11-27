@@ -615,6 +615,8 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_BLOCK.get(), PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_ITEM.get(), 
             new Variant(modLocation("block/prasiolite_quartz_nightstand")), new Variant(modLocation("block/prasiolite_quartz_nightstand_open")));
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK.get(), new Variant(modLocation("block/prasiolite_quartz_sink")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

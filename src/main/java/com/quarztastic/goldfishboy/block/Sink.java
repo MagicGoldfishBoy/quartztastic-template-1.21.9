@@ -116,6 +116,28 @@ public class Sink extends HorizontalDirectionalBlock {
         )
     );
 
+    public static final Map<Direction, VoxelShape> BASIN_WITH_LEGS_SHAPE = Shapes.rotateHorizontal(
+        Shapes.or(Block.box(0, 6, 0, 2, 14, 16),
+        Block.box(2, 6, 0, 14, 14, 4),
+        Block.box(2, 6, 4, 14, 8, 13),
+        Block.box(2, 6, 13, 14, 14, 16),
+        Block.box(14, 6, 0, 16, 14, 16),
+        Block.box(3.25, 14, 1.5, 5.25, 15.25, 3.5),
+        Block.box(10.75, 14, 1.5, 12.75, 15.25, 3.5),
+        Block.box(6.75, 14, 2, 9.25, 16.5, 3),
+        Block.box(6.75, 14, 1.5, 9.25, 16, 2),
+        Block.box(6.75, 15.25, 3, 9.25, 16.5, 5),
+        Block.box(0, 0, 0, 3, 6, 3),
+        Block.box(0, 0, 13, 3, 6, 16),
+        Block.box(13, 0, 13, 16, 6, 16),
+        Block.box(13, 0, 0, 16, 6, 3),
+        Block.box(0, 5, 3, 1, 6, 13),
+        Block.box(15, 5, 3, 16, 6, 13),
+        Block.box(3, 5, 0, 13, 6, 1),
+        Block.box(3, 5, 15, 13, 6, 16)
+        )
+    );
+
     @SuppressWarnings("null")
     @Override
     protected InteractionResult useItemOn(
@@ -183,6 +205,8 @@ public class Sink extends HorizontalDirectionalBlock {
                 return BASIN_WITH_SHELVES_SHAPE.get(state.getValue(FACING).getOpposite());
             case "basin":
                 return BASIN_SHAPE.get(state.getValue(FACING).getOpposite());
+            case "basin_with_legs":
+                return BASIN_WITH_LEGS_SHAPE.get(state.getValue(FACING).getOpposite());
             default:
                 return BATHROOM_SHAPE.get(state.getValue(FACING).getOpposite());
         }

@@ -340,6 +340,8 @@
   "block.quartztastic.prasiolite_quartz_nightstand": "Prasiolite Quartz Nightstand",
   "container.prasiolite_quartz_nightstand": "Prasiolite Quartz Nightstand",
 
+  "block.quartztastic.prasiolite_quartz_sink": "Prasiolite Quartz Sink",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",
