@@ -2024,6 +2024,17 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))
             .unlockedBy("has_chest", has(Items.CHEST))
             .save(this.output);
+
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_ITEM.get())
+            .pattern("@#@")
+            .pattern("@ @")
+            .pattern("@#@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get())
+            .define('#', PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildSinkRecipes() {

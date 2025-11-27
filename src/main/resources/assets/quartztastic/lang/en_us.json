@@ -334,6 +334,9 @@
 
   "block.quartztastic.prasiolite_quartz_ladder": "Prasiolite Quartz Ladder",
 
+  "block.quartztastic.prasiolite_quartz_barrel": "Prasiolite Quartz Barrel",
+  "container.prasiolite_quartz_barrel": "Prasiolite Quartz Barrel",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

@@ -289,7 +289,9 @@ public class TagDatagen extends BlockTagsProvider {
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_SOUL_LANTERN.get(),
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIN.get(),
 
-                PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER.get()
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER.get(),
+
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_BLOCK.get()
             );
 
         
@@ -373,7 +375,8 @@ public class TagDatagen extends BlockTagsProvider {
                 SmokyQuartzList.SMOKY_QUARTZ_BARREL.get(),
                 RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK.get(),
                 CitrineList.CITRINE_BARREL_BLOCK.get(),
-                BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK.get()
+                BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_BLOCK.get()
             );
 
 
