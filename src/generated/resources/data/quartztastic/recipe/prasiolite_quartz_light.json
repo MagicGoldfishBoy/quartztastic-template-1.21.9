@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "quartztastic:prasiolite_quartz_block",
+    "minecraft:glowstone"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:prasiolite_quartz_light"
+  }
+}

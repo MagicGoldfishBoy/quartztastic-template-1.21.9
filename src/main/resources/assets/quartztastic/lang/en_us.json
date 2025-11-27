@@ -324,6 +324,8 @@
   "block.quartztastic.prasiolite_quartz_table": "Prasiolite Quartz Table",
   "block.quartztastic.prasiolite_quartz_shelf": "Prasiolite Quartz Shelf",
 
+  "block.quartztastic.prasiolite_quartz_light": "Prasiolite Quartz Light",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",
