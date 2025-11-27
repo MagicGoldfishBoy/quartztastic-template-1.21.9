@@ -7,10 +7,12 @@ import com.quarztastic.goldfishboy.block.PrasioliteQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBarrelBlock;
+import com.quarztastic.goldfishboy.block.PrasioliteQuartzNightstand;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzOvenEntity;
+import com.quarztastic.goldfishboy.entity.PrasioliteQuartzNightstandEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzFurnaceEntity;
@@ -703,6 +705,27 @@ public class PrasioliteQuartzRegistry {
         );
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_BLOCK
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_BLOCK = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_nightstand", 
+            registryName -> new PrasioliteQuartzNightstand(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "prasiolite_quartz_nightstand",
+            () -> new BlockEntityType<>(
+            PrasioliteQuartzNightstandEntity::new,
+            false,
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_BLOCK.get())
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_BLOCK
         );
     }
 }
