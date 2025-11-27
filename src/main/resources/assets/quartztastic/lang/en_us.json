@@ -342,6 +342,8 @@
 
   "block.quartztastic.prasiolite_quartz_sink": "Prasiolite Quartz Sink",
 
+  "block.quartztastic.prasiolite_quartz_path": "Prasiolite Quartz Path",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

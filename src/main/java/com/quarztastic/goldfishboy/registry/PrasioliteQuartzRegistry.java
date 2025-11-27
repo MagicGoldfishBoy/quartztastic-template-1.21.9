@@ -11,6 +11,7 @@ import com.quarztastic.goldfishboy.block.PrasioliteQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzNightstand;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.OreBlock;
+import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzOvenEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzNightstandEntity;
@@ -741,6 +742,20 @@ public class PrasioliteQuartzRegistry {
         );
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_PATH = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_path", 
+            registryName -> new Path(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.65f, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_PATH_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_PATH
         );
     }
 }

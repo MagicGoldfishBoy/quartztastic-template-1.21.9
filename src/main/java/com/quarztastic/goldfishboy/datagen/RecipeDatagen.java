@@ -2141,6 +2141,16 @@ public class RecipeDatagen extends RecipeProvider {
             .requires(BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get())
             .unlockedBy("has_blue_quartz_slab", has(BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get()))
             .save(this.output, "blue_quartz_path_by_crafting");
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_PATH_ITEM.get(), 16)
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_path_by_stonecutting");
+
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_PATH_ITEM.get(), 8)
+            .requires(PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_slab", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_path_by_crafting");
     }
 
     protected void buildStatueRecipes() {
