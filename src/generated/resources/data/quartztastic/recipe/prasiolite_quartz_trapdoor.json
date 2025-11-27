@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": "quartztastic:prasiolite_quartz_slab"
+  },
+  "pattern": [
+    "@@"
+  ],
+  "result": {
+    "count": 3,
+    "id": "quartztastic:prasiolite_quartz_trapdoor"
+  }
+}

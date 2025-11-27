@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-26T11:54:30.744336637	Loot Tables
+// 1.21.9	2025-11-27T09:27:38.815512588	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -99,6 +99,7 @@ a7d8e25db81fb660ab61d1ffdc4f9f34c163182b data/quartztastic/loot_table/blocks/pra
 5476209868ab75936d5ab3c3e69ec296402a40ee data/quartztastic/loot_table/blocks/prasiolite_quartz_brick_wall.json
 cc4f3e0c5cf61c4026323e3e6c6874654394963b data/quartztastic/loot_table/blocks/prasiolite_quartz_bricks.json
 b14b2a44e32e72eb28f382ff6d0fee50ca3b448b data/quartztastic/loot_table/blocks/prasiolite_quartz_button.json
+0895baefce3aca9645cd09407514d8c571f8bd48 data/quartztastic/loot_table/blocks/prasiolite_quartz_door.json
 dfde14334ef591a4dd0e980132fd8fdf2d9e9b5b data/quartztastic/loot_table/blocks/prasiolite_quartz_fence.json
 d873b2aa111d1c8608297505e5f8dd8d9116f341 data/quartztastic/loot_table/blocks/prasiolite_quartz_furnace.json
 afe3027543b5ceabe4ab60761ede6d79f729db33 data/quartztastic/loot_table/blocks/prasiolite_quartz_gate.json
@@ -113,6 +114,7 @@ a260f0da4152a303bab01f24bf90ca8d3855568f data/quartztastic/loot_table/blocks/pra
 9671ac92ecc63e4892b654c944cee9b8608d0ea8 data/quartztastic/loot_table/blocks/prasiolite_quartz_tile_slab.json
 cde6ca970b5a108c3caf8d68f3d42af20ba15f78 data/quartztastic/loot_table/blocks/prasiolite_quartz_tile_stairs.json
 16c8896c447b2614856fbebb2eff46b029fbd206 data/quartztastic/loot_table/blocks/prasiolite_quartz_tiles.json
+b1fb8e4521c9ca5f4916f28664fbb87727dadb1a data/quartztastic/loot_table/blocks/prasiolite_quartz_trapdoor.json
 39eab0d314ef7e50f3d76b92036bb01c4411a7c8 data/quartztastic/loot_table/blocks/prasiolite_quartz_wall.json
 b0571a9c2e1a3ae7eda63b321cf07d7ef9e5a689 data/quartztastic/loot_table/blocks/rose_quartz_barrel.json
 039dfb70c214fcfd88a19088a00ece06d69109d5 data/quartztastic/loot_table/blocks/rose_quartz_bars.json

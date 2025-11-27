@@ -183,6 +183,8 @@
     "quartztastic:prasiolite_quartz_bookshelf",
     "quartztastic:prasiolite_quartz_furnace",
     "quartztastic:prasiolite_quartz_blast_furnace",
-    "quartztastic:prasiolite_quartz_oven"
+    "quartztastic:prasiolite_quartz_oven",
+    "quartztastic:prasiolite_quartz_door",
+    "quartztastic:prasiolite_quartz_trapdoor"
   ]
 }

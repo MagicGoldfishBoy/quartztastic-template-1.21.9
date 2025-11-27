@@ -317,6 +317,9 @@
   "block.quartztastic.prasiolite_quartz_blast_furnace": "Prasiolite Quartz Blast Furnace",
   "container.prasiolite_quartz_blast_furnace": "Prasiolite Quartz Blast Furnace",
 
+  "block.quartztastic.prasiolite_quartz_door": "Prasiolite Quartz Door",
+  "block.quartztastic.prasiolite_quartz_trapdoor": "Prasiolite Quartz Trapdoor",
+
   "quartztastic.configuration.title": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml": "Quartztastic Configs",
   "quartztastic.configuration.section.quartztastic.common.toml.title": "Quartztastic Configs",

@@ -1441,6 +1441,21 @@ public class RecipeDatagen extends RecipeProvider {
             .define('@', BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get())
             .unlockedBy("has_blue_quartz_slab", has(BlueQuartzList.BLUE_QUARTZ_SLAB_ITEM.get()))
             .save(this.output);
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_DOOR_ITEM.get(), 3)
+            .pattern("@@")
+            .pattern("@@")
+            .pattern("@@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_prasiolite_quartz_crystal", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_TRAPDOOR_ITEM.get(), 3)
+            .pattern("@@")
+            .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_slab", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_SLAB_ITEM.get()))
+            .save(this.output);
     }
 
     protected void buildChairRecipes() {

@@ -15,12 +15,14 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -118,4 +120,11 @@ public class PrasioliteQuartzList {
     public static DeferredBlock<PrasioliteQuartzBlastFurnaceBlock> PRASIOLITE_QUARTZ_BLAST_FURNACE;
     public static Supplier<BlockEntityType<PrasioliteQuartzBlastFurnaceEntity>> PRASIOLITE_QUARTZ_BLAST_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_BLAST_FURNACE_ITEM;
+
+
+    public static DeferredBlock<DoorBlock> PRASIOLITE_QUARTZ_DOOR;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_DOOR_ITEM;
+
+    public static DeferredBlock<TrapDoorBlock> PRASIOLITE_QUARTZ_TRAPDOOR;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_TRAPDOOR_ITEM;
 }

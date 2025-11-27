@@ -275,7 +275,10 @@ public class TagDatagen extends BlockTagsProvider {
 
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_FURNACE.get(),
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLAST_FURNACE.get(),
-                PrasioliteQuartzList.PRASIOLITE_QUARTZ_OVEN.get()
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_OVEN.get(),
+
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_DOOR.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_TRAPDOOR.get()
             );
 
         
@@ -340,21 +343,26 @@ public class TagDatagen extends BlockTagsProvider {
             .add(
                 SmokyQuartzList.SMOKY_QUARTZ_DOOR.get(),
                 RoseQuartzList.ROSE_QUARTZ_DOOR.get(),
-                CitrineList.CITRINE_DOOR.get()
+                CitrineList.CITRINE_DOOR.get(),
+                BlueQuartzList.BLUE_QUARTZ_DOOR.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_DOOR.get()
             );
 
         this.tag(TagKeyList.TRAP_DOORS_TAG)
             .add(
                 SmokyQuartzList.SMOKY_QUARTZ_TRAPDOOR.get(),
                 RoseQuartzList.ROSE_QUARTZ_TRAPDOOR.get(),
-                CitrineList.CITRINE_TRAPDOOR.get()
+                CitrineList.CITRINE_TRAPDOOR.get(),
+                BlueQuartzList.BLUE_QUARTZ_TRAPDOOR.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_TRAPDOOR.get()
             );
 
         this.tag(TagKeyList.BARRELS_TAG)
             .add(
                 SmokyQuartzList.SMOKY_QUARTZ_BARREL.get(),
                 RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK.get(),
-                CitrineList.CITRINE_BARREL_BLOCK.get()
+                CitrineList.CITRINE_BARREL_BLOCK.get(),
+                BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK.get()
             );
 
 
@@ -390,7 +398,8 @@ public class TagDatagen extends BlockTagsProvider {
                 SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF.get(),
                 RoseQuartzList.ROSE_QUARTZ_BOOKSHELF.get(),
                 CitrineList.CITRINE_BOOKSHELF.get(),
-                BlueQuartzList.BLUE_QUARTZ_BOOKSHELF.get()
+                BlueQuartzList.BLUE_QUARTZ_BOOKSHELF.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_BOOKSHELF.get()
             );
     }
     
