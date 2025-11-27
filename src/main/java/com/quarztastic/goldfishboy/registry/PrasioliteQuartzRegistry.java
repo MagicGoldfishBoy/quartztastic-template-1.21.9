@@ -4,6 +4,7 @@ import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzOvenEntity;
@@ -480,6 +481,22 @@ public class PrasioliteQuartzRegistry {
         );
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_TRAPDOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_TRAPDOOR
+        );
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIR = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_chair", 
+            registryName -> new Chair("dining", BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIR
         );
     }
 }

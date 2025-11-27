@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzOvenEntity;
@@ -127,4 +128,8 @@ public class PrasioliteQuartzList {
 
     public static DeferredBlock<TrapDoorBlock> PRASIOLITE_QUARTZ_TRAPDOOR;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_TRAPDOOR_ITEM;
+
+
+    public static DeferredBlock<Chair> PRASIOLITE_QUARTZ_CHAIR;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_CHAIR_ITEM;
 }
