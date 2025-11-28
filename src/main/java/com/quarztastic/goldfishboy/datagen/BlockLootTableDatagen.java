@@ -14,8 +14,14 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 public class BlockLootTableDatagen extends BlockLootSubProvider {
 
@@ -88,7 +94,30 @@ public class BlockLootTableDatagen extends BlockLootSubProvider {
             if(block.getName().toString().matches(".*prasiolite_quartz_netherrack_ore.*")) {
             this.add(block, this.createOreDrop(block, PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()));
             return;
-    }
+    }       
+                if (block instanceof FlowerPotBlock pot) {
+                        
+                this.dropSelf(block);
+                
+                if (block != Blocks.FLOWER_POT) {
+                        Block content = pot.getPotted();
+                        Block emptyPot = pot.getEmptyPot();
+
+                        if (content.asItem() != Items.AIR) {
+                        this.add(block, LootTable.lootTable()
+                        .withPool(this.applyExplosionDecay(block, LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1.0F))
+                                .add(LootItem.lootTableItem(content))))
+                        .withPool(this.applyExplosionDecay(block, LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1.0F))
+                                .add(LootItem.lootTableItem(emptyPot))
+                                )));
+                        }
+                }
+                System.out.println("Pot: " + block + " → content: " + ((FlowerPotBlock) block).getPotted() + " item: " + ((FlowerPotBlock) block).getPotted().asItem());
+                return;
+                }
+
 
             this.dropSelf(block);
         });

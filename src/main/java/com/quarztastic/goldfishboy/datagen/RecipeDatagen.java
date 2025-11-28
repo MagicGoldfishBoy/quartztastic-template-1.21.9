@@ -2,6 +2,7 @@ package com.quarztastic.goldfishboy.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
+import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.PrasioliteQuartzList;
@@ -50,6 +51,7 @@ public class RecipeDatagen extends RecipeProvider {
         buildSinkRecipes();
         buildPathRecipes();
         buildStatueRecipes();
+        buildFlowerPotRecipes();
     }
 
     protected void buildItemRecipes() {
@@ -2178,6 +2180,17 @@ public class RecipeDatagen extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE_ITEM.get())
             .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "prasiolite_quartz_skull_statuette_by_stonecutting");
+    }
+
+    protected void buildFlowerPotRecipes() {
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT_ITEM.get())
+            .pattern("! !")
+            .pattern(" ! ")
+            .define('!', PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get())
+            .unlockedBy("has_prasiolite_quartz_crystal", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
     }
     public static class Runner extends RecipeProvider.Runner {
 

@@ -33,6 +33,7 @@ import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -773,5 +774,52 @@ public class PrasioliteQuartzRegistry {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE
         );
+
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_flower_pot", 
+        registryName -> new FlowerPotBlock(null, () -> Blocks.AIR, BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+            .instabreak()
+            .sound(PRASIOLITE_QUARTZ_SOUND)
+            .noOcclusion()
+        ));
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_POPPY = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_potted_poppy",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.POPPY,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_POPPY_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_POPPY
+        );
+        
+        // PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_POPPY = Quartztastic.BLOCKS.register(
+        //     "prasiolite_quartz_potted_poppy", 
+        // registryName -> new FlowerPotBlock(PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT, () -> Blocks.POPPY, BlockBehaviour.Properties.of()
+        //         .setId(ResourceKey.create(Registries.BLOCK, registryName))
+        //         .instabreak()
+        //         .sound(PRASIOLITE_QUARTZ_SOUND)
+        //         .noOcclusion()
+        // ));
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_DANDELION = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_potted_dandelion", 
+        registryName -> new FlowerPotBlock(PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT, () -> Blocks.DANDELION, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .noOcclusion()
+        ));
     }
 }

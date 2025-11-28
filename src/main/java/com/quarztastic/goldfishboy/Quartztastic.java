@@ -1,9 +1,11 @@
 package com.quarztastic.goldfishboy;
 
 import org.slf4j.Logger;
-import java.time.LocalTime;
 
+import java.time.LocalTime;
 import com.mojang.logging.LogUtils;
+
+import net.minecraft.world.level.block.Blocks;
 import com.quarztastic.goldfishboy.datagen.Datagen;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
@@ -26,6 +28,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -113,17 +116,24 @@ public class Quartztastic {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        LocalTime currentTime = LocalTime.now();
-        LOGGER.info("Common Setup Starting Time: " + currentTime.toString());
-        if (currentTime.isAfter(LocalTime.of(23, 30))) {
-            LOGGER.info("Hello?");
-        }
+        event.enqueueWork(() -> {
+            FlowerPotBlock prasioliteQuartzPot = PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT.get();
+            
+            prasioliteQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.POPPY), 
+                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_POPPY.get()
+            );
+            prasioliteQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.DANDELION), 
+                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_DANDELION.get()
+            );
+        });
     }
 
 
     @SuppressWarnings("deprecation")
-    public void onClientSetup(FMLClientSetupEvent event)
-    {
+    public void onClientSetup(FMLClientSetupEvent event) {
+
         LOGGER.info("Setting Render Layers");
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_SLAB.get(), ChunkSectionLayer.TRANSLUCENT);
@@ -374,5 +384,5 @@ public class Quartztastic {
     public void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(EntityRegistry.CHAIR_ENTITY.get(), NoopRenderer::new);
     }
-
+    
 }

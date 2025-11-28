@@ -30,6 +30,7 @@ import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
@@ -41,6 +42,7 @@ import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 
@@ -205,4 +207,14 @@ public class PrasioliteQuartzList {
 
     public static DeferredBlock<Statuette> PRASIOLITE_QUARTZ_SKULL_STATUETTE;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_SKULL_STATUETTE_ITEM;
+
+
+    public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_FLOWER_POT;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_FLOWER_POT_ITEM;
+    
+
+    public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_POTTED_POPPY;
+        public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_POTTED_POPPY_ITEM;
+    
+    public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_POTTED_DANDELION;
 }

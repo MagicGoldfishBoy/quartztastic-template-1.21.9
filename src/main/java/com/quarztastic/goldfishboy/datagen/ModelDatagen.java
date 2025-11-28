@@ -366,7 +366,7 @@ public class ModelDatagen extends ModelProvider {
         for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {
             LOGGER.info("Generating model for: {}", holder.getId().getPath());
             String rawName = holder.getId().getPath();
-            if (rawName.contains("bookshelf") || rawName.contains("path")) {
+            if (rawName.contains("bookshelf") || rawName.contains("path") || rawName.contains("flower_pot") || rawName.contains("potted")) {
 
                 String name = "block/" + rawName;
 
