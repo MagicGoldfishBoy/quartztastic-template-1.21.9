@@ -57,6 +57,9 @@ public class Quartztastic {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
+    //this only exists because afaik blocks NEED block items to drop ANYTHING and I don't want those clogging up the creative tab
+    public static final DeferredRegister.Items UNOBTAINABLE_ITEMS = DeferredRegister.createItems(MODID);
+
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
 
@@ -86,6 +89,8 @@ public class Quartztastic {
         BLOCKS.register(modEventBus);
 
         ITEMS.register(modEventBus);
+
+        UNOBTAINABLE_ITEMS.register(modEventBus);
 
         CREATIVE_MODE_TABS.register(modEventBus);
 
@@ -364,6 +369,10 @@ public class Quartztastic {
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_PATH.get(), ChunkSectionLayer.TRANSLUCENT);
 
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE.get(), ChunkSectionLayer.TRANSLUCENT);
+
+
+        ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_POPPY.get(), ChunkSectionLayer.CUTOUT_MIPPED);
+        ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_DANDELION.get(), ChunkSectionLayer.CUTOUT_MIPPED);
     }
 
 

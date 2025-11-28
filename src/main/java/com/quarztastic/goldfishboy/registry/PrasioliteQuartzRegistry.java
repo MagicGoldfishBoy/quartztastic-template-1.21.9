@@ -800,26 +800,25 @@ public class PrasioliteQuartzRegistry {
                 .noOcclusion()
             )
         );
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_POPPY_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_POPPY_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_POPPY
         );
         
-        // PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_POPPY = Quartztastic.BLOCKS.register(
-        //     "prasiolite_quartz_potted_poppy", 
-        // registryName -> new FlowerPotBlock(PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT, () -> Blocks.POPPY, BlockBehaviour.Properties.of()
-        //         .setId(ResourceKey.create(Registries.BLOCK, registryName))
-        //         .instabreak()
-        //         .sound(PRASIOLITE_QUARTZ_SOUND)
-        //         .noOcclusion()
-        // ));
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_DANDELION = Quartztastic.BLOCKS.register(
-            "prasiolite_quartz_potted_dandelion", 
-        registryName -> new FlowerPotBlock(PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT, () -> Blocks.DANDELION, BlockBehaviour.Properties.of()
+            "prasiolite_quartz_potted_dandelion",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.DANDELION,
+            BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .instabreak()
                 .sound(PRASIOLITE_QUARTZ_SOUND)
                 .noOcclusion()
-        ));
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_DANDELION_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_DANDELION
+        );
     }
 }
