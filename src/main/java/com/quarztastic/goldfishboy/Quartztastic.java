@@ -8,20 +8,15 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Blocks;
 import com.quarztastic.goldfishboy.datagen.Datagen;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
-import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.BlueQuartzRegistry;
-import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
 import com.quarztastic.goldfishboy.registry.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.PrasioliteQuartzRegistry;
-import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.RoseQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
 
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -35,7 +30,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.common.NeoForge;
@@ -119,74 +113,9 @@ public class Quartztastic {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            FlowerPotBlock prasioliteQuartzPot = PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT.get();
-            
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.POPPY), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_POPPY.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.DANDELION), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_DANDELION.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.BLUE_ORCHID), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_BLUE_ORCHID.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.ALLIUM), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_ALLIUM.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.AZURE_BLUET), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_AZURE_BLUET.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.RED_TULIP), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_RED_TULIP.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.ORANGE_TULIP), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_ORANGE_TULIP.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.WHITE_TULIP), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_WHITE_TULIP.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.PINK_TULIP), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_PINK_TULIP.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.OXEYE_DAISY), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_OXEYE_DAISY.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.CORNFLOWER), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CORNFLOWER.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.LILY_OF_THE_VALLEY), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_LILY_OF_THE_VALLEY.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.WITHER_ROSE), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_WITHER_ROSE.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.TORCHFLOWER), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_TORCHFLOWER.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.CLOSED_EYEBLOSSOM), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CLOSED_EYEBLOSSOM.get()
-            );
-            prasioliteQuartzPot.addPlant(
-                BuiltInRegistries.BLOCK.getKey(Blocks.OPEN_EYEBLOSSOM), 
-                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_OPEN_EYEBLOSSOM.get()
-            );
-        });
+
+        QuartztasticCommonSetupMethods.setPrasioliteQuartzPotPlants(event);
+        
     }
 
 
