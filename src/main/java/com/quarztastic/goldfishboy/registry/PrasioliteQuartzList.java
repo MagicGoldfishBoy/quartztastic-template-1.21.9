@@ -213,7 +213,7 @@ public class PrasioliteQuartzList {
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_FLOWER_POT_ITEM;
 
     public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_POTTED_POPPY;
-    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_POTTED_POPPY_ITEM; //<-this is actually necessary for drop table purposes. Very wasteful
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_POTTED_POPPY_ITEM; //<-this is actually necessary for drop table purposes.
     
     public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_POTTED_DANDELION;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_POTTED_DANDELION_ITEM;
@@ -229,4 +229,7 @@ public class PrasioliteQuartzList {
     
     public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_POTTED_RED_TULIP;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_POTTED_RED_TULIP_ITEM;
+    
+    public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_POTTED_ORANGE_TULIP;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_POTTED_ORANGE_TULIP_ITEM;
 }
