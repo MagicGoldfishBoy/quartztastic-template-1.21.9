@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-28T21:18:00.958183134	Loot Tables
+// 1.21.9	2025-11-28T21:25:17.705535029	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -122,6 +122,7 @@ c1e2c0ae0e61d531062421e367b2a40a02b11709 data/quartztastic/loot_table/blocks/pra
 f6ac33ffc1b13d56f7ae253c0a47448bab479f5f data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_blue_orchid.json
 79fd013dd7ab6a27ee7cb38558c0ea2256c25229 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_dandelion.json
 76033da0904c3d7126ab539cc8665a5cc148dddd data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_poppy.json
+2793ebcd044369c54c59596828e28504fafbb236 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_red_tulip.json
 90a11ab997d63ba088d5ee5ed87dcc0e44cf25d8 data/quartztastic/loot_table/blocks/prasiolite_quartz_pressure_plate.json
 246324f9dde6e6100e8c409120bf8d4b7d9d3ca0 data/quartztastic/loot_table/blocks/prasiolite_quartz_shelf.json
 7409592955061bfa4921b3afaac52a0800ba6155 data/quartztastic/loot_table/blocks/prasiolite_quartz_sink.json
