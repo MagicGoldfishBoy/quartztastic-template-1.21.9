@@ -1140,5 +1140,21 @@ public class PrasioliteQuartzRegistry {
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_JUNGLE_SAPLING
         );
 
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_ACACIA_SAPLING = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_potted_acacia_sapling",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.ACACIA_SAPLING,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_ACACIA_SAPLING_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_ACACIA_SAPLING
+        );
+
     }    
 }

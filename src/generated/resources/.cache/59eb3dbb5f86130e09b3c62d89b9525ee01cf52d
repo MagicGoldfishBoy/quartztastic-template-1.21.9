@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-29T17:17:36.280260262	Loot Tables
+// 1.21.9	2025-11-29T17:23:30.181417452	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -117,6 +117,7 @@ e44fdecdf02baed9fbae1d30b259218bfca97d12 data/quartztastic/loot_table/blocks/pra
 c1e2c0ae0e61d531062421e367b2a40a02b11709 data/quartztastic/loot_table/blocks/prasiolite_quartz_pane.json
 341f41af67c63a351e95ba3f08ba46c543fbbca9 data/quartztastic/loot_table/blocks/prasiolite_quartz_path.json
 0d6cc6fbbea20fc3c42060ec904274c500aceb7c data/quartztastic/loot_table/blocks/prasiolite_quartz_pillar.json
+a7bb98c0986a49ed9f0dc12a2f2110933eb70b1b data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_acacia_sapling.json
 6c7ec08de1606eba0406a748dafc72271a5261cc data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_allium.json
 98483afd2b419bcabdc8fce287206dbc756dbe75 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_azure_bluet.json
 d05bf1ca45487dad59e8178c5aff2093e7a2ae26 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_birch_sapling.json
