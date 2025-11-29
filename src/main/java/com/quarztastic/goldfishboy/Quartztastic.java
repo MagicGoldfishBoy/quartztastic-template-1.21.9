@@ -156,6 +156,10 @@ public class Quartztastic {
                 BuiltInRegistries.BLOCK.getKey(Blocks.WHITE_TULIP), 
                 () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_WHITE_TULIP.get()
             );
+            prasioliteQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.PINK_TULIP), 
+                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_PINK_TULIP.get()
+            );
         });
     }
 
@@ -403,6 +407,7 @@ public class Quartztastic {
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_RED_TULIP.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_ORANGE_TULIP.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_WHITE_TULIP.get(), ChunkSectionLayer.CUTOUT_MIPPED);
+        ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_PINK_TULIP.get(), ChunkSectionLayer.CUTOUT_MIPPED);
     }
 
 
