@@ -86,6 +86,10 @@ public class QuartztasticCommonSetupMethods {
                 BuiltInRegistries.BLOCK.getKey(Blocks.SPRUCE_SAPLING), 
                 () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_SPRUCE_SAPLING.get()
             );
+            prasioliteQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.BIRCH_SAPLING), 
+                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_BIRCH_SAPLING.get()
+            );
         });
     }
 }
