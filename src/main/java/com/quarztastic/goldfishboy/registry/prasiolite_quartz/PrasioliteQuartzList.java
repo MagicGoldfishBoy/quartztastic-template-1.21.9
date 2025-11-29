@@ -1,4 +1,4 @@
-package com.quarztastic.goldfishboy.registry;
+package com.quarztastic.goldfishboy.registry.prasiolite_quartz;
 
 import java.util.function.Supplier;
 
@@ -208,7 +208,7 @@ public class PrasioliteQuartzList {
     public static DeferredBlock<Statuette> PRASIOLITE_QUARTZ_SKULL_STATUETTE;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_SKULL_STATUETTE_ITEM;
 
-//why am I doing this to myself? There has to be a better way, but this is how it's done in vanilla soooo T.T
+
     public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_FLOWER_POT;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_FLOWER_POT_ITEM;
 

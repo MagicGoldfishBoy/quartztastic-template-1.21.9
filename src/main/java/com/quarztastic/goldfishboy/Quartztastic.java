@@ -5,17 +5,15 @@ import org.slf4j.Logger;
 import java.time.LocalTime;
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.world.level.block.Blocks;
 import com.quarztastic.goldfishboy.datagen.Datagen;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
 import com.quarztastic.goldfishboy.registry.BlueQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
-import com.quarztastic.goldfishboy.registry.PrasioliteQuartzList;
-import com.quarztastic.goldfishboy.registry.PrasioliteQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.RoseQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
+import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzRegistry;
 
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -23,7 +21,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -115,7 +112,7 @@ public class Quartztastic {
     private void commonSetup(FMLCommonSetupEvent event) {
 
         QuartztasticCommonSetupMethods.setPrasioliteQuartzPotPlants(event);
-        
+
     }
 
 

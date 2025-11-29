@@ -1,6 +1,6 @@
 package com.quarztastic.goldfishboy;
 
-import com.quarztastic.goldfishboy.registry.PrasioliteQuartzList;
+import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Blocks;

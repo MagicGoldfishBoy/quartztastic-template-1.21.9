@@ -1,4 +1,4 @@
-package com.quarztastic.goldfishboy.registry;
+package com.quarztastic.goldfishboy.registry.prasiolite_quartz;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzFurnaceBlock;
@@ -15,6 +15,7 @@ import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzOvenEntity;
+import com.quarztastic.goldfishboy.registry.BlockSetTypes;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzNightstandEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzBlastFurnaceEntity;

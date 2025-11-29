@@ -16,6 +16,7 @@ import net.minecraft.core.RegistrySetBuilder;
 import java.util.List;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 
 public class WorldgenRegistry {
     public static final RegistrySetBuilder WORLD_GEN_BUILDER = new RegistrySetBuilder()

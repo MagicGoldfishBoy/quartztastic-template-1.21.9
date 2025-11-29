@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzOvenEntity;
-import com.quarztastic.goldfishboy.registry.PrasioliteQuartzList;
+import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;

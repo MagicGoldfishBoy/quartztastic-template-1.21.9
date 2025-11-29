@@ -3,7 +3,7 @@ package com.quarztastic.goldfishboy.entity;
 import java.util.List;
 
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzNightstand;
-import com.quarztastic.goldfishboy.registry.PrasioliteQuartzList;
+import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
