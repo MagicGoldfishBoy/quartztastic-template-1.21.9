@@ -9,7 +9,6 @@ import com.quarztastic.goldfishboy.registry.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.neoforged.api.distmarker.Dist;
@@ -35,11 +34,27 @@ public class QuartztasticClient {
     
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    @SuppressWarnings("deprecation")
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
 
         LOGGER.info("Setting Render Layers");
+
+
+        setSmokyQuartzRenderLayers();
+
+        setRoseQuartzRenderLayers();
+
+        setCitrineRenderLayers();
+
+        setBlueQuartzRenderLayers();
+
+        setPrasioliteQuartzRenderLayers();
+
+    }
+
+    @SuppressWarnings("deprecation")
+    static void setSmokyQuartzRenderLayers() {
+
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_SLAB.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_STAIRS.get(), ChunkSectionLayer.TRANSLUCENT);
@@ -94,6 +109,10 @@ public class QuartztasticClient {
 
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_PATH.get(), ChunkSectionLayer.TRANSLUCENT);
 
+    }
+
+    @SuppressWarnings("deprecation")
+    static void setRoseQuartzRenderLayers() {
 
         ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_DOOR.get(), ChunkSectionLayer.TRANSLUCENT);
 
@@ -103,8 +122,12 @@ public class QuartztasticClient {
 
         ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_BARS.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_BARS_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
+        
+    }
 
-
+    @SuppressWarnings("deprecation")
+    static void setCitrineRenderLayers() {
+        
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_SLAB.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_STAIRS.get(), ChunkSectionLayer.TRANSLUCENT);
@@ -153,9 +176,12 @@ public class QuartztasticClient {
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_SINK.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_PATH.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_SKULL_STATUETTE.get(), ChunkSectionLayer.TRANSLUCENT);
+          
+    }
 
-
-
+    @SuppressWarnings("deprecation")
+    static void setBlueQuartzRenderLayers() {
+        
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_PANE.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_SLAB.get(), ChunkSectionLayer.TRANSLUCENT);
@@ -209,7 +235,10 @@ public class QuartztasticClient {
 
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE.get(), ChunkSectionLayer.TRANSLUCENT);
 
+    }
 
+    @SuppressWarnings("deprecation")
+    static void setPrasioliteQuartzRenderLayers() {
 
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_PANE.get(), ChunkSectionLayer.TRANSLUCENT);
@@ -287,5 +316,6 @@ public class QuartztasticClient {
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_TORCHFLOWER.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CLOSED_EYEBLOSSOM.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_OPEN_EYEBLOSSOM.get(), ChunkSectionLayer.CUTOUT_MIPPED);
+        
     }
 }
