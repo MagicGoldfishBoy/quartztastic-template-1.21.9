@@ -77,6 +77,11 @@ public class QuartztasticCommonSetupMethods {
                 BuiltInRegistries.BLOCK.getKey(Blocks.OPEN_EYEBLOSSOM), 
                 () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_OPEN_EYEBLOSSOM.get()
             );
+            
+            prasioliteQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.OAK_SAPLING), 
+                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_OAK_SAPLING.get()
+            );
         });
     }
 }
