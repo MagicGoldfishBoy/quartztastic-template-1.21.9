@@ -60,6 +60,22 @@ public class PrasioliteQuartzRegistry {
     
     public static void registerAll() {
 
+        registerBasicBlocks();
+
+        registerFunctionalBlocks();
+
+        registerDoorBlocks();
+
+        registerFurnitureBlocks();
+
+        registerDecorBlocks();
+
+        registerFlowerPotBlocks();
+
+    }
+
+    public static void registerBasicBlocks() {
+
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL = Quartztastic.ITEMS.registerSimpleItem(
             "prasiolite_quartz_crystal"
         );
@@ -401,6 +417,23 @@ public class PrasioliteQuartzRegistry {
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_BOOKSHELF
         );
 
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LIGHT = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_light", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .lightLevel(state -> 15)
+            )
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_LIGHT
+        );
+    }
+
+    public static void registerFunctionalBlocks() {
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_FURNACE = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_furnace", 
@@ -457,7 +490,6 @@ public class PrasioliteQuartzRegistry {
                 .requiresCorrectToolForDrops()
             )
         );
-
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLAST_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
             "prasiolite_quartz_blast_furnace",
             () -> new BlockEntityType<>(
@@ -465,12 +497,47 @@ public class PrasioliteQuartzRegistry {
             false,
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLAST_FURNACE.get())
         );
-
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLAST_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLAST_FURNACE
         );
 
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_ladder", 
+            registryName -> new net.minecraft.world.level.block.LadderBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER
+        );
 
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_BLOCK = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_barrel", 
+            registryName -> new PrasioliteQuartzBarrelBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "prasiolite_quartz_barrel",
+            () -> new BlockEntityType<>(
+            PrasioliteQuartzBarrelEntity::new,
+            false,
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_BLOCK.get())
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_BLOCK
+        );
+    }
+
+    private static void registerDoorBlocks() {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_DOOR = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_door", 
             registryName -> new DoorBlock(BlockSetTypes.QUARTZ, BlockBehaviour.Properties.of()
@@ -499,8 +566,9 @@ public class PrasioliteQuartzRegistry {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_TRAPDOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_TRAPDOOR
         );
+    }    
 
-
+    private static void registerFurnitureBlocks() {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIR = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_chair", 
             registryName -> new Chair("dining", BlockBehaviour.Properties.of()
@@ -511,7 +579,6 @@ public class PrasioliteQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIR
         );
@@ -527,7 +594,6 @@ public class PrasioliteQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_TABLE
         );
@@ -543,28 +609,48 @@ public class PrasioliteQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_SHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_SHELF
         );
 
 
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LIGHT = Quartztastic.BLOCKS.register(
-            "prasiolite_quartz_light", 
-            registryName -> new Block(BlockBehaviour.Properties.of()
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_BLOCK = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_nightstand", 
+            registryName -> new PrasioliteQuartzNightstand(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
                 .sound(PRASIOLITE_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
-                .lightLevel(state -> 15)
+                .noOcclusion()
             )
         );
-
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-            PrasioliteQuartzList.PRASIOLITE_QUARTZ_LIGHT
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "prasiolite_quartz_nightstand",
+            () -> new BlockEntityType<>(
+            PrasioliteQuartzNightstandEntity::new,
+            false,
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_BLOCK.get())
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_BLOCK
         );
 
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_sink", 
+            registryName -> new Sink("basin_with_legs", BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK
+        );
+    }    
 
+    private static void registerDecorBlocks() {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_LANTERN = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_lantern", 
             registryName -> new net.minecraft.world.level.block.LanternBlock(BlockBehaviour.Properties.of()
@@ -623,7 +709,6 @@ public class PrasioliteQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_WALL_TORCH = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_wall_torch", 
             registryName -> new net.minecraft.world.level.block.WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.of()
@@ -634,7 +719,6 @@ public class PrasioliteQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_TORCH_ITEM = Quartztastic.ITEMS.register(
             "prasiolite_quartz_torch", 
             registryName -> new StandingAndWallBlockItem(
@@ -676,77 +760,6 @@ public class PrasioliteQuartzRegistry {
                     .setId(ResourceKey.create(Registries.ITEM, registryName))
         ));
 
-
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
-            "prasiolite_quartz_ladder", 
-            registryName -> new net.minecraft.world.level.block.LadderBlock(BlockBehaviour.Properties.of()
-                .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
-                .sound(PRASIOLITE_QUARTZ_SOUND)
-                .requiresCorrectToolForDrops()
-                .noOcclusion()
-            )
-        );
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-            PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER
-        );
-
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_BLOCK = Quartztastic.BLOCKS.register(
-            "prasiolite_quartz_barrel", 
-            registryName -> new PrasioliteQuartzBarrelBlock(BlockBehaviour.Properties.of()
-                .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
-                .sound(PRASIOLITE_QUARTZ_SOUND)
-                .requiresCorrectToolForDrops()
-                .noOcclusion()
-            )
-        );
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
-            "prasiolite_quartz_barrel",
-            () -> new BlockEntityType<>(
-            PrasioliteQuartzBarrelEntity::new,
-            false,
-            PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_BLOCK.get())
-        );
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-            PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_BLOCK
-        );
-
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_BLOCK = Quartztastic.BLOCKS.register(
-            "prasiolite_quartz_nightstand", 
-            registryName -> new PrasioliteQuartzNightstand(BlockBehaviour.Properties.of()
-                .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
-                .sound(PRASIOLITE_QUARTZ_SOUND)
-                .requiresCorrectToolForDrops()
-                .noOcclusion()
-            )
-        );
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
-            "prasiolite_quartz_nightstand",
-            () -> new BlockEntityType<>(
-            PrasioliteQuartzNightstandEntity::new,
-            false,
-            PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_BLOCK.get())
-        );
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-            PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_BLOCK
-        );
-
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK = Quartztastic.BLOCKS.register(
-            "prasiolite_quartz_sink", 
-            registryName -> new Sink("basin_with_legs", BlockBehaviour.Properties.of()
-                .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
-                .sound(PRASIOLITE_QUARTZ_SOUND)
-                .requiresCorrectToolForDrops()
-                .noOcclusion()
-            )
-        );
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-            PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK
-        );
-
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_PATH = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_path", 
             registryName -> new Path(BlockBehaviour.Properties.of()
@@ -775,7 +788,9 @@ public class PrasioliteQuartzRegistry {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE
         );
-
+    }  
+    
+    private static void registerFlowerPotBlocks() {
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_flower_pot", 
@@ -1059,5 +1074,6 @@ public class PrasioliteQuartzRegistry {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_OPEN_EYEBLOSSOM_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_OPEN_EYEBLOSSOM
         );
-    }
+
+    }    
 }
