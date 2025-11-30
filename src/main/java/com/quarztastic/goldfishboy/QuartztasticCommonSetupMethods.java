@@ -102,6 +102,10 @@ public class QuartztasticCommonSetupMethods {
                 BuiltInRegistries.BLOCK.getKey(Blocks.DARK_OAK_SAPLING), 
                 () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_DARK_OAK_SAPLING.get()
             );
+            prasioliteQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.AZALEA), 
+                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_AZALEA.get()
+            );
         });
     }
 }
