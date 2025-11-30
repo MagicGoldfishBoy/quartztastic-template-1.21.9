@@ -1,4 +1,4 @@
-// 1.21.9	2025-11-30T16:11:41.700166198	Loot Tables
+// 1.21.9	2025-11-30T16:39:38.928363796	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -127,6 +127,7 @@ e835063960f955c026347af0ec223f5d27e92379 data/quartztastic/loot_table/blocks/pra
 30ce44e2fce609e18182b2b9bbd9427e67ccdd1f data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_cornflower.json
 79fd013dd7ab6a27ee7cb38558c0ea2256c25229 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_dandelion.json
 cc9b2cd716d42071ba0022a8fef2896478f32bec data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_dark_oak_sapling.json
+bbc3ed3cb39232e4fe502d0fe6f1ecccba867bb0 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_flowering_azalea.json
 8e9ada272a9781c3f06c8984710b1748ecca8909 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_jungle_sapling.json
 84c61202bcd54b593445420e1579814b18d96a35 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_lily_of_the_valley.json
 cea902fb5be0fcb6dfe4a5516bf628498ff6d593 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_oak_sapling.json

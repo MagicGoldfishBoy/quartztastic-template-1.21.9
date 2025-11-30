@@ -106,6 +106,10 @@ public class QuartztasticCommonSetupMethods {
                 BuiltInRegistries.BLOCK.getKey(Blocks.AZALEA), 
                 () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_AZALEA.get()
             );
+            prasioliteQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.FLOWERING_AZALEA), 
+                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_FLOWERING_AZALEA.get()
+            );
         });
     }
 }
