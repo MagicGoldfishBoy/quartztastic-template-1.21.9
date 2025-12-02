@@ -1385,5 +1385,21 @@ public class PrasioliteQuartzRegistry {
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_DEAD_BUSH
         );
 
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CACTUS = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_potted_cactus",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.CACTUS,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .noOcclusion()
+                .mapColor(MapColor.PLANT)
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CACTUS_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CACTUS
+        );
     }    
 }
