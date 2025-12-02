@@ -1,4 +1,4 @@
-// 1.21.9	2025-12-02T15:36:08.135475783	Loot Tables
+// 1.21.9	2025-12-02T15:40:33.989961095	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -123,6 +123,7 @@ a7bb98c0986a49ed9f0dc12a2f2110933eb70b1b data/quartztastic/loot_table/blocks/pra
 98483afd2b419bcabdc8fce287206dbc756dbe75 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_azure_bluet.json
 d05bf1ca45487dad59e8178c5aff2093e7a2ae26 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_birch_sapling.json
 f6ac33ffc1b13d56f7ae253c0a47448bab479f5f data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_blue_orchid.json
+73288707e4ce8537e08dfada87dbb054a940084c data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_brown_mushroom.json
 6b5f3c27af5a5c73877661e819b4fd7416b157fa data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_cherry_sapling.json
 e835063960f955c026347af0ec223f5d27e92379 data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_closed_eyeblossom.json
 30ce44e2fce609e18182b2b9bbd9427e67ccdd1f data/quartztastic/loot_table/blocks/prasiolite_quartz_potted_cornflower.json

@@ -328,8 +328,9 @@ public class QuartztasticClient {
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_MANGROVE_PROPAGULE.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CHERRY_SAPLING.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_PALE_OAK_SAPLING.get(), ChunkSectionLayer.CUTOUT_MIPPED);
-        
+
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_RED_MUSHROOM.get(), ChunkSectionLayer.CUTOUT_MIPPED);
+        ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_BROWN_MUSHROOM.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         
     }
 }
