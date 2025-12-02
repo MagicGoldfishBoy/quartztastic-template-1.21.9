@@ -305,8 +305,11 @@ public class PrasioliteQuartzList {
 
     public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_POTTED_WARPED_FUNGUS;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_POTTED_WARPED_FUNGUS_ITEM;
-    
+
 
     public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_POTTED_CRIMSON_ROOTS;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_POTTED_CRIMSON_ROOTS_ITEM;
+
+    public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_POTTED_WARPED_ROOTS;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_POTTED_WARPED_ROOTS_ITEM;
 }
