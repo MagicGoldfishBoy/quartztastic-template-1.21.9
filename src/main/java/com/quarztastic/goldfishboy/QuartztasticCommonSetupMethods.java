@@ -135,6 +135,10 @@ public class QuartztasticCommonSetupMethods {
                 BuiltInRegistries.BLOCK.getKey(Blocks.CRIMSON_FUNGUS), 
                 () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CRIMSON_FUNGUS.get()
             );
+            prasioliteQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.WARPED_FUNGUS), 
+                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_WARPED_FUNGUS.get()
+            );
         });
     }
 }
