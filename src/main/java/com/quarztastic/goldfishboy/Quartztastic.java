@@ -120,17 +120,17 @@ public class Quartztastic {
 
     }
 
-void registerBlockColors(RegisterColorHandlersEvent.Block event) {
-    LOGGER.info("Registering block color handlers");
-    event.register((state, level, pos, tintIndex) -> {
-        // Only apply grass color to specific tint index (typically 0 for foliage)
-        if (tintIndex != 0) return -1; // -1 means no tint
-        
-        return level != null && pos != null 
-            ? BiomeColors.getAverageGrassColor(level, pos) 
-            : 0x8CBF60;
-    }, PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_FERN.get());
-}
+    void registerBlockColors(RegisterColorHandlersEvent.Block event) {
+        LOGGER.info("Registering block color handlers");
+        event.register((state, level, pos, tintIndex) -> {
+            // Only apply grass color to specific tint index (typically 0 for foliage)
+            if (tintIndex != 0) return -1; // -1 means no tint
+            
+            return level != null && pos != null 
+                ? BiomeColors.getAverageGrassColor(level, pos) 
+                : 0x8CBF60;
+        }, PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_FERN.get());
+    }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {

@@ -152,6 +152,10 @@ public class QuartztasticCommonSetupMethods {
                 BuiltInRegistries.BLOCK.getKey(Blocks.FERN), 
                 () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_FERN.get()
             );
+            prasioliteQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.DEAD_BUSH), 
+                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_DEAD_BUSH.get()
+            );
         });
     }
 }
