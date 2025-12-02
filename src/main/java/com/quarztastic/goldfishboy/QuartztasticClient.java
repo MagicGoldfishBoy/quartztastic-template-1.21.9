@@ -48,7 +48,7 @@ public class QuartztasticClient {
 
         setBlueQuartzRenderLayers();
 
-        setPrasioliteQuartzRenderLayers();
+        setPrasioliteQuartzRenderLayers(event);
 
     }
 
@@ -238,7 +238,7 @@ public class QuartztasticClient {
     }
 
     @SuppressWarnings("deprecation")
-    static void setPrasioliteQuartzRenderLayers() {
+    static void setPrasioliteQuartzRenderLayers(FMLClientSetupEvent event) {
 
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_PANE.get(), ChunkSectionLayer.TRANSLUCENT);
@@ -336,6 +336,7 @@ public class QuartztasticClient {
         
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CRIMSON_ROOTS.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_WARPED_ROOTS.get(), ChunkSectionLayer.CUTOUT_MIPPED);
+        ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_FERN.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         
     }
 }

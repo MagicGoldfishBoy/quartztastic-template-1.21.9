@@ -13,8 +13,10 @@ import com.quarztastic.goldfishboy.registry.EntityRegistry;
 import com.quarztastic.goldfishboy.registry.RoseQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
+import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzRegistry;
 
+import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -29,6 +31,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -73,6 +76,8 @@ public class Quartztastic {
 
         modEventBus.addListener(this::onRegisterRenderers);
 
+        modEventBus.addListener(this::registerBlockColors);
+
         BlockSetTypes.init();
         
         BLOCKS.register(modEventBus);
@@ -115,6 +120,17 @@ public class Quartztastic {
 
     }
 
+void registerBlockColors(RegisterColorHandlersEvent.Block event) {
+    LOGGER.info("Registering block color handlers");
+    event.register((state, level, pos, tintIndex) -> {
+        // Only apply grass color to specific tint index (typically 0 for foliage)
+        if (tintIndex != 0) return -1; // -1 means no tint
+        
+        return level != null && pos != null 
+            ? BiomeColors.getAverageGrassColor(level, pos) 
+            : 0x8CBF60;
+    }, PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_FERN.get());
+}
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
