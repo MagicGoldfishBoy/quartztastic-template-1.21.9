@@ -131,6 +131,10 @@ public class QuartztasticCommonSetupMethods {
                 BuiltInRegistries.BLOCK.getKey(Blocks.BROWN_MUSHROOM), 
                 () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_BROWN_MUSHROOM.get()
             );
+            prasioliteQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CRIMSON_FUNGUS), 
+                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CRIMSON_FUNGUS.get()
+            );
         });
     }
 }
