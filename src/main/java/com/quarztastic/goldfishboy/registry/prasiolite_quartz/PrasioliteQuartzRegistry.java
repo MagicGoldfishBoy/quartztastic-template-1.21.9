@@ -1401,5 +1401,22 @@ public class PrasioliteQuartzRegistry {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CACTUS_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CACTUS
         );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_BAMBOO = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_potted_bamboo",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.BAMBOO,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .noOcclusion()
+                .mapColor(MapColor.PLANT)
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_BAMBOO_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_BAMBOO
+        );
     }    
 }

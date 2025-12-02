@@ -321,4 +321,7 @@ public class PrasioliteQuartzList {
 
     public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_POTTED_CACTUS;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_POTTED_CACTUS_ITEM;
+
+    public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_POTTED_BAMBOO;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_POTTED_BAMBOO_ITEM;
 }

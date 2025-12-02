@@ -160,6 +160,10 @@ public class QuartztasticCommonSetupMethods {
                 BuiltInRegistries.BLOCK.getKey(Blocks.CACTUS), 
                 () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CACTUS.get()
             );
+            prasioliteQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.BAMBOO), 
+                () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_BAMBOO.get()
+            );
         });
     }
 }
