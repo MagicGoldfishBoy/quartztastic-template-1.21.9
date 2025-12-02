@@ -334,5 +334,7 @@ public class QuartztasticClient {
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CRIMSON_FUNGUS.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_WARPED_FUNGUS.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         
+        ItemBlockRenderTypes.setRenderLayer(PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CRIMSON_ROOTS.get(), ChunkSectionLayer.CUTOUT_MIPPED);
+        
     }
 }

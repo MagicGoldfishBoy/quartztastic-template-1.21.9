@@ -1317,5 +1317,22 @@ public class PrasioliteQuartzRegistry {
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_WARPED_FUNGUS
         );
 
+        
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CRIMSON_ROOTS = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_potted_crimson_roots",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) PrasioliteQuartzList.PRASIOLITE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.CRIMSON_ROOTS,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CRIMSON_ROOTS_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_CRIMSON_ROOTS
+        );
+
     }    
 }
