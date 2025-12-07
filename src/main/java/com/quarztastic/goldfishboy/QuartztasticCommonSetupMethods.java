@@ -1,5 +1,6 @@
 package com.quarztastic.goldfishboy;
 
+import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -163,6 +164,163 @@ public class QuartztasticCommonSetupMethods {
             prasioliteQuartzPot.addPlant(
                 BuiltInRegistries.BLOCK.getKey(Blocks.BAMBOO), 
                 () -> PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_BAMBOO.get()
+            );
+        });
+    }
+    static void setBlueQuartzPotPlants(FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            FlowerPotBlock blueQuartzPot = BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get();
+            
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.POPPY), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_POPPY.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.DANDELION), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_DANDELION.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.BLUE_ORCHID), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_BLUE_ORCHID.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.ALLIUM), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_ALLIUM.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.AZURE_BLUET), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_AZURE_BLUET.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.RED_TULIP), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_RED_TULIP.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.ORANGE_TULIP), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_ORANGE_TULIP.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.WHITE_TULIP), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_WHITE_TULIP.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.PINK_TULIP), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_PINK_TULIP.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.OXEYE_DAISY), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_OXEYE_DAISY.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CORNFLOWER), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_CORNFLOWER.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.LILY_OF_THE_VALLEY), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_LILY_OF_THE_VALLEY.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.WITHER_ROSE), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_WITHER_ROSE.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.TORCHFLOWER), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_TORCHFLOWER.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CLOSED_EYEBLOSSOM), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_CLOSED_EYEBLOSSOM.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.OPEN_EYEBLOSSOM), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_OPEN_EYEBLOSSOM.get()
+            );
+
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.OAK_SAPLING), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_OAK_SAPLING.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.SPRUCE_SAPLING), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_SPRUCE_SAPLING.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.BIRCH_SAPLING), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_BIRCH_SAPLING.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.JUNGLE_SAPLING), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_JUNGLE_SAPLING.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.ACACIA_SAPLING), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_ACACIA_SAPLING.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.DARK_OAK_SAPLING), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_DARK_OAK_SAPLING.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.AZALEA), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_AZALEA.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.FLOWERING_AZALEA), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_FLOWERING_AZALEA.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.MANGROVE_PROPAGULE), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_MANGROVE_PROPAGULE.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CHERRY_SAPLING), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_CHERRY_SAPLING.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.PALE_OAK_SAPLING), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_PALE_OAK_SAPLING.get()
+            );
+
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.RED_MUSHROOM), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_RED_MUSHROOM.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.BROWN_MUSHROOM), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_BROWN_MUSHROOM.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CRIMSON_FUNGUS), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_CRIMSON_FUNGUS.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.WARPED_FUNGUS), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_WARPED_FUNGUS.get()
+            );
+
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CRIMSON_ROOTS), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_CRIMSON_ROOTS.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.WARPED_ROOTS), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_WARPED_ROOTS.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.FERN), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_FERN.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.DEAD_BUSH), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_DEAD_BUSH.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CACTUS), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_CACTUS.get()
+            );
+            blueQuartzPot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.BAMBOO), 
+                () -> BlueQuartzList.BLUE_QUARTZ_POTTED_BAMBOO.get()
             );
         });
     }

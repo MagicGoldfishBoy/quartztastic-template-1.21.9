@@ -1,20 +1,19 @@
 package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
-import com.quarztastic.goldfishboy.block.OreBlock;
-import com.quarztastic.goldfishboy.block.Path;
-import com.quarztastic.goldfishboy.block.Pillar;
-import com.quarztastic.goldfishboy.block.BlueQuartzNightstand;
-import com.quarztastic.goldfishboy.block.BlueQuartzBarrelBlock;
+import com.quarztastic.goldfishboy.block.BlueQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
+import com.quarztastic.goldfishboy.block.BlueQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
-import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
-import com.quarztastic.goldfishboy.block.BlueQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.BlueQuartzBarrelBlock;
+import com.quarztastic.goldfishboy.block.BlueQuartzNightstand;
 import com.quarztastic.goldfishboy.block.Chair;
-import com.quarztastic.goldfishboy.block.BlueQuartzFurnaceBlock;
-import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
+import com.quarztastic.goldfishboy.block.OreBlock;
+import com.quarztastic.goldfishboy.block.Path;
+import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.BlueQuartzOvenEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzNightstandEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzBarrelEntity;
@@ -34,6 +33,7 @@ import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -46,6 +46,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.MapColor;
 
 public class BlueQuartzRegistry {
 
@@ -56,12 +57,29 @@ public class BlueQuartzRegistry {
 
     static BlockSetType BLUE_QUARTZ_BLOCK_SET_TYPE = BlockSetTypes.QUARTZ;
     static WoodType BLUE_QUARTZ_WOOD_TYPE = WoodType.CRIMSON;
-
+    
     public static void registerAll() {
+
+        registerBasicBlocks();
+
+        registerFunctionalBlocks();
+
+        registerDoorBlocks();
+
+        registerFurnitureBlocks();
+
+        registerDecorBlocks();
+
+        registerFlowerPotBlocks();
+
+    }
+
+    public static void registerBasicBlocks() {
 
         BlueQuartzList.BLUE_QUARTZ_CRYSTAL = Quartztastic.ITEMS.registerSimpleItem(
             "blue_quartz_crystal"
         );
+
 
         BlueQuartzList.BLUE_QUARTZ_ORE = Quartztastic.BLOCKS.register(
             "blue_quartz_ore", 
@@ -73,9 +91,11 @@ public class BlueQuartzRegistry {
                 .noOcclusion()
             )
         );
+
         BlueQuartzList.BLUE_QUARTZ_ORE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_ORE
         );
+
 
         BlueQuartzList.BLUE_QUARTZ_BLOCK = Quartztastic.BLOCKS.register(
             "blue_quartz_block", 
@@ -263,7 +283,6 @@ public class BlueQuartzRegistry {
         );
 
 
-
         BlueQuartzList.CHISELED_BLUE_QUARTZ_BLOCK = Quartztastic.BLOCKS.register(
             "chiseled_blue_quartz_block", 
             registryName -> new Block(BlockBehaviour.Properties.of()
@@ -274,11 +293,9 @@ public class BlueQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         BlueQuartzList.CHISELED_BLUE_QUARTZ_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.CHISELED_BLUE_QUARTZ_BLOCK
         );
-
 
 
         BlueQuartzList.BLUE_QUARTZ_TILES = Quartztastic.BLOCKS.register(
@@ -291,11 +308,9 @@ public class BlueQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         BlueQuartzList.BLUE_QUARTZ_TILES_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_TILES
         );
-
 
         BlueQuartzList.BLUE_QUARTZ_TILE_SLAB = Quartztastic.BLOCKS.register(
             "blue_quartz_tile_slab", 
@@ -307,11 +322,9 @@ public class BlueQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         BlueQuartzList.BLUE_QUARTZ_TILE_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_TILE_SLAB
         );
-
 
         BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS = Quartztastic.BLOCKS.register(
             "blue_quartz_tile_stairs", 
@@ -323,11 +336,9 @@ public class BlueQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS
         );
-
 
         BlueQuartzList.BLUE_QUARTZ_PILLAR = Quartztastic.BLOCKS.register(
             "blue_quartz_pillar", 
@@ -339,7 +350,6 @@ public class BlueQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         BlueQuartzList.BLUE_QUARTZ_PILLAR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_PILLAR
         );
@@ -392,6 +402,23 @@ public class BlueQuartzRegistry {
             BlueQuartzList.BLUE_QUARTZ_BOOKSHELF
         );
 
+        BlueQuartzList.BLUE_QUARTZ_LIGHT = Quartztastic.BLOCKS.register(
+            "blue_quartz_light", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .lightLevel(state -> 15)
+            )
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_LIGHT
+        );
+    }
+
+    public static void registerFunctionalBlocks() {
 
         BlueQuartzList.BLUE_QUARTZ_FURNACE = Quartztastic.BLOCKS.register(
             "blue_quartz_furnace", 
@@ -448,7 +475,6 @@ public class BlueQuartzRegistry {
                 .requiresCorrectToolForDrops()
             )
         );
-
         BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
             "blue_quartz_blast_furnace",
             () -> new BlockEntityType<>(
@@ -456,12 +482,47 @@ public class BlueQuartzRegistry {
             false,
             BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE.get())
         );
-
         BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE
         );
 
+        BlueQuartzList.BLUE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
+            "blue_quartz_ladder", 
+            registryName -> new net.minecraft.world.level.block.LadderBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_LADDER
+        );
 
+        BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK = Quartztastic.BLOCKS.register(
+            "blue_quartz_barrel", 
+            registryName -> new BlueQuartzBarrelBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_BARREL_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "blue_quartz_barrel",
+            () -> new BlockEntityType<>(
+            BlueQuartzBarrelEntity::new,
+            false,
+            BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK.get())
+        );
+        BlueQuartzList.BLUE_QUARTZ_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK
+        );
+    }
+
+    private static void registerDoorBlocks() {
         BlueQuartzList.BLUE_QUARTZ_DOOR = Quartztastic.BLOCKS.register(
             "blue_quartz_door", 
             registryName -> new DoorBlock(BlockSetTypes.QUARTZ, BlockBehaviour.Properties.of()
@@ -490,8 +551,9 @@ public class BlueQuartzRegistry {
         BlueQuartzList.BLUE_QUARTZ_TRAPDOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_TRAPDOOR
         );
+    }    
 
-
+    private static void registerFurnitureBlocks() {
         BlueQuartzList.BLUE_QUARTZ_CHAIR = Quartztastic.BLOCKS.register(
             "blue_quartz_chair", 
             registryName -> new Chair("dining", BlockBehaviour.Properties.of()
@@ -502,7 +564,6 @@ public class BlueQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         BlueQuartzList.BLUE_QUARTZ_CHAIR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_CHAIR
         );
@@ -518,7 +579,6 @@ public class BlueQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         BlueQuartzList.BLUE_QUARTZ_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_TABLE
         );
@@ -534,28 +594,48 @@ public class BlueQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         BlueQuartzList.BLUE_QUARTZ_SHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_SHELF
         );
 
 
-        BlueQuartzList.BLUE_QUARTZ_LIGHT = Quartztastic.BLOCKS.register(
-            "blue_quartz_light", 
-            registryName -> new Block(BlockBehaviour.Properties.of()
+        BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_BLOCK = Quartztastic.BLOCKS.register(
+            "blue_quartz_nightstand", 
+            registryName -> new BlueQuartzNightstand(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
                 .sound(BLUE_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
-                .lightLevel(state -> 15)
+                .noOcclusion()
             )
         );
-
-        BlueQuartzList.BLUE_QUARTZ_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-            BlueQuartzList.BLUE_QUARTZ_LIGHT
+        BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "blue_quartz_nightstand",
+            () -> new BlockEntityType<>(
+            BlueQuartzNightstandEntity::new,
+            false,
+            BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_BLOCK.get())
+        );
+        BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_BLOCK
         );
 
+        BlueQuartzList.BLUE_QUARTZ_SINK = Quartztastic.BLOCKS.register(
+            "blue_quartz_sink", 
+            registryName -> new Sink("basin_with_legs", BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_SINK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_SINK
+        );
+    }    
 
+    private static void registerDecorBlocks() {
         BlueQuartzList.BLUE_QUARTZ_LANTERN = Quartztastic.BLOCKS.register(
             "blue_quartz_lantern", 
             registryName -> new net.minecraft.world.level.block.LanternBlock(BlockBehaviour.Properties.of()
@@ -614,7 +694,6 @@ public class BlueQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         BlueQuartzList.BLUE_QUARTZ_WALL_TORCH = Quartztastic.BLOCKS.register(
             "blue_quartz_wall_torch", 
             registryName -> new net.minecraft.world.level.block.WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.of()
@@ -625,7 +704,6 @@ public class BlueQuartzRegistry {
                 .noOcclusion()
             )
         );
-
         BlueQuartzList.BLUE_QUARTZ_TORCH_ITEM = Quartztastic.ITEMS.register(
             "blue_quartz_torch", 
             registryName -> new StandingAndWallBlockItem(
@@ -667,77 +745,6 @@ public class BlueQuartzRegistry {
                     .setId(ResourceKey.create(Registries.ITEM, registryName))
         ));
 
-
-        BlueQuartzList.BLUE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
-            "blue_quartz_ladder", 
-            registryName -> new net.minecraft.world.level.block.LadderBlock(BlockBehaviour.Properties.of()
-                .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
-                .sound(BLUE_QUARTZ_SOUND)
-                .requiresCorrectToolForDrops()
-                .noOcclusion()
-            )
-        );
-        BlueQuartzList.BLUE_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-            BlueQuartzList.BLUE_QUARTZ_LADDER
-        );
-
-        BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK = Quartztastic.BLOCKS.register(
-            "blue_quartz_barrel", 
-            registryName -> new BlueQuartzBarrelBlock(BlockBehaviour.Properties.of()
-                .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
-                .sound(BLUE_QUARTZ_SOUND)
-                .requiresCorrectToolForDrops()
-                .noOcclusion()
-            )
-        );
-        BlueQuartzList.BLUE_QUARTZ_BARREL_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
-            "blue_quartz_barrel",
-            () -> new BlockEntityType<>(
-            BlueQuartzBarrelEntity::new,
-            false,
-            BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK.get())
-        );
-        BlueQuartzList.BLUE_QUARTZ_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-            BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK
-        );
-
-        BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_BLOCK = Quartztastic.BLOCKS.register(
-            "blue_quartz_nightstand", 
-            registryName -> new BlueQuartzNightstand(BlockBehaviour.Properties.of()
-                .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
-                .sound(BLUE_QUARTZ_SOUND)
-                .requiresCorrectToolForDrops()
-                .noOcclusion()
-            )
-        );
-        BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
-            "blue_quartz_nightstand",
-            () -> new BlockEntityType<>(
-            BlueQuartzNightstandEntity::new,
-            false,
-            BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_BLOCK.get())
-        );
-        BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-            BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_BLOCK
-        );
-
-        BlueQuartzList.BLUE_QUARTZ_SINK = Quartztastic.BLOCKS.register(
-            "blue_quartz_sink", 
-            registryName -> new Sink("bathroom", BlockBehaviour.Properties.of()
-                .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
-                .sound(BLUE_QUARTZ_SOUND)
-                .requiresCorrectToolForDrops()
-                .noOcclusion()
-            )
-        );
-        BlueQuartzList.BLUE_QUARTZ_SINK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
-            BlueQuartzList.BLUE_QUARTZ_SINK
-        );
-
         BlueQuartzList.BLUE_QUARTZ_PATH = Quartztastic.BLOCKS.register(
             "blue_quartz_path", 
             registryName -> new Path(BlockBehaviour.Properties.of()
@@ -766,6 +773,634 @@ public class BlueQuartzRegistry {
         BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE
         );
-    }
+    }  
     
+    private static void registerFlowerPotBlocks() {
+
+        BlueQuartzList.BLUE_QUARTZ_FLOWER_POT = Quartztastic.BLOCKS.register(
+            "blue_quartz_flower_pot", 
+        registryName -> new FlowerPotBlock(null, () -> Blocks.AIR, BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+            .instabreak()
+            .sound(BLUE_QUARTZ_SOUND)
+            .noOcclusion()
+        ));
+        BlueQuartzList.BLUE_QUARTZ_FLOWER_POT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_FLOWER_POT
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_POPPY = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_poppy",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.POPPY,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_POPPY_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_POPPY
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_DANDELION = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_dandelion",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.DANDELION,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_DANDELION_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_DANDELION
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_BLUE_ORCHID = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_blue_orchid",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.BLUE_ORCHID,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_BLUE_ORCHID_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_BLUE_ORCHID
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_ALLIUM = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_allium",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.ALLIUM,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_ALLIUM_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_ALLIUM
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_AZURE_BLUET = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_azure_bluet",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.AZURE_BLUET,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_AZURE_BLUET_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_AZURE_BLUET
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_RED_TULIP = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_red_tulip",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.RED_TULIP,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_RED_TULIP_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_RED_TULIP
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_ORANGE_TULIP = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_orange_tulip",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.ORANGE_TULIP,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_ORANGE_TULIP_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_ORANGE_TULIP
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_WHITE_TULIP = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_white_tulip",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.WHITE_TULIP,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_WHITE_TULIP_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_WHITE_TULIP
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_PINK_TULIP = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_pink_tulip",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.PINK_TULIP,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_PINK_TULIP_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_PINK_TULIP
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_OXEYE_DAISY = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_oxeye_daisy",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.OXEYE_DAISY,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_OXEYE_DAISY_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_OXEYE_DAISY
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CORNFLOWER = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_cornflower",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.CORNFLOWER,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CORNFLOWER_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_CORNFLOWER
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_LILY_OF_THE_VALLEY = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_lily_of_the_valley",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.LILY_OF_THE_VALLEY,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_LILY_OF_THE_VALLEY_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_LILY_OF_THE_VALLEY
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_WITHER_ROSE = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_wither_rose",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.WITHER_ROSE,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_WITHER_ROSE_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_WITHER_ROSE
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_TORCHFLOWER = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_torchflower",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.TORCHFLOWER,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_TORCHFLOWER_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_TORCHFLOWER
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CLOSED_EYEBLOSSOM = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_closed_eyeblossom",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.CLOSED_EYEBLOSSOM,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CLOSED_EYEBLOSSOM_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_CLOSED_EYEBLOSSOM
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_OPEN_EYEBLOSSOM = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_open_eyeblossom",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.OPEN_EYEBLOSSOM,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_OPEN_EYEBLOSSOM_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_OPEN_EYEBLOSSOM
+        );
+        
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_OAK_SAPLING = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_oak_sapling",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.OAK_SAPLING,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_OAK_SAPLING_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_OAK_SAPLING
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_SPRUCE_SAPLING = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_spruce_sapling",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.SPRUCE_SAPLING,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_SPRUCE_SAPLING_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_SPRUCE_SAPLING
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_BIRCH_SAPLING = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_birch_sapling",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.BIRCH_SAPLING,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_BIRCH_SAPLING_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_BIRCH_SAPLING
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_JUNGLE_SAPLING = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_jungle_sapling",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.JUNGLE_SAPLING,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_JUNGLE_SAPLING_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_JUNGLE_SAPLING
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_ACACIA_SAPLING = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_acacia_sapling",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.ACACIA_SAPLING,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_ACACIA_SAPLING_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_ACACIA_SAPLING
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_DARK_OAK_SAPLING = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_dark_oak_sapling",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.DARK_OAK_SAPLING,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_DARK_OAK_SAPLING_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_DARK_OAK_SAPLING
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_AZALEA = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_azalea",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.AZALEA,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_AZALEA_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_AZALEA
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_FLOWERING_AZALEA = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_flowering_azalea",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.FLOWERING_AZALEA,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_FLOWERING_AZALEA_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_FLOWERING_AZALEA
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_MANGROVE_PROPAGULE = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_mangrove_propagule",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.MANGROVE_PROPAGULE,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_MANGROVE_PROPAGULE_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_MANGROVE_PROPAGULE
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CHERRY_SAPLING = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_cherry_sapling",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.CHERRY_SAPLING,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CHERRY_SAPLING_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_CHERRY_SAPLING
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_PALE_OAK_SAPLING = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_pale_oak_sapling",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.PALE_OAK_SAPLING,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_PALE_OAK_SAPLING_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_PALE_OAK_SAPLING
+        );
+
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_RED_MUSHROOM = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_red_mushroom",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.RED_MUSHROOM,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_RED_MUSHROOM_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_RED_MUSHROOM
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_BROWN_MUSHROOM = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_brown_mushroom",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.BROWN_MUSHROOM,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_BROWN_MUSHROOM_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_BROWN_MUSHROOM
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CRIMSON_FUNGUS = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_crimson_fungus",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.CRIMSON_FUNGUS,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CRIMSON_FUNGUS_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_CRIMSON_FUNGUS
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_WARPED_FUNGUS = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_warped_fungus",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.WARPED_FUNGUS,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_WARPED_FUNGUS_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_WARPED_FUNGUS
+        );
+
+        
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CRIMSON_ROOTS = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_crimson_roots",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.CRIMSON_ROOTS,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CRIMSON_ROOTS_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_CRIMSON_ROOTS
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_WARPED_ROOTS = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_warped_roots",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.WARPED_ROOTS,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_WARPED_ROOTS_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_WARPED_ROOTS
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_FERN = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_fern",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.FERN,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+                .mapColor(MapColor.PLANT)
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_FERN_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_FERN
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_DEAD_BUSH = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_dead_bush",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.DEAD_BUSH,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+                .mapColor(MapColor.PLANT)
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_DEAD_BUSH_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_DEAD_BUSH
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CACTUS = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_cactus",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.CACTUS,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+                .mapColor(MapColor.PLANT)
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_CACTUS_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_CACTUS
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_POTTED_BAMBOO = Quartztastic.BLOCKS.register(
+            "blue_quartz_potted_bamboo",
+            registryName -> new FlowerPotBlock(
+            () -> (FlowerPotBlock) BlueQuartzList.BLUE_QUARTZ_FLOWER_POT.get(),
+            () -> Blocks.BAMBOO,
+            BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .instabreak()
+                .sound(BLUE_QUARTZ_SOUND)
+                .noOcclusion()
+                .mapColor(MapColor.PLANT)
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_POTTED_BAMBOO_ITEM = Quartztastic.UNOBTAINABLE_ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_POTTED_BAMBOO
+        );
+    }    
 }
