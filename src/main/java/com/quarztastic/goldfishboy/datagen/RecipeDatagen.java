@@ -2198,6 +2198,13 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
             .save(this.output);
 
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, CitrineList.CITRINE_FLOWER_POT_ITEM.get())
+            .pattern("! !")
+            .pattern(" ! ")
+            .define('!', CitrineList.CITRINE_CRYSTAL.get())
+            .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
+            .save(this.output);
+
     }
     public static class Runner extends RecipeProvider.Runner {
 

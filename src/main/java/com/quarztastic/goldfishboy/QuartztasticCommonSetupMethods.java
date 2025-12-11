@@ -1,6 +1,7 @@
 package com.quarztastic.goldfishboy;
 
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
+import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -323,5 +324,165 @@ public class QuartztasticCommonSetupMethods {
                 () -> BlueQuartzList.BLUE_QUARTZ_POTTED_BAMBOO.get()
             );
         });
+    }
+    
+    static void setCitrinePotPlants(FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            FlowerPotBlock citrinePot = CitrineList.CITRINE_FLOWER_POT.get();
+            
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.POPPY), 
+                () -> CitrineList.CITRINE_POTTED_POPPY.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.DANDELION), 
+                () -> CitrineList.CITRINE_POTTED_DANDELION.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.BLUE_ORCHID), 
+                () -> CitrineList.CITRINE_POTTED_BLUE_ORCHID.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.ALLIUM), 
+                () -> CitrineList.CITRINE_POTTED_ALLIUM.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.AZURE_BLUET), 
+                () -> CitrineList.CITRINE_POTTED_AZURE_BLUET.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.RED_TULIP), 
+                () -> CitrineList.CITRINE_POTTED_RED_TULIP.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.ORANGE_TULIP), 
+                () -> CitrineList.CITRINE_POTTED_ORANGE_TULIP.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.WHITE_TULIP), 
+                () -> CitrineList.CITRINE_POTTED_WHITE_TULIP.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.PINK_TULIP), 
+                () -> CitrineList.CITRINE_POTTED_PINK_TULIP.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.OXEYE_DAISY), 
+                () -> CitrineList.CITRINE_POTTED_OXEYE_DAISY.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CORNFLOWER), 
+                () -> CitrineList.CITRINE_POTTED_CORNFLOWER.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.LILY_OF_THE_VALLEY), 
+                () -> CitrineList.CITRINE_POTTED_LILY_OF_THE_VALLEY.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.WITHER_ROSE), 
+                () -> CitrineList.CITRINE_POTTED_WITHER_ROSE.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.TORCHFLOWER), 
+                () -> CitrineList.CITRINE_POTTED_TORCHFLOWER.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CLOSED_EYEBLOSSOM), 
+                () -> CitrineList.CITRINE_POTTED_CLOSED_EYEBLOSSOM.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.OPEN_EYEBLOSSOM), 
+                () -> CitrineList.CITRINE_POTTED_OPEN_EYEBLOSSOM.get()
+            );
+
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.OAK_SAPLING), 
+                () -> CitrineList.CITRINE_POTTED_OAK_SAPLING.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.SPRUCE_SAPLING), 
+                () -> CitrineList.CITRINE_POTTED_SPRUCE_SAPLING.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.BIRCH_SAPLING), 
+                () -> CitrineList.CITRINE_POTTED_BIRCH_SAPLING.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.JUNGLE_SAPLING), 
+                () -> CitrineList.CITRINE_POTTED_JUNGLE_SAPLING.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.ACACIA_SAPLING), 
+                () -> CitrineList.CITRINE_POTTED_ACACIA_SAPLING.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.DARK_OAK_SAPLING), 
+                () -> CitrineList.CITRINE_POTTED_DARK_OAK_SAPLING.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.AZALEA), 
+                () -> CitrineList.CITRINE_POTTED_AZALEA.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.FLOWERING_AZALEA), 
+                () -> CitrineList.CITRINE_POTTED_FLOWERING_AZALEA.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.MANGROVE_PROPAGULE), 
+                () -> CitrineList.CITRINE_POTTED_MANGROVE_PROPAGULE.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CHERRY_SAPLING), 
+                () -> CitrineList.CITRINE_POTTED_CHERRY_SAPLING.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.PALE_OAK_SAPLING), 
+                () -> CitrineList.CITRINE_POTTED_PALE_OAK_SAPLING.get()
+            );
+
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.RED_MUSHROOM), 
+                () -> CitrineList.CITRINE_POTTED_RED_MUSHROOM.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.BROWN_MUSHROOM), 
+                () -> CitrineList.CITRINE_POTTED_BROWN_MUSHROOM.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CRIMSON_FUNGUS), 
+                () -> CitrineList.CITRINE_POTTED_CRIMSON_FUNGUS.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.WARPED_FUNGUS), 
+                () -> CitrineList.CITRINE_POTTED_WARPED_FUNGUS.get()
+            );
+
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CRIMSON_ROOTS), 
+                () -> CitrineList.CITRINE_POTTED_CRIMSON_ROOTS.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.WARPED_ROOTS), 
+                () -> CitrineList.CITRINE_POTTED_WARPED_ROOTS.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.FERN), 
+                () -> CitrineList.CITRINE_POTTED_FERN.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.DEAD_BUSH), 
+                () -> CitrineList.CITRINE_POTTED_DEAD_BUSH.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.CACTUS), 
+                () -> CitrineList.CITRINE_POTTED_CACTUS.get()
+            );
+            citrinePot.addPlant(
+                BuiltInRegistries.BLOCK.getKey(Blocks.BAMBOO), 
+                () -> CitrineList.CITRINE_POTTED_BAMBOO.get()
+            );
+            
+        });
+        
     }
 }

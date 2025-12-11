@@ -9,6 +9,7 @@ import com.quarztastic.goldfishboy.datagen.Datagen;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.BlueQuartzRegistry;
+import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
 import com.quarztastic.goldfishboy.registry.RoseQuartzRegistry;
@@ -116,9 +117,11 @@ public class Quartztastic {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-
-        QuartztasticCommonSetupMethods.setPrasioliteQuartzPotPlants(event);
+        
+        QuartztasticCommonSetupMethods.setCitrinePotPlants(event);
         QuartztasticCommonSetupMethods.setBlueQuartzPotPlants(event);
+        QuartztasticCommonSetupMethods.setPrasioliteQuartzPotPlants(event);
+        
 
     }
 
@@ -132,8 +135,11 @@ public class Quartztastic {
                 ? BiomeColors.getAverageGrassColor(level, pos) 
                 : 0x8CBF60;
         }, 
-        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_FERN.get(),
-        BlueQuartzList.BLUE_QUARTZ_POTTED_FERN.get());
+
+        CitrineList.CITRINE_POTTED_FERN.get(),
+        BlueQuartzList.BLUE_QUARTZ_POTTED_FERN.get(),
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_FERN.get());
+        
     }
 
     @SubscribeEvent

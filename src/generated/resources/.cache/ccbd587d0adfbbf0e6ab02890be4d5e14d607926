@@ -1,4 +1,4 @@
-// 1.21.9	2025-12-07T12:38:27.105587056	Quartztastic Recipes
+// 1.21.9	2025-12-11T11:56:42.174999843	Quartztastic Recipes
 be54f49c6029605b2e4c71766272b1630f986f66 data/minecraft/advancement/recipes/building_blocks/blue_quartz_bricks_by_crafting.json
 7f6752e588be2dbf4f563db8a3cd18be5d794def data/minecraft/advancement/recipes/building_blocks/blue_quartz_bricks_by_stonecutting.json
 31341f0448e0f426e0570923b3cf76a914ac191b data/minecraft/advancement/recipes/building_blocks/blue_quartz_bricks_slab_by_crafting.json
@@ -369,6 +369,7 @@ c77397e0ad98de1b959cf4326e563a1bc0269a55 data/quartztastic/advancement/recipes/d
 071769eb226666d1cf681788aa96cbbc0c0976b5 data/quartztastic/advancement/recipes/decorations/citrine_chair.json
 cc1a30438d96d89ab55749f279871a456166349f data/quartztastic/advancement/recipes/decorations/citrine_door.json
 b5e3e6b7ac2faa090c400b286dd9b0a15a1db3e6 data/quartztastic/advancement/recipes/decorations/citrine_fence.json
+2e1bfcae5df21b7d818f567be56bf7524147bd71 data/quartztastic/advancement/recipes/decorations/citrine_flower_pot.json
 5b92eaccc4b0539aa8c39e3f40d5656e7d6de199 data/quartztastic/advancement/recipes/decorations/citrine_gate.json
 2b577cf53023265bc0cd909f3c3e2705959738b8 data/quartztastic/advancement/recipes/decorations/citrine_ladder.json
 60e4d4082ce3d7e0260e95b5f5678b57b1fb496a data/quartztastic/advancement/recipes/decorations/citrine_lantern.json
@@ -473,6 +474,7 @@ f98cf4162a899534a451cff40060e434a742123e data/quartztastic/recipe/citrine_block.
 0e31163cc84fe87aa1a73b1ecee59f7c2f8a6e04 data/quartztastic/recipe/citrine_chair.json
 4b906e57ce97187567b32ba0b1237b676b0fc851 data/quartztastic/recipe/citrine_door.json
 20661cb133b9e2a72abef2b8ef0f3ddbc04c22c7 data/quartztastic/recipe/citrine_fence.json
+825548a53923c6ad823603653d91b4c81137cb34 data/quartztastic/recipe/citrine_flower_pot.json
 9c5d0a3a198f1df538c366897fd541918448badc data/quartztastic/recipe/citrine_furnace.json
 22b2a04f53235b3a0c8046576d27512375092237 data/quartztastic/recipe/citrine_gate.json
 9117a3a5fad515e8d95d27c60d5801dd8634eee9 data/quartztastic/recipe/citrine_ladder.json
