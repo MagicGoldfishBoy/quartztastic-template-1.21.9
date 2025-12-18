@@ -35,15 +35,15 @@ public class TagDatagen extends BlockTagsProvider {
                 SmokyQuartzList.SMOKY_QUARTZ_GATE.get(), 
 
                 SmokyQuartzList.SMOKY_QUARTZ_BRICKS.get(), 
-                SmokyQuartzList.SMOKY_QUARTZ_BRICKS_SLAB.get(), 
-                SmokyQuartzList.SMOKY_QUARTZ_BRICKS_STAIRS.get(), 
+                SmokyQuartzList.SMOKY_QUARTZ_BRICK_SLAB.get(), 
+                SmokyQuartzList.SMOKY_QUARTZ_BRICK_STAIRS.get(), 
                 SmokyQuartzList.SMOKY_QUARTZ_BRICK_WALL.get(),
 
                 SmokyQuartzList.CHISELED_SMOKY_QUARTZ_BLOCK.get(),
 
                 SmokyQuartzList.SMOKY_QUARTZ_TILES.get(),
-                SmokyQuartzList.SMOKY_QUARTZ_TILES_SLAB.get(),
-                SmokyQuartzList.SMOKY_QUARTZ_TILES_STAIRS.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_TILE_SLAB.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_TILE_STAIRS.get(),
                 
                 SmokyQuartzList.SMOKY_QUARTZ_PILLAR.get(),
 
@@ -54,9 +54,9 @@ public class TagDatagen extends BlockTagsProvider {
 
                 SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF.get(),
 
-                SmokyQuartzList.SMOKY_QUARTZ_FURNACE_BLOCK.get(),
-                SmokyQuartzList.SMOKY_QUARTZ_OVEN_BLOCK.get(),
-                SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_BLOCK.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_FURNACE.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_OVEN.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE.get(),
 
                 SmokyQuartzList.SMOKY_QUARTZ_DOOR.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_TRAPDOOR.get(),
@@ -69,8 +69,8 @@ public class TagDatagen extends BlockTagsProvider {
                 SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_CHAIN.get(),
 
-                SmokyQuartzList.SMOKY_QUARTZ_BARREL.get(),
-                SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_BARREL_BLOCK.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND_BLOCK.get(),
 
                 SmokyQuartzList.SMOKY_QUARTZ_SINK.get(),
 
@@ -379,7 +379,7 @@ public class TagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.BARRELS_TAG)
             .add(
-                SmokyQuartzList.SMOKY_QUARTZ_BARREL.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_BARREL_BLOCK.get(),
                 RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK.get(),
                 CitrineList.CITRINE_BARREL_BLOCK.get(),
                 BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK.get(),

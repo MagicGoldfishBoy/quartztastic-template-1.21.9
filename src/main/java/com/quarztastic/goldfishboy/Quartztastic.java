@@ -119,6 +119,7 @@ public class Quartztastic {
 
     private void commonSetup(FMLCommonSetupEvent event) {
 
+        QuartztasticCommonSetupMethods.setSmokyQuartzPotPlants(event);
         QuartztasticCommonSetupMethods.setRoseQuartzPotPlants(event);
         QuartztasticCommonSetupMethods.setCitrinePotPlants(event);
         QuartztasticCommonSetupMethods.setBlueQuartzPotPlants(event);
@@ -136,6 +137,7 @@ public class Quartztastic {
                 ? BiomeColors.getAverageGrassColor(level, pos) 
                 : 0x8CBF60;
         }, 
+        SmokyQuartzList.SMOKY_QUARTZ_POTTED_FERN.get(),
         RoseQuartzList.ROSE_QUARTZ_POTTED_FERN.get(),
         CitrineList.CITRINE_POTTED_FERN.get(),
         BlueQuartzList.BLUE_QUARTZ_POTTED_FERN.get(),
