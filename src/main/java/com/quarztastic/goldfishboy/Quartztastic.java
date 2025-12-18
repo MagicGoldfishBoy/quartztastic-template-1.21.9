@@ -12,6 +12,7 @@ import com.quarztastic.goldfishboy.registry.BlueQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
+import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.RoseQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
@@ -117,25 +118,25 @@ public class Quartztastic {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        
+
+        QuartztasticCommonSetupMethods.setRoseQuartzPotPlants(event);
         QuartztasticCommonSetupMethods.setCitrinePotPlants(event);
         QuartztasticCommonSetupMethods.setBlueQuartzPotPlants(event);
         QuartztasticCommonSetupMethods.setPrasioliteQuartzPotPlants(event);
         
-
     }
 
     void registerBlockColors(RegisterColorHandlersEvent.Block event) {
         LOGGER.info("Registering block color handlers");
         event.register((state, level, pos, tintIndex) -> {
-            // Only apply grass color to specific tint index (typically 0 for foliage)
+            // Only apply grass color to 0 because 0 is plant
             if (tintIndex != 0) return -1; // -1 means no tint
             
             return level != null && pos != null 
                 ? BiomeColors.getAverageGrassColor(level, pos) 
                 : 0x8CBF60;
         }, 
-
+        RoseQuartzList.ROSE_QUARTZ_POTTED_FERN.get(),
         CitrineList.CITRINE_POTTED_FERN.get(),
         BlueQuartzList.BLUE_QUARTZ_POTTED_FERN.get(),
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_POTTED_FERN.get());
