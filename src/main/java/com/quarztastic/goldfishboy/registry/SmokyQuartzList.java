@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.SmokyQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBlastFurnaceBlock;
+import com.quarztastic.goldfishboy.block.SmokyQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.SmokyQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
@@ -137,6 +138,9 @@ public class SmokyQuartzList {
     public static DeferredBlock<SmokyQuartzBlastFurnaceBlock> SMOKY_QUARTZ_BLAST_FURNACE;
     public static Supplier<BlockEntityType<SmokyQuartzBlastFurnaceEntity>> SMOKY_QUARTZ_BLAST_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_BLAST_FURNACE_ITEM;
+
+    public static DeferredBlock<SmokyQuartzCraftingTable> SMOKY_QUARTZ_CRAFTING_TABLE;
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_CRAFTING_TABLE_ITEM;
 
 
     public static DeferredBlock<DoorBlock> SMOKY_QUARTZ_DOOR;

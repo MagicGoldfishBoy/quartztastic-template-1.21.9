@@ -2,7 +2,6 @@ package com.quarztastic.goldfishboy.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
-import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.RoseQuartzList;
@@ -10,7 +9,6 @@ import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.TagKeyList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 
-import net.minecraft.advancements.critereon.CollectionContentsPredicate.Single;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.Registries;
@@ -234,6 +232,15 @@ public class RecipeDatagen extends RecipeProvider {
             .pattern("@@@")
             .define('@', SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
             .define('#', Items.BLAST_FURNACE)
+            .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_CRAFTING_TABLE_ITEM.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
+            .define('#', TagKeyList.CRAFTING_TABLE_TAG)
             .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .save(this.output);
 

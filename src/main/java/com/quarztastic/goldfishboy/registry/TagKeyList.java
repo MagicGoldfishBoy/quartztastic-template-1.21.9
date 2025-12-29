@@ -85,5 +85,10 @@ public class TagKeyList {
         Registries.ITEM, 
         ResourceLocation.fromNamespaceAndPath("minecraft", "coals")
     );
+
+    public static final TagKey<Item> CRAFTING_TABLE_TAG = TagKey.create(
+        Registries.ITEM, 
+        ResourceLocation.fromNamespaceAndPath("c", "player_workstations/crafting_tables")
+    );
     
 }

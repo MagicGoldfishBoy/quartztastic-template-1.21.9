@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy.registry;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.SmokyQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBlastFurnaceBlock;
+import com.quarztastic.goldfishboy.block.SmokyQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.SmokyQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
@@ -499,6 +500,20 @@ public class SmokyQuartzRegistry {
         );
         SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_CRAFTING_TABLE = Quartztastic.BLOCKS.register(
+            "smoky_quartz_crafting_table", 
+            registryName -> new SmokyQuartzCraftingTable(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(SMOKY_QUARTZ_DESTROY_TIME, SMOKY_QUARTZ_BLAST_RESISTANCE)
+                .sound(SMOKY_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        SmokyQuartzList.SMOKY_QUARTZ_CRAFTING_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_CRAFTING_TABLE
         );
 
         SmokyQuartzList.SMOKY_QUARTZ_LADDER = Quartztastic.BLOCKS.register(

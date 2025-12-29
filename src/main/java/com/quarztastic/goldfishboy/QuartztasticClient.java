@@ -79,6 +79,7 @@ public class QuartztasticClient {
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_FURNACE.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_OVEN.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_CRAFTING_TABLE.get(), ChunkSectionLayer.TRANSLUCENT);
 
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_PILLAR.get(), ChunkSectionLayer.TRANSLUCENT);
 

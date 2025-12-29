@@ -354,6 +354,8 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE.get(), new Variant(modLocation("block/smoky_quartz_skull")));
 
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_CRAFTING_TABLE.get(), new Variant(modLocation("block/smoky_quartz_crafting_table")));
+
         itemModels.itemModelOutput.accept(
             SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/smoky_quartz_skull"))
