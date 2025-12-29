@@ -4,7 +4,8 @@ import java.util.Optional;
 
 import javax.annotation.Nullable;
 
-import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
+
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;

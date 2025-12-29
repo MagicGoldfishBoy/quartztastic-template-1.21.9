@@ -17,6 +17,7 @@ import java.util.List;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
 public class WorldgenRegistry {
     public static final RegistrySetBuilder WORLD_GEN_BUILDER = new RegistrySetBuilder()

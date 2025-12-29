@@ -3,7 +3,7 @@ package com.quarztastic.goldfishboy.entity;
 import java.util.List;
 
 import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
-import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;

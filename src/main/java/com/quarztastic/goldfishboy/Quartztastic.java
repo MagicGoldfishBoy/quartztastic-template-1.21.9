@@ -14,10 +14,10 @@ import com.quarztastic.goldfishboy.registry.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
 import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.RoseQuartzRegistry;
-import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
-import com.quarztastic.goldfishboy.registry.SmokyQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzRegistry;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzRegistry;
 
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.entity.NoopRenderer;

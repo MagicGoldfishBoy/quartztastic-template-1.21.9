@@ -1,4 +1,4 @@
-package com.quarztastic.goldfishboy.registry;
+package com.quarztastic.goldfishboy.registry.smoky_quartz;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.SmokyQuartzFurnaceBlock;
@@ -16,6 +16,7 @@ import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzOvenEntity;
+import com.quarztastic.goldfishboy.registry.BlockSetTypes;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzNightstandEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.SmokyQuartzBlastFurnaceEntity;

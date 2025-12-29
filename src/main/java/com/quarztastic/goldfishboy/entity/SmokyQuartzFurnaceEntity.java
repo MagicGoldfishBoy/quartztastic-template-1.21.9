@@ -1,7 +1,7 @@
 package com.quarztastic.goldfishboy.entity;
 
 
-import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

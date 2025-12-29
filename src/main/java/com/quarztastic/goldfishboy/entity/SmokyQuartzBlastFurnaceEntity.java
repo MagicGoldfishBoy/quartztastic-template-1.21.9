@@ -3,7 +3,7 @@ package com.quarztastic.goldfishboy.entity;
 import java.util.logging.Logger;
 
 import com.mojang.logging.LogUtils;
-import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

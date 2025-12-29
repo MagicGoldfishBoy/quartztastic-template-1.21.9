@@ -7,7 +7,7 @@ import java.util.function.BiConsumer;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.CitrineList;
-import com.quarztastic.goldfishboy.registry.SmokyQuartzList;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
