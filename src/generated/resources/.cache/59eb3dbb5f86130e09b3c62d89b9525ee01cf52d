@@ -1,4 +1,4 @@
-// 1.21.9	2025-12-29T16:14:49.218958551	Loot Tables
+// 1.21.9	2025-12-31T11:28:22.912523986	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -261,6 +261,7 @@ c990c88a77a6ea01f419843441ccbde2fc1b4380 data/quartztastic/loot_table/blocks/ros
 eae3c9e5824429dd711603671c79e23ee6076336 data/quartztastic/loot_table/blocks/rose_quartz_button.json
 874eea39e929ae76b574fb4d23fc5b09de02d00b data/quartztastic/loot_table/blocks/rose_quartz_chain.json
 a563db8524f4ad349b00972256f66543cc4dfc75 data/quartztastic/loot_table/blocks/rose_quartz_chair.json
+972bd40b8ed875e214397d80f068bfcc7a43e618 data/quartztastic/loot_table/blocks/rose_quartz_crafting_table.json
 3d84b5006699f6110f5feeb9514b02ae964a4c1a data/quartztastic/loot_table/blocks/rose_quartz_door.json
 1900bdca4b7b58decfd720b041aec897e52dde8e data/quartztastic/loot_table/blocks/rose_quartz_fence.json
 56c7285137f06ccad9573e27d1b81ce5ddea8186 data/quartztastic/loot_table/blocks/rose_quartz_flower_pot.json

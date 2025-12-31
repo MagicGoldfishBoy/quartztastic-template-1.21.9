@@ -3,9 +3,11 @@ package com.quarztastic.goldfishboy.registry;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzBlastFurnaceBlock;
+import com.quarztastic.goldfishboy.block.RoseQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.RoseQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
+import com.quarztastic.goldfishboy.block.SmokyQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.RoseQuartzBarrelBlock;
@@ -15,6 +17,7 @@ import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.RoseQuartzOvenEntity;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 import com.quarztastic.goldfishboy.entity.RoseQuartzNightstandEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.RoseQuartzBlastFurnaceEntity;
@@ -469,6 +472,20 @@ public class RoseQuartzRegistry {
         );
         RoseQuartzList.ROSE_QUARTZ_BLAST_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             RoseQuartzList.ROSE_QUARTZ_BLAST_FURNACE
+        );
+
+        RoseQuartzList.ROSE_QUARTZ_CRAFTING_TABLE = Quartztastic.BLOCKS.register(
+            "rose_quartz_crafting_table", 
+            registryName -> new RoseQuartzCraftingTable(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                .sound(ROSE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        RoseQuartzList.ROSE_QUARTZ_CRAFTING_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            RoseQuartzList.ROSE_QUARTZ_CRAFTING_TABLE
         );
 
         RoseQuartzList.ROSE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
