@@ -1,10 +1,10 @@
-package com.quarztastic.goldfishboy.block;
+package com.quarztastic.goldfishboy.block.ovens;
 
 import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
-import com.quarztastic.goldfishboy.entity.BlueQuartzOvenEntity;
-import com.quarztastic.goldfishboy.registry.BlueQuartzList;
+import com.quarztastic.goldfishboy.entity.RoseQuartzOvenEntity;
+import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -24,37 +24,37 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class BlueQuartzOvenBlock extends AbstractFurnaceBlock {
-    public static final MapCodec<BlueQuartzOvenBlock> CODEC = simpleCodec(BlueQuartzOvenBlock::new);
+public class RoseQuartzOvenBlock extends AbstractFurnaceBlock {
+    public static final MapCodec<RoseQuartzOvenBlock> CODEC = simpleCodec(RoseQuartzOvenBlock::new);
 
     @Override
-    public MapCodec<BlueQuartzOvenBlock> codec() {
+    public MapCodec<RoseQuartzOvenBlock> codec() {
         return CODEC;
     }
 
-    public BlueQuartzOvenBlock(BlockBehaviour.Properties properties) {
+    public RoseQuartzOvenBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
     @SuppressWarnings("null")
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new BlueQuartzOvenEntity(pos, state);
+        return new RoseQuartzOvenEntity(pos, state);
     }
     @SuppressWarnings("null")
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         if (level.isClientSide()) return null;
-        if (blockEntityType != BlueQuartzList.BLUE_QUARTZ_OVEN_ENTITY.get()) return null;
-        return (BlockEntityTicker<T>) (lvl, pos, st, entity) -> BlueQuartzOvenEntity.serverTick((ServerLevel) lvl, pos, st, (BlueQuartzOvenEntity) entity);
+        if (blockEntityType != RoseQuartzList.ROSE_QUARTZ_OVEN_ENTITY.get()) return null;
+        return (BlockEntityTicker<T>) (lvl, pos, st, entity) -> RoseQuartzOvenEntity.serverTick((ServerLevel) lvl, pos, st, (RoseQuartzOvenEntity) entity);
     }
 
     @SuppressWarnings("null")
     @Override
     protected void openContainer(Level level, BlockPos pos, Player player) {
         BlockEntity blockentity = level.getBlockEntity(pos);
-        if (blockentity instanceof BlueQuartzOvenEntity) {
+        if (blockentity instanceof RoseQuartzOvenEntity) {
             player.openMenu((MenuProvider)blockentity);
             player.awardStat(Stats.INTERACT_WITH_SMOKER);
         }
@@ -75,7 +75,6 @@ public class BlueQuartzOvenBlock extends AbstractFurnaceBlock {
         }
     }
 
-    @SuppressWarnings("null")
     @Override
     public int getLightEmission(BlockState state, BlockGetter level, BlockPos pos) {
         return state.getValue(LIT) ? 15 : 0;
