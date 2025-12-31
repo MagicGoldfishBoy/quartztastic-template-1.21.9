@@ -1,10 +1,10 @@
-package com.quarztastic.goldfishboy.block;
+package com.quarztastic.goldfishboy.block.furnaces;
 
 import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
-import com.quarztastic.goldfishboy.entity.SmokyQuartzFurnaceEntity;
-import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
+import com.quarztastic.goldfishboy.entity.PrasioliteQuartzFurnaceEntity;
+import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -29,22 +29,22 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class SmokyQuartzFurnaceBlock extends AbstractFurnaceBlock {
-    public static final MapCodec<SmokyQuartzFurnaceBlock> CODEC = simpleCodec(SmokyQuartzFurnaceBlock::new);
+public class PrasioliteQuartzFurnaceBlock extends AbstractFurnaceBlock {
+    public static final MapCodec<PrasioliteQuartzFurnaceBlock> CODEC = simpleCodec(PrasioliteQuartzFurnaceBlock::new);
 
     @Override
-    public MapCodec<SmokyQuartzFurnaceBlock> codec() {
+    public MapCodec<PrasioliteQuartzFurnaceBlock> codec() {
         return CODEC;
     }
 
-    public SmokyQuartzFurnaceBlock(BlockBehaviour.Properties properties) {
+    public PrasioliteQuartzFurnaceBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
     @SuppressWarnings("null")
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new SmokyQuartzFurnaceEntity(pos, state);
+        return new PrasioliteQuartzFurnaceEntity(pos, state);
     }
 
     @SuppressWarnings("null")
@@ -52,15 +52,15 @@ public class SmokyQuartzFurnaceBlock extends AbstractFurnaceBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         if (level.isClientSide()) return null;
-        if (blockEntityType != SmokyQuartzList.SMOKY_QUARTZ_FURNACE_ENTITY.get()) return null;
-        return (BlockEntityTicker<T>) (lvl, pos, st, entity) -> SmokyQuartzFurnaceEntity.serverTick((ServerLevel) lvl, pos, st, (SmokyQuartzFurnaceEntity) entity);
+        if (blockEntityType != PrasioliteQuartzList.PRASIOLITE_QUARTZ_FURNACE_ENTITY.get()) return null;
+        return (BlockEntityTicker<T>) (lvl, pos, st, entity) -> PrasioliteQuartzFurnaceEntity.serverTick((ServerLevel) lvl, pos, st, (PrasioliteQuartzFurnaceEntity) entity);
     }
 
     @SuppressWarnings("null")
     @Override
     protected void openContainer(Level level, BlockPos pos, Player player) {
         BlockEntity blockentity = level.getBlockEntity(pos);
-        if (blockentity instanceof SmokyQuartzFurnaceEntity) {
+        if (blockentity instanceof PrasioliteQuartzFurnaceEntity) {
             player.openMenu((MenuProvider)blockentity);
             player.awardStat(Stats.INTERACT_WITH_FURNACE);
         }
@@ -99,6 +99,7 @@ public class SmokyQuartzFurnaceBlock extends AbstractFurnaceBlock {
         super.stepOn(level, pos, state, entity);
     }
 
+    @SuppressWarnings("null")
     @Override
     public int getLightEmission(BlockState state, BlockGetter level, BlockPos pos) {
         return state.getValue(LIT) ? 15 : 0;

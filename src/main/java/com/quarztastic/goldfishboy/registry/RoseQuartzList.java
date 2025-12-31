@@ -2,7 +2,6 @@ package com.quarztastic.goldfishboy.registry;
 
 import java.util.function.Supplier;
 
-import com.quarztastic.goldfishboy.block.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
@@ -10,6 +9,7 @@ import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.crafting_tables.SmokyQuartzCraftingTable;
+import com.quarztastic.goldfishboy.block.furnaces.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.RoseQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzNightstand;

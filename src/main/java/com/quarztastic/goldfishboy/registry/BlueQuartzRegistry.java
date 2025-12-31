@@ -1,12 +1,12 @@
 package com.quarztastic.goldfishboy.registry;
 
 import com.quarztastic.goldfishboy.Quartztastic;
-import com.quarztastic.goldfishboy.block.BlueQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.block.furnaces.BlueQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.BlueQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzNightstand;

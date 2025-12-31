@@ -1,10 +1,10 @@
-package com.quarztastic.goldfishboy.block;
+package com.quarztastic.goldfishboy.block.furnaces;
 
 import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
-import com.quarztastic.goldfishboy.entity.RoseQuartzFurnaceEntity;
-import com.quarztastic.goldfishboy.registry.RoseQuartzList;
+import com.quarztastic.goldfishboy.entity.SmokyQuartzFurnaceEntity;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -29,22 +29,22 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class RoseQuartzFurnaceBlock extends AbstractFurnaceBlock {
-    public static final MapCodec<RoseQuartzFurnaceBlock> CODEC = simpleCodec(RoseQuartzFurnaceBlock::new);
+public class SmokyQuartzFurnaceBlock extends AbstractFurnaceBlock {
+    public static final MapCodec<SmokyQuartzFurnaceBlock> CODEC = simpleCodec(SmokyQuartzFurnaceBlock::new);
 
     @Override
-    public MapCodec<RoseQuartzFurnaceBlock> codec() {
+    public MapCodec<SmokyQuartzFurnaceBlock> codec() {
         return CODEC;
     }
 
-    public RoseQuartzFurnaceBlock(BlockBehaviour.Properties properties) {
+    public SmokyQuartzFurnaceBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
     @SuppressWarnings("null")
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new RoseQuartzFurnaceEntity(pos, state);
+        return new SmokyQuartzFurnaceEntity(pos, state);
     }
 
     @SuppressWarnings("null")
@@ -52,15 +52,15 @@ public class RoseQuartzFurnaceBlock extends AbstractFurnaceBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         if (level.isClientSide()) return null;
-        if (blockEntityType != RoseQuartzList.ROSE_QUARTZ_FURNACE_ENTITY.get()) return null;
-        return (BlockEntityTicker<T>) (lvl, pos, st, entity) -> RoseQuartzFurnaceEntity.serverTick((ServerLevel) lvl, pos, st, (RoseQuartzFurnaceEntity) entity);
+        if (blockEntityType != SmokyQuartzList.SMOKY_QUARTZ_FURNACE_ENTITY.get()) return null;
+        return (BlockEntityTicker<T>) (lvl, pos, st, entity) -> SmokyQuartzFurnaceEntity.serverTick((ServerLevel) lvl, pos, st, (SmokyQuartzFurnaceEntity) entity);
     }
 
     @SuppressWarnings("null")
     @Override
     protected void openContainer(Level level, BlockPos pos, Player player) {
         BlockEntity blockentity = level.getBlockEntity(pos);
-        if (blockentity instanceof RoseQuartzFurnaceEntity) {
+        if (blockentity instanceof SmokyQuartzFurnaceEntity) {
             player.openMenu((MenuProvider)blockentity);
             player.awardStat(Stats.INTERACT_WITH_FURNACE);
         }
@@ -99,7 +99,6 @@ public class RoseQuartzFurnaceBlock extends AbstractFurnaceBlock {
         super.stepOn(level, pos, state, entity);
     }
 
-    @SuppressWarnings("null")
     @Override
     public int getLightEmission(BlockState state, BlockGetter level, BlockPos pos) {
         return state.getValue(LIT) ? 15 : 0;

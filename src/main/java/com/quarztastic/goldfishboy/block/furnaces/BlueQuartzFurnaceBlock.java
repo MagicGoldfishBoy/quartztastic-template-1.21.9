@@ -1,4 +1,4 @@
-package com.quarztastic.goldfishboy.block;
+package com.quarztastic.goldfishboy.block.furnaces;
 
 import javax.annotation.Nullable;
 

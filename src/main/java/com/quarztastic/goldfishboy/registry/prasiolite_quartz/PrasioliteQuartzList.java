@@ -2,12 +2,12 @@ package com.quarztastic.goldfishboy.registry.prasiolite_quartz;
 
 import java.util.function.Supplier;
 
-import com.quarztastic.goldfishboy.block.PrasioliteQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.block.furnaces.PrasioliteQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.PrasioliteQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzNightstand;
