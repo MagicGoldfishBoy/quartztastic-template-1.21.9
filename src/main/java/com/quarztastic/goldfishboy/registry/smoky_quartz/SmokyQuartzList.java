@@ -4,12 +4,12 @@ import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.SmokyQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBlastFurnaceBlock;
-import com.quarztastic.goldfishboy.block.SmokyQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.SmokyQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.block.crafting_tables.SmokyQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.SmokyQuartzNightstand;
 import com.quarztastic.goldfishboy.block.Chair;
