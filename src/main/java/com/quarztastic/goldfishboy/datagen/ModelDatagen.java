@@ -524,6 +524,8 @@ public class ModelDatagen extends ModelProvider {
             ItemModelUtils.plainModel(modLocation("block/citrine_skull"))
         );
 
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_CRAFTING_TABLE.get(), new Variant(modLocation("block/citrine_crafting_table")));
+
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_CHAIR.get(), new Variant(modLocation("block/blue_quartz_chair")));
 
