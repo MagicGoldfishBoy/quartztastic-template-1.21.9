@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.block.crafting_tables.PrasioliteQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.PrasioliteQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.PrasioliteQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBarrelBlock;
@@ -137,6 +138,9 @@ public class PrasioliteQuartzList {
     public static DeferredBlock<PrasioliteQuartzBlastFurnaceBlock> PRASIOLITE_QUARTZ_BLAST_FURNACE;
     public static Supplier<BlockEntityType<PrasioliteQuartzBlastFurnaceEntity>> PRASIOLITE_QUARTZ_BLAST_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_BLAST_FURNACE_ITEM;
+
+    public static DeferredBlock<PrasioliteQuartzCraftingTable> PRASIOLITE_QUARTZ_CRAFTING_TABLE;
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_CRAFTING_TABLE_ITEM;
 
 
     public static DeferredBlock<DoorBlock> PRASIOLITE_QUARTZ_DOOR;

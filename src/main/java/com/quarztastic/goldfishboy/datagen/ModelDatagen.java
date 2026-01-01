@@ -630,6 +630,8 @@ public class ModelDatagen extends ModelProvider {
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/prasiolite_quartz_skull"))
         );
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRAFTING_TABLE.get(), new Variant(modLocation("block/prasiolite_quartz_crafting_table")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
