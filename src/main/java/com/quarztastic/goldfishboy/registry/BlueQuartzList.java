@@ -11,6 +11,8 @@ import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.block.crafting_tables.BlueQuartzCraftingTable;
+import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.BlueQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.BlueQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
@@ -136,6 +138,9 @@ public class BlueQuartzList {
     public static DeferredBlock<BlueQuartzBlastFurnaceBlock> BLUE_QUARTZ_BLAST_FURNACE;
     public static Supplier<BlockEntityType<BlueQuartzBlastFurnaceEntity>> BLUE_QUARTZ_BLAST_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_BLAST_FURNACE_ITEM;
+
+    public static DeferredBlock<BlueQuartzCraftingTable> BLUE_QUARTZ_CRAFTING_TABLE;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_CRAFTING_TABLE_ITEM;
 
 
     public static DeferredBlock<DoorBlock> BLUE_QUARTZ_DOOR;

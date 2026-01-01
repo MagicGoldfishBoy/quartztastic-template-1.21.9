@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy.block.crafting_tables;
 import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
+import com.quarztastic.goldfishboy.container.BlueQuartzCraftingTableMenu;
 import com.quarztastic.goldfishboy.container.RoseQuartzCraftingTableMenu;
 
 import net.minecraft.core.BlockPos;
@@ -24,17 +25,17 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class RoseQuartzCraftingTable extends HorizontalDirectionalBlock {
-    public static final MapCodec<RoseQuartzCraftingTable> CODEC = simpleCodec(RoseQuartzCraftingTable::new);
+public class BlueQuartzCraftingTable extends HorizontalDirectionalBlock {
+    public static final MapCodec<BlueQuartzCraftingTable> CODEC = simpleCodec(BlueQuartzCraftingTable::new);
 
-    public RoseQuartzCraftingTable(Properties properties) {
+    public BlueQuartzCraftingTable(Properties properties) {
         super(properties);
     }
 
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     @Override
-    public MapCodec<RoseQuartzCraftingTable> codec() {
+    public MapCodec<BlueQuartzCraftingTable> codec() {
         return CODEC;
     }
     @SuppressWarnings("null")
@@ -52,8 +53,8 @@ public class RoseQuartzCraftingTable extends HorizontalDirectionalBlock {
     @Override
     public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
         return new SimpleMenuProvider(
-            (id, inventory, player) -> new RoseQuartzCraftingTableMenu(id, inventory, ContainerLevelAccess.create(level, pos)),
-            Component.translatable("container.rose_quartz_crafting_table")
+            (id, inventory, player) -> new BlueQuartzCraftingTableMenu(id, inventory, ContainerLevelAccess.create(level, pos)),
+            Component.translatable("container.blue_quartz_crafting_table")
         );
     }
     

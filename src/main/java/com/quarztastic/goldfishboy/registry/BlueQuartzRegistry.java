@@ -6,6 +6,8 @@ import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.block.crafting_tables.BlueQuartzCraftingTable;
+import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.BlueQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.BlueQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.BlueQuartzBarrelBlock;
@@ -484,6 +486,20 @@ public class BlueQuartzRegistry {
         );
         BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_CRAFTING_TABLE = Quartztastic.BLOCKS.register(
+            "blue_quartz_crafting_table", 
+            registryName -> new BlueQuartzCraftingTable(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_CRAFTING_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_CRAFTING_TABLE
         );
 
         BlueQuartzList.BLUE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
