@@ -4,6 +4,7 @@ import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
+import com.quarztastic.goldfishboy.block.Sink.SinkShape;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.crafting_tables.PrasioliteQuartzCraftingTable;
@@ -654,7 +655,7 @@ public class PrasioliteQuartzRegistry {
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_sink", 
-            registryName -> new Sink("basin_with_legs", BlockBehaviour.Properties.of()
+            registryName -> new Sink(SinkShape.BASIN_WITH_LEGS, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
                 .sound(PRASIOLITE_QUARTZ_SOUND)

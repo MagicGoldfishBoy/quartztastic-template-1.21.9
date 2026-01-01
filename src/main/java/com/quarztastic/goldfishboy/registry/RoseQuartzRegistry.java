@@ -4,6 +4,7 @@ import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.RoseQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
+import com.quarztastic.goldfishboy.block.Sink.SinkShape;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
@@ -640,7 +641,7 @@ public class RoseQuartzRegistry {
 
         RoseQuartzList.ROSE_QUARTZ_SINK = Quartztastic.BLOCKS.register(
             "rose_quartz_sink", 
-            registryName -> new Sink("basin_with_shelves", BlockBehaviour.Properties.of()
+            registryName -> new Sink(SinkShape.BASIN_WITH_SHELVES, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
                 .sound(ROSE_QUARTZ_SOUND)

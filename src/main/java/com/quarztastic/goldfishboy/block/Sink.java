@@ -33,19 +33,41 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class Sink extends HorizontalDirectionalBlock {
 
+    private final SinkShape sinkShape;
+
     public static final MapCodec<Sink> CODEC = RecordCodecBuilder.mapCodec(instance ->
         instance.group(
-            Codec.STRING.fieldOf("sink_shape").forGetter(sink -> sink.sinkShape),
+            SinkShape.CODEC.fieldOf("sink_shape").forGetter(sink -> sink.sinkShape),
             propertiesCodec()
-        ).apply(instance, Sink::new)
+        ).apply(instance, (sinkShape, properties) -> new Sink(sinkShape, properties))
     );
 
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    private final String sinkShape;
+    public enum SinkShape {
+        BATHROOM("bathroom"),
+        BASIN_WITH_SHELVES("basin_with_shelves"),
+        BASIN("basin"),
+        BASIN_WITH_LEGS("basin_with_legs");
+
+        private final String shapeName;
+        
+        public static final Codec<SinkShape> CODEC = Codec.STRING.xmap(
+            shape -> SinkShape.valueOf(shape.toUpperCase()),
+            SinkShape::getShapeName
+        );
+        
+        SinkShape(String string) {
+            this.shapeName = string;
+        }
+
+        public String getShapeName() {
+            return this.shapeName;
+        }
+    }
 
 
-    public Sink(String sinkShape, Properties properties) {
+    public Sink(SinkShape sinkShape, Properties properties) {
         super(properties);
         this.sinkShape = sinkShape;
     }
@@ -198,18 +220,15 @@ public class Sink extends HorizontalDirectionalBlock {
     @SuppressWarnings("null")
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        switch (this.sinkShape) {
-            case "bathroom":
-               return BATHROOM_SHAPE.get(state.getValue(FACING).getOpposite());
-            case "basin_with_shelves":
-                return BASIN_WITH_SHELVES_SHAPE.get(state.getValue(FACING).getOpposite());
-            case "basin":
-                return BASIN_SHAPE.get(state.getValue(FACING).getOpposite());
-            case "basin_with_legs":
-                return BASIN_WITH_LEGS_SHAPE.get(state.getValue(FACING).getOpposite());
-            default:
-                return BATHROOM_SHAPE.get(state.getValue(FACING).getOpposite());
-        }
+        return switch (this.sinkShape) {
+
+            case BATHROOM -> BATHROOM_SHAPE.get(state.getValue(FACING).getOpposite());
+
+            case BASIN_WITH_SHELVES -> BASIN_WITH_SHELVES_SHAPE.get(state.getValue(FACING).getOpposite());
+
+            case BASIN -> BASIN_SHAPE.get(state.getValue(FACING).getOpposite());
+
+            case BASIN_WITH_LEGS -> BASIN_WITH_LEGS_SHAPE.get(state.getValue(FACING).getOpposite());
+        };
     }
-    
 }

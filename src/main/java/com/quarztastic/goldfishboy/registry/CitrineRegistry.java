@@ -6,6 +6,7 @@ import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.block.Sink.SinkShape;
 import com.quarztastic.goldfishboy.block.crafting_tables.CitrineCraftingTable;
 import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.CitrineFurnaceBlock;
@@ -638,7 +639,7 @@ public class CitrineRegistry {
 
         CitrineList.CITRINE_SINK = Quartztastic.BLOCKS.register(
             "citrine_sink", 
-            registryName -> new Sink("basin", BlockBehaviour.Properties.of()
+            registryName -> new Sink(SinkShape.BASIN, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(CITRINE_DESTROY_TIME, CITRINE_BLAST_RESISTANCE)
                 .sound(CITRINE_SOUND)

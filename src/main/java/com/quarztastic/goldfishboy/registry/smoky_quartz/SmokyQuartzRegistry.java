@@ -4,6 +4,7 @@ import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
+import com.quarztastic.goldfishboy.block.Sink.SinkShape;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.crafting_tables.SmokyQuartzCraftingTable;
@@ -668,12 +669,12 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_SINK = Quartztastic.BLOCKS.register(
             "smoky_quartz_sink", 
-            registryName -> new Sink("bathroom", BlockBehaviour.Properties.of()
-                .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                .strength(SMOKY_QUARTZ_DESTROY_TIME, SMOKY_QUARTZ_BLAST_RESISTANCE)
-                .sound(SMOKY_QUARTZ_SOUND)
-                .requiresCorrectToolForDrops()
-                .noOcclusion()
+            registryName -> new Sink(SinkShape.BATHROOM, BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+            .strength(SMOKY_QUARTZ_DESTROY_TIME, SMOKY_QUARTZ_BLAST_RESISTANCE)
+            .sound(SMOKY_QUARTZ_SOUND)
+            .requiresCorrectToolForDrops()
+            .noOcclusion()
             )
         );
         SmokyQuartzList.SMOKY_QUARTZ_SINK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
