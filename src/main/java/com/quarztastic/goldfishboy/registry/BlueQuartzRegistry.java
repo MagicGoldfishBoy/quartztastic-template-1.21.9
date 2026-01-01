@@ -638,7 +638,7 @@ public class BlueQuartzRegistry {
 
         BlueQuartzList.BLUE_QUARTZ_SINK = Quartztastic.BLOCKS.register(
             "blue_quartz_sink", 
-            registryName -> new Sink("basin_with_legs", BlockBehaviour.Properties.of()
+            registryName -> new Sink("bathroom", BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
                 .sound(BLUE_QUARTZ_SOUND)

@@ -638,7 +638,7 @@ public class CitrineRegistry {
 
         CitrineList.CITRINE_SINK = Quartztastic.BLOCKS.register(
             "citrine_sink", 
-            registryName -> new Sink("basin_with_legs", BlockBehaviour.Properties.of()
+            registryName -> new Sink("basin", BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(CITRINE_DESTROY_TIME, CITRINE_BLAST_RESISTANCE)
                 .sound(CITRINE_SOUND)

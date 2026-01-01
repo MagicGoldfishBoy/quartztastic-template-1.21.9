@@ -668,7 +668,7 @@ public class SmokyQuartzRegistry {
 
         SmokyQuartzList.SMOKY_QUARTZ_SINK = Quartztastic.BLOCKS.register(
             "smoky_quartz_sink", 
-            registryName -> new Sink("basin_with_legs", BlockBehaviour.Properties.of()
+            registryName -> new Sink("bathroom", BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(SMOKY_QUARTZ_DESTROY_TIME, SMOKY_QUARTZ_BLAST_RESISTANCE)
                 .sound(SMOKY_QUARTZ_SOUND)

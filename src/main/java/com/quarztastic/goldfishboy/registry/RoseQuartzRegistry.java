@@ -640,7 +640,7 @@ public class RoseQuartzRegistry {
 
         RoseQuartzList.ROSE_QUARTZ_SINK = Quartztastic.BLOCKS.register(
             "rose_quartz_sink", 
-            registryName -> new Sink("basin_with_legs", BlockBehaviour.Properties.of()
+            registryName -> new Sink("basin_with_shelves", BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
                 .sound(ROSE_QUARTZ_SOUND)
