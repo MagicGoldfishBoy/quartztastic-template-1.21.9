@@ -2,6 +2,7 @@ package com.quarztastic.goldfishboy.datagen;
 
 import javax.annotation.Nonnull;
 
+import com.ibm.icu.text.Normalizer.Mode;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.CitrineList;
@@ -355,6 +356,8 @@ public class ModelDatagen extends ModelProvider {
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE.get(), new Variant(modLocation("block/smoky_quartz_skull")));
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_CRAFTING_TABLE.get(), new Variant(modLocation("block/smoky_quartz_crafting_table")));
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_STONECUTTER.get(), new Variant(modLocation("block/smoky_quartz_stonecutter")));
 
         itemModels.itemModelOutput.accept(
             SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE_ITEM.get(),
