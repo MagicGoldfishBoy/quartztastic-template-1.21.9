@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "quartztastic:block/citrine_skull",
+      "model": "quartztastic:block/citrine_skull_statuette",
       "y": 270
     },
     "facing=north": {
-      "model": "quartztastic:block/citrine_skull",
+      "model": "quartztastic:block/citrine_skull_statuette",
       "y": 180
     },
     "facing=south": {
-      "model": "quartztastic:block/citrine_skull"
+      "model": "quartztastic:block/citrine_skull_statuette"
     },
     "facing=west": {
-      "model": "quartztastic:block/citrine_skull",
+      "model": "quartztastic:block/citrine_skull_statuette",
       "y": 90
     }
   }

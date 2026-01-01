@@ -21,7 +21,9 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import oshi.jna.platform.mac.SystemB.Pri;
 
 public class ModelDatagen extends ModelProvider {
     public ModelDatagen(PackOutput output) {
@@ -353,22 +355,26 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SINK.get(), new Variant(modLocation("block/smoky_quartz_sink")));
 
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE.get(), new Variant(modLocation("block/smoky_quartz_skull")));
-
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_CRAFTING_TABLE.get(), new Variant(modLocation("block/smoky_quartz_crafting_table")));
-
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_STONECUTTER.get(), new Variant(modLocation("block/smoky_quartz_stonecutter")));
-
-        itemModels.itemModelOutput.accept(
-            SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE_ITEM.get(),
-            ItemModelUtils.plainModel(modLocation("block/smoky_quartz_skull"))
-        );
-
 
 
         for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {
             LOGGER.info("Generating model for: {}", holder.getId().getPath());
             String rawName = holder.getId().getPath();
+            // if (holder.get().getClass() == HorizontalDirectionalBlock.class) {
+            //     String name = "block/" + rawName;
+
+            //     System.out.println("Generating horizontal rotational model for: " + name);
+            // }
+            if (rawName.contains("stonecutter") || rawName.contains("crafting_table") || rawName.contains("skull_statuette")) {
+                String name = "block/" + rawName;
+
+                LOGGER.info("Generating model for: {}", name);
+
+                ResourceLocation block = modLocation(name);
+                Variant blockvariant = new Variant(block);
+
+                ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, (HorizontalDirectionalBlock) holder.get(), blockvariant);
+            }
             if (rawName.contains("bookshelf") || rawName.contains("path") || rawName.contains("flower_pot") || rawName.contains("potted")) {
 
                 String name = "block/" + rawName;
@@ -400,7 +406,19 @@ public class ModelDatagen extends ModelProvider {
         }
 
         for (DeferredHolder<Item, ? extends Item> holder : Quartztastic.ITEMS.getEntries()) {
+
             String rawName = holder.getId().getPath();
+
+            if (rawName.contains("skull_statuette")) {
+                String name = "block/" + rawName;
+
+                LOGGER.info("Generating model for: {}", name);
+
+                itemModels.itemModelOutput.accept(
+                    holder.get(),
+                    ItemModelUtils.plainModel(modLocation(name))
+                );
+            }
             if (rawName.contains("bookshelf")) {
                 String name = "block/" + rawName;
 
@@ -467,15 +485,15 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_SINK.get(), new Variant(modLocation("block/rose_quartz_sink")));
 
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE.get(), new Variant(modLocation("block/rose_quartz_skull")));
-        itemModels.itemModelOutput.accept(
-            RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE_ITEM.get(),
-            ItemModelUtils.plainModel(modLocation("block/rose_quartz_skull"))
-        );
+        // ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE.get(), new Variant(modLocation("block/rose_quartz_skull")));
+        // itemModels.itemModelOutput.accept(
+        //     RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE_ITEM.get(),
+        //     ItemModelUtils.plainModel(modLocation("block/rose_quartz_skull"))
+        // );
 
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_CRAFTING_TABLE.get(), new Variant(modLocation("block/rose_quartz_crafting_table")));
+       // ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_CRAFTING_TABLE.get(), new Variant(modLocation("block/rose_quartz_crafting_table")));
 
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_STONECUTTER.get(), new Variant(modLocation("block/rose_quartz_stonecutter")));
+        //ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_STONECUTTER.get(), new Variant(modLocation("block/rose_quartz_stonecutter")));
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_CHAIR.get(), new Variant(modLocation("block/citrine_chair")));
 
@@ -522,14 +540,6 @@ public class ModelDatagen extends ModelProvider {
             
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_SINK.get(), new Variant(modLocation("block/citrine_sink")));
 
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_SKULL_STATUETTE.get(), new Variant(modLocation("block/citrine_skull")));
-        itemModels.itemModelOutput.accept(
-            CitrineList.CITRINE_SKULL_STATUETTE_ITEM.get(),
-            ItemModelUtils.plainModel(modLocation("block/citrine_skull"))
-        );
-
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_CRAFTING_TABLE.get(), new Variant(modLocation("block/citrine_crafting_table")));
-
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_CHAIR.get(), new Variant(modLocation("block/blue_quartz_chair")));
 
@@ -575,14 +585,6 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_SINK.get(), new Variant(modLocation("block/blue_quartz_sink")));
 
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE.get(), new Variant(modLocation("block/blue_quartz_skull")));
-        itemModels.itemModelOutput.accept(
-            BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE_ITEM.get(),
-            ItemModelUtils.plainModel(modLocation("block/blue_quartz_skull"))
-        );
-
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_CRAFTING_TABLE.get(), new Variant(modLocation("block/blue_quartz_crafting_table")));
-
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIR.get(), new Variant(modLocation("block/prasiolite_quartz_chair")));
 
@@ -627,15 +629,6 @@ public class ModelDatagen extends ModelProvider {
             new Variant(modLocation("block/prasiolite_quartz_nightstand")), new Variant(modLocation("block/prasiolite_quartz_nightstand_open")));
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK.get(), new Variant(modLocation("block/prasiolite_quartz_sink")));
-        
-
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE.get(), new Variant(modLocation("block/prasiolite_quartz_skull")));
-        itemModels.itemModelOutput.accept(
-            PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE_ITEM.get(),
-            ItemModelUtils.plainModel(modLocation("block/prasiolite_quartz_skull"))
-        );
-
-        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRAFTING_TABLE.get(), new Variant(modLocation("block/prasiolite_quartz_crafting_table")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
