@@ -11,6 +11,8 @@ import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable
 import com.quarztastic.goldfishboy.block.crafting_tables.SmokyQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.RoseQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.stonecutters.RoseQuartzStonecutter;
+import com.quarztastic.goldfishboy.block.stonecutters.SmokyQuartzStonecutter;
 import com.quarztastic.goldfishboy.block.RoseQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.RoseQuartzNightstand;
 import com.quarztastic.goldfishboy.block.Chair;
@@ -136,6 +138,9 @@ public class RoseQuartzList {
 
     public static DeferredBlock<RoseQuartzCraftingTable> ROSE_QUARTZ_CRAFTING_TABLE;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_CRAFTING_TABLE_ITEM;
+
+    public static DeferredBlock<RoseQuartzStonecutter> ROSE_QUARTZ_STONECUTTER;
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_STONECUTTER_ITEM;
 
     public static DeferredBlock<DoorBlock> ROSE_QUARTZ_DOOR;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_DOOR_ITEM;

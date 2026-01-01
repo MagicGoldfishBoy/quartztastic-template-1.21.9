@@ -168,6 +168,8 @@ public class QuartztasticClient {
         ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_BARS.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_BARS_BLOCK.get(), ChunkSectionLayer.TRANSLUCENT);
 
+        ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_STONECUTTER.get(), ChunkSectionLayer.CUTOUT_MIPPED);
+
 
         ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_POTTED_POPPY.get(), ChunkSectionLayer.CUTOUT_MIPPED);
         ItemBlockRenderTypes.setRenderLayer(RoseQuartzList.ROSE_QUARTZ_POTTED_DANDELION.get(), ChunkSectionLayer.CUTOUT_MIPPED);
