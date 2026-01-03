@@ -12,9 +12,9 @@ import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.crafting_tables.CitrineCraftingTable;
-import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.CitrineOvenBlock;
+import com.quarztastic.goldfishboy.block.stonecutters.CitrineStonecutter;
 import com.quarztastic.goldfishboy.block.CitrineBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.entity.CitrineFurnaceEntity;
@@ -140,6 +140,9 @@ public class CitrineList {
 
     public static DeferredBlock<CitrineCraftingTable> CITRINE_CRAFTING_TABLE;
     public static DeferredItem<BlockItem> CITRINE_CRAFTING_TABLE_ITEM;
+
+    public static DeferredBlock<CitrineStonecutter> CITRINE_STONECUTTER;
+    public static DeferredItem<BlockItem> CITRINE_STONECUTTER_ITEM;
 
 
     public static DeferredBlock<DoorBlock> CITRINE_DOOR;

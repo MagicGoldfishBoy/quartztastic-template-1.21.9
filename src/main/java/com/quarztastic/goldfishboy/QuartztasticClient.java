@@ -246,6 +246,7 @@ public class QuartztasticClient {
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_OVEN.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_BLAST_FURNACE.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_CRAFTING_TABLE.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_STONECUTTER.get(), ChunkSectionLayer.TRANSLUCENT);
 
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_DOOR.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_TRAPDOOR.get(), ChunkSectionLayer.TRANSLUCENT);

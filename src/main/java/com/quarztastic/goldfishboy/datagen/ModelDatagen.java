@@ -23,8 +23,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import oshi.jna.platform.mac.SystemB.Pri;
 
+//TODO: Exorcise this demonic abominination from the eigth ring of hell itself
 public class ModelDatagen extends ModelProvider {
     public ModelDatagen(PackOutput output) {
         super(output, Quartztastic.MODID);
@@ -355,7 +355,7 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SINK.get(), new Variant(modLocation("block/smoky_quartz_sink")));
 
-
+        //I know this is fucking awful, but it works for now :P
 
         for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {
             LOGGER.info("Generating model for: {}", holder.getId().getPath());

@@ -11,6 +11,8 @@ import com.quarztastic.goldfishboy.block.crafting_tables.CitrineCraftingTable;
 import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.CitrineFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.CitrineOvenBlock;
+import com.quarztastic.goldfishboy.block.stonecutters.CitrineStonecutter;
+import com.quarztastic.goldfishboy.block.stonecutters.SmokyQuartzStonecutter;
 import com.quarztastic.goldfishboy.block.CitrineBarrelBlock;
 import com.quarztastic.goldfishboy.block.CitrineNightstand;
 import com.quarztastic.goldfishboy.block.Chair;
@@ -18,6 +20,7 @@ import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.CitrineOvenEntity;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 import com.quarztastic.goldfishboy.entity.CitrineNightstandEntity;
 import com.quarztastic.goldfishboy.entity.CitrineBarrelEntity;
 import com.quarztastic.goldfishboy.entity.CitrineBlastFurnaceEntity;
@@ -501,6 +504,20 @@ public class CitrineRegistry {
         );
         CitrineList.CITRINE_CRAFTING_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_CRAFTING_TABLE
+        );
+
+        CitrineList.CITRINE_STONECUTTER = Quartztastic.BLOCKS.register(
+            "citrine_stonecutter", 
+            registryName -> new CitrineStonecutter(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_BLAST_RESISTANCE)
+                .sound(CITRINE_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_STONECUTTER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_STONECUTTER
         );
 
         CitrineList.CITRINE_LADDER = Quartztastic.BLOCKS.register(

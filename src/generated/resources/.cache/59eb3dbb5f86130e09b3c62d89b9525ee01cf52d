@@ -1,4 +1,4 @@
-// 1.21.9	2026-01-01T14:12:58.111106334	Loot Tables
+// 1.21.9	2026-01-02T22:18:11.449306479	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -159,6 +159,7 @@ cb88f2774297846d04529075f5a863868addf290 data/quartztastic/loot_table/blocks/cit
 36407666aabca528c9b1461f452df0724999b44b data/quartztastic/loot_table/blocks/citrine_soul_lantern.json
 1cc15058b7eb7987df3bacac0835ead4e84e1261 data/quartztastic/loot_table/blocks/citrine_soul_torch.json
 980734d0a32ff32bc1ed1cf1feadbb24efaa8bcd data/quartztastic/loot_table/blocks/citrine_stairs.json
+f7da4af81bfc7f8577b3b2cf3c41d36388dc1dca data/quartztastic/loot_table/blocks/citrine_stonecutter.json
 2afd05aab0400bf249d23ef84e65a54b1b7b5a29 data/quartztastic/loot_table/blocks/citrine_table.json
 8df616e536540b5ad490bcb37f3c430bcc6d515f data/quartztastic/loot_table/blocks/citrine_tile_slab.json
 bb41dba8ae631f4e01e4ad952cf840f58af36660 data/quartztastic/loot_table/blocks/citrine_tile_stairs.json
