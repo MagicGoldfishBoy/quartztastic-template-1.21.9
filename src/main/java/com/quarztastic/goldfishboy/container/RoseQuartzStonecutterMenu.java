@@ -92,7 +92,6 @@ public class RoseQuartzStonecutterMenu extends AbstractContainerMenu {
             public void onTake(Player player, ItemStack stack) {
                 stack.onCraftedBy(player, stack.getCount());
                 RoseQuartzStonecutterMenu.this.resultContainer.awardUsedRecipes(player, this.getRelevantItems());
-                player.giveExperiencePoints(5);
                 ItemStack itemstack = RoseQuartzStonecutterMenu.this.inputSlot.remove(1);
                 if (!itemstack.isEmpty()) {
                     RoseQuartzStonecutterMenu.this.setupResultSlot(RoseQuartzStonecutterMenu.this.selectedRecipeIndex.get());

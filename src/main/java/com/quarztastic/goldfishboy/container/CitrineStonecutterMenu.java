@@ -98,7 +98,6 @@ public class CitrineStonecutterMenu extends AbstractContainerMenu {
             public void onTake(Player player, ItemStack stack) {
                 stack.onCraftedBy(player, stack.getCount());
                 CitrineStonecutterMenu.this.resultContainer.awardUsedRecipes(player, this.getRelevantItems());
-                player.giveExperiencePoints(5);
                 ItemStack itemstack = CitrineStonecutterMenu.this.inputSlot.remove(1);
                 if (!itemstack.isEmpty()) {
                     CitrineStonecutterMenu.this.setupResultSlot(CitrineStonecutterMenu.this.selectedRecipeIndex.get());
