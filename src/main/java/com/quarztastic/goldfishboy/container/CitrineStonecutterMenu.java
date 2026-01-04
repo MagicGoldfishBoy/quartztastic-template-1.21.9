@@ -5,10 +5,12 @@ import java.util.Optional;
 
 import com.quarztastic.goldfishboy.registry.CitrineList;
 
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -24,6 +26,7 @@ import net.minecraft.world.item.crafting.SelectableRecipe;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 
 public class CitrineStonecutterMenu extends AbstractContainerMenu {
 
@@ -101,11 +104,14 @@ public class CitrineStonecutterMenu extends AbstractContainerMenu {
                     CitrineStonecutterMenu.this.setupResultSlot(CitrineStonecutterMenu.this.selectedRecipeIndex.get());
                 }
 
-                access.execute((p_393254_, p_393255_) -> {
-                    long i = p_393254_.getGameTime();
+                access.execute((Level, blockPos) -> {
+                    long i = Level.getGameTime();
                     if (CitrineStonecutterMenu.this.lastSoundTime != i) {
-                        p_393254_.playSound(null, p_393255_, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
+                        Level.playSound(null, blockPos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
                         CitrineStonecutterMenu.this.lastSoundTime = i;
+                    }
+                    if (level instanceof ServerLevel && level.random.nextFloat() < 0.25F) {
+                        ExperienceOrb.award((ServerLevel)level, Vec3.atCenterOf(blockPos), 1);
                     }
                 });
                 super.onTake(player, stack);

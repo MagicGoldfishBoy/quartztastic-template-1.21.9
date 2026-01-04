@@ -5,10 +5,13 @@ import java.util.Optional;
 
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -24,6 +27,7 @@ import net.minecraft.world.item.crafting.SelectableRecipe;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 
 public class BlueQuartzStonecutterMenu extends AbstractContainerMenu {
     public static final int INPUT_SLOT = 0;
@@ -41,7 +45,7 @@ public class BlueQuartzStonecutterMenu extends AbstractContainerMenu {
 
     @SuppressWarnings("unused")
     private static final int USE_ROW_SLOT_END = 38;
-    
+
     private final ContainerLevelAccess access;
     /**
      * The index of the selected recipe in the GUI.
@@ -98,22 +102,24 @@ public class BlueQuartzStonecutterMenu extends AbstractContainerMenu {
             public void onTake(Player player, ItemStack stack) {
                 stack.onCraftedBy(player, stack.getCount());
                 BlueQuartzStonecutterMenu.this.resultContainer.awardUsedRecipes(player, this.getRelevantItems());
-                player.giveExperiencePoints(5);
                 ItemStack itemstack = BlueQuartzStonecutterMenu.this.inputSlot.remove(1);
                 if (!itemstack.isEmpty()) {
                     BlueQuartzStonecutterMenu.this.setupResultSlot(BlueQuartzStonecutterMenu.this.selectedRecipeIndex.get());
                 }
 
-                access.execute((p_393254_, p_393255_) -> {
-                    long i = p_393254_.getGameTime();
+                access.execute((level, blockPos) -> {
+                    long i = level.getGameTime();
                     if (BlueQuartzStonecutterMenu.this.lastSoundTime != i) {
-                        p_393254_.playSound(null, p_393255_, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
+                        level.playSound(null, blockPos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
                         BlueQuartzStonecutterMenu.this.lastSoundTime = i;
+                    }
+                    if (level instanceof ServerLevel && level.random.nextFloat() < 0.25F) {
+                        ExperienceOrb.award((ServerLevel)level, Vec3.atCenterOf(blockPos), 1);
                     }
                 });
                 super.onTake(player, stack);
             }
-
+            
             private List<ItemStack> getRelevantItems() {
                 return List.of(BlueQuartzStonecutterMenu.this.inputSlot.getItem());
             }

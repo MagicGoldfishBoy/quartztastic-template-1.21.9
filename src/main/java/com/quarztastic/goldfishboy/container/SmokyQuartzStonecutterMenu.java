@@ -5,10 +5,12 @@ import java.util.Optional;
 
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -24,6 +26,7 @@ import net.minecraft.world.item.crafting.SelectableRecipe;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 
 public class SmokyQuartzStonecutterMenu extends AbstractContainerMenu {
     public static final int INPUT_SLOT = 0;
@@ -84,21 +87,24 @@ public class SmokyQuartzStonecutterMenu extends AbstractContainerMenu {
                 return false;
             }
 
+            @SuppressWarnings("null")
             @Override
             public void onTake(Player player, ItemStack stack) {
                 stack.onCraftedBy(player, stack.getCount());
                 SmokyQuartzStonecutterMenu.this.resultContainer.awardUsedRecipes(player, this.getRelevantItems());
-                player.giveExperiencePoints(5);
                 ItemStack itemstack = SmokyQuartzStonecutterMenu.this.inputSlot.remove(1);
                 if (!itemstack.isEmpty()) {
                     SmokyQuartzStonecutterMenu.this.setupResultSlot(SmokyQuartzStonecutterMenu.this.selectedRecipeIndex.get());
                 }
 
-                access.execute((p_393254_, p_393255_) -> {
-                    long i = p_393254_.getGameTime();
+                access.execute((Level, blockPos) -> {
+                    long i = Level.getGameTime();
                     if (SmokyQuartzStonecutterMenu.this.lastSoundTime != i) {
-                        p_393254_.playSound(null, p_393255_, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
+                        Level.playSound(null, blockPos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
                         SmokyQuartzStonecutterMenu.this.lastSoundTime = i;
+                    }
+                    if (Level instanceof ServerLevel && Level.random.nextFloat() < 0.25F) {
+                        ExperienceOrb.award((ServerLevel)Level, Vec3.atCenterOf(blockPos), 1);
                     }
                 });
                 super.onTake(player, stack);
