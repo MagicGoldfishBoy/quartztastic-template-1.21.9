@@ -227,6 +227,7 @@ public class TagDatagen extends BlockTagsProvider {
                 BlueQuartzList.BLUE_QUARTZ_OVEN.get(),
                 BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE.get(),
                 BlueQuartzList.BLUE_QUARTZ_CRAFTING_TABLE.get(),
+                BlueQuartzList.BLUE_QUARTZ_STONECUTTER.get(),
 
                 BlueQuartzList.BLUE_QUARTZ_DOOR.get(),
                 BlueQuartzList.BLUE_QUARTZ_TRAPDOOR.get(),

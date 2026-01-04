@@ -31,10 +31,9 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+public class BlueQuartzStonecutter extends HorizontalDirectionalBlock {
 
-public class SmokyQuartzStonecutter extends HorizontalDirectionalBlock {
-
-    private static final Component CONTAINER_TITLE = Component.translatable("container.quartztastic.smoky_quartz_stonecutter");
+    private static final Component CONTAINER_TITLE = Component.translatable("container.quartztastic.blue_quartz_stonecutter");
 
     public static final EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
     
@@ -42,14 +41,14 @@ public class SmokyQuartzStonecutter extends HorizontalDirectionalBlock {
         Shapes.or(Block.box(0, 0, 0, 16, 2, 16), Block.box(0, 2, 0, 16, 6, 16))
     );
 
-    public SmokyQuartzStonecutter(Properties properties) {
+    public BlueQuartzStonecutter(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
     @Override
     protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        return simpleCodec(SmokyQuartzStonecutter::new);
+        return simpleCodec(BlueQuartzStonecutter::new);
     }
 
     @SuppressWarnings("null")
@@ -74,7 +73,7 @@ public class SmokyQuartzStonecutter extends HorizontalDirectionalBlock {
     @Override
     protected MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
         return new SimpleMenuProvider(
-            (p_57074_, p_57075_, p_57076_) -> new com.quarztastic.goldfishboy.container.SmokyQuartzStonecutterMenu(p_57074_, p_57075_, ContainerLevelAccess.create(level, pos)), CONTAINER_TITLE
+            (p_57074_, p_57075_, p_57076_) -> new com.quarztastic.goldfishboy.container.BlueQuartzStonecutterMenu(p_57074_, p_57075_, ContainerLevelAccess.create(level, pos)), CONTAINER_TITLE
         );
     }
 

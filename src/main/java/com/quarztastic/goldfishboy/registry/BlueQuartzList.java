@@ -15,6 +15,8 @@ import com.quarztastic.goldfishboy.block.crafting_tables.BlueQuartzCraftingTable
 import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.BlueQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.BlueQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.stonecutters.BlueQuartzStonecutter;
+import com.quarztastic.goldfishboy.block.stonecutters.SmokyQuartzStonecutter;
 import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
@@ -141,6 +143,9 @@ public class BlueQuartzList {
 
     public static DeferredBlock<BlueQuartzCraftingTable> BLUE_QUARTZ_CRAFTING_TABLE;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_CRAFTING_TABLE_ITEM;
+
+    public static DeferredBlock<BlueQuartzStonecutter> BLUE_QUARTZ_STONECUTTER;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_STONECUTTER_ITEM;
 
 
     public static DeferredBlock<DoorBlock> BLUE_QUARTZ_DOOR;

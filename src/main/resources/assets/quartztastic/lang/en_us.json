@@ -266,11 +266,15 @@
   "block.quartztastic.blue_quartz_oven": "Blue Quartz Oven",
   "container.blue_quartz_oven": "Blue Quartz Oven",
 
+  "block.quartztastic.blue_quartz_blast_furnace": "Blue Quartz Blast Furnace",
+  "container.blue_quartz_blast_furnace": "Blue Quartz Blast Furnace",
+
   "block.quartztastic.blue_quartz_crafting_table": "Blue Quartz Crafting Table",
   "container.blue_quartz_crafting_table": "Blue Quartz Crafting Table",
 
-  "block.quartztastic.blue_quartz_blast_furnace": "Blue Quartz Blast Furnace",
-  "container.blue_quartz_blast_furnace": "Blue Quartz Blast Furnace",
+  "block.quartztastic.blue_quartz_stonecutter": "Blue Quartz Stonecutter",
+  "container.quartztastic.blue_quartz_stonecutter": "Blue Quartz Stonecutter",
+
 
   "block.quartztastic.blue_quartz_door": "Blue Quartz Door",
   "block.quartztastic.blue_quartz_trapdoor": "Blue Quartz Trapdoor",
