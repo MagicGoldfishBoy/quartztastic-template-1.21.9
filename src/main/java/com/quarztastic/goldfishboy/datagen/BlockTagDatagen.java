@@ -13,9 +13,9 @@ import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 
-public class TagDatagen extends BlockTagsProvider {
+public class BlockTagDatagen extends BlockTagsProvider {
     
-    public TagDatagen(PackOutput output, CompletableFuture<Provider> lookupProvider, String modId) {
+    public BlockTagDatagen(PackOutput output, CompletableFuture<Provider> lookupProvider, String modId) {
         super(output, lookupProvider, modId);
     }
 
@@ -413,7 +413,70 @@ public class TagDatagen extends BlockTagsProvider {
 
                 BlueQuartzList.BLUE_QUARTZ_SOUL_LANTERN.get(),
                 BlueQuartzList.BLUE_QUARTZ_SOUL_TORCH.get(),
-                BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE.get()
+                BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE.get(),
+
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_SOUL_LANTERN.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_SOUL_TORCH.get(),
+                PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE.get()
+            );
+
+        this.tag(TagKeyList.HOGLIN_REPELLENT_TAG)
+            .add(
+                BlueQuartzList.BLUE_QUARTZ_ORE.get(),
+                BlueQuartzList.BLUE_QUARTZ_BLOCK.get(),
+                BlueQuartzList.BLUE_QUARTZ_PANE.get(),
+                BlueQuartzList.BLUE_QUARTZ_SLAB.get(),
+                BlueQuartzList.BLUE_QUARTZ_STAIRS.get(),
+                BlueQuartzList.BLUE_QUARTZ_BUTTON.get(),
+                BlueQuartzList.BLUE_QUARTZ_PRESSURE_PLATE.get(),
+                BlueQuartzList.BLUE_QUARTZ_FENCE.get(),
+                BlueQuartzList.BLUE_QUARTZ_WALL.get(),
+                BlueQuartzList.BLUE_QUARTZ_GATE.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_BRICKS.get(), 
+                BlueQuartzList.BLUE_QUARTZ_BRICK_SLAB.get(), 
+                BlueQuartzList.BLUE_QUARTZ_BRICK_STAIRS.get(), 
+                BlueQuartzList.BLUE_QUARTZ_BRICK_WALL.get(),
+
+                BlueQuartzList.CHISELED_BLUE_QUARTZ_BLOCK.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_TILES.get(),
+                BlueQuartzList.BLUE_QUARTZ_TILE_SLAB.get(),
+                BlueQuartzList.BLUE_QUARTZ_TILE_STAIRS.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_PILLAR.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_BARS_BLOCK.get(),
+                BlueQuartzList.BLUE_QUARTZ_BARS.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_BOOKSHELF.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_FURNACE.get(),
+                BlueQuartzList.BLUE_QUARTZ_OVEN.get(),
+                BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE.get(),
+                BlueQuartzList.BLUE_QUARTZ_CRAFTING_TABLE.get(),
+                BlueQuartzList.BLUE_QUARTZ_STONECUTTER.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_DOOR.get(),
+                BlueQuartzList.BLUE_QUARTZ_TRAPDOOR.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_CHAIR.get(),
+                BlueQuartzList.BLUE_QUARTZ_TABLE.get(),
+                BlueQuartzList.BLUE_QUARTZ_SHELF.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_LIGHT.get(),
+                BlueQuartzList.BLUE_QUARTZ_LANTERN.get(),
+                BlueQuartzList.BLUE_QUARTZ_SOUL_LANTERN.get(),
+                BlueQuartzList.BLUE_QUARTZ_CHAIN.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_LADDER.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK.get(),
+                BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_BLOCK.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_SINK.get(),
+
+                BlueQuartzList.BLUE_QUARTZ_PATH.get()
             );
 
         this.tag(TagKeyList.CLIMBABLE_TAG)

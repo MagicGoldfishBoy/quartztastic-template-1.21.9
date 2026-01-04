@@ -60,6 +60,11 @@ public class TagKeyList {
         ResourceLocation.fromNamespaceAndPath("minecraft", "piglin_repellents")
     );
 
+    public static final TagKey<Block> HOGLIN_REPELLENT_TAG = TagKey.create(
+        Registries.BLOCK, 
+        ResourceLocation.fromNamespaceAndPath("minecraft", "hoglin_repellents")
+    );
+
     public static final TagKey<Block> CLIMBABLE_TAG = TagKey.create(
         Registries.BLOCK, 
         ResourceLocation.fromNamespaceAndPath("minecraft", "climbable")
@@ -69,6 +74,7 @@ public class TagKeyList {
         Registries.BLOCK, 
         ResourceLocation.fromNamespaceAndPath("minecraft", "enchantment_power_provider")
     );
+
 
 
     public static final TagKey<Item> QUARTZ_ORE_TAG = TagKey.create(

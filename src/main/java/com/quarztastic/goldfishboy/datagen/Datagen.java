@@ -14,7 +14,8 @@ public class Datagen {
         public void gatherData(GatherDataEvent event) {
         event.createProvider(RecipeDatagen.Runner::new);
         event.createProvider(ModelDatagen::new);
-        event.createProvider((out, lookup) -> new TagDatagen(out, lookup, Quartztastic.MODID));
+        event.createProvider((out, lookup) -> new BlockTagDatagen(out, lookup, Quartztastic.MODID));
+        event.createProvider((out, lookup) -> new ItemTagDatagen(out, lookup, Quartztastic.MODID));
         event.createProvider((output, lookupProvider) -> new LootTableProvider(
             output,
             Set.of(),
