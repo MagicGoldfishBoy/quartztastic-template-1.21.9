@@ -10,6 +10,7 @@ import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.crafting_tables.PrasioliteQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.PrasioliteQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.PrasioliteQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.stonecutters.PrasioliteQuartzStonecutter;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzNightstand;
 import com.quarztastic.goldfishboy.block.Chair;
@@ -18,6 +19,7 @@ import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzOvenEntity;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
+import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzNightstandEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzBarrelEntity;
@@ -517,6 +519,20 @@ public class PrasioliteQuartzRegistry {
         );
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRAFTING_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRAFTING_TABLE
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_STONECUTTER = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_stonecutter", 
+            registryName -> new PrasioliteQuartzStonecutter(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_STONECUTTER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_STONECUTTER
         );
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
