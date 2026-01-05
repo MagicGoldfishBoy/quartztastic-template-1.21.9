@@ -240,7 +240,7 @@ public class RecipeDatagen extends RecipeProvider {
             .pattern("@#@")
             .pattern("@@@")
             .define('@', SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get())
-            .define('#', TagKeyList.CRAFTING_TABLE_TAG)
+            .define('#', TagKeyList.CRAFTING_TABLE_ITEM_TAG)
             .unlockedBy("has_smoky_quartz_crystal", has(SmokyQuartzList.SMOKY_QUARTZ_CRYSTAL.get()))
             .save(this.output);
 
@@ -369,7 +369,7 @@ public class RecipeDatagen extends RecipeProvider {
             .pattern("@#@")
             .pattern("@@@")
             .define('@', RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get())
-            .define('#', TagKeyList.CRAFTING_TABLE_TAG)
+            .define('#', TagKeyList.CRAFTING_TABLE_ITEM_TAG)
             .unlockedBy("has_rose_quartz_crystal", has(RoseQuartzList.ROSE_QUARTZ_CRYSTAL.get()))
             .save(this.output);
 
@@ -486,7 +486,7 @@ public class RecipeDatagen extends RecipeProvider {
             .pattern("@#@")
             .pattern("@@@")
             .define('@', CitrineList.CITRINE_CRYSTAL.get())
-            .define('#', TagKeyList.CRAFTING_TABLE_TAG)
+            .define('#', TagKeyList.CRAFTING_TABLE_ITEM_TAG)
             .unlockedBy("has_citrine_crystal", has(CitrineList.CITRINE_CRYSTAL.get()))
             .save(this.output);
 
@@ -619,7 +619,7 @@ public class RecipeDatagen extends RecipeProvider {
             .pattern("@#@")
             .pattern("@@@")
             .define('@', BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get())
-            .define('#', TagKeyList.CRAFTING_TABLE_TAG)
+            .define('#', TagKeyList.CRAFTING_TABLE_ITEM_TAG)
             .unlockedBy("has_blue_quartz_crystal", has(BlueQuartzList.BLUE_QUARTZ_CRYSTAL.get()))
             .save(this.output);
 
@@ -752,7 +752,7 @@ public class RecipeDatagen extends RecipeProvider {
             .pattern("@#@")
             .pattern("@@@")
             .define('@', PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get())
-            .define('#', TagKeyList.CRAFTING_TABLE_TAG)
+            .define('#', TagKeyList.CRAFTING_TABLE_ITEM_TAG)
             .unlockedBy("has_prasiolite_quartz_crystal", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_CRYSTAL.get()))
             .save(this.output);
 

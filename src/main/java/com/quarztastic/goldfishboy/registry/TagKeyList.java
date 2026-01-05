@@ -75,6 +75,7 @@ public class TagKeyList {
         ResourceLocation.fromNamespaceAndPath("minecraft", "enchantment_power_provider")
     );
 
+    
 
 
     public static final TagKey<Item> QUARTZ_ORE_TAG = TagKey.create(
@@ -92,9 +93,30 @@ public class TagKeyList {
         ResourceLocation.fromNamespaceAndPath("minecraft", "coals")
     );
 
-    public static final TagKey<Item> CRAFTING_TABLE_TAG = TagKey.create(
+    public static final TagKey<Item> CRAFTING_TABLE_ITEM_TAG = TagKey.create(
         Registries.ITEM, 
         ResourceLocation.fromNamespaceAndPath("c", "player_workstations/crafting_tables")
+    );
+
+    public static final TagKey<Item> BARREL_ITEM_TAG = TagKey.create(
+        Registries.ITEM, 
+        ResourceLocation.fromNamespaceAndPath("c", "barrels")
+    );
+
+    public static final TagKey<Item> CHAIN_ITEM_TAG = TagKey.create(
+        Registries.ITEM, 
+        ResourceLocation.fromNamespaceAndPath("c", "chains")
+    );
+
+    public static final TagKey<Item> BOOKSHELVES_ITEM_TAG = TagKey.create(
+        Registries.ITEM, 
+        ResourceLocation.fromNamespaceAndPath("c", "bookshelves")
+    );
+
+
+    public static final TagKey<Item> PIGLIN_REPELLENT_ITEM_TAG = TagKey.create(
+        Registries.ITEM, 
+        ResourceLocation.fromNamespaceAndPath("minecraft", "piglin_repellents")
     );
     
 }
