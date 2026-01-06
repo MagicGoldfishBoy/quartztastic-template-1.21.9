@@ -6,8 +6,8 @@ import com.ibm.icu.text.Normalizer.Mode;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.CitrineList;
-import com.quarztastic.goldfishboy.registry.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
+import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
 import net.minecraft.client.data.models.BlockModelGenerators;

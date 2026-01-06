@@ -3,7 +3,7 @@ package com.quarztastic.goldfishboy.container;
 import java.util.List;
 import java.util.Optional;
 
-import com.quarztastic.goldfishboy.registry.RoseQuartzList;
+import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;

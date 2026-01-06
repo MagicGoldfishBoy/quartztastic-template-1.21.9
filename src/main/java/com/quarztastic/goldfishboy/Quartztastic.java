@@ -12,10 +12,10 @@ import com.quarztastic.goldfishboy.registry.BlueQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.CitrineList;
 import com.quarztastic.goldfishboy.registry.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
-import com.quarztastic.goldfishboy.registry.RoseQuartzList;
-import com.quarztastic.goldfishboy.registry.RoseQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzRegistry;
+import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
+import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzRegistry;
 

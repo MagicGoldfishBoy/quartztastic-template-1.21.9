@@ -2,7 +2,7 @@ package com.quarztastic.goldfishboy.entity;
 
 import java.util.List;
 
-import com.quarztastic.goldfishboy.registry.RoseQuartzList;
+import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
