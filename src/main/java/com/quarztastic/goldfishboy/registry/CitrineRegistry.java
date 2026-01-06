@@ -10,6 +10,7 @@ import com.quarztastic.goldfishboy.block.Sink.SinkShape;
 import com.quarztastic.goldfishboy.block.crafting_tables.CitrineCraftingTable;
 import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.CitrineFurnaceBlock;
+import com.quarztastic.goldfishboy.block.grindstones.CitrineGrindstone;
 import com.quarztastic.goldfishboy.block.ovens.CitrineOvenBlock;
 import com.quarztastic.goldfishboy.block.stonecutters.CitrineStonecutter;
 import com.quarztastic.goldfishboy.block.stonecutters.SmokyQuartzStonecutter;
@@ -518,6 +519,20 @@ public class CitrineRegistry {
         );
         CitrineList.CITRINE_STONECUTTER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_STONECUTTER
+        );
+
+        CitrineList.CITRINE_GRINDSTONE = Quartztastic.BLOCKS.register(
+            "citrine_grindstone", 
+            registryName -> new CitrineGrindstone(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_BLAST_RESISTANCE)
+                .sound(CITRINE_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        CitrineList.CITRINE_GRINDSTONE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_GRINDSTONE
         );
 
         CitrineList.CITRINE_LADDER = Quartztastic.BLOCKS.register(
