@@ -60,7 +60,7 @@ public class Quartztastic {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("quartztastic", () -> CreativeModeTab.builder()
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> QUARTZ_TAB = CREATIVE_MODE_TABS.register("quartztastic", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.quartztastic"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get().getDefaultInstance())

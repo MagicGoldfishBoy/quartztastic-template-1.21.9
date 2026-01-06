@@ -22,6 +22,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 //TODO: Exorcise this demonic abominination from the eigth ring of hell itself
@@ -355,16 +356,14 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SINK.get(), new Variant(modLocation("block/smoky_quartz_sink")));
 
+        ModelDatagenHelpers.createFaceAttachedHorizontalDirectionalBlockModels(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_GRINDSTONE.get(), new Variant(modLocation("block/smoky_quartz_grindstone")));
+
         //I know this is fucking awful, but it works for now :P
 
         for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {
             LOGGER.info("Generating model for: {}", holder.getId().getPath());
             String rawName = holder.getId().getPath();
-            // if (holder.get().getClass() == HorizontalDirectionalBlock.class) {
-            //     String name = "block/" + rawName;
 
-            //     System.out.println("Generating horizontal rotational model for: " + name);
-            // }
             if (rawName.contains("stonecutter") || rawName.contains("crafting_table") || rawName.contains("skull_statuette")) {
                 String name = "block/" + rawName;
 

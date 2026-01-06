@@ -9,6 +9,7 @@ import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.crafting_tables.SmokyQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.SmokyQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.block.grindstones.SmokyQuartzGrindstone;
 import com.quarztastic.goldfishboy.block.ovens.SmokyQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.stonecutters.SmokyQuartzStonecutter;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBarrelBlock;
@@ -145,6 +146,9 @@ public class SmokyQuartzList {
 
     public static DeferredBlock<SmokyQuartzStonecutter> SMOKY_QUARTZ_STONECUTTER;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_STONECUTTER_ITEM;
+
+    public static DeferredBlock<SmokyQuartzGrindstone> SMOKY_QUARTZ_GRINDSTONE;
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_GRINDSTONE_ITEM;
 
 
     public static DeferredBlock<DoorBlock> SMOKY_QUARTZ_DOOR;

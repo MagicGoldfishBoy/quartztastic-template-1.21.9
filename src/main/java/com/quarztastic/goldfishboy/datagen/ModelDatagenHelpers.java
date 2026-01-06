@@ -21,8 +21,10 @@ import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DirectionalBlock;
+import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.LadderBlock;
+import net.minecraft.world.level.block.state.properties.AttachFace;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class ModelDatagenHelpers extends ModelProvider {
@@ -134,6 +136,26 @@ public class ModelDatagenHelpers extends ModelProvider {
         );
     }
 
+    public static void createFaceAttachedHorizontalDirectionalBlockModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels, FaceAttachedHorizontalDirectionalBlock block, Variant variant) {
+        blockModels.blockStateOutput.accept(
+            MultiVariantGenerator.dispatch(
+                block,
+                BlockModelGenerators.variant(variant)
+            ).with(
+                PropertyDispatch.modify(BlockStateProperties.ATTACH_FACE)
+                    .select(AttachFace.FLOOR, BlockModelGenerators.NOP)
+                    .select(AttachFace.WALL, BlockModelGenerators.X_ROT_90)
+                    .select(AttachFace.CEILING,  BlockModelGenerators.X_ROT_180)
+            ).with(
+                PropertyDispatch.modify(BlockStateProperties.HORIZONTAL_FACING)
+                    .select(Direction.SOUTH, BlockModelGenerators.Y_ROT_180)
+                    .select(Direction.NORTH, BlockModelGenerators.NOP)
+                    .select(Direction.WEST, BlockModelGenerators.Y_ROT_270)
+                    .select(Direction.EAST, BlockModelGenerators.Y_ROT_90)
+            )
+        );
+    }
+
     public static void createLadderBlockstates(BlockModelGenerators blockModels, ItemModelGenerators itemModels, LadderBlock block, Item item, Variant variant) {
         blockModels.blockStateOutput.accept(
             MultiVariantGenerator.dispatch(
@@ -155,7 +177,7 @@ public class ModelDatagenHelpers extends ModelProvider {
     }
 
     public static void createRotatableStorageBlock(BlockModelGenerators blockModels, ItemModelGenerators itemModels, Block block, Item item,
-    Variant closed_variant, Variant open_variant) {
+        Variant closed_variant, Variant open_variant) {
 
         MultiVariant closed_multivariant = new MultiVariant(WeightedList.of(closed_variant));
         MultiVariant open_multivariant = new MultiVariant(WeightedList.of(open_variant));
@@ -183,7 +205,7 @@ public class ModelDatagenHelpers extends ModelProvider {
     }
 
     public static void createRotatableFurnaceBlock(BlockModelGenerators blockModels, ItemModelGenerators itemModels, Block block,
-    Variant unlit_variant, Variant lit_variant) {
+        Variant unlit_variant, Variant lit_variant) {
 
         MultiVariant unlit_multivariant = new MultiVariant(WeightedList.of(unlit_variant));
         MultiVariant lit_multivariant = new MultiVariant(WeightedList.of(lit_variant));

@@ -9,6 +9,7 @@ import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.crafting_tables.SmokyQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.SmokyQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.block.grindstones.SmokyQuartzGrindstone;
 import com.quarztastic.goldfishboy.block.ovens.SmokyQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.stonecutters.SmokyQuartzStonecutter;
 import com.quarztastic.goldfishboy.block.SmokyQuartzBarrelBlock;
@@ -531,6 +532,20 @@ public class SmokyQuartzRegistry {
         );
         SmokyQuartzList.SMOKY_QUARTZ_STONECUTTER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_STONECUTTER
+        );
+
+        SmokyQuartzList.SMOKY_QUARTZ_GRINDSTONE = Quartztastic.BLOCKS.register(
+            "smoky_quartz_grindstone", 
+            registryName -> new SmokyQuartzGrindstone(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(SMOKY_QUARTZ_DESTROY_TIME, SMOKY_QUARTZ_BLAST_RESISTANCE)
+                .sound(SMOKY_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        SmokyQuartzList.SMOKY_QUARTZ_GRINDSTONE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_GRINDSTONE
         );
 
         SmokyQuartzList.SMOKY_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
