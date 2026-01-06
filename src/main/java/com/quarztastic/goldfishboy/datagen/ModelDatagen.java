@@ -21,6 +21,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -356,13 +357,22 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SINK.get(), new Variant(modLocation("block/smoky_quartz_sink")));
 
-        ModelDatagenHelpers.createFaceAttachedHorizontalDirectionalBlockModels(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_GRINDSTONE.get(), new Variant(modLocation("block/smoky_quartz_grindstone")));
+        //ModelDatagenHelpers.createFaceAttachedHorizontalDirectionalBlockModels(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_GRINDSTONE.get(), new Variant(modLocation("block/smoky_quartz_grindstone")));
 
         //I know this is fucking awful, but it works for now :P
 
         for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {
             LOGGER.info("Generating model for: {}", holder.getId().getPath());
             String rawName = holder.getId().getPath();
+
+            if (rawName.contains("grindstone")) {
+                String name = "block/" + rawName;
+
+                ResourceLocation block = modLocation(name);
+                Variant blockvariant = new Variant(block);
+
+                ModelDatagenHelpers.createFaceAttachedHorizontalDirectionalBlockModels(blockModels, itemModels, (FaceAttachedHorizontalDirectionalBlock) holder.get(), blockvariant);
+            }
 
             if (rawName.contains("stonecutter") || rawName.contains("crafting_table") || rawName.contains("skull_statuette")) {
                 String name = "block/" + rawName;

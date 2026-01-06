@@ -10,6 +10,7 @@ import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.crafting_tables.SmokyQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.RoseQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.block.grindstones.RoseQuartzGrindstone;
 import com.quarztastic.goldfishboy.block.ovens.RoseQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.stonecutters.RoseQuartzStonecutter;
 import com.quarztastic.goldfishboy.block.stonecutters.SmokyQuartzStonecutter;
@@ -503,6 +504,20 @@ public class RoseQuartzRegistry {
         );
         RoseQuartzList.ROSE_QUARTZ_STONECUTTER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             RoseQuartzList.ROSE_QUARTZ_STONECUTTER
+        );
+
+        RoseQuartzList.ROSE_QUARTZ_GRINDSTONE = Quartztastic.BLOCKS.register(
+            "rose_quartz_grindstone", 
+            registryName -> new RoseQuartzGrindstone(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                .sound(ROSE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        RoseQuartzList.ROSE_QUARTZ_GRINDSTONE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            RoseQuartzList.ROSE_QUARTZ_GRINDSTONE
         );
 
         RoseQuartzList.ROSE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(

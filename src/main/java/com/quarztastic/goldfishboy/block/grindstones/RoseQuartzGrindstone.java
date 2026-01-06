@@ -2,7 +2,7 @@ package com.quarztastic.goldfishboy.block.grindstones;
 
 import com.mojang.math.OctahedralGroup;
 import com.mojang.serialization.MapCodec;
-import com.quarztastic.goldfishboy.container.grindstones.SmokyQuartzGrindstoneMenu;
+import com.quarztastic.goldfishboy.container.grindstones.RoseQuartzGrindstoneMenu;
 
 import java.util.Map;
 import java.util.function.Function;
@@ -32,17 +32,17 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class SmokyQuartzGrindstone extends FaceAttachedHorizontalDirectionalBlock {
-    public static final MapCodec<SmokyQuartzGrindstone> CODEC = simpleCodec(SmokyQuartzGrindstone::new);
-    private static final Component CONTAINER_TITLE = Component.translatable("container.smoky_quartz_grindstone");
+public class RoseQuartzGrindstone extends FaceAttachedHorizontalDirectionalBlock {
+    public static final MapCodec<RoseQuartzGrindstone> CODEC = simpleCodec(RoseQuartzGrindstone::new);
+    private static final Component CONTAINER_TITLE = Component.translatable("container.rose_quartz_grindstone");
     private final Function<BlockState, VoxelShape> shapes;
 
     @Override
-    public MapCodec<SmokyQuartzGrindstone> codec() {
+    public MapCodec<RoseQuartzGrindstone> codec() {
         return CODEC;
     }
 
-    public SmokyQuartzGrindstone(BlockBehaviour.Properties properties) {
+    public RoseQuartzGrindstone(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(FACE, AttachFace.WALL));
         this.shapes = this.makeShapes();
@@ -93,7 +93,7 @@ public class SmokyQuartzGrindstone extends FaceAttachedHorizontalDirectionalBloc
     @Override
     protected MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
         return new SimpleMenuProvider(
-            (p_53812_, p_53813_, p_53814_) -> new SmokyQuartzGrindstoneMenu(p_53812_, p_53813_, ContainerLevelAccess.create(level, pos)), CONTAINER_TITLE
+            (p_53812_, p_53813_, p_53814_) -> new RoseQuartzGrindstoneMenu(p_53812_, p_53813_, ContainerLevelAccess.create(level, pos)), CONTAINER_TITLE
         );
     }
 
