@@ -433,6 +433,7 @@ public class BlueQuartzRegistry {
                 .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
                 .sound(BLUE_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
 
@@ -456,6 +457,7 @@ public class BlueQuartzRegistry {
                 .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
                 .sound(BLUE_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
 
@@ -479,6 +481,7 @@ public class BlueQuartzRegistry {
                 .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
                 .sound(BLUE_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
         BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(

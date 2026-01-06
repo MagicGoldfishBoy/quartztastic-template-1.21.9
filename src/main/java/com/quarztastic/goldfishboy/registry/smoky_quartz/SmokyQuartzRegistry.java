@@ -447,6 +447,7 @@ public class SmokyQuartzRegistry {
                 .strength(SMOKY_QUARTZ_DESTROY_TIME, SMOKY_QUARTZ_BLAST_RESISTANCE)
                 .sound(SMOKY_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
 
@@ -470,6 +471,7 @@ public class SmokyQuartzRegistry {
                 .strength(SMOKY_QUARTZ_DESTROY_TIME, SMOKY_QUARTZ_BLAST_RESISTANCE)
                 .sound(SMOKY_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
 
@@ -493,6 +495,7 @@ public class SmokyQuartzRegistry {
                 .strength(SMOKY_QUARTZ_DESTROY_TIME, SMOKY_QUARTZ_BLAST_RESISTANCE)
                 .sound(SMOKY_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
         SmokyQuartzList.SMOKY_QUARTZ_BLAST_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
