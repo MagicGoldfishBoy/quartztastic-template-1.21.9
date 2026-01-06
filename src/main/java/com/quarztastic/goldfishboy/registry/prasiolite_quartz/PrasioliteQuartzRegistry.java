@@ -9,6 +9,7 @@ import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.crafting_tables.PrasioliteQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.PrasioliteQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.block.grindstones.PrasioliteQuartzGrindstone;
 import com.quarztastic.goldfishboy.block.ovens.PrasioliteQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.stonecutters.PrasioliteQuartzStonecutter;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBarrelBlock;
@@ -448,6 +449,7 @@ public class PrasioliteQuartzRegistry {
                 .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
                 .sound(PRASIOLITE_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
 
@@ -471,6 +473,7 @@ public class PrasioliteQuartzRegistry {
                 .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
                 .sound(PRASIOLITE_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
 
@@ -494,6 +497,7 @@ public class PrasioliteQuartzRegistry {
                 .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
                 .sound(PRASIOLITE_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLAST_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
@@ -533,6 +537,20 @@ public class PrasioliteQuartzRegistry {
         );
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_STONECUTTER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_STONECUTTER
+        );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_GRINDSTONE = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_grindstone", 
+            registryName -> new PrasioliteQuartzGrindstone(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_GRINDSTONE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_GRINDSTONE
         );
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(

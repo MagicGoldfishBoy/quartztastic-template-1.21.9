@@ -434,6 +434,7 @@ public class CitrineRegistry {
                 .strength(CITRINE_DESTROY_TIME, CITRINE_BLAST_RESISTANCE)
                 .sound(CITRINE_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
 
@@ -457,6 +458,7 @@ public class CitrineRegistry {
                 .strength(CITRINE_DESTROY_TIME, CITRINE_BLAST_RESISTANCE)
                 .sound(CITRINE_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
 
@@ -480,6 +482,7 @@ public class CitrineRegistry {
                 .strength(CITRINE_DESTROY_TIME, CITRINE_BLAST_RESISTANCE)
                 .sound(CITRINE_SOUND)
                 .requiresCorrectToolForDrops()
+                .noOcclusion()
             )
         );
         CitrineList.CITRINE_BLAST_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
