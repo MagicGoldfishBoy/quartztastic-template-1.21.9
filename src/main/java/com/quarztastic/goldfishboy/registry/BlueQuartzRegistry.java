@@ -1,5 +1,7 @@
 package com.quarztastic.goldfishboy.registry;
 
+import org.apache.logging.log4j.core.pattern.AbstractStyleNameConverter.Blue;
+
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.BlueQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.Shelf;
@@ -9,6 +11,7 @@ import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.block.Sink.SinkShape;
 import com.quarztastic.goldfishboy.block.crafting_tables.BlueQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.BlueQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.block.grindstones.BlueQuartzGrindstone;
 import com.quarztastic.goldfishboy.block.ovens.BlueQuartzOvenBlock;
 import com.quarztastic.goldfishboy.block.stonecutters.BlueQuartzStonecutter;
 import com.quarztastic.goldfishboy.block.BlueQuartzBarrelBlock;
@@ -515,6 +518,20 @@ public class BlueQuartzRegistry {
         );
         BlueQuartzList.BLUE_QUARTZ_STONECUTTER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_STONECUTTER
+        );
+
+        BlueQuartzList.BLUE_QUARTZ_GRINDSTONE = Quartztastic.BLOCKS.register(
+            "blue_quartz_grindstone", 
+            registryName -> new BlueQuartzGrindstone(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_GRINDSTONE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_GRINDSTONE
         );
 
         BlueQuartzList.BLUE_QUARTZ_LADDER = Quartztastic.BLOCKS.register(

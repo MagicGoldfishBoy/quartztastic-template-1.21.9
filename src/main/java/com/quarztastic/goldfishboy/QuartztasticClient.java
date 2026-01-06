@@ -349,6 +349,7 @@ public class QuartztasticClient {
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_BLAST_FURNACE.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_CRAFTING_TABLE.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_STONECUTTER.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_GRINDSTONE.get(), ChunkSectionLayer.TRANSLUCENT);
 
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_DOOR.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(BlueQuartzList.BLUE_QUARTZ_TRAPDOOR.get(), ChunkSectionLayer.TRANSLUCENT);

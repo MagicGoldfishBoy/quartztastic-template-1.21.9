@@ -147,6 +147,9 @@ public class BlueQuartzList {
     public static DeferredBlock<BlueQuartzStonecutter> BLUE_QUARTZ_STONECUTTER;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_STONECUTTER_ITEM;
 
+    public static DeferredBlock<Block> BLUE_QUARTZ_GRINDSTONE;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_GRINDSTONE_ITEM;
+
 
     public static DeferredBlock<DoorBlock> BLUE_QUARTZ_DOOR;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_DOOR_ITEM;
