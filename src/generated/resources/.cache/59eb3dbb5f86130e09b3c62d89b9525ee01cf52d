@@ -1,4 +1,4 @@
-// 1.21.9	2026-01-07T13:24:25.943614742	Loot Tables
+// 1.21.9	2026-01-07T13:52:20.479876179	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -351,6 +351,7 @@ e79a68c8d3f7d4f52a05486ded48029e03e887e1 data/quartztastic/loot_table/blocks/ros
 03d0703dbfd9ca38f869e094713afedd30cce85a data/quartztastic/loot_table/blocks/smoky_quartz_barrel.json
 9471fa2fe3a54de8708a7335bad8736ce6c2acea data/quartztastic/loot_table/blocks/smoky_quartz_bars.json
 ee53f01a2368e1b57884ea62387e0604bf8b9b91 data/quartztastic/loot_table/blocks/smoky_quartz_bars_block.json
+695beabcf975ec7e1070a69daec3e14cab2e1cf1 data/quartztastic/loot_table/blocks/smoky_quartz_bee_statuette.json
 0ef36d96925f6eae8da3044358004cc4ac135db3 data/quartztastic/loot_table/blocks/smoky_quartz_blast_furnace.json
 43a8c0fea9fd2911579aafa62d3e16a9a87b02c7 data/quartztastic/loot_table/blocks/smoky_quartz_block.json
 64e9361bed6f2639a178889ae04f2cb76a20521d data/quartztastic/loot_table/blocks/smoky_quartz_bookshelf.json

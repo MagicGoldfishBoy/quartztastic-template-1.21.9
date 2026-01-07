@@ -39,7 +39,8 @@ public class Statuette extends HorizontalDirectionalBlock {
     public enum StatuetteShape {
         SKULL_SHAPE("skull_shape"),
         GOLDFISH_SHAPE("goldfish_shape"),
-        CHICKEN_SHAPE("chicken_shape");
+        CHICKEN_SHAPE("chicken_shape"),
+        BEE_SHAPE("bee_shape");
 
         private final String shapeName;
         
@@ -122,6 +123,16 @@ public class Statuette extends HorizontalDirectionalBlock {
             Block.box(7, 9.75, 15.25, 9, 11, 16.25)
         )
     );
+
+    public static final Map<Direction, VoxelShape> BEE_SHAPE = Shapes.rotateHorizontal(
+        Shapes.or(Block.box(5, 2, 3, 12, 9, 12),
+            Block.box(5, 2, 12, 12, 3, 13),
+            Block.box(5, 3, 12, 7, 6, 13),
+            Block.box(7, 3, 12, 10, 6, 13),
+            Block.box(10, 3, 12, 12, 6, 13),
+            Block.box(5, 6, 12, 12, 9, 13)
+        )
+    );
     
     @SuppressWarnings("null")
     @Nullable
@@ -146,6 +157,8 @@ public class Statuette extends HorizontalDirectionalBlock {
                 return GOLDFISH_SHAPE.get(state.getValue(FACING).getOpposite());
             case CHICKEN_SHAPE:
                 return CHICKEN_SHAPE.get(state.getValue(FACING).getOpposite());
+            case BEE_SHAPE:
+                return BEE_SHAPE.get(state.getValue(FACING).getOpposite());
             default:
                 return SKULL_SHAPE.get(state.getValue(FACING).getOpposite());
         }

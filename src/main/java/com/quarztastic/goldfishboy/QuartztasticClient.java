@@ -115,6 +115,7 @@ public class QuartztasticClient {
 
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_GOLDFISH_STATUETTE.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_CHICKEN_STATUETTE.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_BEE_STATUETTE.get(), ChunkSectionLayer.TRANSLUCENT);
 
 
         ItemBlockRenderTypes.setRenderLayer(SmokyQuartzList.SMOKY_QUARTZ_POTTED_POPPY.get(), ChunkSectionLayer.CUTOUT_MIPPED);
