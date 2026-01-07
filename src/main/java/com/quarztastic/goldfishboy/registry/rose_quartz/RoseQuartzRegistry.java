@@ -817,7 +817,7 @@ public class RoseQuartzRegistry {
                 .sound(ROSE_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
                 .noOcclusion()
-                .lightLevel(state -> 5)
+                .lightLevel(state -> 3)
             )
         );
         RoseQuartzList.ROSE_QUARTZ_GOLDFISH_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(

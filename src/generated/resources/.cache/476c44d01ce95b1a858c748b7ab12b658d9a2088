@@ -1,4 +1,4 @@
-// 1.21.9	2026-01-07T11:57:24.920388515	Model Definitions - quartztastic
+// 1.21.9	2026-01-07T12:06:43.480651683	Model Definitions - quartztastic
 acd699d636e5749fa609419032360eef24335e8f assets/quartztastic/blockstates/blue_quartz_barrel.json
 87f5a387c9f9e176346342479b272c9db56f4ef6 assets/quartztastic/blockstates/blue_quartz_bars.json
 bd90a0e030a076b4a84cdaee3a4697681f4f982a assets/quartztastic/blockstates/blue_quartz_bars_block.json
@@ -107,6 +107,7 @@ c0ebee7ba343d2a2d062b022118d86ed73ba1a41 assets/quartztastic/blockstates/citrine
 4a1be27ca1b7fb2e01ea59d53e340b2c039f0795 assets/quartztastic/blockstates/citrine_flower_pot.json
 b2004dea90dc50b5a0644a6a7ec0982c4fad39e1 assets/quartztastic/blockstates/citrine_furnace.json
 da647081f0b6298b90ebe7225438770f29681a9d assets/quartztastic/blockstates/citrine_gate.json
+42d62b017927ced75e5797f3c5cf23f1e45eafb0 assets/quartztastic/blockstates/citrine_goldfish_statuette.json
 f805fc9c4acdbd0be10f41591bb2d535c3473c4d assets/quartztastic/blockstates/citrine_grindstone.json
 0dea388d81ad81a6753584025c41dcffc6139534 assets/quartztastic/blockstates/citrine_ladder.json
 6e60810a98e4cce39097f7362c56497ea5a5d89d assets/quartztastic/blockstates/citrine_lantern.json
@@ -535,6 +536,7 @@ c590a5020522daf39559902eae645a4ad3406974 assets/quartztastic/items/citrine_fence
 429a609bd36558831347d4f2cf47d96dc0576e5d assets/quartztastic/items/citrine_flower_pot.json
 e40c6b0444cd5dfcca80a7ac714eeb9de5a8afd8 assets/quartztastic/items/citrine_furnace.json
 f37da9bc355101639e889d1bc3cfa2cac838ffdb assets/quartztastic/items/citrine_gate.json
+dea730356cd82a08fe5207b2ea7542bc2c2cba18 assets/quartztastic/items/citrine_goldfish_statuette.json
 14bff2f4a50ffa4015962f164f972a93eca5da60 assets/quartztastic/items/citrine_grindstone.json
 1154b82d5b8f7b65a1089215a788a1f30db4762d assets/quartztastic/items/citrine_ladder.json
 eb96df84a0085eb5606482c26080aa6969eeddd2 assets/quartztastic/items/citrine_lantern.json
