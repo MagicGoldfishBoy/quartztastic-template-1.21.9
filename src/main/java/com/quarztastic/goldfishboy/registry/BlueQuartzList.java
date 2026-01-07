@@ -219,6 +219,9 @@ public class BlueQuartzList {
     public static DeferredBlock<Statuette> BLUE_QUARTZ_SKULL_STATUETTE;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_SKULL_STATUETTE_ITEM;
 
+    public static DeferredBlock<Statuette> BLUE_QUARTZ_GOLDFISH_STATUETTE;
+    public static DeferredItem<BlockItem> BLUE_QUARTZ_GOLDFISH_STATUETTE_ITEM;
+
 
     public static DeferredBlock<FlowerPotBlock> BLUE_QUARTZ_FLOWER_POT;
     public static DeferredItem<BlockItem> BLUE_QUARTZ_FLOWER_POT_ITEM;
