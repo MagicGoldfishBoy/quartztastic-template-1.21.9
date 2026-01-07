@@ -219,6 +219,9 @@ public class PrasioliteQuartzList {
     public static DeferredBlock<Statuette> PRASIOLITE_QUARTZ_SKULL_STATUETTE;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_SKULL_STATUETTE_ITEM;
 
+    public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_GOLDFISH_STATUETTE_ITEM;
+    public static DeferredBlock<Statuette> PRASIOLITE_QUARTZ_GOLDFISH_STATUETTE;
+
 
     public static DeferredBlock<FlowerPotBlock> PRASIOLITE_QUARTZ_FLOWER_POT;
     public static DeferredItem<BlockItem> PRASIOLITE_QUARTZ_FLOWER_POT_ITEM;
