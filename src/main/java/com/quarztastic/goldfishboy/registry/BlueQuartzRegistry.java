@@ -812,7 +812,7 @@ public class BlueQuartzRegistry {
 
         BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE = Quartztastic.BLOCKS.register(
             "blue_quartz_skull_statuette", 
-            registryName -> new Statuette("skull", BlockBehaviour.Properties.of()
+            registryName -> new Statuette(Statuette.StatuetteShape.SKULL_SHAPE, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
                 .sound(BLUE_QUARTZ_SOUND)

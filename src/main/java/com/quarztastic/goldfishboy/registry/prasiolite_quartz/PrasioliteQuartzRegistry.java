@@ -828,7 +828,7 @@ public class PrasioliteQuartzRegistry {
 
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_SKULL_STATUETTE = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_skull_statuette", 
-            registryName -> new Statuette("skull", BlockBehaviour.Properties.of()
+            registryName -> new Statuette(Statuette.StatuetteShape.SKULL_SHAPE, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
                 .sound(PRASIOLITE_QUARTZ_SOUND)

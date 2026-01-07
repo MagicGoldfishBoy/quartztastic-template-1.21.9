@@ -374,7 +374,7 @@ public class ModelDatagen extends ModelProvider {
                 ModelDatagenHelpers.createFaceAttachedHorizontalDirectionalBlockModels(blockModels, itemModels, (FaceAttachedHorizontalDirectionalBlock) holder.get(), blockvariant);
             }
 
-            if (rawName.contains("stonecutter") || rawName.contains("crafting_table") || rawName.contains("skull_statuette")) {
+            if (rawName.contains("stonecutter") || rawName.contains("crafting_table") || rawName.contains("statuette")) {
                 String name = "block/" + rawName;
 
                 LOGGER.info("Generating model for: {}", name);

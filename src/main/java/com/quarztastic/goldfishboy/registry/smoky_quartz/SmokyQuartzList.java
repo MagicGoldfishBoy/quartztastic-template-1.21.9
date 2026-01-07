@@ -219,6 +219,9 @@ public class SmokyQuartzList {
     public static DeferredBlock<Statuette> SMOKY_QUARTZ_SKULL_STATUETTE;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_SKULL_STATUETTE_ITEM;
 
+    public static DeferredBlock<Statuette> SMOKY_QUARTZ_GOLDFISH_STATUETTE;
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_GOLDFISH_STATUETTE_ITEM;
+
 
     public static DeferredBlock<FlowerPotBlock> SMOKY_QUARTZ_FLOWER_POT;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_FLOWER_POT_ITEM;

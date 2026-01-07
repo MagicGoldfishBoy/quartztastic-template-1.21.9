@@ -796,7 +796,7 @@ public class RoseQuartzRegistry {
 
         RoseQuartzList.ROSE_QUARTZ_SKULL_STATUETTE = Quartztastic.BLOCKS.register(
             "rose_quartz_skull_statuette", 
-            registryName -> new Statuette("skull", BlockBehaviour.Properties.of()
+            registryName -> new Statuette(Statuette.StatuetteShape.SKULL_SHAPE, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
                 .sound(ROSE_QUARTZ_SOUND)
