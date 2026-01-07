@@ -2313,6 +2313,10 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "rose_quartz_goldfish_statuette_by_stonecutting");
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, RoseQuartzList.ROSE_QUARTZ_CHICKEN_STATUETTE_ITEM.get())
+            .unlockedBy("has_rose_quartz_block", has(RoseQuartzList.ROSE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "rose_quartz_chicken_statuette_by_stonecutting");
+
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, CitrineList.CITRINE_SKULL_STATUETTE_ITEM.get())
             .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
