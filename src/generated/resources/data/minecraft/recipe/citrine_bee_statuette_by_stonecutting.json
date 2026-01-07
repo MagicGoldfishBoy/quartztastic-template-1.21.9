@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "quartztastic:citrine_block",
+  "result": {
+    "count": 1,
+    "id": "quartztastic:citrine_bee_statuette"
+  }
+}

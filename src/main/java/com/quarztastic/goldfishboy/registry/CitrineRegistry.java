@@ -855,6 +855,21 @@ public class CitrineRegistry {
         CitrineList.CITRINE_CHICKEN_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             CitrineList.CITRINE_CHICKEN_STATUETTE
         );
+
+        CitrineList.CITRINE_BEE_STATUETTE = Quartztastic.BLOCKS.register(
+            "citrine_bee_statuette", 
+            registryName -> new Statuette(Statuette.StatuetteShape.BEE_SHAPE, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(CITRINE_DESTROY_TIME, CITRINE_BLAST_RESISTANCE)
+                .sound(CITRINE_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+                .lightLevel(state -> 6)
+            )
+        );
+        CitrineList.CITRINE_BEE_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            CitrineList.CITRINE_BEE_STATUETTE
+        );
     }  
     
     private static void registerFlowerPotBlocks() {

@@ -1,4 +1,4 @@
-// 1.21.9	2026-01-07T13:58:33.253963417	Loot Tables
+// 1.21.9	2026-01-07T14:03:34.931583011	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -93,6 +93,7 @@ e8d3ce5c1b5383aca9de09320f82dd14dc8c5c99 data/quartztastic/loot_table/blocks/chi
 f87491efa889c636bc855421c6a65f3267a6dad6 data/quartztastic/loot_table/blocks/citrine_barrel.json
 66b2af3670ff401efbdb3a0d301f97967ce523bf data/quartztastic/loot_table/blocks/citrine_bars.json
 0da044d7e69c8b7b6637bfddbc3b3311522b1500 data/quartztastic/loot_table/blocks/citrine_bars_block.json
+8fae27ac9c76d4b204739bd9ddbb0b4577a1dcc9 data/quartztastic/loot_table/blocks/citrine_bee_statuette.json
 f9a29dd251e1a8b6a69136904893c1cddd277ccd data/quartztastic/loot_table/blocks/citrine_blast_furnace.json
 a67be03c3d58941245ed02e0bb8679fc6f4a4345 data/quartztastic/loot_table/blocks/citrine_block.json
 9e20872bd21f0ae59c7855968a19961206627698 data/quartztastic/loot_table/blocks/citrine_bookshelf.json
