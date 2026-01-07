@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "quartztastic:prasiolite_quartz_block",
+  "result": {
+    "count": 1,
+    "id": "quartztastic:prasiolite_quartz_chicken_statuette"
+  }
+}
