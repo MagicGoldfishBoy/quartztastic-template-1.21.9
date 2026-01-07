@@ -220,6 +220,9 @@ public class RoseQuartzList {
     public static DeferredBlock<Statuette> ROSE_QUARTZ_CHICKEN_STATUETTE;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_CHICKEN_STATUETTE_ITEM;
 
+    public static DeferredBlock<Statuette> ROSE_QUARTZ_BEE_STATUETTE;
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_BEE_STATUETTE_ITEM;
+
 
     public static DeferredBlock<FlowerPotBlock> ROSE_QUARTZ_FLOWER_POT;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_FLOWER_POT_ITEM;

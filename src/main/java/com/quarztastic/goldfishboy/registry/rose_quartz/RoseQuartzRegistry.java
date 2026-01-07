@@ -838,6 +838,21 @@ public class RoseQuartzRegistry {
         RoseQuartzList.ROSE_QUARTZ_CHICKEN_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             RoseQuartzList.ROSE_QUARTZ_CHICKEN_STATUETTE
         );
+
+        RoseQuartzList.ROSE_QUARTZ_BEE_STATUETTE = Quartztastic.BLOCKS.register(
+            "rose_quartz_bee_statuette", 
+            registryName -> new Statuette(Statuette.StatuetteShape.BEE_SHAPE, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
+                .sound(ROSE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+                .lightLevel(state -> 6)
+            )
+        );
+        RoseQuartzList.ROSE_QUARTZ_BEE_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            RoseQuartzList.ROSE_QUARTZ_BEE_STATUETTE
+        );
     }  
     
     private static void registerFlowerPotBlocks() {
