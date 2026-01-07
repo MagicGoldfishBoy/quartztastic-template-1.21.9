@@ -854,6 +854,21 @@ public class BlueQuartzRegistry {
         BlueQuartzList.BLUE_QUARTZ_CHICKEN_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             BlueQuartzList.BLUE_QUARTZ_CHICKEN_STATUETTE
         );
+
+        BlueQuartzList.BLUE_QUARTZ_BEE_STATUETTE = Quartztastic.BLOCKS.register(
+            "blue_quartz_bee_statuette", 
+            registryName -> new Statuette(Statuette.StatuetteShape.BEE_SHAPE, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
+                .sound(BLUE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+                .lightLevel(state -> 6)
+            )
+        );
+        BlueQuartzList.BLUE_QUARTZ_BEE_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            BlueQuartzList.BLUE_QUARTZ_BEE_STATUETTE
+        );
     }  
     
     private static void registerFlowerPotBlocks() {
