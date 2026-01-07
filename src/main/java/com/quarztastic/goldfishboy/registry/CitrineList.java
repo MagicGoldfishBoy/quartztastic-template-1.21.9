@@ -220,6 +220,9 @@ public class CitrineList {
     public static DeferredBlock<Statuette> CITRINE_GOLDFISH_STATUETTE;
     public static DeferredItem<BlockItem> CITRINE_GOLDFISH_STATUETTE_ITEM;
 
+    public static DeferredBlock<Statuette> CITRINE_CHICKEN_STATUETTE;
+    public static DeferredItem<BlockItem> CITRINE_CHICKEN_STATUETTE_ITEM;
+
 
     public static DeferredBlock<FlowerPotBlock> CITRINE_FLOWER_POT;
     public static DeferredItem<BlockItem> CITRINE_FLOWER_POT_ITEM;
