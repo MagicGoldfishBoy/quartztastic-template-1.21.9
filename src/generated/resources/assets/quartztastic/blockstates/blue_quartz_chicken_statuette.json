@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "quartztastic:block/blue_quartz_chicken_statuette",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "quartztastic:block/blue_quartz_chicken_statuette",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "quartztastic:block/blue_quartz_chicken_statuette"
+    },
+    "facing=west": {
+      "model": "quartztastic:block/blue_quartz_chicken_statuette",
+      "y": 90
+    }
+  }
+}

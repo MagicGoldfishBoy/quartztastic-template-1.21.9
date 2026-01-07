@@ -197,7 +197,7 @@ public class BlockTagDatagen extends BlockTagsProvider {
                 CitrineList.CITRINE_NIGHTSTAND_BLOCK.get(),
 
                 CitrineList.CITRINE_SINK.get(),
-                
+
                 CitrineList.CITRINE_PATH.get(),
                 CitrineList.CITRINE_SKULL_STATUETTE.get(),
                 CitrineList.CITRINE_GOLDFISH_STATUETTE.get(),
@@ -262,6 +262,7 @@ public class BlockTagDatagen extends BlockTagsProvider {
                 BlueQuartzList.BLUE_QUARTZ_PATH.get(),
                 BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE.get(),
                 BlueQuartzList.BLUE_QUARTZ_GOLDFISH_STATUETTE.get(),
+                BlueQuartzList.BLUE_QUARTZ_CHICKEN_STATUETTE.get(),
 
 
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE.get(),
