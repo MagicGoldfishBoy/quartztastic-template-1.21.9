@@ -210,6 +210,7 @@ public class BlockTagDatagen extends BlockTagsProvider {
                 CitrineList.CITRINE_CHICKEN_STATUETTE.get(),
                 CitrineList.CITRINE_BEE_STATUETTE.get(),
                 CitrineList.CITRINE_FROG_STATUETTE.get(),
+                CitrineList.CITRINE_AXOLOTL_STATUETTE.get(),
 
 
                 BlueQuartzList.BLUE_QUARTZ_ORE.get(),

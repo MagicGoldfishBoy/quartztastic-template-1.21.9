@@ -1,4 +1,4 @@
-// 1.21.9	2026-01-08T12:18:27.952766535	Loot Tables
+// 1.21.9	2026-01-08T13:21:36.647087137	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -92,6 +92,7 @@ e0074092987d24f082873df7a6df646ea3dbbf2d data/quartztastic/loot_table/blocks/chi
 e48306db32bb0167139c1b3e0ba63e87a71fecb2 data/quartztastic/loot_table/blocks/chiseled_prasiolite_quartz_block.json
 43beb9e6456d916a78af765125031ce1756d029d data/quartztastic/loot_table/blocks/chiseled_rose_quartz_block.json
 e8d3ce5c1b5383aca9de09320f82dd14dc8c5c99 data/quartztastic/loot_table/blocks/chiseled_smoky_quartz_block.json
+e1e8d593907fd6d6094765653c6b0430555f184f data/quartztastic/loot_table/blocks/citrine_axolotl_statuette.json
 f87491efa889c636bc855421c6a65f3267a6dad6 data/quartztastic/loot_table/blocks/citrine_barrel.json
 66b2af3670ff401efbdb3a0d301f97967ce523bf data/quartztastic/loot_table/blocks/citrine_bars.json
 0da044d7e69c8b7b6637bfddbc3b3311522b1500 data/quartztastic/loot_table/blocks/citrine_bars_block.json

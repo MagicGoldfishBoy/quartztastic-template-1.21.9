@@ -2362,6 +2362,10 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
             .save(this.output, "citrine_frog_statuette_by_stonecutting");
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(CitrineList.CITRINE_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, CitrineList.CITRINE_AXOLOTL_STATUETTE_ITEM.get())
+            .unlockedBy("has_citrine_block", has(CitrineList.CITRINE_BLOCK_ITEM.get()))
+            .save(this.output, "citrine_axolotl_statuette_by_stonecutting");
+
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, BlueQuartzList.BLUE_QUARTZ_SKULL_STATUETTE_ITEM.get())
             .unlockedBy("has_blue_quartz_block", has(BlueQuartzList.BLUE_QUARTZ_BLOCK_ITEM.get()))

@@ -278,6 +278,7 @@ public class QuartztasticClient {
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_CHICKEN_STATUETTE.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_BEE_STATUETTE.get(), ChunkSectionLayer.TRANSLUCENT);
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_FROG_STATUETTE.get(), ChunkSectionLayer.TRANSLUCENT);
+        ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_AXOLOTL_STATUETTE.get(), ChunkSectionLayer.TRANSLUCENT);
 
 
         ItemBlockRenderTypes.setRenderLayer(CitrineList.CITRINE_POTTED_POPPY.get(), ChunkSectionLayer.CUTOUT_MIPPED);
