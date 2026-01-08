@@ -883,6 +883,21 @@ public class SmokyQuartzRegistry {
         SmokyQuartzList.SMOKY_QUARTZ_BEE_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             SmokyQuartzList.SMOKY_QUARTZ_BEE_STATUETTE
         );
+
+        SmokyQuartzList.SMOKY_QUARTZ_FROG_STATUETTE = Quartztastic.BLOCKS.register(
+            "smoky_quartz_frog_statuette", 
+            registryName -> new Statuette(Statuette.StatuetteShape.FROG_SHAPE, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(SMOKY_QUARTZ_DESTROY_TIME, SMOKY_QUARTZ_BLAST_RESISTANCE)
+                .sound(SMOKY_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+                .lightLevel(state -> 5)
+            )
+        );
+        SmokyQuartzList.SMOKY_QUARTZ_FROG_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            SmokyQuartzList.SMOKY_QUARTZ_FROG_STATUETTE
+        );
     }  
     
     private static void registerFlowerPotBlocks() {

@@ -40,7 +40,8 @@ public class Statuette extends HorizontalDirectionalBlock {
         SKULL_SHAPE("skull_shape"),
         GOLDFISH_SHAPE("goldfish_shape"),
         CHICKEN_SHAPE("chicken_shape"),
-        BEE_SHAPE("bee_shape");
+        BEE_SHAPE("bee_shape"),
+        FROG_SHAPE("frog_shape");
 
         private final String shapeName;
         
@@ -68,6 +69,40 @@ public class Statuette extends HorizontalDirectionalBlock {
         return CODEC;
     }
 
+
+    
+    @SuppressWarnings("null")
+    @Nullable
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite());
+    }
+
+    @SuppressWarnings("null")
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(FACING);
+    }
+
+    @SuppressWarnings("null")
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        switch (this.statuetteShape) {
+            case SKULL_SHAPE:
+               return SKULL_SHAPE.get(state.getValue(FACING).getOpposite());
+            case GOLDFISH_SHAPE:
+                return GOLDFISH_SHAPE.get(state.getValue(FACING).getOpposite());
+            case CHICKEN_SHAPE:
+                return CHICKEN_SHAPE.get(state.getValue(FACING).getOpposite());
+            case BEE_SHAPE:
+                return BEE_SHAPE.get(state.getValue(FACING).getOpposite());
+            case FROG_SHAPE:
+                return FROG_SHAPE.get(state.getValue(FACING).getOpposite());
+            default:
+                return SKULL_SHAPE.get(state.getValue(FACING).getOpposite());
+        }
+    }    
+    
     public static final Map<Direction, VoxelShape> SKULL_SHAPE = Shapes.rotateHorizontal(
         Shapes.or(Block.box(5, 0, 5, 11, 1, 11),
             Block.box(5, 1, 5, 6, 2, 11),
@@ -133,34 +168,31 @@ public class Statuette extends HorizontalDirectionalBlock {
             Block.box(5, 6, 12, 12, 9, 13)
         )
     );
-    
-    @SuppressWarnings("null")
-    @Nullable
-    @Override
-    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
-        return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite());
-    }
 
-    @SuppressWarnings("null")
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
-    }
-
-    @SuppressWarnings("null")
-    @Override
-    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        switch (this.statuetteShape) {
-            case SKULL_SHAPE:
-               return SKULL_SHAPE.get(state.getValue(FACING).getOpposite());
-            case GOLDFISH_SHAPE:
-                return GOLDFISH_SHAPE.get(state.getValue(FACING).getOpposite());
-            case CHICKEN_SHAPE:
-                return CHICKEN_SHAPE.get(state.getValue(FACING).getOpposite());
-            case BEE_SHAPE:
-                return BEE_SHAPE.get(state.getValue(FACING).getOpposite());
-            default:
-                return SKULL_SHAPE.get(state.getValue(FACING).getOpposite());
-        }
-    }
+    public static final Map<Direction, VoxelShape> FROG_SHAPE = Shapes.rotateHorizontal(
+        Shapes.or(Block.box(4.5, 1, 10.5, 11.5, 3, 12.5),
+            Block.box(4.5, 3, 10.5, 6.5, 4, 12.5),
+            Block.box(6.5, 3, 10.5, 9.5, 4, 12.5),
+            Block.box(9.5, 3, 10.5, 11.5, 4, 12.5),
+            Block.box(4.5, 4, 10.5, 6.5, 5, 12.5),
+            Block.box(6.5, 4, 10.5, 9.5, 5, 12.5),
+            Block.box(9.5, 4, 10.5, 11.5, 5, 12.5),
+            Block.box(4.5, 5, 10.5, 11.5, 6, 12.5),
+            Block.box(4.5, 1, 3.5, 11.5, 6, 10.5),
+            Block.box(3, 0, 4, 4.5, 3, 7),
+            Block.box(4.5, 0, 4, 5, 1, 7),
+            Block.box(3, 0, 9, 4.5, 3, 12),
+            Block.box(4.5, 0, 9, 5, 1, 12),
+            Block.box(11.5, 0, 9, 13, 3, 12),
+            Block.box(11, 0, 9, 11.5, 1, 12),
+            Block.box(11, 0, 4, 11.5, 1, 7),
+            Block.box(11.5, 0, 4, 13, 3, 7),
+            Block.box(9.5, 6, 10.5, 11.5, 7, 11.5),
+            Block.box(9.5, 6, 9.5, 11.5, 7, 10.5),
+            Block.box(9.5, 7, 9.5, 11.5, 8, 11.5),
+            Block.box(4.5, 6, 10.5, 6.5, 7, 11.5),
+            Block.box(4.5, 7, 9.5, 6.5, 8, 11.5),
+            Block.box(4.5, 6, 9.5, 6.5, 7, 10.5)
+        )
+    );
 }
