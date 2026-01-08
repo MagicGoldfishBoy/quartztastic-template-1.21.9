@@ -2411,6 +2411,10 @@ public class RecipeDatagen extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_FROG_STATUETTE_ITEM.get())
             .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "prasiolite_quartz_frog_statuette_by_stonecutting");
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.DECORATIONS, PrasioliteQuartzList.PRASIOLITE_QUARTZ_AXOLOTL_STATUETTE_ITEM.get())
+            .unlockedBy("has_prasiolite_quartz_block", has(PrasioliteQuartzList.PRASIOLITE_QUARTZ_BLOCK_ITEM.get()))
+            .save(this.output, "prasiolite_quartz_axolotl_statuette_by_stonecutting");
     }
 
     protected void buildFlowerPotRecipes() {
