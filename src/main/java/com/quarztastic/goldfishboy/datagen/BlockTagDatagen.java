@@ -84,6 +84,7 @@ public class BlockTagDatagen extends BlockTagsProvider {
                 SmokyQuartzList.SMOKY_QUARTZ_CHICKEN_STATUETTE.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_BEE_STATUETTE.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_FROG_STATUETTE.get(),
+                SmokyQuartzList.SMOKY_QUARTZ_AXOLOTL_STATUETTE.get(),
 
 
                 RoseQuartzList.ROSE_QUARTZ_ORE.get(),

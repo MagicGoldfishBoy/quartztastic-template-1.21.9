@@ -41,7 +41,8 @@ public class Statuette extends HorizontalDirectionalBlock {
         GOLDFISH_SHAPE("goldfish_shape"),
         CHICKEN_SHAPE("chicken_shape"),
         BEE_SHAPE("bee_shape"),
-        FROG_SHAPE("frog_shape");
+        FROG_SHAPE("frog_shape"),
+        AXOLOTL_SHAPE("axolotl_shape");
 
         private final String shapeName;
         
@@ -98,11 +99,13 @@ public class Statuette extends HorizontalDirectionalBlock {
                 return BEE_SHAPE.get(state.getValue(FACING).getOpposite());
             case FROG_SHAPE:
                 return FROG_SHAPE.get(state.getValue(FACING).getOpposite());
+            case AXOLOTL_SHAPE:
+                return AXOLOTL_SHAPE.get(state.getValue(FACING).getOpposite());
             default:
                 return SKULL_SHAPE.get(state.getValue(FACING).getOpposite());
         }
     }    
-    
+
     public static final Map<Direction, VoxelShape> SKULL_SHAPE = Shapes.rotateHorizontal(
         Shapes.or(Block.box(5, 0, 5, 11, 1, 11),
             Block.box(5, 1, 5, 6, 2, 11),
@@ -193,6 +196,19 @@ public class Statuette extends HorizontalDirectionalBlock {
             Block.box(4.5, 6, 10.5, 6.5, 7, 11.5),
             Block.box(4.5, 7, 9.5, 6.5, 8, 11.5),
             Block.box(4.5, 6, 9.5, 6.5, 7, 10.5)
+        )
+    );
+
+    public static final Map<Direction, VoxelShape> AXOLOTL_SHAPE = Shapes.rotateHorizontal(
+        Shapes.or(Block.box(5, 0, 5, 11, 3, 13),
+            Block.box(5, 0, 15, 11, 1.5, 16),
+            Block.box(5, 1.5, 15, 6, 2.5, 16),
+            Block.box(6, 1.5, 15, 7, 2.5, 16),
+            Block.box(7, 1.5, 15, 9, 2.5, 16),
+            Block.box(9, 1.5, 15, 10, 2.5, 16),
+            Block.box(10, 1.5, 15, 11, 2.5, 16),
+            Block.box(5, 2.5, 15, 11, 4, 16),
+            Block.box(5, 0, 13, 11, 4, 15)
         )
     );
 }

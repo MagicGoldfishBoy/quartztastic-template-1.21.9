@@ -231,6 +231,9 @@ public class SmokyQuartzList {
     public static DeferredBlock<Statuette> SMOKY_QUARTZ_FROG_STATUETTE;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_FROG_STATUETTE_ITEM;
 
+    public static DeferredBlock<Statuette> SMOKY_QUARTZ_AXOLOTL_STATUETTE;
+    public static DeferredItem<BlockItem> SMOKY_QUARTZ_AXOLOTL_STATUETTE_ITEM;
+
 
     public static DeferredBlock<FlowerPotBlock> SMOKY_QUARTZ_FLOWER_POT;
     public static DeferredItem<BlockItem> SMOKY_QUARTZ_FLOWER_POT_ITEM;
