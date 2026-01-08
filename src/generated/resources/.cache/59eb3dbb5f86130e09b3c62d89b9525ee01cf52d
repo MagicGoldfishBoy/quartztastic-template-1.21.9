@@ -1,4 +1,4 @@
-// 1.21.9	2026-01-08T11:21:29.655009286	Loot Tables
+// 1.21.9	2026-01-08T11:28:28.011029179	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -199,6 +199,7 @@ a864278fb35c5603d1806708ca671641c8d19ff1 data/quartztastic/loot_table/blocks/pra
 0895baefce3aca9645cd09407514d8c571f8bd48 data/quartztastic/loot_table/blocks/prasiolite_quartz_door.json
 dfde14334ef591a4dd0e980132fd8fdf2d9e9b5b data/quartztastic/loot_table/blocks/prasiolite_quartz_fence.json
 0093f52fd5b1e82bd5d183c425d42aa04b8c68ac data/quartztastic/loot_table/blocks/prasiolite_quartz_flower_pot.json
+62257c12dbb7861372ee10c19da7a068bce74954 data/quartztastic/loot_table/blocks/prasiolite_quartz_frog_statuette.json
 d873b2aa111d1c8608297505e5f8dd8d9116f341 data/quartztastic/loot_table/blocks/prasiolite_quartz_furnace.json
 afe3027543b5ceabe4ab60761ede6d79f729db33 data/quartztastic/loot_table/blocks/prasiolite_quartz_gate.json
 e05a69214c45a82c4ea43fae549c9a006046eb7a data/quartztastic/loot_table/blocks/prasiolite_quartz_goldfish_statuette.json

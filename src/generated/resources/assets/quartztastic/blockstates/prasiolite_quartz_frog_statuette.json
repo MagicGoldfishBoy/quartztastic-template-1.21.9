@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "quartztastic:block/prasiolite_quartz_frog_statuette",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "quartztastic:block/prasiolite_quartz_frog_statuette",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "quartztastic:block/prasiolite_quartz_frog_statuette"
+    },
+    "facing=west": {
+      "model": "quartztastic:block/prasiolite_quartz_frog_statuette",
+      "y": 90
+    }
+  }
+}

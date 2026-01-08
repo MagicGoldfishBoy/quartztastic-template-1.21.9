@@ -885,6 +885,21 @@ public class PrasioliteQuartzRegistry {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_BEE_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_BEE_STATUETTE
         );
+
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_FROG_STATUETTE = Quartztastic.BLOCKS.register(
+            "prasiolite_quartz_frog_statuette", 
+            registryName -> new Statuette(Statuette.StatuetteShape.FROG_SHAPE, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
+                .sound(PRASIOLITE_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+                .lightLevel(state -> 7)
+            )
+        );
+        PrasioliteQuartzList.PRASIOLITE_QUARTZ_FROG_STATUETTE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            PrasioliteQuartzList.PRASIOLITE_QUARTZ_FROG_STATUETTE
+        );
     }  
     
     private static void registerFlowerPotBlocks() {
