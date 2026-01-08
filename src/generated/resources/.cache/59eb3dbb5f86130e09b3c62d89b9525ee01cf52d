@@ -1,4 +1,4 @@
-// 1.21.9	2026-01-08T10:41:44.611397306	Loot Tables
+// 1.21.9	2026-01-08T11:15:33.405714714	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -110,6 +110,7 @@ eba80192245a54c1dfe7fade652b34db24a0d4cb data/quartztastic/loot_table/blocks/cit
 a4fa6319a7041e217ee6e0d5e131c84e620de7f1 data/quartztastic/loot_table/blocks/citrine_door.json
 9e192d4468feae091b418236e891cc52e58fd458 data/quartztastic/loot_table/blocks/citrine_fence.json
 e7ded8999e5b13e196ecf7a4f43d78c838ab0b5f data/quartztastic/loot_table/blocks/citrine_flower_pot.json
+1c3b6764ebfe48b612a04b56954877fe07d46aad data/quartztastic/loot_table/blocks/citrine_frog_statuette.json
 f309a72c25a41d83bcbfbb3894ea8ce33292d0e7 data/quartztastic/loot_table/blocks/citrine_furnace.json
 82904fdb3becf0e9476ede461d7a47acc3d1ef97 data/quartztastic/loot_table/blocks/citrine_gate.json
 d5b95c9bda8e6a70a6395f92ce6304c892a0475f data/quartztastic/loot_table/blocks/citrine_goldfish_statuette.json
@@ -285,6 +286,7 @@ c665bfd1a0d2d50b299cac5150ef1abbaa4ab5cc data/quartztastic/loot_table/blocks/ros
 3d84b5006699f6110f5feeb9514b02ae964a4c1a data/quartztastic/loot_table/blocks/rose_quartz_door.json
 1900bdca4b7b58decfd720b041aec897e52dde8e data/quartztastic/loot_table/blocks/rose_quartz_fence.json
 56c7285137f06ccad9573e27d1b81ce5ddea8186 data/quartztastic/loot_table/blocks/rose_quartz_flower_pot.json
+184398cbe85ad03a00f1b950223eae2f57e6ec9a data/quartztastic/loot_table/blocks/rose_quartz_frog_statuette.json
 bb357e7aee0d000d38c397858ce82b024028e05a data/quartztastic/loot_table/blocks/rose_quartz_furnace.json
 68a8748331f7ba12233ef619f57d9f17cd2880a0 data/quartztastic/loot_table/blocks/rose_quartz_gate.json
 81ad9f708f70b86b463851c6f04d4b2563f35fb4 data/quartztastic/loot_table/blocks/rose_quartz_goldfish_statuette.json
