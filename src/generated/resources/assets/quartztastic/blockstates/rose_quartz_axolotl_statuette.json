@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "quartztastic:block/rose_quartz_axolotl_statuette",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "quartztastic:block/rose_quartz_axolotl_statuette",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "quartztastic:block/rose_quartz_axolotl_statuette"
+    },
+    "facing=west": {
+      "model": "quartztastic:block/rose_quartz_axolotl_statuette",
+      "y": 90
+    }
+  }
+}

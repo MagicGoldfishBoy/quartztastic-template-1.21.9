@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "quartztastic:rose_quartz_block",
+  "result": {
+    "count": 1,
+    "id": "quartztastic:rose_quartz_axolotl_statuette"
+  }
+}

@@ -226,6 +226,9 @@ public class RoseQuartzList {
     public static DeferredBlock<Statuette> ROSE_QUARTZ_FROG_STATUETTE;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_FROG_STATUETTE_ITEM;
 
+    public static DeferredBlock<Statuette> ROSE_QUARTZ_AXOLOTL_STATUETTE;
+    public static DeferredItem<BlockItem> ROSE_QUARTZ_AXOLOTL_STATUETTE_ITEM;
+
 
     public static DeferredBlock<FlowerPotBlock> ROSE_QUARTZ_FLOWER_POT;
     public static DeferredItem<BlockItem> ROSE_QUARTZ_FLOWER_POT_ITEM;
