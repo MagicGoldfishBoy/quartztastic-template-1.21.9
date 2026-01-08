@@ -270,6 +270,7 @@ public class BlockTagDatagen extends BlockTagsProvider {
                 BlueQuartzList.BLUE_QUARTZ_GOLDFISH_STATUETTE.get(),
                 BlueQuartzList.BLUE_QUARTZ_CHICKEN_STATUETTE.get(),
                 BlueQuartzList.BLUE_QUARTZ_BEE_STATUETTE.get(),
+                BlueQuartzList.BLUE_QUARTZ_FROG_STATUETTE.get(),
 
 
                 PrasioliteQuartzList.PRASIOLITE_QUARTZ_ORE.get(),

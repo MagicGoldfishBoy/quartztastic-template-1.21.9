@@ -1,4 +1,4 @@
-// 1.21.9	2026-01-08T11:15:33.405714714	Loot Tables
+// 1.21.9	2026-01-08T11:21:29.655009286	Loot Tables
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
 abeb00294e0c779643e951eca554712034b25cab data/quartztastic/loot_table/blocks/blue_quartz_bars_block.json
@@ -18,6 +18,7 @@ a95dd3b602d678a271479f18cf88669b46419cc2 data/quartztastic/loot_table/blocks/blu
 74351fbd125fb00e2924b4ead737fe192acad4c6 data/quartztastic/loot_table/blocks/blue_quartz_door.json
 6eab44e955408d5e2e18cb38937d6aa2c03b676c data/quartztastic/loot_table/blocks/blue_quartz_fence.json
 a52dab425d41fdbaacafbb28d0d173149786f179 data/quartztastic/loot_table/blocks/blue_quartz_flower_pot.json
+4dcb4f857549d3e8cfbee69496d0083b39959738 data/quartztastic/loot_table/blocks/blue_quartz_frog_statuette.json
 174f5011c9c3c2b1d29c0d1ac5675d45a107e9a2 data/quartztastic/loot_table/blocks/blue_quartz_furnace.json
 530c891a73b5c846d7119f73360bd5fe498f13f9 data/quartztastic/loot_table/blocks/blue_quartz_gate.json
 72ed5871d826c544804305258de82065884622ca data/quartztastic/loot_table/blocks/blue_quartz_goldfish_statuette.json
