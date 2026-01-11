@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
 import com.quarztastic.goldfishboy.entity.BlueQuartzFurnaceEntity;
-import com.quarztastic.goldfishboy.registry.BlueQuartzList;
+import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

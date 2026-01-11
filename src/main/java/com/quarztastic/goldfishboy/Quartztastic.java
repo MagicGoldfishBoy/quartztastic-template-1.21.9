@@ -7,11 +7,11 @@ import com.mojang.logging.LogUtils;
 
 import com.quarztastic.goldfishboy.datagen.Datagen;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
-import com.quarztastic.goldfishboy.registry.BlueQuartzList;
-import com.quarztastic.goldfishboy.registry.BlueQuartzRegistry;
-import com.quarztastic.goldfishboy.registry.CitrineList;
-import com.quarztastic.goldfishboy.registry.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.EntityRegistry;
+import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
+import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzRegistry;
+import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
+import com.quarztastic.goldfishboy.registry.citrine.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;

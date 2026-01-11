@@ -3,8 +3,8 @@ package com.quarztastic.goldfishboy;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
-import com.quarztastic.goldfishboy.registry.BlueQuartzList;
-import com.quarztastic.goldfishboy.registry.CitrineList;
+import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
+import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;

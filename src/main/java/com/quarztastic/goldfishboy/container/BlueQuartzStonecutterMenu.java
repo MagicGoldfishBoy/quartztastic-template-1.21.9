@@ -3,7 +3,7 @@ package com.quarztastic.goldfishboy.container;
 import java.util.List;
 import java.util.Optional;
 
-import com.quarztastic.goldfishboy.registry.BlueQuartzList;
+import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

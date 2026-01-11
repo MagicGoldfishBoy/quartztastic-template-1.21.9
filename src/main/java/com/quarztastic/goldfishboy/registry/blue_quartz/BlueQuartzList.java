@@ -1,4 +1,4 @@
-package com.quarztastic.goldfishboy.registry;
+package com.quarztastic.goldfishboy.registry.blue_quartz;
 
 import java.util.function.Supplier;
 

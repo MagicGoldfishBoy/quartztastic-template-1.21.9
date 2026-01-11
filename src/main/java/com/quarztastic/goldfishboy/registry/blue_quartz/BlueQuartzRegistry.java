@@ -1,4 +1,4 @@
-package com.quarztastic.goldfishboy.registry;
+package com.quarztastic.goldfishboy.registry.blue_quartz;
 
 import org.apache.logging.log4j.core.pattern.AbstractStyleNameConverter.Blue;
 
@@ -21,6 +21,7 @@ import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.BlueQuartzOvenEntity;
+import com.quarztastic.goldfishboy.registry.BlockSetTypes;
 import com.quarztastic.goldfishboy.entity.BlueQuartzNightstandEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzBarrelEntity;
 import com.quarztastic.goldfishboy.entity.BlueQuartzBlastFurnaceEntity;

@@ -2,7 +2,7 @@ package com.quarztastic.goldfishboy.entity;
 
 import java.util.List;
 
-import com.quarztastic.goldfishboy.registry.CitrineList;
+import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;

@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import javax.annotation.Nullable;
 
-import com.quarztastic.goldfishboy.registry.CitrineList;
+import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.server.level.ServerLevel;

@@ -3,7 +3,7 @@ package com.quarztastic.goldfishboy.container;
 import java.util.List;
 import java.util.Optional;
 
-import com.quarztastic.goldfishboy.registry.CitrineList;
+import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;

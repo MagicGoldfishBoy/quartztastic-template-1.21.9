@@ -1,6 +1,6 @@
 package com.quarztastic.goldfishboy.container.grindstones;
 
-import com.quarztastic.goldfishboy.registry.BlueQuartzList;
+import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap.Entry;
 import net.minecraft.core.BlockPos;

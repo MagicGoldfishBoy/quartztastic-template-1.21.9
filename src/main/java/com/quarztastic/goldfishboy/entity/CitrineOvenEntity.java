@@ -1,6 +1,6 @@
 package com.quarztastic.goldfishboy.entity;
 
-import com.quarztastic.goldfishboy.registry.CitrineList;
+import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

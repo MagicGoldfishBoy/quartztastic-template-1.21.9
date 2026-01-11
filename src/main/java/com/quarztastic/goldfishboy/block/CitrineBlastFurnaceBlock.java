@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
 import com.quarztastic.goldfishboy.entity.CitrineBlastFurnaceEntity;
-import com.quarztastic.goldfishboy.registry.CitrineList;
+import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
