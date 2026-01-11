@@ -121,6 +121,16 @@ public class ModelDatagenHelpers extends ModelProvider {
         );
     }
 
+    //this only exists because neoforge's model datagen is rigid as fuck and won't let me use vanilla textures afaik
+    public static void createSimpleBlockModel(BlockModelGenerators blockModels, ItemModelGenerators itemModels, Block block, Variant variant) {
+        blockModels.blockStateOutput.accept(
+            MultiVariantGenerator.dispatch(
+                block,
+                BlockModelGenerators.variant(variant)
+            )
+        );
+    }
+
     public static void createHorizontalRotationModel(BlockModelGenerators blockModels, ItemModelGenerators itemModels, HorizontalDirectionalBlock block, Variant variant) {
         blockModels.blockStateOutput.accept(
             MultiVariantGenerator.dispatch(

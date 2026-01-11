@@ -1,5 +1,12 @@
 {
   "itemGroup.quartztastic": "Quartztastic",
+
+  "block.quartztastic.nether_quartz_button": "Nether Quartz Button",
+  "block.quartztastic.nether_quartz_pressure_plate": "Nether Quartz Pressure Plate",
+  "block.quartztastic.nether_quartz_fence": "Nether Quartz Fence",
+  "block.quartztastic.nether_quartz_wall": "Nether Quartz Wall",
+  "block.quartztastic.nether_quartz_gate": "Nether Quartz Gate",
+
   "block.quartztastic.smoky_quartz_ore": "Smoky Quartz Ore",
   "block.quartztastic.smoky_quartz_netherrack_ore": "Smoky Quartz Ore",
   "item.quartztastic.smoky_quartz_crystal": "Smoky Quartz Crystal",

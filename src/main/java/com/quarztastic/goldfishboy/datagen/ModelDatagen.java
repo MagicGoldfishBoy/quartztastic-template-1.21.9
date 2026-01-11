@@ -6,6 +6,7 @@ import com.ibm.icu.text.Normalizer.Mode;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -14,15 +15,24 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.ItemModelUtils;
+import net.minecraft.client.data.models.model.ModelLocationUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TextureSlot;
+import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.client.renderer.block.model.Variant;
+import net.minecraft.client.renderer.block.model.VariantMutator.VariantProperty;
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
@@ -59,6 +69,8 @@ public class ModelDatagen extends ModelProvider {
     }
 
     protected void buildSimpleBlockModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
+        ModelDatagenHelpers.createSimpleBlockModel(blockModels, itemModels, NetherQuartzBasicBlockList.NETHER_QUARTZ_TEXTURE_BLOCK.get(), new Variant(modLocation("block/nether_quartz_texture_block")));
 
         blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_ORE.get());
 
@@ -135,6 +147,16 @@ public class ModelDatagen extends ModelProvider {
     }
 
     protected void buildBlockFamilies(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
+        //ended up having to set the textures on these fuckers manually because datagen keeps fucking up and not updating the motherfucking textures
+        //also the family method ONLY WORKS with normal block, not pillars, which is what nether quartz blocks are
+
+        blockModels.familyWithExistingFullBlock(NetherQuartzBasicBlockList.NETHER_QUARTZ_TEXTURE_BLOCK.get())
+            .button(NetherQuartzBasicBlockList.NETHER_QUARTZ_BUTTON.get())
+            .pressurePlate(NetherQuartzBasicBlockList.NETHER_QUARTZ_PRESSURE_PLATE.get())
+            .fence(NetherQuartzBasicBlockList.NETHER_QUARTZ_FENCE.get())
+            .wall(NetherQuartzBasicBlockList.NETHER_QUARTZ_WALL.get())
+            .fenceGate(NetherQuartzBasicBlockList.NETHER_QUARTZ_GATE.get());
 
         blockModels.familyWithExistingFullBlock(SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get())
             .slab(SmokyQuartzList.SMOKY_QUARTZ_SLAB.get())

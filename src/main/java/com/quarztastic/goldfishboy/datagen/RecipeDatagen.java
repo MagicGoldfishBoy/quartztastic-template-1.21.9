@@ -5,6 +5,7 @@ import java.util.concurrent.CompletableFuture;
 import com.quarztastic.goldfishboy.registry.TagKeyList;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -1193,6 +1194,16 @@ public class RecipeDatagen extends RecipeProvider {
 
     protected void buildButtonRecipes() {
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.QUARTZ_BLOCK), RecipeCategory.REDSTONE, NetherQuartzBasicBlockList.NETHER_QUARTZ_BUTTON_ITEM.get(), 4)
+            .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
+            .save(this.output, "nether_quartz_button_by_stonecutting");
+
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, NetherQuartzBasicBlockList.NETHER_QUARTZ_BUTTON_ITEM.get())
+            .requires(Items.QUARTZ)
+            .unlockedBy("has_nether_quartz_crystal", has(Items.QUARTZ))
+            .save(this.output, "nether_quartz_button_by_crafting");
+
+
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, SmokyQuartzList.SMOKY_QUARTZ_BUTTON_ITEM.get(), 4)
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "smoky_quartz_button_by_stonecutting");
@@ -1244,6 +1255,17 @@ public class RecipeDatagen extends RecipeProvider {
     }
 
     protected void buildPressurePlateRecipes() {
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.QUARTZ_BLOCK), RecipeCategory.REDSTONE, NetherQuartzBasicBlockList.NETHER_QUARTZ_PRESSURE_PLATE_ITEM.get())
+            .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
+            .save(this.output, "nether_quartz_pressure_plate_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, NetherQuartzBasicBlockList.NETHER_QUARTZ_PRESSURE_PLATE_ITEM.get())
+            .pattern("@@")
+            .define('@', Items.QUARTZ_BLOCK)
+            .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
+            .save(this.output, "nether_quartz_pressure_plate_by_crafting");
+
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.REDSTONE, SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE_ITEM.get())
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
@@ -1301,6 +1323,39 @@ public class RecipeDatagen extends RecipeProvider {
     }
 
     protected void buildFenceWallGateRecipes() {
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzBasicBlockList.NETHER_QUARTZ_FENCE_ITEM.get(), 6)
+            .pattern("@#@")
+            .pattern("@#@")
+            .define('@', Items.QUARTZ_BLOCK)
+            .define('#', Items.QUARTZ)
+            .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
+            .unlockedBy("has_nether_quartz_crystal", has(Items.QUARTZ))
+            .save(this.output);
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.QUARTZ_BLOCK), RecipeCategory.DECORATIONS, NetherQuartzBasicBlockList.NETHER_QUARTZ_WALL_ITEM.get())
+            .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
+            .save(this.output, "nether_quartz_wall_by_stonecutting");
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzBasicBlockList.NETHER_QUARTZ_WALL_ITEM.get(), 6)
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', Items.QUARTZ_BLOCK)
+            .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
+            .save(this.output, "nether_quartz_wall_by_crafting");
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.REDSTONE, NetherQuartzBasicBlockList.NETHER_QUARTZ_GATE_ITEM.get(), 2)
+            .pattern("#@#")
+            .pattern("#@#")
+            .define('@', Items.QUARTZ_BLOCK)
+            .define('#', Items.QUARTZ)
+            .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
+            .unlockedBy("has_nether_quartz_crystal", has(Items.QUARTZ))
+            .save(this.output);
+
+
 
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_FENCE_ITEM.get(), 6)
             .pattern("@#@")

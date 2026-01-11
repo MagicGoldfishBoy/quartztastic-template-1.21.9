@@ -5,6 +5,7 @@ import java.util.concurrent.CompletableFuture;
 import com.quarztastic.goldfishboy.registry.TagKeyList;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -23,6 +24,14 @@ public class BlockTagDatagen extends BlockTagsProvider {
     protected void addTags(Provider provider) {
         this.tag(TagKeyList.MINED_BY_PICKAXE_TAG)
             .add(
+
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_BUTTON.get(), 
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_PRESSURE_PLATE.get(), 
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_FENCE.get(), 
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_WALL.get(), 
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_GATE.get(),
+
+
                 SmokyQuartzList.SMOKY_QUARTZ_ORE.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE.get(),
 
@@ -345,6 +354,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
         
         this.tag(TagKeyList.STONE_PRESSURE_PLATES_TAG)
             .add(
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_PRESSURE_PLATE.get(),
+                
                 SmokyQuartzList.SMOKY_QUARTZ_PRESSURE_PLATE.get(),
 
                 RoseQuartzList.ROSE_QUARTZ_PRESSURE_PLATE.get(),
@@ -358,6 +369,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.FENCES_TAG)
             .add(
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_FENCE.get(),
+
                 SmokyQuartzList.SMOKY_QUARTZ_FENCE.get(),
 
                 RoseQuartzList.ROSE_QUARTZ_FENCE.get(),
@@ -371,6 +384,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.WALLS_TAG)
             .add(
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_WALL.get(),
+
                 SmokyQuartzList.SMOKY_QUARTZ_WALL.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_BRICK_WALL.get(),
 
@@ -389,6 +404,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.GATES_TAG)
             .add(
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_GATE.get(),
+                
                 SmokyQuartzList.SMOKY_QUARTZ_GATE.get(),
 
                 RoseQuartzList.ROSE_QUARTZ_GATE.get(),

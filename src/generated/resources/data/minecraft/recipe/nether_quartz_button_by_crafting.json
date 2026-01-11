@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    "minecraft:quartz"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:nether_quartz_button"
+  }
+}

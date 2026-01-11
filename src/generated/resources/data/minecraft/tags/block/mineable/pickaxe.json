@@ -1,5 +1,10 @@
 {
   "values": [
+    "quartztastic:nether_quartz_button",
+    "quartztastic:nether_quartz_pressure_plate",
+    "quartztastic:nether_quartz_fence",
+    "quartztastic:nether_quartz_wall",
+    "quartztastic:nether_quartz_gate",
     "quartztastic:smoky_quartz_ore",
     "quartztastic:smoky_quartz_netherrack_ore",
     "quartztastic:smoky_quartz_block",

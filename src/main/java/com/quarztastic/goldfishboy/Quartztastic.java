@@ -12,6 +12,7 @@ import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineRegistry;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockRegistry;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
@@ -54,6 +55,8 @@ public class Quartztastic {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
+    public static final DeferredRegister.Blocks UNOBTAINABLE_BLOCKS = DeferredRegister.createBlocks(MODID);
+
     //this only exists because afaik blocks NEED block items to drop ANYTHING and I don't want those clogging up the creative tab
     public static final DeferredRegister.Items UNOBTAINABLE_ITEMS = DeferredRegister.createItems(MODID);
 
@@ -87,6 +90,8 @@ public class Quartztastic {
 
         ITEMS.register(modEventBus);
 
+        UNOBTAINABLE_BLOCKS.register(modEventBus);
+
         UNOBTAINABLE_ITEMS.register(modEventBus);
 
         CREATIVE_MODE_TABS.register(modEventBus);
@@ -96,6 +101,7 @@ public class Quartztastic {
 
         EntityRegistry.init(modEventBus);
 
+        NetherQuartzBasicBlockRegistry.registerAll();
 
         SmokyQuartzRegistry.registerAll();
 
