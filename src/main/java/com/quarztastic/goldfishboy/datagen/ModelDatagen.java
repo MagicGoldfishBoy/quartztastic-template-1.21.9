@@ -148,15 +148,20 @@ public class ModelDatagen extends ModelProvider {
 
     protected void buildBlockFamilies(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
-        //ended up having to set the textures on these fuckers manually because datagen keeps fucking up and not updating the motherfucking textures
-        //also the family method ONLY WORKS with normal block, not pillars, which is what nether quartz blocks are
-
+        //ended up having to set the textures on these nether quartz fuckers manually because datagen keeps fucking up
+        //using setBlock shows the texture block has the right texture, but somehow that greedy little bitch won't share
+        
         blockModels.familyWithExistingFullBlock(NetherQuartzBasicBlockList.NETHER_QUARTZ_TEXTURE_BLOCK.get())
             .button(NetherQuartzBasicBlockList.NETHER_QUARTZ_BUTTON.get())
             .pressurePlate(NetherQuartzBasicBlockList.NETHER_QUARTZ_PRESSURE_PLATE.get())
             .fence(NetherQuartzBasicBlockList.NETHER_QUARTZ_FENCE.get())
             .wall(NetherQuartzBasicBlockList.NETHER_QUARTZ_WALL.get())
             .fenceGate(NetherQuartzBasicBlockList.NETHER_QUARTZ_GATE.get());
+
+        blockModels.familyWithExistingFullBlock(Blocks.QUARTZ_BRICKS)
+            .slab(NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_SLAB.get())
+            .stairs(NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_STAIRS.get())
+            .wall(NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_WALL.get());
 
         blockModels.familyWithExistingFullBlock(SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get())
             .slab(SmokyQuartzList.SMOKY_QUARTZ_SLAB.get())

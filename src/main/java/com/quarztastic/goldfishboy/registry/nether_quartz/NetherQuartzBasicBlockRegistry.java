@@ -5,11 +5,14 @@ import com.quarztastic.goldfishboy.Quartztastic;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -29,6 +32,8 @@ public class NetherQuartzBasicBlockRegistry {
 
         registerFullBlocks();
 
+        registerSlabsAndStairs();
+
         registerRedstoneBlocks();
 
         registerFenceWallsGates();
@@ -44,6 +49,39 @@ public class NetherQuartzBasicBlockRegistry {
                 .sound(NETHER_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
             )
+        );
+    }
+
+    public static void registerSlabsAndStairs() {
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_SLAB = Quartztastic.BLOCKS.register(
+            "nether_quartz_brick_slab", 
+            registryName -> new SlabBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_SLAB
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_STAIRS = Quartztastic.BLOCKS.register(
+            "nether_quartz_brick_stairs", 
+            registryName -> new StairBlock(
+                Blocks.QUARTZ_BRICKS.defaultBlockState(),
+                BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                    .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                    .sound(NETHER_QUARTZ_SOUND)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+            )
+        );
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_STAIRS
         );
     }
 
@@ -121,6 +159,20 @@ public class NetherQuartzBasicBlockRegistry {
         );
         NetherQuartzBasicBlockList.NETHER_QUARTZ_GATE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzBasicBlockList.NETHER_QUARTZ_GATE
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_WALL = Quartztastic.BLOCKS.register(
+            "nether_quartz_brick_wall", 
+            registryName -> new WallBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_WALL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_WALL
         );
     }
     
