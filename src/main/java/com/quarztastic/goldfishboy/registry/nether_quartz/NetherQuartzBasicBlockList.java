@@ -58,4 +58,8 @@ public class NetherQuartzBasicBlockList {
 
     public static DeferredBlock<IronBarsBlock> NETHER_QUARTZ_BARS;
     public static DeferredItem<BlockItem> NETHER_QUARTZ_BARS_ITEM;
+
+
+    public static DeferredBlock<Block> NETHER_QUARTZ_BOOKSHELF;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_BOOKSHELF_ITEM;
 }

@@ -2,6 +2,8 @@ package com.quarztastic.goldfishboy.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
+import org.checkerframework.checker.units.qual.N;
+
 import com.quarztastic.goldfishboy.registry.TagKeyList;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
@@ -41,6 +43,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
                 NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS.get(),
                 NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_BLOCK.get(),
+
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_BOOKSHELF.get(),
 
 
                 SmokyQuartzList.SMOKY_QUARTZ_ORE.get(),
@@ -550,6 +554,7 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.ENCHANTMENT_POWER_PROVIDER_TAG)
             .add(
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_BOOKSHELF.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_BOOKSHELF.get(),
                 RoseQuartzList.ROSE_QUARTZ_BOOKSHELF.get(),
                 CitrineList.CITRINE_BOOKSHELF.get(),

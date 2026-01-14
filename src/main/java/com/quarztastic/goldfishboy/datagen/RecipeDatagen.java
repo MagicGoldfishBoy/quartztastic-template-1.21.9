@@ -157,6 +157,17 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
 
 
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzBasicBlockList.NETHER_QUARTZ_BOOKSHELF_ITEM.get())
+            .pattern("@@@")
+            .pattern("###")
+            .pattern("@@@")
+            .define('@', Items.QUARTZ_SLAB)
+            .define('#', Items.BOOK)
+            .unlockedBy("has_quartz_slab", has(Items.QUARTZ_SLAB))
+            .unlockedBy("has_book", has(Items.BOOK))
+            .save(this.output);
+
+
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_BRICKS_ITEM.get())
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
             .save(this.output, "smoky_quartz_bricks_by_stonecutting");

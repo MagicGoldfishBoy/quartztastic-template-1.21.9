@@ -250,6 +250,22 @@ public class NetherQuartzBasicBlockRegistry {
         NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS
         );
+
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BOOKSHELF = Quartztastic.BLOCKS.register(
+            "nether_quartz_bookshelf", 
+            registryName -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BOOKSHELF)
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BOOKSHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_BOOKSHELF
+        );
     }
     
 }
