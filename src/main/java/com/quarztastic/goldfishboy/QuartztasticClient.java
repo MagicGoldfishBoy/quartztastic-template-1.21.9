@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -40,6 +41,7 @@ public class QuartztasticClient {
 
         LOGGER.info("Setting Render Layers");
 
+        setNetherQuartzRenderLayers();
 
         setSmokyQuartzRenderLayers();
 
@@ -50,6 +52,14 @@ public class QuartztasticClient {
         setBlueQuartzRenderLayers();
 
         setPrasioliteQuartzRenderLayers(event);
+
+    }
+
+    @SuppressWarnings("deprecation")
+    static void setNetherQuartzRenderLayers() {
+
+            ItemBlockRenderTypes.setRenderLayer(NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_BLOCK.get(), ChunkSectionLayer.CUTOUT_MIPPED);
+            ItemBlockRenderTypes.setRenderLayer(NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS.get(), ChunkSectionLayer.CUTOUT_MIPPED);
 
     }
 

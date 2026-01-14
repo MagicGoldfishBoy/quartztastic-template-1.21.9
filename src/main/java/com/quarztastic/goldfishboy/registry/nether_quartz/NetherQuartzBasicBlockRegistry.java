@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -216,6 +217,38 @@ public class NetherQuartzBasicBlockRegistry {
         );
         NetherQuartzBasicBlockList.NETHER_QUARTZ_TILE_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzBasicBlockList.NETHER_QUARTZ_TILE_STAIRS
+        );
+
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_BLOCK = Quartztastic.BLOCKS.register(
+            "nether_quartz_bars_block", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_BLOCK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_BLOCK
+        );
+
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS = Quartztastic.BLOCKS.register(
+            "nether_quartz_bars", 
+            registryName -> new IronBarsBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS
         );
     }
     

@@ -5,6 +5,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
@@ -50,4 +51,11 @@ public class NetherQuartzBasicBlockList {
 
     public static DeferredBlock<StairBlock> NETHER_QUARTZ_TILE_STAIRS;
     public static DeferredItem<BlockItem> NETHER_QUARTZ_TILE_STAIRS_ITEM;
+
+
+    public static DeferredBlock<Block> NETHER_QUARTZ_BARS_BLOCK;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_BARS_BLOCK_ITEM;
+
+    public static DeferredBlock<IronBarsBlock> NETHER_QUARTZ_BARS;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_BARS_ITEM;
 }

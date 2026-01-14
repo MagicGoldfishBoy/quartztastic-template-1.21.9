@@ -736,6 +736,8 @@ public class ModelDatagen extends ModelProvider {
 
     protected void buildBarModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
+        blockModels.createGlassBlocks(NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_BLOCK.get(), NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS.get());
+
 
         blockModels.createGlassBlocks(SmokyQuartzList.SMOKY_QUARTZ_BARS_BLOCK.get(), SmokyQuartzList.SMOKY_QUARTZ_BARS.get());
 

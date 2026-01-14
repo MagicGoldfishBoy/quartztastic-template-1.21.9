@@ -130,7 +130,24 @@ public class RecipeDatagen extends RecipeProvider {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.QUARTZ_BLOCK), RecipeCategory.BUILDING_BLOCKS, NetherQuartzBasicBlockList.NETHER_QUARTZ_TILES.get())
             .unlockedBy("has_quartz_block", has(Items.QUARTZ_BLOCK))
             .save(this.output);
-            
+
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_ITEM.get(), 18)
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', Items.QUARTZ)
+            .unlockedBy("has_quartz", has(Items.QUARTZ))
+            .save(this.output);
+
+        
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_BLOCK_ITEM.get())
+            .pattern("@@@")
+            .pattern("@@@")
+            .pattern("@@@")
+            .define('@', NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_ITEM.get())
+            .unlockedBy("has_nether_quartz_bars", has(NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_ITEM.get()))
+            .save(this.output);
+
 
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get())
             .pattern("@@")
