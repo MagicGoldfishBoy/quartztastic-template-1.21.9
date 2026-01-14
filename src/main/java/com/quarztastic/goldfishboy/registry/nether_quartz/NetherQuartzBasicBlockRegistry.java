@@ -174,6 +174,49 @@ public class NetherQuartzBasicBlockRegistry {
         NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_WALL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_WALL
         );
+
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_TILES = Quartztastic.BLOCKS.register(
+            "nether_quartz_tiles", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_TILES_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_TILES
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_TILE_SLAB = Quartztastic.BLOCKS.register(
+            "nether_quartz_tile_slab", 
+            registryName -> new SlabBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME / 2, NETHER_QUARTZ_BLAST_RESISTANCE / 2)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_TILE_SLAB_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_TILE_SLAB
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_TILE_STAIRS = Quartztastic.BLOCKS.register(
+            "nether_quartz_tile_stairs", 
+            registryName -> new StairBlock(NetherQuartzBasicBlockList.NETHER_QUARTZ_TILES.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_TILE_STAIRS_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_TILE_STAIRS
+        );
     }
     
 }

@@ -11,6 +11,10 @@
   "block.quartztastic.nether_quartz_brick_stairs": "Nether Quartz Brick Stairs",
   "block.quartztastic.nether_quartz_brick_wall": "Nether Quartz Brick Wall",
 
+  "block.quartztastic.nether_quartz_tiles": "Nether Quartz Tiles",
+  "block.quartztastic.nether_quartz_tile_slab": "Nether Quartz Tiles Slab",
+  "block.quartztastic.nether_quartz_tile_stairs": "Nether Quartz Tiles Stairs",
+
   "block.quartztastic.smoky_quartz_ore": "Smoky Quartz Ore",
   "block.quartztastic.smoky_quartz_netherrack_ore": "Smoky Quartz Ore",
   "item.quartztastic.smoky_quartz_crystal": "Smoky Quartz Crystal",

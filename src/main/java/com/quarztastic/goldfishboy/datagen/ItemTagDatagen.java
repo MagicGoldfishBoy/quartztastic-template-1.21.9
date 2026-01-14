@@ -11,7 +11,6 @@ import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
 
 public class ItemTagDatagen extends ItemTagsProvider {

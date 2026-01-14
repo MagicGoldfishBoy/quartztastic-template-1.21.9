@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "@": "quartztastic:nether_quartz_tiles"
+  },
+  "pattern": [
+    "@  ",
+    "@@ ",
+    "@@@"
+  ],
+  "result": {
+    "count": 4,
+    "id": "quartztastic:nether_quartz_tile_stairs"
+  }
+}

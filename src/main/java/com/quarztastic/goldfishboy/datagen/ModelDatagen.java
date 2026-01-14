@@ -147,9 +147,6 @@ public class ModelDatagen extends ModelProvider {
     }
 
     protected void buildBlockFamilies(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
-
-        //ended up having to set the textures on these nether quartz fuckers manually because datagen keeps fucking up
-        //using setBlock shows the texture block has the right texture, but somehow that greedy little bitch won't share
         
         blockModels.familyWithExistingFullBlock(NetherQuartzBasicBlockList.NETHER_QUARTZ_TEXTURE_BLOCK.get())
             .button(NetherQuartzBasicBlockList.NETHER_QUARTZ_BUTTON.get())
@@ -162,6 +159,11 @@ public class ModelDatagen extends ModelProvider {
             .slab(NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_SLAB.get())
             .stairs(NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_STAIRS.get())
             .wall(NetherQuartzBasicBlockList.NETHER_QUARTZ_BRICK_WALL.get());
+
+        blockModels.family(NetherQuartzBasicBlockList.NETHER_QUARTZ_TILES.get())
+            .slab(NetherQuartzBasicBlockList.NETHER_QUARTZ_TILE_SLAB.get())
+            .stairs(NetherQuartzBasicBlockList.NETHER_QUARTZ_TILE_STAIRS.get());
+
 
         blockModels.familyWithExistingFullBlock(SmokyQuartzList.SMOKY_QUARTZ_BLOCK.get())
             .slab(SmokyQuartzList.SMOKY_QUARTZ_SLAB.get())

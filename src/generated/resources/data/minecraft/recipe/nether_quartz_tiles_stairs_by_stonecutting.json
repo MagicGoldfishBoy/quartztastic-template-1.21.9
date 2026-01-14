@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "quartztastic:nether_quartz_tiles",
+  "result": {
+    "count": 1,
+    "id": "quartztastic:nether_quartz_tile_stairs"
+  }
+}

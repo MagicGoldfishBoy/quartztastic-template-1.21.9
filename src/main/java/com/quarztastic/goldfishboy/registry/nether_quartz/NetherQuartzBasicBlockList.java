@@ -40,5 +40,14 @@ public class NetherQuartzBasicBlockList {
 
     public static DeferredBlock<WallBlock> NETHER_QUARTZ_BRICK_WALL;
     public static DeferredItem<BlockItem> NETHER_QUARTZ_BRICK_WALL_ITEM; 
-    
+
+
+    public static DeferredBlock<Block> NETHER_QUARTZ_TILES;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_TILES_ITEM;
+
+    public static DeferredBlock<SlabBlock> NETHER_QUARTZ_TILE_SLAB;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_TILE_SLAB_ITEM;
+
+    public static DeferredBlock<StairBlock> NETHER_QUARTZ_TILE_STAIRS;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_TILE_STAIRS_ITEM;
 }
