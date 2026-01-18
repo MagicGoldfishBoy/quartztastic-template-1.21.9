@@ -6,6 +6,7 @@ import com.quarztastic.goldfishboy.registry.TagKeyList;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -165,6 +166,16 @@ public class RecipeDatagen extends RecipeProvider {
             .define('#', Items.BOOK)
             .unlockedBy("has_quartz_slab", has(Items.QUARTZ_SLAB))
             .unlockedBy("has_book", has(Items.BOOK))
+            .save(this.output);
+
+        
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzUtilityBlockList.NETHER_QUARTZ_FURNACE_ITEM.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', Items.QUARTZ)
+            .define('#', Items.FURNACE)
+            .unlockedBy("has_quartz", has(Items.QUARTZ))
             .save(this.output);
 
 

@@ -20,6 +20,9 @@
 
   "block.quartztastic.nether_quartz_bookshelf": "Nether Quartz Bookshelf",
 
+  "block.quartztastic.nether_quartz_furnace": "Nether Quartz Furnace",
+  "container.nether_quartz_furnace": "Nether Quartz Furnace",
+
   "block.quartztastic.smoky_quartz_ore": "Smoky Quartz Ore",
   "block.quartztastic.smoky_quartz_netherrack_ore": "Smoky Quartz Ore",
   "item.quartztastic.smoky_quartz_crystal": "Smoky Quartz Crystal",
