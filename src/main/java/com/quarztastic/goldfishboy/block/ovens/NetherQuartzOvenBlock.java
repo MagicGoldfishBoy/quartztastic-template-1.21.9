@@ -3,8 +3,8 @@ package com.quarztastic.goldfishboy.block.ovens;
 import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
-import com.quarztastic.goldfishboy.entity.SmokyQuartzOvenEntity;
-import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
+import com.quarztastic.goldfishboy.entity.NetherQuartzOvenEntity;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -24,37 +24,37 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class SmokyQuartzOvenBlock extends AbstractFurnaceBlock {
-    public static final MapCodec<SmokyQuartzOvenBlock> CODEC = simpleCodec(SmokyQuartzOvenBlock::new);
+public class NetherQuartzOvenBlock extends AbstractFurnaceBlock {
+    public static final MapCodec<NetherQuartzOvenBlock> CODEC = simpleCodec(NetherQuartzOvenBlock::new);
 
     @Override
-    public MapCodec<SmokyQuartzOvenBlock> codec() {
+    public MapCodec<NetherQuartzOvenBlock> codec() {
         return CODEC;
     }
 
-    public SmokyQuartzOvenBlock(BlockBehaviour.Properties properties) {
+    public NetherQuartzOvenBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
     @SuppressWarnings("null")
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new SmokyQuartzOvenEntity(pos, state);
+        return new NetherQuartzOvenEntity(pos, state);
     }
     @SuppressWarnings("null")
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         if (level.isClientSide()) return null;
-        if (blockEntityType != SmokyQuartzList.SMOKY_QUARTZ_OVEN_ENTITY.get()) return null;
-        return (BlockEntityTicker<T>) (lvl, pos, st, entity) -> SmokyQuartzOvenEntity.serverTick((ServerLevel) lvl, pos, st, (SmokyQuartzOvenEntity) entity);
+        if (blockEntityType != NetherQuartzUtilityBlockList.NETHER_QUARTZ_OVEN_ENTITY.get()) return null;
+        return (BlockEntityTicker<T>) (lvl, pos, st, entity) -> NetherQuartzOvenEntity.serverTick((ServerLevel) lvl, pos, st, (NetherQuartzOvenEntity) entity);
     }
 
     @SuppressWarnings("null")
     @Override
     protected void openContainer(Level level, BlockPos pos, Player player) {
         BlockEntity blockentity = level.getBlockEntity(pos);
-        if (blockentity instanceof SmokyQuartzOvenEntity) {
+        if (blockentity instanceof NetherQuartzOvenEntity) {
             player.openMenu((MenuProvider)blockentity);
             player.awardStat(Stats.INTERACT_WITH_SMOKER);
         }
