@@ -1,6 +1,6 @@
 package com.quarztastic.goldfishboy.container.grindstones;
 
-import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap.Entry;
 import net.minecraft.core.Holder;
@@ -26,7 +26,7 @@ import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
-public class SmokyQuartzGrindstoneMenu extends AbstractContainerMenu {
+public class NetherQuartzGrindstoneMenu extends AbstractContainerMenu {
     public static final int MAX_NAME_LENGTH = 35;
     public static final int INPUT_SLOT = 0;
     public static final int ADDITIONAL_SLOT = 1;
@@ -47,17 +47,17 @@ public class SmokyQuartzGrindstoneMenu extends AbstractContainerMenu {
         @Override
         public void setChanged() {
             super.setChanged();
-            SmokyQuartzGrindstoneMenu.this.slotsChanged(this);
+            NetherQuartzGrindstoneMenu.this.slotsChanged(this);
         }
     };
     private final ContainerLevelAccess access;
     private int xp = -1;
 
-    public SmokyQuartzGrindstoneMenu(int containerId, Inventory playerInventory) {
+    public NetherQuartzGrindstoneMenu(int containerId, Inventory playerInventory) {
         this(containerId, playerInventory, ContainerLevelAccess.NULL);
     }
 
-    public SmokyQuartzGrindstoneMenu(int containerId, Inventory playerInventory, final ContainerLevelAccess access) {
+    public NetherQuartzGrindstoneMenu(int containerId, Inventory playerInventory, final ContainerLevelAccess access) {
         super(MenuType.GRINDSTONE, containerId);
         this.access = access;
         this.addSlot(new Slot(this.repairSlots, 0, 49, 19) {
@@ -85,7 +85,7 @@ public class SmokyQuartzGrindstoneMenu extends AbstractContainerMenu {
             @SuppressWarnings("null")
             @Override
             public void onTake(Player player, ItemStack stack) {
-                if (net.neoforged.neoforge.common.CommonHooks.onGrindstoneTake(SmokyQuartzGrindstoneMenu.this.repairSlots, access, player, this::getExperienceAmount)) return;
+                if (net.neoforged.neoforge.common.CommonHooks.onGrindstoneTake(NetherQuartzGrindstoneMenu.this.repairSlots, access, player, this::getExperienceAmount)) return;
                 access.execute((p_39634_, p_39635_) -> {
                     if (p_39634_ instanceof ServerLevel) {
                         ExperienceOrb.award((ServerLevel)p_39634_, Vec3.atCenterOf(p_39635_), this.getExperienceAmount(p_39634_));
@@ -93,8 +93,8 @@ public class SmokyQuartzGrindstoneMenu extends AbstractContainerMenu {
 
                     p_39634_.levelEvent(1042, p_39635_, 0);
                 });
-                SmokyQuartzGrindstoneMenu.this.repairSlots.setItem(0, ItemStack.EMPTY);
-                SmokyQuartzGrindstoneMenu.this.repairSlots.setItem(1, ItemStack.EMPTY);
+                NetherQuartzGrindstoneMenu.this.repairSlots.setItem(0, ItemStack.EMPTY);
+                NetherQuartzGrindstoneMenu.this.repairSlots.setItem(1, ItemStack.EMPTY);
             }
 
             /**
@@ -103,8 +103,8 @@ public class SmokyQuartzGrindstoneMenu extends AbstractContainerMenu {
             private int getExperienceAmount(Level level) {
                 if (xp > -1) return xp;
                 int i = 0;
-                i += this.getExperienceFromItem(SmokyQuartzGrindstoneMenu.this.repairSlots.getItem(0));
-                i += this.getExperienceFromItem(SmokyQuartzGrindstoneMenu.this.repairSlots.getItem(1));
+                i += this.getExperienceFromItem(NetherQuartzGrindstoneMenu.this.repairSlots.getItem(0));
+                i += this.getExperienceFromItem(NetherQuartzGrindstoneMenu.this.repairSlots.getItem(1));
                 if (i > 0) {
                     int j = (int)Math.ceil(i / 2.0);
                     return j + level.random.nextInt(j);
@@ -243,7 +243,7 @@ public class SmokyQuartzGrindstoneMenu extends AbstractContainerMenu {
     @SuppressWarnings("null")
     @Override
     public boolean stillValid(Player player) {
-        return stillValid(this.access, player, SmokyQuartzList.SMOKY_QUARTZ_GRINDSTONE.get());
+        return stillValid(this.access, player, NetherQuartzUtilityBlockList.NETHER_QUARTZ_GRINDSTONE.get());
     }
 
     /**

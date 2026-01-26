@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import com.quarztastic.goldfishboy.block.NetherQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.crafting_tables.NetherQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.NetherQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.block.grindstones.NetherQuartzGrindstone;
 import com.quarztastic.goldfishboy.block.ovens.NetherQuartzOvenBlock;
 import com.quarztastic.goldfishboy.entity.NetherQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.NetherQuartzFurnaceEntity;
@@ -31,4 +32,7 @@ public class NetherQuartzUtilityBlockList {
 
     public static DeferredBlock<NetherQuartzCraftingTable> NETHER_QUARTZ_CRAFTING_TABLE;
     public static DeferredItem<BlockItem> NETHER_QUARTZ_CRAFTING_TABLE_ITEM;
+
+    public static DeferredBlock<NetherQuartzGrindstone> NETHER_QUARTZ_GRINDSTONE;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_GRINDSTONE_ITEM;
 }

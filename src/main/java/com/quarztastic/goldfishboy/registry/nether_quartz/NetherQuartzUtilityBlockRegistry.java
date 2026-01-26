@@ -4,6 +4,7 @@ import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.NetherQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.crafting_tables.NetherQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.NetherQuartzFurnaceBlock;
+import com.quarztastic.goldfishboy.block.grindstones.NetherQuartzGrindstone;
 import com.quarztastic.goldfishboy.block.ovens.NetherQuartzOvenBlock;
 import com.quarztastic.goldfishboy.entity.NetherQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.NetherQuartzFurnaceEntity;
@@ -110,6 +111,20 @@ public class NetherQuartzUtilityBlockRegistry {
         );
         NetherQuartzUtilityBlockList.NETHER_QUARTZ_CRAFTING_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzUtilityBlockList.NETHER_QUARTZ_CRAFTING_TABLE
+        );
+
+        NetherQuartzUtilityBlockList.NETHER_QUARTZ_GRINDSTONE = Quartztastic.BLOCKS.register(
+            "nether_quartz_grindstone", 
+            registryName -> new NetherQuartzGrindstone(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NetherQuartzBasicBlockRegistry.NETHER_QUARTZ_DESTROY_TIME, NetherQuartzBasicBlockRegistry.NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NetherQuartzBasicBlockRegistry.NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzUtilityBlockList.NETHER_QUARTZ_GRINDSTONE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzUtilityBlockList.NETHER_QUARTZ_GRINDSTONE
         );
 
     }
