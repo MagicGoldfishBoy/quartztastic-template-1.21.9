@@ -1,10 +1,14 @@
 package com.quarztastic.goldfishboy.registry.nether_quartz;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.block.NetherQuartzBlastFurnaceBlock;
 import com.quarztastic.goldfishboy.block.furnaces.NetherQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.NetherQuartzOvenBlock;
+import com.quarztastic.goldfishboy.entity.NetherQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.NetherQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.NetherQuartzOvenEntity;
+import com.quarztastic.goldfishboy.entity.SmokyQuartzBlastFurnaceEntity;
+import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -66,6 +70,28 @@ public class NetherQuartzUtilityBlockRegistry {
 
         NetherQuartzUtilityBlockList.NETHER_QUARTZ_OVEN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzUtilityBlockList.NETHER_QUARTZ_OVEN
+        );
+
+
+        NetherQuartzUtilityBlockList.NETHER_QUARTZ_BLAST_FURNACE = Quartztastic.BLOCKS.register(
+            "nether_quartz_blast_furnace", 
+            registryName -> new NetherQuartzBlastFurnaceBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NetherQuartzBasicBlockRegistry.NETHER_QUARTZ_DESTROY_TIME, NetherQuartzBasicBlockRegistry.NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NetherQuartzBasicBlockRegistry.NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzUtilityBlockList.NETHER_QUARTZ_BLAST_FURNACE_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "nether_quartz_blast_furnace",
+            () -> new BlockEntityType<>(
+            NetherQuartzBlastFurnaceEntity::new,
+            false,
+            NetherQuartzUtilityBlockList.NETHER_QUARTZ_BLAST_FURNACE.get())
+        );
+        NetherQuartzUtilityBlockList.NETHER_QUARTZ_BLAST_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzUtilityBlockList.NETHER_QUARTZ_BLAST_FURNACE
         );
 
     }

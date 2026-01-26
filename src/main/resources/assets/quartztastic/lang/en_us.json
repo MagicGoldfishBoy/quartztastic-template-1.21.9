@@ -26,6 +26,9 @@
   "block.quartztastic.nether_quartz_oven": "Nether Quartz Oven",
   "container.nether_quartz_oven": "Nether Quartz Furnace",
 
+  "block.quartztastic.nether_quartz_blast_furnace": "Nether Quartz Blast Furnace",
+  "container.nether_quartz_blast_furnace": "Nether Quartz Blast Furnace",
+
   "block.quartztastic.smoky_quartz_ore": "Smoky Quartz Ore",
   "block.quartztastic.smoky_quartz_netherrack_ore": "Smoky Quartz Ore",
   "item.quartztastic.smoky_quartz_crystal": "Smoky Quartz Crystal",
