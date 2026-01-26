@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy.registry.nether_quartz;
 import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.NetherQuartzBlastFurnaceBlock;
+import com.quarztastic.goldfishboy.block.crafting_tables.NetherQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.NetherQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.NetherQuartzOvenBlock;
 import com.quarztastic.goldfishboy.entity.NetherQuartzBlastFurnaceEntity;
@@ -27,4 +28,7 @@ public class NetherQuartzUtilityBlockList {
     public static DeferredBlock<NetherQuartzBlastFurnaceBlock> NETHER_QUARTZ_BLAST_FURNACE;
     public static Supplier<BlockEntityType<NetherQuartzBlastFurnaceEntity>> NETHER_QUARTZ_BLAST_FURNACE_ENTITY;
     public static DeferredItem<BlockItem> NETHER_QUARTZ_BLAST_FURNACE_ITEM;
+
+    public static DeferredBlock<NetherQuartzCraftingTable> NETHER_QUARTZ_CRAFTING_TABLE;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_CRAFTING_TABLE_ITEM;
 }

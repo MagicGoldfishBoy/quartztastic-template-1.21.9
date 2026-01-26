@@ -2,13 +2,12 @@ package com.quarztastic.goldfishboy.registry.nether_quartz;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.NetherQuartzBlastFurnaceBlock;
+import com.quarztastic.goldfishboy.block.crafting_tables.NetherQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.NetherQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.ovens.NetherQuartzOvenBlock;
 import com.quarztastic.goldfishboy.entity.NetherQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.NetherQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.NetherQuartzOvenEntity;
-import com.quarztastic.goldfishboy.entity.SmokyQuartzBlastFurnaceEntity;
-import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -21,6 +20,7 @@ public class NetherQuartzUtilityBlockRegistry {
 
         registerFurnaces();
 
+        registerCraftingBlocks();
     }
 
     public static void registerFurnaces() {
@@ -92,6 +92,24 @@ public class NetherQuartzUtilityBlockRegistry {
         );
         NetherQuartzUtilityBlockList.NETHER_QUARTZ_BLAST_FURNACE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzUtilityBlockList.NETHER_QUARTZ_BLAST_FURNACE
+        );
+
+    }
+
+    public static void registerCraftingBlocks() {
+
+        NetherQuartzUtilityBlockList.NETHER_QUARTZ_CRAFTING_TABLE = Quartztastic.BLOCKS.register(
+            "nether_quartz_crafting_table", 
+            registryName -> new NetherQuartzCraftingTable(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NetherQuartzBasicBlockRegistry.NETHER_QUARTZ_DESTROY_TIME, NetherQuartzBasicBlockRegistry.NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NetherQuartzBasicBlockRegistry.NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzUtilityBlockList.NETHER_QUARTZ_CRAFTING_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzUtilityBlockList.NETHER_QUARTZ_CRAFTING_TABLE
         );
 
     }
