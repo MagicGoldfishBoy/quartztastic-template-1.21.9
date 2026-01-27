@@ -6,6 +6,7 @@ import com.mojang.logging.LogUtils;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -60,6 +61,8 @@ public class QuartztasticClient {
 
             ItemBlockRenderTypes.setRenderLayer(NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS_BLOCK.get(), ChunkSectionLayer.CUTOUT_MIPPED);
             ItemBlockRenderTypes.setRenderLayer(NetherQuartzBasicBlockList.NETHER_QUARTZ_BARS.get(), ChunkSectionLayer.CUTOUT_MIPPED);
+
+            ItemBlockRenderTypes.setRenderLayer(NetherQuartzUtilityBlockList.NETHER_QUARTZ_STONECUTTER.get(), ChunkSectionLayer.CUTOUT_MIPPED);
 
     }
 

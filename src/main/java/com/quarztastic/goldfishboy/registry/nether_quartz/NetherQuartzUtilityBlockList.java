@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.block.crafting_tables.NetherQuartzCraftingTab
 import com.quarztastic.goldfishboy.block.furnaces.NetherQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.grindstones.NetherQuartzGrindstone;
 import com.quarztastic.goldfishboy.block.ovens.NetherQuartzOvenBlock;
+import com.quarztastic.goldfishboy.block.stonecutters.NetherQuartzStonecutter;
 import com.quarztastic.goldfishboy.entity.NetherQuartzBlastFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.NetherQuartzFurnaceEntity;
 import com.quarztastic.goldfishboy.entity.NetherQuartzOvenEntity;
@@ -35,4 +36,7 @@ public class NetherQuartzUtilityBlockList {
 
     public static DeferredBlock<NetherQuartzGrindstone> NETHER_QUARTZ_GRINDSTONE;
     public static DeferredItem<BlockItem> NETHER_QUARTZ_GRINDSTONE_ITEM;
+
+    public static DeferredBlock<NetherQuartzStonecutter> NETHER_QUARTZ_STONECUTTER;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_STONECUTTER_ITEM;
 }

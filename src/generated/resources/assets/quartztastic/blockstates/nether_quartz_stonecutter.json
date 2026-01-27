@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "quartztastic:block/nether_quartz_stonecutter",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "quartztastic:block/nether_quartz_stonecutter",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "quartztastic:block/nether_quartz_stonecutter"
+    },
+    "facing=west": {
+      "model": "quartztastic:block/nether_quartz_stonecutter",
+      "y": 90
+    }
+  }
+}
