@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": "minecraft:quartz_slab"
+  },
+  "pattern": [
+    "@@"
+  ],
+  "result": {
+    "count": 3,
+    "id": "quartztastic:nether_quartz_trapdoor"
+  }
+}

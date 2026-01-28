@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -284,8 +285,24 @@ public class NetherQuartzBasicBlockRegistry {
             )
         );
 
-        NetherQuartzBasicBlockList.NETEHR_QUARTZ_DOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_DOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzBasicBlockList.NETHER_QUARTZ_DOOR
+        );
+
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_TRAPDOOR = Quartztastic.BLOCKS.register(
+            "nether_quartz_trapdoor", 
+            registryName -> new TrapDoorBlock(NETHER_QUARTZ_BLOCK_SET_TYPE, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_TRAPDOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_TRAPDOOR
         );
     }
     

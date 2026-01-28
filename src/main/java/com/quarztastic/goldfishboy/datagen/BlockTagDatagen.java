@@ -56,6 +56,7 @@ public class BlockTagDatagen extends BlockTagsProvider {
                 NetherQuartzCraftingBlockList.NETHER_QUARTZ_GRINDSTONE.get(),
 
                 NetherQuartzBasicBlockList.NETHER_QUARTZ_DOOR.get(),
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_TRAPDOOR.get(),
 
 
                 SmokyQuartzList.SMOKY_QUARTZ_ORE.get(),
@@ -456,6 +457,7 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.TRAP_DOORS_TAG)
             .add(
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_TRAPDOOR.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_TRAPDOOR.get(),
                 RoseQuartzList.ROSE_QUARTZ_TRAPDOOR.get(),
                 CitrineList.CITRINE_TRAPDOOR.get(),

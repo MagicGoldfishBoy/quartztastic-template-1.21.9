@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -66,5 +67,8 @@ public class NetherQuartzBasicBlockList {
 
 
     public static DeferredBlock<DoorBlock> NETHER_QUARTZ_DOOR;
-    public static DeferredItem<BlockItem> NETEHR_QUARTZ_DOOR_ITEM;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_DOOR_ITEM;
+
+    public static DeferredBlock<TrapDoorBlock> NETHER_QUARTZ_TRAPDOOR;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_TRAPDOOR_ITEM;
 }
