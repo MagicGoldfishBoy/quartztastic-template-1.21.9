@@ -6,7 +6,7 @@ import com.quarztastic.goldfishboy.registry.TagKeyList;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
-import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -54,7 +54,7 @@ public class ItemTagDatagen extends ItemTagsProvider {
 
         this.tag(TagKeyList.CRAFTING_TABLE_ITEM_TAG)
             .add(
-                NetherQuartzUtilityBlockList.NETHER_QUARTZ_CRAFTING_TABLE_ITEM.get(),
+                NetherQuartzCraftingBlockList.NETHER_QUARTZ_CRAFTING_TABLE_ITEM.get(),
 
                 SmokyQuartzList.SMOKY_QUARTZ_CRAFTING_TABLE_ITEM.get(),
 

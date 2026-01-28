@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import javax.annotation.Nullable;
 
-import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockList;
 
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.server.level.ServerLevel;
@@ -118,7 +118,7 @@ public class NetherQuartzCraftingTableMenu extends AbstractCraftingMenu {
     @SuppressWarnings("null")
     @Override
     public boolean stillValid(Player player) {
-        return stillValid(this.access, player, NetherQuartzUtilityBlockList.NETHER_QUARTZ_CRAFTING_TABLE.get());
+        return stillValid(this.access, player, NetherQuartzCraftingBlockList.NETHER_QUARTZ_CRAFTING_TABLE.get());
     }
 
     @SuppressWarnings("null")

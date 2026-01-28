@@ -8,7 +8,7 @@ import com.quarztastic.goldfishboy.registry.TagKeyList;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
-import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -47,13 +47,15 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
                 NetherQuartzBasicBlockList.NETHER_QUARTZ_BOOKSHELF.get(),
 
-                NetherQuartzUtilityBlockList.NETHER_QUARTZ_FURNACE.get(),
-                NetherQuartzUtilityBlockList.NETHER_QUARTZ_OVEN.get(),
-                NetherQuartzUtilityBlockList.NETHER_QUARTZ_BLAST_FURNACE.get(),
+                NetherQuartzCraftingBlockList.NETHER_QUARTZ_FURNACE.get(),
+                NetherQuartzCraftingBlockList.NETHER_QUARTZ_OVEN.get(),
+                NetherQuartzCraftingBlockList.NETHER_QUARTZ_BLAST_FURNACE.get(),
 
-                NetherQuartzUtilityBlockList.NETHER_QUARTZ_CRAFTING_TABLE.get(),
-                NetherQuartzUtilityBlockList.NETHER_QUARTZ_STONECUTTER.get(),
-                NetherQuartzUtilityBlockList.NETHER_QUARTZ_GRINDSTONE.get(),
+                NetherQuartzCraftingBlockList.NETHER_QUARTZ_CRAFTING_TABLE.get(),
+                NetherQuartzCraftingBlockList.NETHER_QUARTZ_STONECUTTER.get(),
+                NetherQuartzCraftingBlockList.NETHER_QUARTZ_GRINDSTONE.get(),
+
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_DOOR.get(),
 
 
                 SmokyQuartzList.SMOKY_QUARTZ_ORE.get(),
@@ -444,6 +446,7 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.DOORS_TAG)
             .add(
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_DOOR.get(),                
                 SmokyQuartzList.SMOKY_QUARTZ_DOOR.get(),
                 RoseQuartzList.ROSE_QUARTZ_DOOR.get(),
                 CitrineList.CITRINE_DOOR.get(),

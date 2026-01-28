@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 
-public class NetherQuartzUtilityBlockList {
+public class NetherQuartzCraftingBlockList {
 
     public static DeferredBlock<NetherQuartzFurnaceBlock> NETHER_QUARTZ_FURNACE;
     public static Supplier<BlockEntityType<NetherQuartzFurnaceEntity>> NETHER_QUARTZ_FURNACE_ENTITY;

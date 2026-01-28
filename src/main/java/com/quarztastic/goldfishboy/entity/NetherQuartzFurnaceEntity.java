@@ -1,6 +1,6 @@
 package com.quarztastic.goldfishboy.entity;
 
-import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -17,7 +17,7 @@ public class NetherQuartzFurnaceEntity extends AbstractFurnaceBlockEntity {
     private static final Component DEFAULT_NAME = Component.translatable("container.nether_quartz_furnace");
     
     public NetherQuartzFurnaceEntity(BlockPos pos, BlockState blockState) {
-        super(NetherQuartzUtilityBlockList.NETHER_QUARTZ_FURNACE_ENTITY.get(), pos, blockState, RecipeType.SMELTING);
+        super(NetherQuartzCraftingBlockList.NETHER_QUARTZ_FURNACE_ENTITY.get(), pos, blockState, RecipeType.SMELTING);
     }
     
     @Override

@@ -1,6 +1,6 @@
 package com.quarztastic.goldfishboy.container.grindstones;
 
-import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockList;
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap.Entry;
 import net.minecraft.core.Holder;
@@ -243,7 +243,7 @@ public class NetherQuartzGrindstoneMenu extends AbstractContainerMenu {
     @SuppressWarnings("null")
     @Override
     public boolean stillValid(Player player) {
-        return stillValid(this.access, player, NetherQuartzUtilityBlockList.NETHER_QUARTZ_GRINDSTONE.get());
+        return stillValid(this.access, player, NetherQuartzCraftingBlockList.NETHER_QUARTZ_GRINDSTONE.get());
     }
 
     /**

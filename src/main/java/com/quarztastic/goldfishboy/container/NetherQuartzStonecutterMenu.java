@@ -3,7 +3,7 @@ package com.quarztastic.goldfishboy.container;
 import java.util.List;
 import java.util.Optional;
 
-import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockList;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -139,7 +139,7 @@ public class NetherQuartzStonecutterMenu extends AbstractContainerMenu {
      */
     @Override
     public boolean stillValid(Player player) {
-        return stillValid(this.access, player, NetherQuartzUtilityBlockList.NETHER_QUARTZ_STONECUTTER.get());
+        return stillValid(this.access, player, NetherQuartzCraftingBlockList.NETHER_QUARTZ_STONECUTTER.get());
     }
 
     /**

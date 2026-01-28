@@ -2,7 +2,6 @@ package com.quarztastic.goldfishboy.datagen;
 
 import javax.annotation.Nonnull;
 
-import com.ibm.icu.text.Normalizer.Mode;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
@@ -15,16 +14,9 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
-import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.ItemModelUtils;
-import net.minecraft.client.data.models.model.ModelLocationUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.data.models.model.TextureMapping;
-import net.minecraft.client.data.models.model.TextureSlot;
-import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.client.renderer.block.model.Variant;
-import net.minecraft.client.renderer.block.model.VariantMutator.VariantProperty;
-import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -32,8 +24,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 //TODO: Exorcise this demonic abominination from the eigth ring of hell itself
@@ -313,29 +303,22 @@ public class ModelDatagen extends ModelProvider {
 
     protected void buildDoorModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
-        blockModels.createDoor(SmokyQuartzList.SMOKY_QUARTZ_DOOR.get());
+        for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {
+            LOGGER.info("Generating model for: {}", holder.getId().getPath());
+            String rawName = holder.getId().getPath();
 
-        blockModels.createOrientableTrapdoor(SmokyQuartzList.SMOKY_QUARTZ_TRAPDOOR.get());
-        
+            if (rawName.contains("door") && !rawName.contains("trap")) {
 
-        blockModels.createDoor(RoseQuartzList.ROSE_QUARTZ_DOOR.get());
+                blockModels.createDoor(holder.get());
 
-        blockModels.createOrientableTrapdoor(RoseQuartzList.ROSE_QUARTZ_TRAPDOOR.get());
+            }
+            if (rawName.contains("door") && rawName.contains("trap")) {
 
+                blockModels.createOrientableTrapdoor(holder.get());
 
-        blockModels.createDoor(CitrineList.CITRINE_DOOR.get());
+            }
+        }
 
-        blockModels.createOrientableTrapdoor(CitrineList.CITRINE_TRAPDOOR.get());
-        
-
-        blockModels.createDoor(BlueQuartzList.BLUE_QUARTZ_DOOR.get());
-
-        blockModels.createOrientableTrapdoor(BlueQuartzList.BLUE_QUARTZ_TRAPDOOR.get());
-        
-
-        blockModels.createDoor(PrasioliteQuartzList.PRASIOLITE_QUARTZ_DOOR.get());
-
-        blockModels.createOrientableTrapdoor(PrasioliteQuartzList.PRASIOLITE_QUARTZ_TRAPDOOR.get());
     }
 
     protected void buildBlockbenchBlockstates(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {

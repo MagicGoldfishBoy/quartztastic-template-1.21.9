@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
@@ -38,6 +39,8 @@ public class NetherQuartzBasicBlockRegistry {
         registerRedstoneBlocks();
 
         registerFenceWallsGates();
+
+        registerDoors();
 
     }
 
@@ -265,6 +268,24 @@ public class NetherQuartzBasicBlockRegistry {
 
         NetherQuartzBasicBlockList.NETHER_QUARTZ_BOOKSHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzBasicBlockList.NETHER_QUARTZ_BOOKSHELF
+        );
+    }
+
+    public static void registerDoors() {
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_DOOR = Quartztastic.BLOCKS.register(
+            "nether_quartz_door", 
+            registryName -> new DoorBlock(NETHER_QUARTZ_BLOCK_SET_TYPE, BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        NetherQuartzBasicBlockList.NETEHR_QUARTZ_DOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_DOOR
         );
     }
     

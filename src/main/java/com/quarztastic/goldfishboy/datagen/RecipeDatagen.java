@@ -6,7 +6,7 @@ import com.quarztastic.goldfishboy.registry.TagKeyList;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
-import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -169,7 +169,7 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
 
         
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzUtilityBlockList.NETHER_QUARTZ_FURNACE_ITEM.get())
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzCraftingBlockList.NETHER_QUARTZ_FURNACE_ITEM.get())
             .pattern("@@@")
             .pattern("@#@")
             .pattern("@@@")
@@ -179,7 +179,7 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
 
 
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzUtilityBlockList.NETHER_QUARTZ_OVEN_ITEM.get())
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzCraftingBlockList.NETHER_QUARTZ_OVEN_ITEM.get())
             .pattern("@@@")
             .pattern("@#@")
             .pattern("@@@")
@@ -189,7 +189,7 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
 
 
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzUtilityBlockList.NETHER_QUARTZ_BLAST_FURNACE_ITEM.get())
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzCraftingBlockList.NETHER_QUARTZ_BLAST_FURNACE_ITEM.get())
             .pattern("@@@")
             .pattern("@#@")
             .pattern("@@@")
@@ -199,7 +199,7 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
 
 
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzUtilityBlockList.NETHER_QUARTZ_CRAFTING_TABLE_ITEM.get())
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzCraftingBlockList.NETHER_QUARTZ_CRAFTING_TABLE_ITEM.get())
             .pattern("@@@")
             .pattern("@#@")
             .pattern("@@@")
@@ -209,7 +209,7 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
 
 
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzUtilityBlockList.NETHER_QUARTZ_GRINDSTONE_ITEM.get())
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzCraftingBlockList.NETHER_QUARTZ_GRINDSTONE_ITEM.get())
             .pattern("@@@")
             .pattern("@#@")
             .pattern("@@@")
@@ -219,7 +219,7 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
 
 
-        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzUtilityBlockList.NETHER_QUARTZ_STONECUTTER_ITEM.get())
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzCraftingBlockList.NETHER_QUARTZ_STONECUTTER_ITEM.get())
             .pattern("@@@")
             .pattern("@#@")
             .pattern("@@@")
@@ -1736,6 +1736,14 @@ public class RecipeDatagen extends RecipeProvider {
     }
 
     protected void buildDoorRecipes() {
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzBasicBlockList.NETEHR_QUARTZ_DOOR_ITEM.get(), 3)
+            .pattern("@@")
+            .pattern("@@")
+            .pattern("@@")
+            .define('@', Items.QUARTZ)
+            .unlockedBy("has_quartz", has(Items.QUARTZ))
+            .save(this.output);
 
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_DOOR_ITEM.get(), 3)
             .pattern("@@")

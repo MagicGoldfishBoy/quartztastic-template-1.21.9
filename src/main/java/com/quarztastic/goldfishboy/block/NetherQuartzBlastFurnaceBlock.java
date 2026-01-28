@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
 import com.quarztastic.goldfishboy.entity.NetherQuartzBlastFurnaceEntity;
-import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockList;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -48,7 +48,7 @@ public class NetherQuartzBlastFurnaceBlock extends AbstractFurnaceBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         if (level.isClientSide()) return null;
-        if (blockEntityType != NetherQuartzUtilityBlockList.NETHER_QUARTZ_BLAST_FURNACE_ENTITY.get()) return null;
+        if (blockEntityType != NetherQuartzCraftingBlockList.NETHER_QUARTZ_BLAST_FURNACE_ENTITY.get()) return null;
         return (BlockEntityTicker<T>) (lvl, pos, st, entity) -> NetherQuartzBlastFurnaceEntity.serverTick((ServerLevel) lvl, pos, st, (NetherQuartzBlastFurnaceEntity) entity);
     }
     /**

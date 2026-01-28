@@ -3,6 +3,7 @@ package com.quarztastic.goldfishboy.registry.nether_quartz;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
@@ -62,4 +63,8 @@ public class NetherQuartzBasicBlockList {
 
     public static DeferredBlock<Block> NETHER_QUARTZ_BOOKSHELF;
     public static DeferredItem<BlockItem> NETHER_QUARTZ_BOOKSHELF_ITEM;
+
+
+    public static DeferredBlock<DoorBlock> NETHER_QUARTZ_DOOR;
+    public static DeferredItem<BlockItem> NETEHR_QUARTZ_DOOR_ITEM;
 }

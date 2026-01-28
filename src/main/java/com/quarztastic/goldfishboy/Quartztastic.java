@@ -13,7 +13,7 @@ import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockRegistry;
-import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzUtilityBlockRegistry;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockRegistry;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
@@ -103,7 +103,7 @@ public class Quartztastic {
         EntityRegistry.init(modEventBus);
 
         NetherQuartzBasicBlockRegistry.registerAll();
-        NetherQuartzUtilityBlockRegistry.registerAll();
+        NetherQuartzCraftingBlockRegistry.registerAll();
 
         SmokyQuartzRegistry.registerAll();
 
