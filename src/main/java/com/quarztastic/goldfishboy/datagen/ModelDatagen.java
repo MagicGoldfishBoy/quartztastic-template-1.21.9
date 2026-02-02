@@ -17,6 +17,7 @@ import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.model.Model;
 import net.minecraft.client.renderer.block.model.Variant;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -344,6 +345,14 @@ public class ModelDatagen extends ModelProvider {
         itemModels.itemModelOutput.accept(
             NetherQuartzFurnitureBlockList.NETHER_QUARTZ_TABLE_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/nether_quartz_table_single"))
+        );
+
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SHELF.get(), new Variant(modLocation("block/nether_quartz_shelf")));
+
+        itemModels.itemModelOutput.accept(
+            NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SHELF_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/nether_quartz_shelf"))
         );
 
 

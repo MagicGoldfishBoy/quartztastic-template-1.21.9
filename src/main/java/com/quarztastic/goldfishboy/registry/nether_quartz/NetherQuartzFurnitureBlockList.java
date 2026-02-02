@@ -1,6 +1,7 @@
 package com.quarztastic.goldfishboy.registry.nether_quartz;
 
 import com.quarztastic.goldfishboy.block.Chair;
+import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
 
 import net.minecraft.world.item.BlockItem;
@@ -14,5 +15,8 @@ public class NetherQuartzFurnitureBlockList {
 
     public static DeferredBlock<Table> NETHER_QUARTZ_TABLE;
     public static DeferredItem<BlockItem> NETHER_QUARTZ_TABLE_ITEM;
+
+    public static DeferredBlock<Shelf> NETHER_QUARTZ_SHELF;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_SHELF_ITEM;
 
 }

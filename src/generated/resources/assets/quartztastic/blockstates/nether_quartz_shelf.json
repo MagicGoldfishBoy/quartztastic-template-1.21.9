@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "quartztastic:block/nether_quartz_shelf",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "quartztastic:block/nether_quartz_shelf",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "quartztastic:block/nether_quartz_shelf"
+    },
+    "facing=west": {
+      "model": "quartztastic:block/nether_quartz_shelf",
+      "y": 90
+    }
+  }
+}

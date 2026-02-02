@@ -2,6 +2,7 @@ package com.quarztastic.goldfishboy.registry.nether_quartz;
 
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.Chair;
+import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Table;
 
 import net.minecraft.core.registries.Registries;
@@ -49,6 +50,20 @@ public class NetherQuartzFurnitureBlockRegistry {
         );
         NetherQuartzFurnitureBlockList.NETHER_QUARTZ_TABLE_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzFurnitureBlockList.NETHER_QUARTZ_TABLE
+        );
+
+        NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SHELF = Quartztastic.BLOCKS.register(
+            "nether_quartz_shelf", 
+            registryName -> new Shelf(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SHELF
         );
     }
 }
