@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Sink.SinkShape;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.block.Chair.ChairShape;
 import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.RoseQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.grindstones.RoseQuartzGrindstone;
@@ -588,7 +589,7 @@ public class RoseQuartzRegistry {
     private static void registerFurnitureBlocks() {
         RoseQuartzList.ROSE_QUARTZ_CHAIR = Quartztastic.BLOCKS.register(
             "rose_quartz_chair", 
-            registryName -> new Chair("dining", BlockBehaviour.Properties.of()
+            registryName -> new Chair(ChairShape.ROYAL_SHAPE, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(ROSE_QUARTZ_DESTROY_TIME, ROSE_QUARTZ_BLAST_RESISTANCE)
                 .sound(ROSE_QUARTZ_SOUND)

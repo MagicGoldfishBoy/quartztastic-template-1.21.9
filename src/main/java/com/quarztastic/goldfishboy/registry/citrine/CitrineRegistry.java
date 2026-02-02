@@ -6,6 +6,7 @@ import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.block.Chair.ChairShape;
 import com.quarztastic.goldfishboy.block.Sink.SinkShape;
 import com.quarztastic.goldfishboy.block.crafting_tables.CitrineCraftingTable;
 import com.quarztastic.goldfishboy.block.crafting_tables.RoseQuartzCraftingTable;
@@ -609,7 +610,7 @@ public class CitrineRegistry {
     private static void registerFurnitureBlocks() {
         CitrineList.CITRINE_CHAIR = Quartztastic.BLOCKS.register(
             "citrine_chair", 
-            registryName -> new Chair("dining", BlockBehaviour.Properties.of()
+            registryName -> new Chair(Chair.ChairShape.DINING_SHAPE, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(CITRINE_DESTROY_TIME, CITRINE_BLAST_RESISTANCE)
                 .sound(CITRINE_SOUND)

@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Sink.SinkShape;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.block.Chair.ChairShape;
 import com.quarztastic.goldfishboy.block.crafting_tables.SmokyQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.SmokyQuartzFurnaceBlock;
 import com.quarztastic.goldfishboy.block.grindstones.SmokyQuartzGrindstone;
@@ -621,7 +622,7 @@ public class SmokyQuartzRegistry {
     private static void registerFurnitureBlocks() {
         SmokyQuartzList.SMOKY_QUARTZ_CHAIR = Quartztastic.BLOCKS.register(
             "smoky_quartz_chair", 
-            registryName -> new Chair("dining", BlockBehaviour.Properties.of()
+            registryName -> new Chair(ChairShape.DINER_SHAPE, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(SMOKY_QUARTZ_DESTROY_TIME, SMOKY_QUARTZ_BLAST_RESISTANCE)
                 .sound(SMOKY_QUARTZ_SOUND)

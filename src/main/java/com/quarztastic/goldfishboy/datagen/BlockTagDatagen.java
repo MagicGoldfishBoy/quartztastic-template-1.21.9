@@ -9,6 +9,7 @@ import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzFurnitureBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -57,6 +58,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
                 NetherQuartzBasicBlockList.NETHER_QUARTZ_DOOR.get(),
                 NetherQuartzBasicBlockList.NETHER_QUARTZ_TRAPDOOR.get(),
+
+                NetherQuartzFurnitureBlockList.NETHER_QUARTZ_CHAIR.get(),
 
 
                 SmokyQuartzList.SMOKY_QUARTZ_ORE.get(),

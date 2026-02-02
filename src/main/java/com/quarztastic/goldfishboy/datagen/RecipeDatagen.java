@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzFurnitureBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -1827,6 +1828,17 @@ public class RecipeDatagen extends RecipeProvider {
     }
 
     protected void buildChairRecipes() {
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzFurnitureBlockList.NETHER_QUARTZ_CHAIR.get(), 4)
+            .pattern("  @")
+            .pattern("##@")
+            .pattern("@ @")
+            .define('@', Items.QUARTZ)
+            .define('#', Items.QUARTZ_SLAB)
+            .unlockedBy("has_nether_quartz_crystal", has(Items.QUARTZ))
+            .unlockedBy("has_nether_quartz_slab", has(Items.QUARTZ_SLAB))
+            .save(this.output);
+
 
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_CHAIR.get(), 4)
             .pattern("  @")

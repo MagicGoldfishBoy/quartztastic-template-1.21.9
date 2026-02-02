@@ -1,4 +1,4 @@
-// 1.21.9	2026-01-28T12:01:55.233935599	Loot Tables
+// 1.21.9	2026-02-02T10:59:37.983329082	Loot Tables
 0c71f4190742fb4980b0829027584b6ec2c10b7f data/quartztastic/loot_table/blocks/blue_quartz_axolotl_statuette.json
 e2a6cc0a46068cae6735fab48aab3f9c57847f9a data/quartztastic/loot_table/blocks/blue_quartz_barrel.json
 a7c3cfae2ddf7e43b2f9698542e7cb1692967519 data/quartztastic/loot_table/blocks/blue_quartz_bars.json
@@ -190,6 +190,7 @@ e8fe3062e68f416523f946eb1acd9d0240b939a9 data/quartztastic/loot_table/blocks/net
 6a7c2a98d7390dc7d759f468c0107dc95e337e6e data/quartztastic/loot_table/blocks/nether_quartz_brick_stairs.json
 275234f19a965506a90e3885a1c8e6bd0ab8d607 data/quartztastic/loot_table/blocks/nether_quartz_brick_wall.json
 d284dcb98d823826e617a8b5e55573226fe5830e data/quartztastic/loot_table/blocks/nether_quartz_button.json
+01f610151e87abde7bd8a32393d2ab223454b659 data/quartztastic/loot_table/blocks/nether_quartz_chair.json
 701876af00917472cf7cdbc14776d489aa6c0f40 data/quartztastic/loot_table/blocks/nether_quartz_crafting_table.json
 3c0ebc788978f02c8701c3412c6ef64e807ba802 data/quartztastic/loot_table/blocks/nether_quartz_door.json
 0a2bfe9873925be9d92e526d4a317b55b1d8de94 data/quartztastic/loot_table/blocks/nether_quartz_fence.json

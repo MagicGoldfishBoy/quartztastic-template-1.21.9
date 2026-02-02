@@ -14,6 +14,7 @@ import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineRegistry;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockRegistry;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockRegistry;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzFurnitureBlockRegistry;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzRegistry;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
@@ -104,6 +105,7 @@ public class Quartztastic {
 
         NetherQuartzBasicBlockRegistry.registerAll();
         NetherQuartzCraftingBlockRegistry.registerAll();
+        NetherQuartzFurnitureBlockRegistry.registerFurnitureBlocks();
 
         SmokyQuartzRegistry.registerAll();
 

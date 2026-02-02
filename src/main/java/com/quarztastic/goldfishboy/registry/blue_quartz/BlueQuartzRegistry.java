@@ -8,6 +8,7 @@ import com.quarztastic.goldfishboy.block.Shelf;
 import com.quarztastic.goldfishboy.block.Sink;
 import com.quarztastic.goldfishboy.block.Statuette;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.block.Chair.ChairShape;
 import com.quarztastic.goldfishboy.block.Sink.SinkShape;
 import com.quarztastic.goldfishboy.block.crafting_tables.BlueQuartzCraftingTable;
 import com.quarztastic.goldfishboy.block.furnaces.BlueQuartzFurnaceBlock;
@@ -608,7 +609,7 @@ public class BlueQuartzRegistry {
     private static void registerFurnitureBlocks() {
         BlueQuartzList.BLUE_QUARTZ_CHAIR = Quartztastic.BLOCKS.register(
             "blue_quartz_chair", 
-            registryName -> new Chair("dining", BlockBehaviour.Properties.of()
+            registryName -> new Chair(ChairShape.DINING_SHAPE, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(BLUE_QUARTZ_DESTROY_TIME, BLUE_QUARTZ_BLAST_RESISTANCE)
                 .sound(BLUE_QUARTZ_SOUND)

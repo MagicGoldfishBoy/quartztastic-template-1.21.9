@@ -6,6 +6,7 @@ import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzFurnitureBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -322,6 +323,13 @@ public class ModelDatagen extends ModelProvider {
     }
 
     protected void buildBlockbenchBlockstates(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
+        ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, NetherQuartzFurnitureBlockList.NETHER_QUARTZ_CHAIR.get(), new Variant(modLocation("block/nether_quartz_chair")));
+
+        itemModels.itemModelOutput.accept(
+            NetherQuartzFurnitureBlockList.NETHER_QUARTZ_CHAIR_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/nether_quartz_chair"))
+        );
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_CHAIR.get(), new Variant(modLocation("block/smoky_quartz_chair")));
 

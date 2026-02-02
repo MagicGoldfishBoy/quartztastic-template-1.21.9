@@ -15,12 +15,12 @@ import com.quarztastic.goldfishboy.block.stonecutters.PrasioliteQuartzStonecutte
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.PrasioliteQuartzNightstand;
 import com.quarztastic.goldfishboy.block.Chair;
+import com.quarztastic.goldfishboy.block.Chair.ChairShape;
 import com.quarztastic.goldfishboy.block.OreBlock;
 import com.quarztastic.goldfishboy.block.Path;
 import com.quarztastic.goldfishboy.block.Pillar;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzOvenEntity;
 import com.quarztastic.goldfishboy.registry.BlockSetTypes;
-import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzNightstandEntity;
 import com.quarztastic.goldfishboy.entity.PrasioliteQuartzBarrelEntity;
@@ -623,7 +623,7 @@ public class PrasioliteQuartzRegistry {
     private static void registerFurnitureBlocks() {
         PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIR = Quartztastic.BLOCKS.register(
             "prasiolite_quartz_chair", 
-            registryName -> new Chair("dining", BlockBehaviour.Properties.of()
+            registryName -> new Chair(ChairShape.DINING_SHAPE, BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))
                 .strength(PRASIOLITE_QUARTZ_DESTROY_TIME, PRASIOLITE_QUARTZ_BLAST_RESISTANCE)
                 .sound(PRASIOLITE_QUARTZ_SOUND)
