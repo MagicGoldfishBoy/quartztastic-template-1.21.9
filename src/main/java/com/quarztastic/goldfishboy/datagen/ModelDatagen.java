@@ -331,6 +331,23 @@ public class ModelDatagen extends ModelProvider {
             ItemModelUtils.plainModel(modLocation("block/nether_quartz_chair"))
         );
 
+
+        ModelDatagenHelpers.createTableModel(blockModels, itemModels, NetherQuartzFurnitureBlockList.NETHER_QUARTZ_TABLE.get(), new Variant(modLocation("block/nether_quartz_table_single")), 
+        new Variant(modLocation("block/nether_quartz_table_multiple")), new Variant(modLocation("block/nether_quartz_table_single")), new Variant(modLocation("block/nether_quartz_table_single")), 
+        new Variant(modLocation("block/nether_quartz_table_single")), new Variant(modLocation("block/nether_quartz_table_single")), new Variant(modLocation("block/nether_quartz_table_multiple")), 
+        new Variant(modLocation("block/nether_quartz_table_single")), new Variant(modLocation("block/nether_quartz_table_single")), 
+        new Variant(modLocation("block/nether_quartz_table_multiple")), new Variant(modLocation("block/nether_quartz_table_single")), 
+        new Variant(modLocation("block/nether_quartz_table_single")), new Variant(modLocation("block/nether_quartz_table_multiple")),
+        new Variant(modLocation("block/nether_quartz_table_multiple")), new Variant(modLocation("block/nether_quartz_table_multiple")), 
+        new Variant(modLocation("block/nether_quartz_table_multiple")));
+
+        itemModels.itemModelOutput.accept(
+            NetherQuartzFurnitureBlockList.NETHER_QUARTZ_TABLE_ITEM.get(),
+            ItemModelUtils.plainModel(modLocation("block/nether_quartz_table_single"))
+        );
+
+
+
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_CHAIR.get(), new Variant(modLocation("block/smoky_quartz_chair")));
 
         itemModels.itemModelOutput.accept(

@@ -1897,6 +1897,16 @@ public class RecipeDatagen extends RecipeProvider {
 
     protected void buildTableRecipes() {
 
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzFurnitureBlockList.NETHER_QUARTZ_TABLE_ITEM.get(), 2)
+            .pattern("###")
+            .pattern("@ @")
+            .define('@', Items.QUARTZ)
+            .define('#', Items.QUARTZ_SLAB)
+            .unlockedBy("has_nether_quartz_crystal", has(Items.QUARTZ))
+            .unlockedBy("has_nether_quartz_slab", has(Items.QUARTZ_SLAB))
+            .save(this.output);
+
+
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_TABLE_ITEM.get(), 2)
             .pattern("###")
             .pattern("@ @")

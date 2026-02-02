@@ -1,0 +1,23 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "block/quartz_block_top",
+		"": "block/quartz_block_top"
+	},
+	"elements": [
+		{
+			"from": [0, 13, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 5, 16, 8], "texture": "#"},
+				"east": {"uv": [0, 5, 16, 8], "texture": "#"},
+				"south": {"uv": [0, 5, 16, 8], "texture": "#"},
+				"west": {"uv": [0, 5, 16, 8], "texture": "#"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#"}
+			}
+		}
+	]
+}
