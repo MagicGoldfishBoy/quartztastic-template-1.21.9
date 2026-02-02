@@ -71,4 +71,8 @@ public class NetherQuartzBasicBlockList {
 
     public static DeferredBlock<TrapDoorBlock> NETHER_QUARTZ_TRAPDOOR;
     public static DeferredItem<BlockItem> NETHER_QUARTZ_TRAPDOOR_ITEM;
+
+
+    public static DeferredBlock<Block> NETHER_QUARTZ_LIGHT;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_LIGHT_ITEM;
 }

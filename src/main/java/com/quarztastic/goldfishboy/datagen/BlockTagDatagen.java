@@ -63,6 +63,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
                 NetherQuartzFurnitureBlockList.NETHER_QUARTZ_TABLE.get(),
                 NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SHELF.get(),
 
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_LIGHT.get(),
+
 
                 SmokyQuartzList.SMOKY_QUARTZ_ORE.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE.get(),

@@ -46,6 +46,7 @@ public class NetherQuartzBasicBlockRegistry {
     }
 
     public static void registerFullBlocks() {
+
         NetherQuartzBasicBlockList.NETHER_QUARTZ_TEXTURE_BLOCK = Quartztastic.UNOBTAINABLE_BLOCKS.register(
             "nether_quartz_texture_block", 
             registryName -> new Block(BlockBehaviour.Properties.of()
@@ -54,6 +55,20 @@ public class NetherQuartzBasicBlockRegistry {
                 .sound(NETHER_QUARTZ_SOUND)
                 .requiresCorrectToolForDrops()
             )
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_LIGHT = Quartztastic.BLOCKS.register(
+            "nether_quartz_light", 
+            registryName -> new Block(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.3f)
+                .lightLevel(state -> 15)
+                .sound(NETHER_QUARTZ_SOUND)
+                .noOcclusion()
+            )
+        );
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_LIGHT_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_LIGHT
         );
     }
 

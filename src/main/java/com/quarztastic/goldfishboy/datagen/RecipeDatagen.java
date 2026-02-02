@@ -230,6 +230,14 @@ public class RecipeDatagen extends RecipeProvider {
             .save(this.output);
 
 
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzBasicBlockList.NETHER_QUARTZ_LIGHT_ITEM.get())
+            .requires(Items.QUARTZ_BLOCK)
+            .requires(Items.GLOWSTONE)
+            .unlockedBy("has_quartz_block", has(Items.QUARTZ_BLOCK))
+            .unlockedBy("has_glowstone", has(Items.GLOWSTONE))
+            .save(this.output);
+
+
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_BRICKS_ITEM.get())
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))
@@ -1967,7 +1975,7 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_nether_quartz_crystal", has(Items.QUARTZ))
             .unlockedBy("has_nether_quartz_slab", has(Items.QUARTZ_SLAB))
             .save(this.output);
-            
+
 
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_SHELF_ITEM.get(), 2)
             .pattern("###")

@@ -64,6 +64,10 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createSimpleBlockModel(blockModels, itemModels, NetherQuartzBasicBlockList.NETHER_QUARTZ_TEXTURE_BLOCK.get(), new Variant(modLocation("block/nether_quartz_texture_block")));
 
+        blockModels.createTrivialCube(NetherQuartzBasicBlockList.NETHER_QUARTZ_LIGHT.get());
+
+        
+
         blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_ORE.get());
 
         blockModels.createTrivialCube(SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE.get());
