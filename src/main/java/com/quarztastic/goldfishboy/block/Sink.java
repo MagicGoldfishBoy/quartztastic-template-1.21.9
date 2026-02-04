@@ -181,6 +181,20 @@ public class Sink extends HorizontalDirectionalBlock {
             level.playSound(null, pos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS, 1.0F, 1.0F);
             return InteractionResult.CONSUME;
         }
+        else if (stack.getItem() == Items.WATER_BUCKET) {
+
+            checkGameEnvironment(level, pos, player, stack);
+
+            ItemStack emptyBucket = new ItemStack(Items.BUCKET);
+
+            if (!player.addItem(emptyBucket)) {
+                player.drop(emptyBucket, false);
+            }
+
+            level.playSound(null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
+            return InteractionResult.CONSUME;  
+        }
+
         else if (stack.getItem() == Items.GLASS_BOTTLE) {
 
             checkGameEnvironment(level, pos, player, stack);
@@ -194,6 +208,22 @@ public class Sink extends HorizontalDirectionalBlock {
 
             level.playSound(null, pos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS, 1.0F, 1.0F);
             return InteractionResult.CONSUME;   
+        }
+        else if (stack.getItem() == Items.POTION) {
+            PotionContents potionContents = stack.get(DataComponents.POTION_CONTENTS);
+            if (potionContents != null && potionContents.is(Potions.WATER)) {
+
+                checkGameEnvironment(level, pos, player, stack);
+
+                ItemStack emptyBottle = new ItemStack(Items.GLASS_BOTTLE);
+
+                if (!player.addItem(emptyBottle)) {
+                    player.drop(emptyBottle, false);
+                }
+
+                level.playSound(null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
+                return InteractionResult.CONSUME;  
+            }
         }
 
         return InteractionResult.PASS;
