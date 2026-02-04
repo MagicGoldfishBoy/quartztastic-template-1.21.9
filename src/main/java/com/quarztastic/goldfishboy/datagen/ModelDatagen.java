@@ -708,7 +708,7 @@ public class ModelDatagen extends ModelProvider {
         ModelDatagenHelpers.createChainBlockstates(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_CHAIN.get(), SmokyQuartzList.SMOKY_QUARTZ_CHAIN_ITEM.get());
 
 
-        
+
         blockModels.createLantern(RoseQuartzList.ROSE_QUARTZ_LANTERN.get());
 
         blockModels.createLantern(RoseQuartzList.ROSE_QUARTZ_SOUL_LANTERN.get());
@@ -739,6 +739,11 @@ public class ModelDatagen extends ModelProvider {
     }
 
     protected void buildTorchModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
+
+        blockModels.createNormalTorch(NetherQuartzBasicBlockList.NETHER_QUARTZ_TORCH.get(), NetherQuartzBasicBlockList.NETHER_QUARTZ_WALL_TORCH.get());
+
+        blockModels.createNormalTorch(NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_TORCH.get(), NetherQuartzBasicBlockList.NETHER_QUARTZ_WALL_SOUL_TORCH.get());
+        
 
         blockModels.createNormalTorch(SmokyQuartzList.SMOKY_QUARTZ_TORCH.get(), SmokyQuartzList.SMOKY_QUARTZ_WALL_TORCH.get());
 

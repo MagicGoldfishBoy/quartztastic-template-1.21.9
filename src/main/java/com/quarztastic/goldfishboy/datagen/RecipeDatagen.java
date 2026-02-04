@@ -2205,6 +2205,27 @@ public class RecipeDatagen extends RecipeProvider {
 
     protected void buildTorchRecipes() {
 
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzBasicBlockList.NETHER_QUARTZ_TORCH_ITEM.get(), 4)
+            .pattern("@")
+            .pattern("#")
+            .define('@', TagKeyList.COALS_TAG)
+            .define('#', Items.QUARTZ)
+            .unlockedBy("has_coal_or_charcoal", has(TagKeyList.COALS_TAG))
+            .unlockedBy("has_quartz", has(Items.QUARTZ))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_TORCH_ITEM.get(), 4)
+            .pattern("@")
+            .pattern("$")
+            .pattern("#")
+            .define('@', TagKeyList.COALS_TAG)
+            .define('$',Items.SOUL_SAND)
+            .define('#', Items.QUARTZ)
+            .unlockedBy("has_coal_or_charcoal", has(TagKeyList.COALS_TAG))
+            .unlockedBy("has_soul_sand", has(Items.SOUL_SAND))
+            .unlockedBy("has_quartz", has(Items.QUARTZ))
+            .save(this.output);
+
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_TORCH_ITEM.get(), 4)
             .pattern("@")
             .pattern("#")

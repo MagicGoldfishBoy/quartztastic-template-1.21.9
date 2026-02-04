@@ -1,4 +1,4 @@
-// 1.21.9	2026-02-04T09:49:17.224436195	Tags for minecraft:block mod id quartztastic
+// 1.21.9	2026-02-04T10:27:16.186190715	Tags for minecraft:block mod id quartztastic
 fa0dfcc3d395123978d264a2bc5db707c02040ba data/minecraft/tags/block/barrels.json
 dded5ca553a831f8344e40f3151f69e5cbdf5a58 data/minecraft/tags/block/climbable.json
 f5f5ae9129ec0630195d0acfa5a566af88e38fb3 data/minecraft/tags/block/doors.json
@@ -7,7 +7,7 @@ f2693b60589bc245e8743464ae478c7594b0b181 data/minecraft/tags/block/fence_gates.j
 096c81d132dbf996558599b5d6ca1301f8ed40e8 data/minecraft/tags/block/fences.json
 de06fbe1fb1a28988b58ed8498a349a1b4be1426 data/minecraft/tags/block/hoglin_repellents.json
 fb2e6c9e9f9741cb7cf66d55433faccdf50cba5a data/minecraft/tags/block/mineable/pickaxe.json
-d716bffbabfbb3eafff5ab6990285acb582ae7e6 data/minecraft/tags/block/piglin_repellents.json
+4f116cc8d0c7c8ba1bcce6f3488d58f0a5ccfecf data/minecraft/tags/block/piglin_repellents.json
 e5224a09432405854aeaf7e1e2d425794b6fa7b7 data/minecraft/tags/block/stone_pressure_plates.json
 2311ee6edfd5aa7c3b8cf708df8ac020671d559a data/minecraft/tags/block/trapdoors.json
 ef4b6b38d0f57f67c4123f6c7f824056cdce1964 data/minecraft/tags/block/walls.json

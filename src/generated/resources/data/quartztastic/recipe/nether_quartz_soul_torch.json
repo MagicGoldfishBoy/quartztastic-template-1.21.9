@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:quartz",
+    "$": "minecraft:soul_sand",
+    "@": "#minecraft:coals"
+  },
+  "pattern": [
+    "@",
+    "$",
+    "#"
+  ],
+  "result": {
+    "count": 4,
+    "id": "quartztastic:nether_quartz_soul_torch"
+  }
+}

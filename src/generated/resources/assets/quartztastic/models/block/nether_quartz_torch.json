@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_torch",
+  "textures": {
+    "torch": "quartztastic:block/nether_quartz_torch"
+  }
+}
