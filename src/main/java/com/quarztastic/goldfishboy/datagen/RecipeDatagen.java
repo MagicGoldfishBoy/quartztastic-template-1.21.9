@@ -2402,6 +2402,18 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
             .save(this.output);
 
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzFurnitureBlockList.NETHER_QUARTZ_NIGHTSTAND_ITEM.get(), 2)
+            .pattern("###")
+            .pattern("@$@")
+            .pattern("@@@")
+            .define('@', Items.QUARTZ_BLOCK)
+            .define('#', Items.QUARTZ_SLAB)
+            .define('$', Items.CHEST)
+            .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
+            .unlockedBy("has_chest", has(Items.CHEST))
+            .save(this.output);
+            
+
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_BARREL_ITEM.get())
             .pattern("@#@")
             .pattern("@ @")

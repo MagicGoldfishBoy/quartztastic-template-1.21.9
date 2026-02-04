@@ -18,7 +18,6 @@ import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.model.Model;
 import net.minecraft.client.renderer.block.model.Variant;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -393,14 +392,6 @@ public class ModelDatagen extends ModelProvider {
         );
 
 
-        // ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_BARREL_BLOCK.get(), SmokyQuartzList.SMOKY_QUARTZ_BARREL_ITEM.get(), 
-        //     new Variant(modLocation("block/smoky_quartz_barrel")), new Variant(modLocation("block/smoky_quartz_barrel_open")));
-
-
-        // ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND_BLOCK.get(), SmokyQuartzList.SMOKY_QUARTZ_NIGHTSTAND_ITEM.get(), 
-        //     new Variant(modLocation("block/smoky_quartz_nightstand")), new Variant(modLocation("block/smoky_quartz_nightstand_open")));
-
-
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SINK.get(), new Variant(modLocation("block/smoky_quartz_sink")));
 
         //I know this is fucking awful, but it works for now :P
@@ -550,14 +541,6 @@ public class ModelDatagen extends ModelProvider {
             ItemModelUtils.plainModel(modLocation("block/rose_quartz_shelf"))
         );
 
-
-        // ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK.get(), RoseQuartzList.ROSE_QUARTZ_BARREL_ITEM.get(), 
-        //     new Variant(modLocation("block/rose_quartz_barrel")), new Variant(modLocation("block/rose_quartz_barrel_open")));
-
-
-        // ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_NIGHTSTAND_BLOCK.get(), RoseQuartzList.ROSE_QUARTZ_NIGHTSTAND_ITEM.get(), 
-        //     new Variant(modLocation("block/rose_quartz_nightstand")), new Variant(modLocation("block/rose_quartz_nightstand_open")));
-
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_SINK.get(), new Variant(modLocation("block/rose_quartz_sink")));
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_CHAIR.get(), new Variant(modLocation("block/citrine_chair")));
@@ -589,14 +572,6 @@ public class ModelDatagen extends ModelProvider {
             CitrineList.CITRINE_SHELF_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/citrine_shelf"))
         );
-
-
-        // ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, CitrineList.CITRINE_BARREL_BLOCK.get(), CitrineList.CITRINE_BARREL_ITEM.get(), 
-        //     new Variant(modLocation("block/citrine_barrel")), new Variant(modLocation("block/citrine_barrel_open")));
-
-
-        // ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, CitrineList.CITRINE_NIGHTSTAND_BLOCK.get(), CitrineList.CITRINE_NIGHTSTAND_ITEM.get(), 
-        //     new Variant(modLocation("block/citrine_nightstand")), new Variant(modLocation("block/citrine_nightstand_open")));
 
             
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_SINK.get(), new Variant(modLocation("block/citrine_sink")));
@@ -632,14 +607,6 @@ public class ModelDatagen extends ModelProvider {
             ItemModelUtils.plainModel(modLocation("block/blue_quartz_shelf"))
         );
 
-
-        // ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK.get(), BlueQuartzList.BLUE_QUARTZ_BARREL_ITEM.get(), 
-        //     new Variant(modLocation("block/blue_quartz_barrel")), new Variant(modLocation("block/blue_quartz_barrel_open")));
-
-
-        // ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_BLOCK.get(), BlueQuartzList.BLUE_QUARTZ_NIGHTSTAND_ITEM.get(), 
-        //     new Variant(modLocation("block/blue_quartz_nightstand")), new Variant(modLocation("block/blue_quartz_nightstand_open")));
-
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_SINK.get(), new Variant(modLocation("block/blue_quartz_sink")));
 
 
@@ -672,14 +639,6 @@ public class ModelDatagen extends ModelProvider {
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_SHELF_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/prasiolite_quartz_shelf"))
         );
-
-
-        // ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_BLOCK.get(), PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_ITEM.get(), 
-        //     new Variant(modLocation("block/prasiolite_quartz_barrel")), new Variant(modLocation("block/prasiolite_quartz_barrel_open")));
-
-
-        // ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_BLOCK.get(), PrasioliteQuartzList.PRASIOLITE_QUARTZ_NIGHTSTAND_ITEM.get(), 
-        //     new Variant(modLocation("block/prasiolite_quartz_nightstand")), new Variant(modLocation("block/prasiolite_quartz_nightstand_open")));
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK.get(), new Variant(modLocation("block/prasiolite_quartz_sink")));
     }

@@ -4,9 +4,11 @@ import java.util.function.Supplier;
 
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Shelf;
+import com.quarztastic.goldfishboy.block.NetherQuartzNightstand;
 import com.quarztastic.goldfishboy.block.NetherQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.NetherQuartzBarrelEntity;
+import com.quarztastic.goldfishboy.entity.NetherQuartzNightstandEntity;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -27,5 +29,10 @@ public class NetherQuartzFurnitureBlockList {
     public static DeferredBlock<NetherQuartzBarrelBlock> NETHER_QUARTZ_BARREL_BLOCK;
     public static Supplier<BlockEntityType<NetherQuartzBarrelEntity>> NETHER_QUARTZ_BARREL_ENTITY;
     public static DeferredItem<BlockItem> NETHER_QUARTZ_BARREL_ITEM;
+
+
+    public static DeferredBlock<NetherQuartzNightstand> NETHER_QUARTZ_NIGHTSTAND_BLOCK;
+    public static Supplier<BlockEntityType<NetherQuartzNightstandEntity>> NETHER_QUARTZ_NIGHTSTAND_ENTITY;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_NIGHTSTAND_ITEM;
 
 }

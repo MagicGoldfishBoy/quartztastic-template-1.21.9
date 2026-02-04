@@ -3,9 +3,11 @@ package com.quarztastic.goldfishboy.registry.nether_quartz;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Shelf;
+import com.quarztastic.goldfishboy.block.NetherQuartzNightstand;
 import com.quarztastic.goldfishboy.block.NetherQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.Table;
 import com.quarztastic.goldfishboy.entity.NetherQuartzBarrelEntity;
+import com.quarztastic.goldfishboy.entity.NetherQuartzNightstandEntity;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -88,6 +90,28 @@ public class NetherQuartzFurnitureBlockRegistry {
         );
         NetherQuartzFurnitureBlockList.NETHER_QUARTZ_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzFurnitureBlockList.NETHER_QUARTZ_BARREL_BLOCK
+        );
+
+
+        NetherQuartzFurnitureBlockList.NETHER_QUARTZ_NIGHTSTAND_BLOCK = Quartztastic.BLOCKS.register(
+            "nether_quartz_nightstand", 
+            registryName -> new NetherQuartzNightstand(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzFurnitureBlockList.NETHER_QUARTZ_NIGHTSTAND_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "nether_quartz_nightstand",
+            () -> new BlockEntityType<>(
+            NetherQuartzNightstandEntity::new,
+            false,
+            NetherQuartzFurnitureBlockList.NETHER_QUARTZ_NIGHTSTAND_BLOCK.get())
+        );
+        NetherQuartzFurnitureBlockList.NETHER_QUARTZ_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzFurnitureBlockList.NETHER_QUARTZ_NIGHTSTAND_BLOCK
         );
     }
 }
