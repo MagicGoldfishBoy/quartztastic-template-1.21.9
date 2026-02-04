@@ -10,6 +10,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -18,6 +19,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.alchemy.PotionContents;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -166,15 +169,11 @@ public class Sink extends HorizontalDirectionalBlock {
         ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult
     ) {
         if (stack.getItem() == Items.BUCKET) {
-            if (level.isClientSide()) {
-                return InteractionResult.SUCCESS;
-            }
-            
-            if (!player.getAbilities().instabuild) {
-                stack.shrink(1);
-            }
+
+            checkGameEnvironment(level, pos, player, stack);
             
             ItemStack waterBucket = new ItemStack(Items.WATER_BUCKET);
+
             if (!player.addItem(waterBucket)) {
                 player.drop(waterBucket, false);
             }
@@ -183,24 +182,34 @@ public class Sink extends HorizontalDirectionalBlock {
             return InteractionResult.CONSUME;
         }
         else if (stack.getItem() == Items.GLASS_BOTTLE) {
-            if (level.isClientSide()) {
-                return InteractionResult.SUCCESS;
+
+            checkGameEnvironment(level, pos, player, stack);
+
+            ItemStack waterBottle = new ItemStack(Items.POTION);
+            waterBottle.set(DataComponents.POTION_CONTENTS, new PotionContents(Potions.WATER));
+
+            if (!player.addItem(waterBottle)) {
+                player.drop(waterBottle, false);
             }
 
-            if (!player.getAbilities().instabuild) {
-                stack.shrink(1);
-            }
-
-            ItemStack waterBucket = new ItemStack(Items.WATER_BUCKET);
-
-            if (!player.addItem(waterBucket)) {
-                player.drop(waterBucket, false);
-            }
             level.playSound(null, pos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS, 1.0F, 1.0F);
             return InteractionResult.CONSUME;   
         }
 
         return InteractionResult.PASS;
+    }
+
+    public InteractionResult checkGameEnvironment(Level level, BlockPos pos, Player player, ItemStack stack) {  
+
+        if (!player.getAbilities().instabuild) {
+            stack.shrink(1);
+        }       
+
+        if (level.isClientSide()) {
+            return InteractionResult.SUCCESS;
+        }
+
+        return InteractionResult.CONSUME;
     }
 
 
