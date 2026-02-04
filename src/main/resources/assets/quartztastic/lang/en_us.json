@@ -27,6 +27,10 @@
 
   "block.quartztastic.nether_quartz_light": "Nether Quartz Light",
 
+  "block.quartztastic.nether_quartz_lantern": "Nether Quartz Lantern",
+  "block.quartztastic.nether_quartz_soul_lantern": "Nether Quartz Soul Lantern",
+  "block.quartztastic.nether_quartz_chain": "Nether Quartz Chain",
+
   "block.quartztastic.nether_quartz_bookshelf": "Nether Quartz Bookshelf",
 
   "block.quartztastic.nether_quartz_furnace": "Nether Quartz Furnace",

@@ -2,6 +2,7 @@ package com.quarztastic.goldfishboy.datagen;
 
 import javax.annotation.Nonnull;
 
+import com.ibm.icu.text.Normalizer.Mode;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
@@ -692,6 +693,14 @@ public class ModelDatagen extends ModelProvider {
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
+        blockModels.createLantern(NetherQuartzBasicBlockList.NETHER_QUARTZ_LANTERN.get());
+
+        blockModels.createLantern(NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_LANTERN.get());
+
+        ModelDatagenHelpers.createChainBlockstates(blockModels, itemModels, NetherQuartzBasicBlockList.NETHER_QUARTZ_CHAIN.get(), NetherQuartzBasicBlockList.NETHER_QUARTZ_CHAIN_ITEM.get());
+
+
+
         blockModels.createLantern(SmokyQuartzList.SMOKY_QUARTZ_LANTERN.get());
 
         blockModels.createLantern(SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN.get());
@@ -699,6 +708,7 @@ public class ModelDatagen extends ModelProvider {
         ModelDatagenHelpers.createChainBlockstates(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_CHAIN.get(), SmokyQuartzList.SMOKY_QUARTZ_CHAIN_ITEM.get());
 
 
+        
         blockModels.createLantern(RoseQuartzList.ROSE_QUARTZ_LANTERN.get());
 
         blockModels.createLantern(RoseQuartzList.ROSE_QUARTZ_SOUL_LANTERN.get());

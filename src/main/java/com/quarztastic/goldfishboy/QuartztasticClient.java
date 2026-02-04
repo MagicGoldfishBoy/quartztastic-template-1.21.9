@@ -64,6 +64,10 @@ public class QuartztasticClient {
 
             ItemBlockRenderTypes.setRenderLayer(NetherQuartzCraftingBlockList.NETHER_QUARTZ_STONECUTTER.get(), ChunkSectionLayer.CUTOUT_MIPPED);
 
+            ItemBlockRenderTypes.setRenderLayer(NetherQuartzBasicBlockList.NETHER_QUARTZ_LANTERN.get(), ChunkSectionLayer.TRANSLUCENT);
+            ItemBlockRenderTypes.setRenderLayer(NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_LANTERN.get(), ChunkSectionLayer.TRANSLUCENT);
+            ItemBlockRenderTypes.setRenderLayer(NetherQuartzBasicBlockList.NETHER_QUARTZ_CHAIN.get(), ChunkSectionLayer.CUTOUT_MIPPED);
+
     }
 
     @SuppressWarnings("deprecation")

@@ -2029,6 +2029,35 @@ public class RecipeDatagen extends RecipeProvider {
 
     protected void buildLanternChainRecipes() {
 
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzBasicBlockList.NETHER_QUARTZ_LANTERN_ITEM.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', Items.QUARTZ)
+            .define('#', Items.TORCH)
+            .unlockedBy("has_quartz", has(Items.QUARTZ))
+            .unlockedBy("has_torch", has(Items.TORCH))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_LANTERN_ITEM.get())
+            .pattern("@@@")
+            .pattern("@#@")
+            .pattern("@@@")
+            .define('@', Items.QUARTZ)
+            .define('#', Items.SOUL_TORCH)
+            .unlockedBy("has_quartz", has(Items.QUARTZ))
+            .unlockedBy("has_soul_torch", has(Items.SOUL_TORCH))
+            .save(this.output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzBasicBlockList.NETHER_QUARTZ_CHAIN.get())
+            .pattern("@")
+            .pattern("@")
+            .pattern("@")
+            .define('@', Items.QUARTZ)
+            .unlockedBy("has_quartz", has(Items.QUARTZ))
+            .save(this.output);
+
+
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_LANTERN_ITEM.get())
             .pattern("@@@")
             .pattern("@#@")

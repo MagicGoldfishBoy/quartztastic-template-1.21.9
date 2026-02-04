@@ -65,6 +65,10 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
                 NetherQuartzBasicBlockList.NETHER_QUARTZ_LIGHT.get(),
 
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_LANTERN.get(),
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_LANTERN.get(),
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_CHAIN.get(),
+
 
                 SmokyQuartzList.SMOKY_QUARTZ_ORE.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE.get(),
@@ -484,6 +488,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.PIGLIN_REPELLENT_TAG)
             .add(
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_LANTERN.get(),
+                
                 SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_SOUL_TORCH.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE.get(),

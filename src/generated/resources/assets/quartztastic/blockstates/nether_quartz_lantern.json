@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "quartztastic:block/nether_quartz_lantern"
+    },
+    "hanging=true": {
+      "model": "quartztastic:block/nether_quartz_lantern_hanging"
+    }
+  }
+}

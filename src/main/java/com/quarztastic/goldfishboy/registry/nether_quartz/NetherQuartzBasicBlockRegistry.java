@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
@@ -42,6 +43,8 @@ public class NetherQuartzBasicBlockRegistry {
         registerFenceWallsGates();
 
         registerDoors();
+
+        registerLanternsChainsTorches();
 
     }
 
@@ -318,6 +321,56 @@ public class NetherQuartzBasicBlockRegistry {
 
         NetherQuartzBasicBlockList.NETHER_QUARTZ_TRAPDOOR_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzBasicBlockList.NETHER_QUARTZ_TRAPDOOR
+        );
+    }
+
+    public static void registerLanternsChainsTorches() {
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_LANTERN = Quartztastic.BLOCKS.register(
+            "nether_quartz_lantern", 
+            registryName -> new net.minecraft.world.level.block.LanternBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .lightLevel(state -> 15)
+            )
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_LANTERN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_LANTERN
+        );
+
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_LANTERN = Quartztastic.BLOCKS.register(
+            "nether_quartz_soul_lantern", 
+            registryName -> new net.minecraft.world.level.block.LanternBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .lightLevel(state -> 10)
+            )
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_LANTERN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_LANTERN
+        );
+
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_CHAIN = Quartztastic.BLOCKS.register(
+            "nether_quartz_chain", 
+            registryName -> new ChainBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_CHAIN_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_CHAIN
         );
     }
     

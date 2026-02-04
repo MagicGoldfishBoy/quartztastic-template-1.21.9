@@ -83,6 +83,8 @@ public class ItemTagDatagen extends ItemTagsProvider {
 
         this.tag(TagKeyList.CHAIN_ITEM_TAG)
             .add(
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_CHAIN_ITEM.get(),
+
                 SmokyQuartzList.SMOKY_QUARTZ_CHAIN_ITEM.get(),
 
                 RoseQuartzList.ROSE_QUARTZ_CHAIN_ITEM.get(),
@@ -111,6 +113,8 @@ public class ItemTagDatagen extends ItemTagsProvider {
             
         this.tag(TagKeyList.PIGLIN_REPELLENT_ITEM_TAG)
             .add(
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_LANTERN_ITEM.get(),
+                
                 SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN_ITEM.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_SOUL_TORCH_ITEM.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE_ITEM.get(),
