@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:water_bucket",
+    "@": "minecraft:quartz_block"
+  },
+  "pattern": [
+    "@#@",
+    " @ ",
+    " @ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "quartztastic:nether_quartz_sink"
+  }
+}

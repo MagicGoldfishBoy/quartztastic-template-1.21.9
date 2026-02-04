@@ -3,6 +3,8 @@ package com.quarztastic.goldfishboy.registry.nether_quartz;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Shelf;
+import com.quarztastic.goldfishboy.block.Sink;
+import com.quarztastic.goldfishboy.block.Sink.SinkShape;
 import com.quarztastic.goldfishboy.block.NetherQuartzNightstand;
 import com.quarztastic.goldfishboy.block.NetherQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.Table;
@@ -112,6 +114,20 @@ public class NetherQuartzFurnitureBlockRegistry {
         );
         NetherQuartzFurnitureBlockList.NETHER_QUARTZ_NIGHTSTAND_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzFurnitureBlockList.NETHER_QUARTZ_NIGHTSTAND_BLOCK
+        );
+
+        NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SINK = Quartztastic.BLOCKS.register(
+            "nether_quartz_sink", 
+            registryName -> new Sink(SinkShape.BASIN_WITH_SHELVES, BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+            .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+            .sound(NETHER_QUARTZ_SOUND)
+            .requiresCorrectToolForDrops()
+            .noOcclusion()
+            )
+        );
+        NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SINK_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SINK
         );
     }
 }

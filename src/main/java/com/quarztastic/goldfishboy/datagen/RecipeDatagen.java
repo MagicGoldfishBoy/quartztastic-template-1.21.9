@@ -2412,7 +2412,7 @@ public class RecipeDatagen extends RecipeProvider {
             .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
             .unlockedBy("has_chest", has(Items.CHEST))
             .save(this.output);
-            
+
 
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_BARREL_ITEM.get())
             .pattern("@#@")
@@ -2529,6 +2529,15 @@ public class RecipeDatagen extends RecipeProvider {
     }
 
     protected void buildSinkRecipes() {
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SINK_ITEM.get())
+            .pattern("@#@")
+            .pattern(" @ ")
+            .pattern(" @ ")
+            .define('@', Items.QUARTZ_BLOCK)
+            .define('#', Items.WATER_BUCKET)
+            .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
+            .save(this.output);
 
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_SINK_ITEM.get())
             .pattern("@#@")
