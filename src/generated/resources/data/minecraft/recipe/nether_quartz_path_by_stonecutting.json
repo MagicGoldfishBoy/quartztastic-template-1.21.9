@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:quartz_block",
+  "result": {
+    "count": 16,
+    "id": "quartztastic:nether_quartz_path"
+  }
+}

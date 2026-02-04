@@ -1,5 +1,7 @@
 package com.quarztastic.goldfishboy.registry.nether_quartz;
 
+import com.quarztastic.goldfishboy.block.Path;
+
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.Block;
@@ -107,4 +109,8 @@ public class NetherQuartzBasicBlockList {
 
     public static DeferredBlock<LadderBlock> NETHER_QUARTZ_LADDER;
     public static DeferredItem<BlockItem> NETHER_QUARTZ_LADDER_ITEM;
+
+
+    public static DeferredBlock<Path> NETHER_QUARTZ_PATH;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_PATH_ITEM;
 }

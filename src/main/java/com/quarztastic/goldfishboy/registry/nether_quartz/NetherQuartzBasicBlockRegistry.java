@@ -1,6 +1,7 @@
 package com.quarztastic.goldfishboy.registry.nether_quartz;
 
 import com.quarztastic.goldfishboy.Quartztastic;
+import com.quarztastic.goldfishboy.block.Path;
 
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -452,6 +453,20 @@ public class NetherQuartzBasicBlockRegistry {
         );
         NetherQuartzBasicBlockList.NETHER_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzBasicBlockList.NETHER_QUARTZ_LADDER
+        );
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_PATH = Quartztastic.BLOCKS.register(
+            "nether_quartz_path", 
+            registryName -> new Path(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(0.65f, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_PATH_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_PATH
         );
     }
     

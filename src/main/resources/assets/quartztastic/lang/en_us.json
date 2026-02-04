@@ -64,6 +64,8 @@
 
   "block.quartztastic.nether_quartz_sink": "Nether Quartz Sink",
 
+  "block.quartztastic.nether_quartz_path": "Nether Quartz Path",
+
   "block.quartztastic.smoky_quartz_ore": "Smoky Quartz Ore",
   "block.quartztastic.smoky_quartz_netherrack_ore": "Smoky Quartz Ore",
   "item.quartztastic.smoky_quartz_crystal": "Smoky Quartz Crystal",

@@ -12,6 +12,7 @@ import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzLi
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
 
+import net.minecraft.advancements.critereon.CollectionContentsPredicate.Single;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.Registries;
@@ -2590,6 +2591,16 @@ public class RecipeDatagen extends RecipeProvider {
     }
 
     protected void buildPathRecipes() {
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.QUARTZ_BLOCK), RecipeCategory.BUILDING_BLOCKS, NetherQuartzBasicBlockList.NETHER_QUARTZ_PATH_ITEM.get(), 16)
+            .unlockedBy("has_nether_quartz_block", has(Items.QUARTZ_BLOCK))
+            .save(this.output, "nether_quartz_path_by_stonecutting");
+
+        ShapelessRecipeBuilder.shapeless(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, NetherQuartzBasicBlockList.NETHER_QUARTZ_PATH_ITEM.get(), 8)
+            .requires(Items.QUARTZ_SLAB)
+            .unlockedBy("has_nether_quartz_slab", has(Items.QUARTZ_SLAB))
+            .save(this.output, "nether_quartz_path_by_crafting");
+            
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, SmokyQuartzList.SMOKY_QUARTZ_PATH_ITEM.get(), 16)
             .unlockedBy("has_smoky_quartz_block", has(SmokyQuartzList.SMOKY_QUARTZ_BLOCK_ITEM.get()))

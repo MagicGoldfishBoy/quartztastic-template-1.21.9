@@ -391,9 +391,6 @@ public class ModelDatagen extends ModelProvider {
             ItemModelUtils.plainModel(modLocation("block/smoky_quartz_shelf"))
         );
 
-
-        //ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SINK.get(), new Variant(modLocation("block/smoky_quartz_sink")));
-
         //I know this is fucking awful, but it works for now :P
 
         for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {
@@ -573,9 +570,6 @@ public class ModelDatagen extends ModelProvider {
             ItemModelUtils.plainModel(modLocation("block/citrine_shelf"))
         );
 
-            
-        //ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, CitrineList.CITRINE_SINK.get(), new Variant(modLocation("block/citrine_sink")));
-
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_CHAIR.get(), new Variant(modLocation("block/blue_quartz_chair")));
 
@@ -607,8 +601,6 @@ public class ModelDatagen extends ModelProvider {
             ItemModelUtils.plainModel(modLocation("block/blue_quartz_shelf"))
         );
 
-        //ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_SINK.get(), new Variant(modLocation("block/blue_quartz_sink")));
-
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_CHAIR.get(), new Variant(modLocation("block/prasiolite_quartz_chair")));
 
@@ -639,8 +631,6 @@ public class ModelDatagen extends ModelProvider {
             PrasioliteQuartzList.PRASIOLITE_QUARTZ_SHELF_ITEM.get(),
             ItemModelUtils.plainModel(modLocation("block/prasiolite_quartz_shelf"))
         );
-
-        //ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_SINK.get(), new Variant(modLocation("block/prasiolite_quartz_sink")));
     }
 
     protected void buildLanternModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
