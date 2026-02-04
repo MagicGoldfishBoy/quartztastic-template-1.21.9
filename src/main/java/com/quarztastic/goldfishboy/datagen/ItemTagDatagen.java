@@ -7,6 +7,7 @@ import com.quarztastic.goldfishboy.registry.blue_quartz.BlueQuartzList;
 import com.quarztastic.goldfishboy.registry.citrine.CitrineList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzBasicBlockList;
 import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzCraftingBlockList;
+import com.quarztastic.goldfishboy.registry.nether_quartz.NetherQuartzFurnitureBlockList;
 import com.quarztastic.goldfishboy.registry.prasiolite_quartz.PrasioliteQuartzList;
 import com.quarztastic.goldfishboy.registry.rose_quartz.RoseQuartzList;
 import com.quarztastic.goldfishboy.registry.smoky_quartz.SmokyQuartzList;
@@ -70,6 +71,8 @@ public class ItemTagDatagen extends ItemTagsProvider {
 
         this.tag(TagKeyList.BARREL_ITEM_TAG)
             .add(
+                NetherQuartzFurnitureBlockList.NETHER_QUARTZ_BARREL_ITEM.get(),
+                
                 SmokyQuartzList.SMOKY_QUARTZ_BARREL_ITEM.get(),
 
                 RoseQuartzList.ROSE_QUARTZ_BARREL_ITEM.get(),
@@ -114,7 +117,8 @@ public class ItemTagDatagen extends ItemTagsProvider {
         this.tag(TagKeyList.PIGLIN_REPELLENT_ITEM_TAG)
             .add(
                 NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_LANTERN_ITEM.get(),
-                
+                NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_TORCH_ITEM.get(),
+
                 SmokyQuartzList.SMOKY_QUARTZ_SOUL_LANTERN_ITEM.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_SOUL_TORCH_ITEM.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_SKULL_STATUETTE_ITEM.get(),

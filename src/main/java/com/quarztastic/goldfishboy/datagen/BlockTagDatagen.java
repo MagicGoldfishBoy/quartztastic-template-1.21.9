@@ -69,6 +69,8 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
                 NetherQuartzBasicBlockList.NETHER_QUARTZ_LADDER.get(),
 
+                NetherQuartzFurnitureBlockList.NETHER_QUARTZ_BARREL_BLOCK.get(),
+
 
                 SmokyQuartzList.SMOKY_QUARTZ_ORE.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_NETHERRACK_ORE.get(),
@@ -478,6 +480,7 @@ public class BlockTagDatagen extends BlockTagsProvider {
 
         this.tag(TagKeyList.BARRELS_TAG)
             .add(
+                NetherQuartzFurnitureBlockList.NETHER_QUARTZ_BARREL_BLOCK.get(),
                 SmokyQuartzList.SMOKY_QUARTZ_BARREL_BLOCK.get(),
                 RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK.get(),
                 CitrineList.CITRINE_BARREL_BLOCK.get(),

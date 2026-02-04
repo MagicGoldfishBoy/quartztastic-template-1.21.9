@@ -1,8 +1,8 @@
-// 1.21.9	2026-02-04T09:49:17.219411768	Tags for minecraft:item mod id quartztastic
-fa0dfcc3d395123978d264a2bc5db707c02040ba data/c/tags/item/barrels.json
+// 1.21.9	2026-02-04T11:41:41.75930456	Tags for minecraft:item mod id quartztastic
+69cb9cccf1f8438552eed4e2d215f0194bf3d355 data/c/tags/item/barrels.json
 4da208fba9a26fc7562e4ece238750535e560bcd data/c/tags/item/bookshelves.json
 829b2b63366d6a4c75e7af1e1d85fbeac47c4760 data/c/tags/item/chains.json
 1281cffe7fb24c6982e8433c5127ff020b4a0915 data/c/tags/item/gems/quartz.json
 9a7003bada9f4595711ed2d2858acc522271e936 data/c/tags/item/ores/quartz.json
 911edee9d3d293e37c28c6a17ef34bc3f616e2da data/c/tags/item/player_workstations/crafting_tables.json
-d716bffbabfbb3eafff5ab6990285acb582ae7e6 data/minecraft/tags/item/piglin_repellents.json
+4f116cc8d0c7c8ba1bcce6f3488d58f0a5ccfecf data/minecraft/tags/item/piglin_repellents.json

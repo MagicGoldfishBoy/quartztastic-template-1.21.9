@@ -38,6 +38,9 @@
 
   "block.quartztastic.nether_quartz_bookshelf": "Nether Quartz Bookshelf",
 
+  "block.quartztastic.nether_quartz_barrel": "Nether Quartz Barrel",
+  "container.nether_quartz_barrel": "Nether Quartz Barrel",
+
   "block.quartztastic.nether_quartz_furnace": "Nether Quartz Furnace",
   "container.nether_quartz_furnace": "Nether Quartz Furnace",
 

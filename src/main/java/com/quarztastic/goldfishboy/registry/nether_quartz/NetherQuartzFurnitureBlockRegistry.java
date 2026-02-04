@@ -3,11 +3,14 @@ package com.quarztastic.goldfishboy.registry.nether_quartz;
 import com.quarztastic.goldfishboy.Quartztastic;
 import com.quarztastic.goldfishboy.block.Chair;
 import com.quarztastic.goldfishboy.block.Shelf;
+import com.quarztastic.goldfishboy.block.NetherQuartzBarrelBlock;
 import com.quarztastic.goldfishboy.block.Table;
+import com.quarztastic.goldfishboy.entity.NetherQuartzBarrelEntity;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -64,6 +67,27 @@ public class NetherQuartzFurnitureBlockRegistry {
         );
         NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SHELF_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
             NetherQuartzFurnitureBlockList.NETHER_QUARTZ_SHELF
+        );
+
+        NetherQuartzFurnitureBlockList.NETHER_QUARTZ_BARREL_BLOCK = Quartztastic.BLOCKS.register(
+            "nether_quartz_barrel", 
+            registryName -> new NetherQuartzBarrelBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzFurnitureBlockList.NETHER_QUARTZ_BARREL_ENTITY = Quartztastic.BLOCK_ENTITIES.register(
+            "nether_quartz_barrel",
+            () -> new BlockEntityType<>(
+            NetherQuartzBarrelEntity::new,
+            false,
+            NetherQuartzFurnitureBlockList.NETHER_QUARTZ_BARREL_BLOCK.get())
+        );
+        NetherQuartzFurnitureBlockList.NETHER_QUARTZ_BARREL_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzFurnitureBlockList.NETHER_QUARTZ_BARREL_BLOCK
         );
     }
 }
