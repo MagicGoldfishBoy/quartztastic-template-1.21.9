@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -102,4 +103,8 @@ public class NetherQuartzBasicBlockList {
     public static DeferredBlock<TorchBlock> NETHER_QUARTZ_SOUL_TORCH;
     public static DeferredBlock<WallTorchBlock> NETHER_QUARTZ_WALL_SOUL_TORCH;
     public static DeferredItem<StandingAndWallBlockItem> NETHER_QUARTZ_SOUL_TORCH_ITEM;
+
+
+    public static DeferredBlock<LadderBlock> NETHER_QUARTZ_LADDER;
+    public static DeferredItem<BlockItem> NETHER_QUARTZ_LADDER_ITEM;
 }

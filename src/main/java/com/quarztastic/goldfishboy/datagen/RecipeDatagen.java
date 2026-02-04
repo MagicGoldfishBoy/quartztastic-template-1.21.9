@@ -2338,6 +2338,14 @@ public class RecipeDatagen extends RecipeProvider {
 
     protected void buildLadderRecipes() {
 
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, NetherQuartzBasicBlockList.NETHER_QUARTZ_LADDER.get(), 3)
+            .pattern("@ @")
+            .pattern("@@@")
+            .pattern("@ @")
+            .define('@', Items.QUARTZ)
+            .unlockedBy("has_nether_quartz_crystal", has(Items.QUARTZ))
+            .save(this.output);
+
         ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.DECORATIONS, SmokyQuartzList.SMOKY_QUARTZ_LADDER.get(), 3)
             .pattern("@ @")
             .pattern("@@@")

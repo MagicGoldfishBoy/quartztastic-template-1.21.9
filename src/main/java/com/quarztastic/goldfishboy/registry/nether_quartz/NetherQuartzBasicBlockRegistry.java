@@ -439,6 +439,20 @@ public class NetherQuartzBasicBlockRegistry {
                 new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM, registryName))
         ));
+
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_LADDER = Quartztastic.BLOCKS.register(
+            "nether_quartz_ladder", 
+            registryName -> new net.minecraft.world.level.block.LadderBlock(BlockBehaviour.Properties.of()
+                .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                .strength(NETHER_QUARTZ_DESTROY_TIME, NETHER_QUARTZ_BLAST_RESISTANCE)
+                .sound(NETHER_QUARTZ_SOUND)
+                .requiresCorrectToolForDrops()
+                .noOcclusion()
+            )
+        );
+        NetherQuartzBasicBlockList.NETHER_QUARTZ_LADDER_ITEM = Quartztastic.ITEMS.registerSimpleBlockItem(
+            NetherQuartzBasicBlockList.NETHER_QUARTZ_LADDER
+        );
     }
     
 }

@@ -393,8 +393,8 @@ public class ModelDatagen extends ModelProvider {
         );
 
         
-        ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_LADDER.get(), SmokyQuartzList.SMOKY_QUARTZ_LADDER_ITEM.get(), 
-            new Variant(modLocation("block/smoky_quartz_ladder")));
+        // ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_LADDER.get(), SmokyQuartzList.SMOKY_QUARTZ_LADDER_ITEM.get(), 
+        //     new Variant(modLocation("block/smoky_quartz_ladder")));
 
 
 
@@ -408,13 +408,23 @@ public class ModelDatagen extends ModelProvider {
 
         ModelDatagenHelpers.createHorizontalRotationModel(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_SINK.get(), new Variant(modLocation("block/smoky_quartz_sink")));
 
-        //ModelDatagenHelpers.createFaceAttachedHorizontalDirectionalBlockModels(blockModels, itemModels, SmokyQuartzList.SMOKY_QUARTZ_GRINDSTONE.get(), new Variant(modLocation("block/smoky_quartz_grindstone")));
-
         //I know this is fucking awful, but it works for now :P
 
         for (DeferredHolder<Block, ? extends Block> holder : Quartztastic.BLOCKS.getEntries()) {
             LOGGER.info("Generating model for: {}", holder.getId().getPath());
             String rawName = holder.getId().getPath();
+
+            if (rawName.contains("ladder")) {
+                String name = "block/" + rawName;
+
+                LOGGER.info("Generating model for: {}", name);
+
+                ResourceLocation block = modLocation(name);
+                Variant blockvariant = new Variant(block);
+
+                ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, (net.minecraft.world.level.block.LadderBlock) holder.get(), holder.get().asItem(), 
+                blockvariant);
+            }
 
             if (rawName.contains("grindstone")) {
                 String name = "block/" + rawName;
@@ -532,8 +542,8 @@ public class ModelDatagen extends ModelProvider {
         );
 
 
-        ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_LADDER.get(), RoseQuartzList.ROSE_QUARTZ_LADDER_ITEM.get(), 
-            new Variant(modLocation("block/rose_quartz_ladder")));
+        // ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_LADDER.get(), RoseQuartzList.ROSE_QUARTZ_LADDER_ITEM.get(), 
+        //     new Variant(modLocation("block/rose_quartz_ladder")));
 
 
         ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, RoseQuartzList.ROSE_QUARTZ_BARREL_BLOCK.get(), RoseQuartzList.ROSE_QUARTZ_BARREL_ITEM.get(), 
@@ -586,8 +596,8 @@ public class ModelDatagen extends ModelProvider {
         );
 
 
-        ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, CitrineList.CITRINE_LADDER.get(), CitrineList.CITRINE_LADDER_ITEM.get(), 
-            new Variant(modLocation("block/citrine_ladder")));
+        // ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, CitrineList.CITRINE_LADDER.get(), CitrineList.CITRINE_LADDER_ITEM.get(), 
+        //     new Variant(modLocation("block/citrine_ladder")));
 
 
         ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, CitrineList.CITRINE_BARREL_BLOCK.get(), CitrineList.CITRINE_BARREL_ITEM.get(), 
@@ -632,8 +642,8 @@ public class ModelDatagen extends ModelProvider {
         );
 
 
-        ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_LADDER.get(), BlueQuartzList.BLUE_QUARTZ_LADDER_ITEM.get(), 
-            new Variant(modLocation("block/blue_quartz_ladder")));
+        // ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_LADDER.get(), BlueQuartzList.BLUE_QUARTZ_LADDER_ITEM.get(), 
+        //     new Variant(modLocation("block/blue_quartz_ladder")));
 
 
         ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, BlueQuartzList.BLUE_QUARTZ_BARREL_BLOCK.get(), BlueQuartzList.BLUE_QUARTZ_BARREL_ITEM.get(), 
@@ -677,8 +687,8 @@ public class ModelDatagen extends ModelProvider {
         );
 
 
-        ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER.get(), PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER_ITEM.get(), 
-            new Variant(modLocation("block/prasiolite_quartz_ladder")));
+        // ModelDatagenHelpers.createLadderBlockstates(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER.get(), PrasioliteQuartzList.PRASIOLITE_QUARTZ_LADDER_ITEM.get(), 
+        //     new Variant(modLocation("block/prasiolite_quartz_ladder")));
 
 
         ModelDatagenHelpers.createRotatableStorageBlock(blockModels, itemModels, PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_BLOCK.get(), PrasioliteQuartzList.PRASIOLITE_QUARTZ_BARREL_ITEM.get(), 
@@ -743,7 +753,7 @@ public class ModelDatagen extends ModelProvider {
         blockModels.createNormalTorch(NetherQuartzBasicBlockList.NETHER_QUARTZ_TORCH.get(), NetherQuartzBasicBlockList.NETHER_QUARTZ_WALL_TORCH.get());
 
         blockModels.createNormalTorch(NetherQuartzBasicBlockList.NETHER_QUARTZ_SOUL_TORCH.get(), NetherQuartzBasicBlockList.NETHER_QUARTZ_WALL_SOUL_TORCH.get());
-        
+
 
         blockModels.createNormalTorch(SmokyQuartzList.SMOKY_QUARTZ_TORCH.get(), SmokyQuartzList.SMOKY_QUARTZ_WALL_TORCH.get());
 
